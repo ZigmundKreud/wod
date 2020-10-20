@@ -1,0 +1,18 @@
+<div class="flex-group-center">
+    <label>{{localize "WOD.attributes.physical"}}</label>
+    {{#each (filterByType data.attributes "physical") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="attributes"}}
+    {{/each}}
+</div>
+<div class="flex-group-center">
+    <label>{{localize "WOD.attributes.social"}}</label>
+    {{#each (filterByType data.attributes "social") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="attributes"}}
+    {{/each}}
+</div>
+<div class="flex-group-center">
+    <label>{{localize "WOD.attributes.mental"}}</label>
+    {{#each (filterByType data.attributes "mental") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="attributes"}}
+    {{/each}}
+</div>

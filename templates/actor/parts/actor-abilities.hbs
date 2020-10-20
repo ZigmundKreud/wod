@@ -1,0 +1,18 @@
+<div class="flex-group-center">
+    <label>{{localize "WOD.abilities.talents"}}</label>
+    {{#each (filterByType data.abilities "talent") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{/each}}
+</div>
+<div class="flex-group-center">
+    <label>{{localize "WOD.abilities.skills"}}</label>
+    {{#each (filterByType data.abilities "skill") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{/each}}
+</div>
+<div class="flex-group-center">
+    <label>{{localize "WOD.abilities.knowledge"}}</label>
+    {{#each (filterByType data.abilities "knowledge") as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{/each}}
+</div>

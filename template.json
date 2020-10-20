@@ -1,0 +1,720 @@
+{
+  "Actor": {
+    "types": [
+      "werewolf",
+      "vampire",
+      "human"
+    ],
+    "templates": {
+      "base": {
+        "description": "",
+        "biography": "",
+        "attributes": {
+          "physical": {
+            "key": "physical",
+            "label": "WOD.attributes.physical",
+            "total": 0
+          },
+          "social": {
+            "key": "social",
+            "label": "WOD.attributes.social",
+            "total": 0
+          },
+          "mental": {
+            "key": "mental",
+            "label": "WOD.attributes.mental",
+            "total": 0
+          },
+          "str": {
+            "type": "physical",
+            "key": "str",
+            "label": "WOD.attributes.str",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "dex": {
+            "type": "physical",
+            "key": "dex",
+            "label": "WOD.attributes.dex",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "stam": {
+            "type": "physical",
+            "key": "stam",
+            "label": "WOD.attributes.stam",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "cha": {
+            "type": "social",
+            "key": "cha",
+            "label": "WOD.attributes.cha",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "man": {
+            "type": "social",
+            "key": "man",
+            "label": "WOD.attributes.man",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "app": {
+            "type": "social",
+            "key": "app",
+            "label": "WOD.attributes.app",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "per": {
+            "type": "mental",
+            "key": "per",
+            "label": "WOD.attributes.per",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "int": {
+            "type": "mental",
+            "key": "int",
+            "label": "WOD.attributes.int",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          },
+          "wits": {
+            "type": "mental",
+            "key": "wits",
+            "label": "WOD.attributes.wits",
+            "value": 1,
+            "min": 1,
+            "max": 9,
+            "temp": null
+          }
+        },
+        "health": {
+          "max": 7,
+          "value": 0,
+          "status" : {
+            "bruised": {
+              "ordinal": 0,
+              "key": "bruised",
+              "label": "WOD.health.bruised",
+              "malus": 0,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "hurt": {
+              "ordinal": 1,
+              "key": "hurt",
+              "label": "WOD.health.hurt",
+              "malus": 1,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "injured": {
+              "ordinal": 2,
+              "key": "injured",
+              "label": "WOD.health.injured",
+              "malus": 1,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "wounded": {
+              "ordinal": 3,
+              "key": "wounded",
+              "label": "WOD.health.wounded",
+              "malus": 2,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "mauled": {
+              "ordinal": 4,
+              "key": "mauled",
+              "label": "WOD.health.mauled",
+              "malus": 2,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "crippled": {
+              "ordinal": 5,
+              "key": "cripled",
+              "label": "WOD.health.crippled",
+              "malus": 5,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            },
+            "incapacitated": {
+              "ordinal": 6,
+              "key": "incapacitated",
+              "label": "WOD.health.incapacitated",
+              "malus": 0,
+              "checked": false,
+              "bashing": false,
+              "lethal": false,
+              "aggravated": false
+            }
+          }
+        },
+        "resources": {
+          "willpower": {
+            "type": "resource",
+            "key": "willpower",
+            "label": "WOD.resources.willpower",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "experience": {
+            "key": "experience",
+            "label": "WOD.experience",
+            "value": 0,
+            "max": 0
+          }
+        }
+      },
+      "resources": {
+        "resources": {
+          "glory": {
+            "type": "renown",
+            "key": "glory",
+            "label": "WOD.resources.glory",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "honor": {
+            "type": "renown",
+            "key": "honor",
+            "label": "WOD.resources.honor",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "wisdom": {
+            "type": "renown",
+            "key": "wisdom",
+            "label": "WOD.resources.wisdom",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "rage": {
+            "type": "resource",
+            "key": "rage",
+            "label": "WOD.resources.rage",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "gnosis": {
+            "type": "resource",
+            "key": "gnosis",
+            "label": "WOD.resources.gnosis",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "willpower": {
+            "type": "resource",
+            "key": "willpower",
+            "label": "WOD.resources.willpower",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          }
+        }
+      },
+      "abilities": {
+        "abilities": {
+          "talents": {
+            "key": "talents",
+            "label": "WOD.abilities.talents",
+            "total": 0
+          },
+          "skills": {
+            "key": "skills",
+            "label": "WOD.abilities.skills",
+            "total": 0
+          },
+          "knowledge": {
+            "key": "talents",
+            "label": "WOD.abilities.knowledge",
+            "total": 0
+          },
+          "alertness": {
+            "type": "talent",
+            "key": "alertness",
+            "label": "WOD.talents.alertness",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "arts": {
+            "type": "talent",
+            "key": "arts",
+            "label": "WOD.talents.arts",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "athletics": {
+            "type": "talent",
+            "key": "athletics",
+            "label": "WOD.talents.athletics",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "awareness": {
+            "type": "talent",
+            "key": "awareness",
+            "label": "WOD.talents.awareness",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "brawl": {
+            "type": "talent",
+            "key": "brawl",
+            "label": "WOD.talents.brawl",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "empathy": {
+            "type": "talent",
+            "key": "empathy",
+            "label": "WOD.talents.empathy",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "expression": {
+            "type": "talent",
+            "key": "expression",
+            "label": "WOD.talents.expression",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "intimidation": {
+            "type": "talent",
+            "key": "intimidation",
+            "label": "WOD.talents.intimidation",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "leadership": {
+            "type": "talent",
+            "key": "leadership",
+            "label": "WOD.talents.leadership",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "primalurge": {
+            "type": "talent",
+            "key": "primalurge",
+            "label": "WOD.talents.primalurge",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "streetwise": {
+            "type": "talent",
+            "key": "streetwise",
+            "label": "WOD.talents.streetwise",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "subterfuge": {
+            "type": "talent",
+            "key": "subterfuge",
+            "label": "WOD.talents.subterfuge",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "animalken": {
+            "type": "skill",
+            "key": "animalken",
+            "label": "WOD.skill.animalken",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "crafts": {
+            "type": "skill",
+            "key": "crafts",
+            "label": "WOD.skill.crafts",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "drive": {
+            "type": "skill",
+            "key": "drive",
+            "label": "WOD.skill.drive",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "etiquette": {
+            "type": "skill",
+            "key": "etiquette",
+            "label": "WOD.skill.etiquette",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "firearms": {
+            "type": "skill",
+            "key": "firearms",
+            "label": "WOD.skill.firearms",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "martialarts": {
+            "type": "skill",
+            "key": "martialarts",
+            "label": "WOD.skill.martialarts",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "meditation": {
+            "type": "skill",
+            "key": "meditation",
+            "label": "WOD.skill.meditation",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "larceny": {
+            "type": "skill",
+            "key": "larceny",
+            "label": "WOD.skill.larceny",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "melee": {
+            "type": "skill",
+            "key": "melee",
+            "label": "WOD.skill.melee",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "research": {
+            "type": "skill",
+            "key": "research",
+            "label": "WOD.skill.research",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "performance": {
+            "type": "skill",
+            "key": "performance",
+            "label": "WOD.skill.performance",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "stealth": {
+            "type": "skill",
+            "key": "stealth",
+            "label": "WOD.skill.stealth",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "survival": {
+            "type": "skill",
+            "key": "survival",
+            "label": "WOD.skill.survival",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "academics": {
+            "type": "knowledge",
+            "key": "academics",
+            "label": "WOD.knowledge.academics",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "computer": {
+            "type": "knowledge",
+            "key": "computer",
+            "label": "WOD.knowledge.computer",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "cosmology": {
+            "type": "knowledge",
+            "key": "cosmology",
+            "label": "WOD.knowledge.cosmology",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "finance": {
+            "type": "knowledge",
+            "key": "finance",
+            "label": "WOD.knowledge.finance",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "enigmas": {
+            "type": "knowledge",
+            "key": "enigmas",
+            "label": "WOD.knowledge.enigmas",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "esoterica": {
+            "type": "knowledge",
+            "key": "esoterica",
+            "label": "WOD.knowledge.esoterica",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "investigation": {
+            "type": "knowledge",
+            "key": "investigation",
+            "label": "WOD.knowledge.investigation",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "law": {
+            "type": "knowledge",
+            "key": "law",
+            "label": "WOD.knowledge.law",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "medecine": {
+            "type": "knowledge",
+            "key": "medecine",
+            "label": "WOD.knowledge.medecine",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "occult": {
+            "type": "knowledge",
+            "key": "occult",
+            "label": "WOD.knowledge.occult",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "politics": {
+            "type": "knowledge",
+            "key": "politics",
+            "label": "WOD.knowledge.politics",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "rituals": {
+            "type": "knowledge",
+            "key": "rituals",
+            "label": "WOD.knowledge.rituals",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "science": {
+            "type": "knowledge",
+            "key": "science",
+            "label": "WOD.knowledge.science",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          },
+          "technology": {
+            "type": "knowledge",
+            "key": "technology",
+            "label": "WOD.knowledge.technology",
+            "value": 0,
+            "temp": null,
+            "min": 0,
+            "max": 5
+          }
+        }
+      }
+    },
+    "werewolf": {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ],
+      "breed": "",
+      "auspice": "",
+      "tribe": "",
+      "packname": "",
+      "packtotem": "",
+      "concept": "",
+      "deformity": "",
+      "battlescars": [],
+      "secondary" : {
+        "glory": {
+          "type": "renown",
+          "key": "glory",
+          "label": "WOD.resources.glory",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "honor": {
+          "type": "renown",
+          "key": "honor",
+          "label": "WOD.resources.honor",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "wisdom": {
+          "type": "renown",
+          "key": "wisdom",
+          "label": "WOD.resources.wisdom",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "rage": {
+          "type": "resource",
+          "key": "rage",
+          "label": "WOD.resources.rage",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "gnosis": {
+          "type": "resource",
+          "key": "gnosis",
+          "label": "WOD.resources.gnosis",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        }
+      }
+    },
+    "vampire" : {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ]
+    },
+    "human" : {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ]
+    }
+  },
+  "Item": {
+    "types": [
+      "item"
+    ],
+    "item": {
+      "description": "",
+      "quantity": 1,
+      "weight": 0
+    }
+  }
+}

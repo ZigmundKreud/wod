@@ -102,3 +102,25 @@ dist
 
 # TernJS port file
 .tern-port
+Supprimerait .npmignore
+Supprimerait README.md
+Supprimerait _data/
+Supprimerait assets/img/border.png
+Supprimerait assets/img/logo.png
+Supprimerait assets/img/separator-short.png
+Supprimerait assets/img/separator.png
+Supprimerait assets/logo.png
+Supprimerait fonts/
+Supprimerait gulpfile.js
+Supprimerait lang/
+Supprimerait module/
+Supprimerait package.json
+Supprimerait scss/components/
+Supprimerait scss/global/
+Supprimerait scss/utils/
+Supprimerait scss/wod.scss
+Supprimerait system.json
+Supprimerait template.json
+Supprimerait templates/actor/
+Supprimerait templates/item/
+Supprimerait ui/
