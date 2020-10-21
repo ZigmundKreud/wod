@@ -346,6 +346,39 @@
   flex: 4;
 }
 
+.roll-result {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.roll-result.fail.botch {
+  color: red;
+}
+
+.roll-result.fail.failure {
+  color: darkred;
+}
+
+.roll-result.success.marginal {
+  color: darkgreen;
+}
+
+.roll-result.success.moderate {
+  color: darkgreen;
+}
+
+.roll-result.success.complete {
+  color: darkgreen;
+}
+
+.roll-result.success.exceptional {
+  color: #008d00;
+}
+
+.roll-result.success.phenomenal {
+  color: mediumseagreen;
+}
+
 /* Styles limited to wod sheets */
 .wod .field-label {
   min-height: 25px;
@@ -515,6 +548,10 @@
 .wod.actor .wrap .sheet-body .main .section-content .score .score-label {
   font-family: "GoudyOldStyle", Serif;
   font-size: 16px;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score .score-label.active {
+  text-decoration: underline;
 }
 
 .wod.actor .wrap .sheet-body .main .section-content .score .rank {

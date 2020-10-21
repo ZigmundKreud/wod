@@ -1,0 +1,30 @@
+.roll-result {
+  font-size: 15px;
+  font-weight: bold;
+  &.fail{
+    &.botch {
+      color:red;
+    }
+    &.failure {
+      color:darkred;
+    }
+  }
+
+  &.success{
+    &.marginal{
+      color: darkgreen;
+    }
+    &.moderate{
+      color: darkgreen;
+    }
+    &.complete{
+      color: darkgreen;
+    }
+    &.exceptional{
+      color: #008d00;
+    }
+    &.phenomenal{
+      color:mediumseagreen;
+    }
+  }
+}

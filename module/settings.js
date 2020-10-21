@@ -19,4 +19,14 @@ export const registerSystemSettings = function() {
         type: Boolean,
         onChange: lang => window.location.reload()
     });
+
+    game.settings.register("wod", "10reroll", {
+        name: "Les 10 rejouent",
+        hint: "Les 10 rejouent et permettent d'augmenter le nombre de succès",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: lang => window.location.reload()
+    });
 };

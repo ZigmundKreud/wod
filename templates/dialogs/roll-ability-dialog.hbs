@@ -78,11 +78,33 @@
         <input class="field-value readonly" id="bonus" name="bonus" type="text" value="{{bonus}}" data-dtype="Number"/>
     </div>
 </div>
+{{#if (isEnabled "10reroll")}}
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.explodes"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="explodes" name="explodes" type="text" value="{{explodes}}" data-dtype="Number"/>
+    </div>
+</div>
+{{/if}}
 <div class="flexrow">
     <div class="flex1 center">
         <label for="dice">{{localize "WOD.ui.difficulty"}}</label>
     </div>
     <div class="flex1 center cell">
-        <input class="field-value readonly" id="difficulty" name="difficulty" type="text" value="{{difficulty}}" data-dtype="Number"/>
+<!--        <input class="field-value readonly" id="difficulty" name="difficulty" type="text" value="{{!difficulty}}" data-dtype="Number"/>-->
+        <select id="difficulty" name="difficulty" data-dtype="Number" style="width:100%">
+            {{#select difficulty}}
+                <option value="">{{localize "WOD.None"}}</option>
+                <option value="3">{{localize "WOD.difficulty.trivial"}}</option>
+                <option value="4">{{localize "WOD.difficulty.easy"}}</option>
+                <option value="5">{{localize "WOD.difficulty.straighforward"}}</option>
+                <option value="6">{{localize "WOD.difficulty.standard"}}</option>
+                <option value="7">{{localize "WOD.difficulty.challenging"}}</option>
+                <option value="8">{{localize "WOD.difficulty.difficult"}}</option>
+                <option value="9">{{localize "WOD.difficulty.extreme"}}</option>
+            {{/select}}
+        </select>
     </div>
 </div>

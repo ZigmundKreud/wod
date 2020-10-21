@@ -20,7 +20,7 @@ Hooks.once('init', async function () {
      * @type {String}
      */
     CONFIG.Combat.initiative = {
-        formula: "1d20",
+        formula: "1d10x10 + @attributes.dex.value + @attributes.wits.value + (@attributes.dex.value + @attributes.wits.value)/100",
         decimals: 2
     };
 

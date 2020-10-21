@@ -2,6 +2,9 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
+
+import {WodRoll} from "../roll.js";
+
 export class WodActorSheet extends ActorSheet {
 
     /** @override */
@@ -23,6 +26,8 @@ export class WodActorSheet extends ActorSheet {
 
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
+
+        html.find('.attributes.score').contextmenu(this._onToggleActiveState.bind(this));
 
         // Add Inventory Item
         html.find('.rank').click(this._onUpdateRank.bind(this));
@@ -77,25 +82,25 @@ export class WodActorSheet extends ActorSheet {
         const id = elt.data("itemId");
         const target = eval("this.actor.data." + id);
         const targetLabel = eval("game.i18n.localize('" + target.label + "')");
-        console.log(id);
         if (type == "attributes") {
             const label = game.i18n.localize("WOD.ui.rollAttribute") + " - " + targetLabel;
-            this._rollAttributeDialog(label, id, 0, 6);
+            this._rollAttributeDialog(label, id, 0, 10, 6);
         } else if (type == "abilities") {
             const label = game.i18n.localize("WOD.ui.rollAbility") + " - " + targetLabel;
-            this._rollAbilityDialog(label, id, 0, 6);
+            this._rollAbilityDialog(label, id, 0, 10, 6);
         }
     }
 
     /* -------------------------------------------- */
 
-    async _rollAttributeDialog(label, id, bonus, difficulty) {
-        const actor = this.actor;
+    async _rollAttributeDialog(label, id, bonus, explodes, difficulty) {
+
         const rollOptionTpl = 'systems/wod/templates/dialogs/roll-attribute-dialog.hbs';
 
         const rollData = {
             label: label,
             attribute: id,
+            explodes: explodes,
             bonus: bonus,
             difficulty: difficulty
         };
@@ -119,20 +124,13 @@ export class WodActorSheet extends ActorSheet {
                         const attrKey = html.find("#attribute").val();
                         const bonus = html.find("#bonus").val();
                         const diff = html.find('#difficulty').val();
-                        const attr = eval("actor.data."+attrKey);
+                        const attr = eval("this.actor.data." + attrKey);
                         const attrValue = attr.value;
-                        const pool = parseInt(attrValue, 10) + parseInt(bonus,10)
-                        const formula = pool + "d10x10cs>=" + diff;
-                        const r = new Roll(formula);
+                        const pool = parseInt(attrValue, 10) + parseInt(bonus, 10)
+                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
+                        const r = new WodRoll(pool, diff, expl);
                         r.roll();
-                        console.log(r);
-                        console.log(r.results);
-                        const msgFlavor = `<h2>${label}</h2>`;
-                        r.toMessage({
-                            user: game.user._id,
-                            flavor: msgFlavor,
-                            speaker: ChatMessage.getSpeaker({actor: this.actor})
-                        });
+                        r.toMessage(label, this.actor);
                     }
                 }
             },
@@ -145,12 +143,15 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
-    async _rollAbilityDialog(label, id, bonus, difficulty) {
-        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-ability-dialog.hbs';
+    async _rollAbilityDialog(label, id, bonus, explodes, difficulty) {
 
+        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-ability-dialog.hbs';
+        const activeAttribute = Object.values(this.actor.data.data.attributes).find(a => a.active);
         const rollData = {
             label: label,
+            attribute : (activeAttribute) ? `data.attributes.${activeAttribute.key}` : "data.attributes.str",
             ability: id,
+            explodes: explodes,
             bonus: bonus,
             difficulty: difficulty
         };
@@ -175,35 +176,19 @@ export class WodActorSheet extends ActorSheet {
                         const abilityKey = html.find("#ability").val();
                         const bonus = html.find("#bonus").val();
                         const diff = html.find('#difficulty').val();
-                        const attr = eval("this.actor.data."+attrKey);
+                        const attr = eval("this.actor.data." + attrKey);
                         const attrValue = attr.value;
-                        const ability = eval("this.actor.data."+abilityKey);
+                        const ability = eval("this.actor.data." + abilityKey);
                         const abilityValue = ability.value;
-                        const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus,10)
-                        const formula = pool + "d10x10cs>=" + diff;
-                        const r = new Roll(formula);
+                        const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus, 10)
+                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
+                        const r = new WodRoll(pool, diff, expl);
+                        const attrLabel = game.i18n.localize(eval("this.actor.data." + attrKey + ".label"));
+                        const abilityLabel = game.i18n.localize(eval("this.actor.data." + abilityKey + ".label"));
+                        const prefix = game.i18n.localize("WOD.ui.rollAbility");
+                        const fullLabel = `${prefix} - ${attrLabel}/${abilityLabel}`;
                         r.roll();
-                        console.log(r);
-                        console.log(r.results);
-                        const msgFlavor = `<h2>${label}</h2>`;
-                        r.toMessage({
-                            user: game.user._id,
-                            flavor: msgFlavor,
-                            speaker: ChatMessage.getSpeaker({actor: this.actor})
-                        });
-
-
-                        // const pool = parseInt(attr, 10) + parseInt(ab)
-                        // const formula = pool + "d10x10cs>=" + diff;
-                        // const r = new Roll(formula);
-                        // r.roll();
-                        // console.log(r);
-                        // const msgFlavor = `<h2>${label}</h2>`;
-                        // r.toMessage({
-                        //     user: game.user._id,
-                        //     flavor: msgFlavor,
-                        //     speaker: ChatMessage.getSpeaker({actor: this.actor})
-                        // });
+                        r.toMessage(fullLabel, this.actor);
                     }
                 }
             },
@@ -241,6 +226,29 @@ export class WodActorSheet extends ActorSheet {
 
         // Finally, create the item!
         return this.actor.createOwnedItem(itemData);
+    }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Handle clickable rolls.
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    _onToggleActiveState(event) {
+        event.preventDefault();
+        let data = this.getData();
+        let attributes = data.actor.data.attributes;
+        // console.log(attributes);
+        Object.values(attributes).filter(attr => attr.active === true).forEach(attr => attr.active = false);
+        const li = $(event.currentTarget);
+        const id = li.data("key");
+        console.log(event.currentTarget);
+        console.log(id);
+        const active = eval(`attributes.${id}`);
+        console.log(active);
+        active.active = true;
+        return this.actor.update({"data.attributes" : attributes});
     }
 
     /* -------------------------------------------- */

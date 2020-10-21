@@ -63,6 +63,17 @@
             .score-label {
               font-family: $font-secondary;
               font-size : 16px;
+
+              &.active{
+                text-decoration: underline;
+                //color:darkred;
+                //&:before {
+                //  content : ">>"
+                //}
+                //&:after {
+                //  content : "<<"
+                //}
+              }
             }
             .rank {
               font-size: 12px;

@@ -49,9 +49,6 @@ export class WodActor extends Actor {
         actorData.data.abilities.talents.total = talentsTotal;
         actorData.data.abilities.skills.total = skillsTotal;
         actorData.data.abilities.knowledges.total = knowledgesTotal;
-
-        console.log(physicalTotal, socialTotal, mentalTotal);
-        console.log(talentsTotal, skillsTotal, knowledgesTotal);
     }
 
     _prepareWerewolfData(actorData) {
@@ -68,6 +65,10 @@ export class WodActor extends Actor {
 
     _prepareHumanData(actorData) {
         this._prepareCharacterData(actorData)
+    }
+
+    getData() {
+        return super.getData();
     }
 
 }
