@@ -21,6 +21,7 @@
   "WOD.ui.traits" : "Traits",
   "WOD.ui.inventory" : "Inventory",
 
+  "WOD.difficulty.mundane" : "Mundane",
   "WOD.difficulty.trivial" : "Trivial",
   "WOD.difficulty.easy" : "Easy",
   "WOD.difficulty.straighforward" : "Straightforward",
@@ -28,6 +29,7 @@
   "WOD.difficulty.challenging" : "Challenging",
   "WOD.difficulty.difficult" : "Difficult",
   "WOD.difficulty.extreme" : "Extreme",
+  "WOD.difficulty.impossible" : "Impossible",
 
   "WOD.degree.phenomenal" : "Phenomenal Success",
   "WOD.degree.exceptional" : "Exceptional Success",
