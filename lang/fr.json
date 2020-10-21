@@ -12,6 +12,7 @@
   "WOD.ui.success" : "Succès",
   "WOD.ui.ones" : "Nombre de '1'",
   "WOD.ui.bonus": "Bonus",
+  "WOD.ui.malus": "Malus",
   "WOD.ui.rollAttribute": "Jet d'Attribut",
   "WOD.ui.rollAbility": "Jet de Capacité",
   "WOD.ui.explodes": "Relance",

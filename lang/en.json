@@ -12,6 +12,7 @@
   "WOD.ui.success" : "Success",
   "WOD.ui.ones" : "Number of '1'",
   "WOD.ui.bonus": "Bonus",
+  "WOD.ui.malus": "Malus",
   "WOD.ui.rollAttribute": "Attribute Roll",
   "WOD.ui.rollAbility": "Ability Roll",
   "WOD.ui.explodes": "Explodes",
