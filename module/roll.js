@@ -56,7 +56,7 @@ export class WodRoll {
         return this._roll._total = value;
     }
     get successDegree(){
-        if(this._isFumble) return SUCCESS_DEGREE.BOTCH;
+        if(this._isBotch) return SUCCESS_DEGREE.BOTCH;
         else if(this.total >= 5) return SUCCESS_DEGREE.PHENOMENAL;
         else if(this.total == 4) return SUCCESS_DEGREE.EXCEPTIONAL;
         else if(this.total == 3) return SUCCESS_DEGREE.COMPLETE;
