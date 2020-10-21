@@ -15,35 +15,30 @@
   @import 'components/tabs';
   @import 'components/items';
 
-  .window-content{
-    //font-family : $font-primary;
+  .window-content {
     background: white;
-    background-image: url("../ui/logo-v20.png");
-    background-repeat: no-repeat;
-    background-size: 25%;
-    background-position-x : center;
-    background-position-y : top;
-
-    .sidebar {
-      background: yellow;
-    }
-    .wrap {
-      background: pink;
-      .sheet-header {
-        background: red;
-      }
-      .sheet-tabs {
-        background: green;
-      }
-      .sheet-body {
-        background: blue;
-      }
-    }
   }
 
   &.actor {
     @import 'scss/components/sheet/actor/layout';
+    .window-content {
+      .editable {
+        &.werewolf {
+          @import 'scss/components/sheet/actor/werewolf';
+        }
+        &.vampire {
+          @import 'scss/components/sheet/actor/vampire';
+        }
+        &.mage {
+          @import 'scss/components/sheet/actor/mage';
+        }
+        &.human {
+          @import 'scss/components/sheet/actor/human';
+        }
+      }
+    }
   }
+
   &.item {
     @import 'scss/components/sheet/item/layout';
   }

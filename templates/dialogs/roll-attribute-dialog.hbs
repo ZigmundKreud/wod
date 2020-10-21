@@ -1,0 +1,37 @@
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.attribute"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <select id="attribute" name="attribute" data-type="String" style="width:100%">
+            {{#select attribute}}
+            <option value="">{{localize "WOD.None"}}</option>
+            <option value="data.attributes.str">{{localize "WOD.attributes.str"}}</option>
+            <option value="data.attributes.dex">{{localize "WOD.attributes.dex"}}</option>
+            <option value="data.attributes.stam">{{localize "WOD.attributes.stam"}}</option>
+            <option value="data.attributes.cha">{{localize "WOD.attributes.cha"}}</option>
+            <option value="data.attributes.man">{{localize "WOD.attributes.man"}}</option>
+            <option value="data.attributes.app">{{localize "WOD.attributes.app"}}</option>
+            <option value="data.attributes.per">{{localize "WOD.attributes.per"}}</option>
+            <option value="data.attributes.int">{{localize "WOD.attributes.int"}}</option>
+            <option value="data.attributes.wits">{{localize "WOD.attributes.wits"}}</option>
+        {{/select}}
+        </select>
+    </div>
+</div>
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.bonus"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="bonus" name="bonus" type="text" value="{{bonus}}" data-dtype="Number"/>
+    </div>
+</div>
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.difficulty"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="difficulty" name="difficulty" type="text" value="{{difficulty}}" data-dtype="Number"/>
+    </div>
+</div>

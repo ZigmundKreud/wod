@@ -59,6 +59,31 @@
   src: url("../fonts/MyriadPro-Black.otf");
 }
 
+@font-face {
+  font-family: "Werewolf";
+  src: url("../fonts/werewolf.ttf");
+}
+
+@font-face {
+  font-family: "GoudyOldStyle";
+  src: url("../fonts/GoudyOldStyle.ttf");
+}
+
+@font-face {
+  font-family: "CaflischScriptPro";
+  src: url("../fonts/caflischscriptpro-regular.otf");
+}
+
+@font-face {
+  font-family: "CaflischScriptPro";
+  src: url("../fonts/caflischscriptpro-regular.otf");
+}
+
+@font-face {
+  font-family: "Delavan";
+  src: url("../fonts/delavan.ttf");
+}
+
 .ellipsis {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -151,7 +176,6 @@
   align-items: center;
   text-align: center;
   padding: 5px;
-  border: 1px solid #999;
 }
 
 .flex-group-left {
@@ -323,6 +347,61 @@
 }
 
 /* Styles limited to wod sheets */
+.wod .field-label {
+  min-height: 25px;
+  height: 25px;
+  max-height: 25px;
+  margin: 3px;
+  padding-top: 3px;
+  font-family: "CaflischScriptPro";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wod .field-value {
+  min-height: 25px;
+  height: 25px;
+  max-height: 25px;
+  margin: 3px;
+  -webkit-box-shadow: 3px 3px 3px gray;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.wod .field-value input, .wod .field-value select {
+  border-radius: 0;
+  border: none;
+  background: white;
+}
+
+.wod select, .wod input {
+  font-family: "MyriadPro", sans-serif;
+  font-size: 13px;
+  color: #333;
+  min-height: 25px;
+  max-height: 25px;
+  height: 25px;
+}
+
+.wod ::-webkit-input-placeholder {
+  color: lightgray;
+}
+
+.wod ::-moz-placeholder {
+  color: lightgray;
+}
+
+.wod :-ms-input-placeholder {
+  color: lightgray;
+}
+
+.wod ::-ms-input-placeholder {
+  color: lightgray;
+}
+
+.wod ::placeholder {
+  color: lightgray;
+}
+
 .wod .tabs {
   height: 40px;
   max-height: 40px;
@@ -382,29 +461,278 @@
 
 .wod .window-content {
   background: white;
-  background-image: url("../ui/logo-v20.png");
+}
+
+.wod.actor .wrap {
+  padding: 5px;
+}
+
+.wod.actor .wrap .sheet-header .portrait {
+  background-color: lightgray;
+  min-height: 250px;
+  height: 250px;
+  max-height: 250px;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px gray;
+  cursor: pointer;
+  margin: -10px 10px 0 -10px;
+}
+
+.wod.actor .wrap .sheet-header .portrait img {
+  border: 4px solid white;
+  min-height: 250px;
+  height: 250px;
+  max-height: 250px;
+  min-width: 190px;
+}
+
+.wod.actor .wrap .sheet-header .header-fields .details {
+  margin-top: -15px;
+}
+
+.wod.actor .wrap .sheet-header .header-fields .sheet-tabs {
+  border: none;
+}
+
+.wod.actor .wrap .sheet-body .section-header {
+  font-family: "GoudyOldStyle", Serif;
+  background-color: white;
+  text-align: center;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content {
+  margin-top: -10px;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score .score-label {
+  font-family: "GoudyOldStyle", Serif;
+  font-size: 16px;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score .rank {
+  font-size: 12px;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score .rank-0 {
+  visibility: hidden;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score:hover .rank-0 {
+  visibility: visible;
+}
+
+.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .logo {
+  background-image: url("../ui/werewolf/logo-v20.png");
   background-repeat: no-repeat;
-  background-size: 25%;
   background-position-x: center;
   background-position-y: top;
+  background-size: auto 150px;
+  min-height: 150px;
+  height: 150px;
+  max-height: 150px;
+  margin-top: -30px;
 }
 
-.wod .window-content .sidebar {
-  background: yellow;
+.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .sheet-tabs {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.wod .window-content .wrap {
-  background: pink;
+.wod.actor .window-content .editable.werewolf .wrap .sheet-body .section-header {
+  background-image: url("../ui/werewolf/separator-short.png");
+  background-repeat: repeat-x;
+  background-size: 311px 37px;
 }
 
-.wod .window-content .wrap .sheet-header {
-  background: red;
+.wod.actor .window-content .editable.werewolf .wrap .sheet-body .section-header .section-title {
+  background-color: white;
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  -webkit-box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px white;
 }
 
-.wod .window-content .wrap .sheet-tabs {
+.wod.actor .window-content .editable.werewolf .wrap .sheet-body .main .section-content .section-title {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .logo {
+  background-image: url("../ui/vampire/logo-v20.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: auto 130px;
+  min-height: 130px;
+  height: 130px;
+  max-height: 130px;
+  margin-top: -10px;
+}
+
+.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .sheet-tabs {
+  font-family: Delavan;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header {
+  background-image: url("../ui/vampire/separator.png");
+  background-repeat: no-repeat;
+  background-size: 100% 37px;
+}
+
+.wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header .section-title {
+  background-color: white;
+  font-family: Delavan;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0;
+  margin: -10px 10px 0 10px;
+}
+
+.wod.actor .window-content .editable.vampire .wrap .sheet-body .main .section-content .section-title {
+  font-family: Delavan;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.wod.actor .window-content .editable.mage .wrap {
+  padding: 5px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .portrait {
+  background-color: lightgray;
+  min-height: 250px;
+  height: 250px;
+  max-height: 250px;
+  min-width: 190px;
+  width: 190px;
+  width: 190px;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px gray;
+  cursor: pointer;
+  margin: -10px 10px 0 -10px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .portrait img {
+  border: 4px solid white;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .logo {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: auto 150px;
+  min-height: 150px;
+  height: 150px;
+  max-height: 150px;
+  margin-top: -30px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .logo.werewolf {
+  background-image: url("../ui/werewolf/logo-v20.png");
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .details {
+  margin-top: -15px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .sheet-tabs {
   background: green;
 }
 
-.wod .window-content .wrap .sheet-body {
-  background: blue;
+.wod.actor .window-content .editable.mage .wrap .sheet-body .section-header {
+  font-family: "GoudyOldStyle", Serif;
+  background-color: white;
+  background-image: url("../ui/werewolf/separator-short.png");
+  background-repeat: repeat-x;
+  background-size: 311px 37px;
+  text-align: center;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .section-header .section-title {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  -webkit-box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px white;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content {
+  margin-top: -10px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .section-title {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .score .score-label {
+  font-family: "GoudyOldStyle", Serif;
+  font-size: 16px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .score .rank {
+  font-size: 12px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .score .rank-0 {
+  visibility: hidden;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .score:hover .rank-0 {
+  visibility: visible;
+}
+
+.wod.actor .window-content .editable.human .wrap .sheet-header .header-fields .logo {
+  background-image: url("../ui/werewolf/logo-v20.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: auto 150px;
+  min-height: 150px;
+  height: 150px;
+  max-height: 150px;
+  margin-top: -30px;
+}
+
+.wod.actor .window-content .editable.human .wrap .sheet-body .section-header {
+  background-image: url("../ui/werewolf/separator-short.png");
+}
+
+.wod.actor .window-content .editable.human .wrap .sheet-body .section-header .section-title {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.wod.actor .window-content .editable.human .wrap .sheet-body .main .section-content .section-title {
+  font-family: Werewolf;
+  font-weight: bold;
+  font-size: 20px;
 }

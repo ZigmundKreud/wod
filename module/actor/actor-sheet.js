@@ -62,6 +62,158 @@ export class WodActorSheet extends ActorSheet {
         data[field] = value;
         await this.actor.update(data);
     }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Handle clickable rolls.
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    _onRoll(event) {
+        event.preventDefault();
+        const elt = $(event.currentTarget);
+        const type = elt.data("type");
+        const id = elt.data("itemId");
+        const target = eval("this.actor.data." + id);
+        const targetLabel = eval("game.i18n.localize('" + target.label + "')");
+        console.log(id);
+        if (type == "attributes") {
+            const label = game.i18n.localize("WOD.ui.rollAttribute") + " - " + targetLabel;
+            this._rollAttributeDialog(label, id, 0, 6);
+        } else if (type == "abilities") {
+            const label = game.i18n.localize("WOD.ui.rollAbility") + " - " + targetLabel;
+            this._rollAbilityDialog(label, id, 0, 6);
+        }
+    }
+
+    /* -------------------------------------------- */
+
+    async _rollAttributeDialog(label, id, bonus, difficulty) {
+        const actor = this.actor;
+        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-attribute-dialog.hbs';
+
+        const rollData = {
+            label: label,
+            attribute: id,
+            bonus: bonus,
+            difficulty: difficulty
+        };
+
+        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
+
+        let d = new Dialog({
+            title: label,
+            content: rollOptionContent,
+            buttons: {
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Cancel",
+                    callback: () => {
+                    }
+                },
+                submit: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Submit",
+                    callback: (html) => {
+                        const attrKey = html.find("#attribute").val();
+                        const bonus = html.find("#bonus").val();
+                        const diff = html.find('#difficulty').val();
+                        const attr = eval("actor.data."+attrKey);
+                        const attrValue = attr.value;
+                        const pool = parseInt(attrValue, 10) + parseInt(bonus,10)
+                        const formula = pool + "d10x10cs>=" + diff;
+                        const r = new Roll(formula);
+                        r.roll();
+                        console.log(r);
+                        console.log(r.results);
+                        const msgFlavor = `<h2>${label}</h2>`;
+                        r.toMessage({
+                            user: game.user._id,
+                            flavor: msgFlavor,
+                            speaker: ChatMessage.getSpeaker({actor: this.actor})
+                        });
+                    }
+                }
+            },
+            default: "submit",
+            close: () => {
+            }
+        });
+        d.render(true);
+    }
+
+    /* -------------------------------------------- */
+
+    async _rollAbilityDialog(label, id, bonus, difficulty) {
+        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-ability-dialog.hbs';
+
+        const rollData = {
+            label: label,
+            ability: id,
+            bonus: bonus,
+            difficulty: difficulty
+        };
+
+        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
+
+        let d = new Dialog({
+            title: label,
+            content: rollOptionContent,
+            buttons: {
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Cancel",
+                    callback: () => {
+                    }
+                },
+                submit: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Submit",
+                    callback: (html) => {
+                        const attrKey = html.find("#attribute").val();
+                        const abilityKey = html.find("#ability").val();
+                        const bonus = html.find("#bonus").val();
+                        const diff = html.find('#difficulty').val();
+                        const attr = eval("this.actor.data."+attrKey);
+                        const attrValue = attr.value;
+                        const ability = eval("this.actor.data."+abilityKey);
+                        const abilityValue = ability.value;
+                        const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus,10)
+                        const formula = pool + "d10x10cs>=" + diff;
+                        const r = new Roll(formula);
+                        r.roll();
+                        console.log(r);
+                        console.log(r.results);
+                        const msgFlavor = `<h2>${label}</h2>`;
+                        r.toMessage({
+                            user: game.user._id,
+                            flavor: msgFlavor,
+                            speaker: ChatMessage.getSpeaker({actor: this.actor})
+                        });
+
+
+                        // const pool = parseInt(attr, 10) + parseInt(ab)
+                        // const formula = pool + "d10x10cs>=" + diff;
+                        // const r = new Roll(formula);
+                        // r.roll();
+                        // console.log(r);
+                        // const msgFlavor = `<h2>${label}</h2>`;
+                        // r.toMessage({
+                        //     user: game.user._id,
+                        //     flavor: msgFlavor,
+                        //     speaker: ChatMessage.getSpeaker({actor: this.actor})
+                        // });
+                    }
+                }
+            },
+            default: "submit",
+            close: () => {
+            }
+        });
+        d.render(true);
+    }
+
     /* -------------------------------------------- */
 
     /**
@@ -90,28 +242,6 @@ export class WodActorSheet extends ActorSheet {
         // Finally, create the item!
         return this.actor.createOwnedItem(itemData);
     }
-
-    /**
-     * Handle clickable rolls.
-     * @param {Event} event   The originating click event
-     * @private
-     */
-    _onRoll(event) {
-        event.preventDefault();
-        console.debug("_onRoll");
-        const element = event.currentTarget;
-        const dataset = element.dataset;
-        console.log(element, dataset);
-        if (dataset.roll) {
-            let roll = new Roll(dataset.roll, this.actor.data.data);
-            let label = dataset.label ? `Rolling ${dataset.label}` : '';
-            roll.roll().toMessage({
-                speaker: ChatMessage.getSpeaker({actor: this.actor}),
-                flavor: label
-            });
-        }
-    }
-
 
     /* -------------------------------------------- */
 

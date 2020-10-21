@@ -14,8 +14,11 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-details.hbs",
         "systems/wod/templates/actor/parts/actor-main.hbs",
         "systems/wod/templates/actor/parts/actor-inventory.hbs",
+        "systems/wod/templates/actor/parts/actor-traits.hbs",
         "systems/wod/templates/actor/parts/actor-resources.hbs",
-        "systems/wod/templates/actor/parts/score-rank.hbs"
+        "systems/wod/templates/actor/parts/score-rank.hbs",
+        "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
+        "systems/wod/templates/dialogs/roll-ability-dialog.hbs"
     ];
 
     // Load the template parts

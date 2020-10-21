@@ -1,0 +1,37 @@
+.field-label {
+  min-height: 25px;
+  height: 25px;
+  max-height: 25px;
+  margin:3px;
+  padding-top:3px;
+  font-family: "CaflischScriptPro";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.field-value {
+  min-height: 25px;
+  height: 25px;
+  max-height: 25px;
+  margin:3px;
+  box-shadow: 3px 3px 3px gray;
+  input, select {
+    border-radius: 0;
+    border: none;
+    background: white;
+
+  }
+}
+
+select, input {
+  font-family: $font-primary;
+  font-size: 13px;
+  color: #333;
+  min-height: 25px;
+  max-height: 25px;
+  height: 25px;
+  //padding: 5px;
+}
+::placeholder{
+  color: lightgray;
+}

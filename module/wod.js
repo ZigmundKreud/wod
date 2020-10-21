@@ -4,6 +4,7 @@ import {WodActorSheet} from "./actor/actor-sheet.js";
 import {WodItem} from "./item/item.js";
 import {WodItemSheet} from "./item/item-sheet.js";
 
+import {registerSystemSettings} from "./settings.js";
 import {preloadHandlebarsTemplates} from "./templates.js";
 import {registerHandlebarsHelpers} from "./helpers.js";
 
@@ -33,6 +34,9 @@ Hooks.once('init', async function () {
 
     Actors.registerSheet("wod", WodActorSheet, {makeDefault: true});
     Items.registerSheet("wod", WodItemSheet, {makeDefault: true});
+
+    // Register System Settings
+    registerSystemSettings();
 
     // Preload Handlebars Templates
     preloadHandlebarsTemplates();
