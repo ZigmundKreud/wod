@@ -55,6 +55,11 @@
   "WOD.details.clan": "Clan",
   "WOD.details.generation": "Generation",
   "WOD.details.sire": "Sire",
+  "WOD.details.essence": "Essence",
+  "WOD.details.affiliation": "Affiliation",
+  "WOD.details.sect": "Sect",
+  "WOD.details.domitor":"Domitor",
+  "WOD.details.residence":"Residence",
 
   "WOD.damage.bashing": "Bashing",
   "WOD.damage.lethal": "Lethal",

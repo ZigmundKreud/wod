@@ -2,30 +2,6 @@
 /*  LOCAL FONTS                             */
 /* ----------------------------------------- */
 @font-face {
-  font-family: "Georgia";
-  src: url("../fonts/georgia.ttf");
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-weight: bold;
-  src: url("../fonts/georgiab.ttf");
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-style: italic;
-  src: url("../fonts/georgiai.ttf");
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../fonts/georgiaz.ttf");
-}
-
-@font-face {
   font-family: "MyriadPro";
   src: url("../fonts/MyriadPro-Regular.otf");
 }
@@ -75,11 +51,6 @@
 }
 
 @font-face {
-  font-family: "CaflischScriptPro";
-  src: url("../fonts/caflischscriptpro-regular.otf");
-}
-
-@font-face {
   font-family: "Delavan";
   src: url("../fonts/delavan.ttf");
 }
@@ -87,16 +58,6 @@
 @font-face {
   font-family: "Abbess";
   src: url("../fonts/AbbessRegular.ttf");
-}
-
-@font-face {
-  font-family: "AbbessCompressed";
-  src: url("../fonts/AbbessCompressed.ttf");
-}
-
-@font-face {
-  font-family: "AbbessStretched";
-  src: url("../fonts/AbbessStretched.ttf");
 }
 
 .ellipsis {
@@ -401,7 +362,6 @@
   max-height: 25px;
   margin: 3px;
   padding-top: 3px;
-  font-family: "CaflischScriptPro";
   font-weight: bold;
   font-size: 20px;
 }
@@ -602,6 +562,12 @@
   margin-top: -30px;
 }
 
+.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "CaflischScriptPro", Serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .sheet-tabs {
   font-family: "Werewolf", Serif;
   font-weight: bold;
@@ -643,9 +609,13 @@
   margin-top: -10px;
 }
 
+.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Delavan", Serif;
+  font-size: 14px;
+}
+
 .wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .sheet-tabs {
   font-family: "Delavan", Serif;
-  font-weight: bold;
   font-size: 18px;
 }
 
@@ -658,16 +628,14 @@
 .wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header .section-title {
   background-color: white;
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0;
+  font-size: 24px;
+  padding: 0 10px;
   margin: -10px 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.vampire .wrap .sheet-body .main .section-content .section-title {
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .logo {
@@ -679,7 +647,13 @@
   min-height: 130px;
   height: 130px;
   max-height: 130px;
-  margin-top: -10px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Abbess", Serif;
+  font-size: 14px;
 }
 
 .wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .sheet-tabs {
@@ -721,6 +695,11 @@
   margin-top: -10px;
 }
 
+.wod.actor .window-content .editable.hunter .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Delavan", Serif;
+  font-size: 14px;
+}
+
 .wod.actor .window-content .editable.hunter .wrap .sheet-header .header-fields .sheet-tabs {
   font-family: "Delavan", Serif;
   font-weight: bold;
@@ -736,16 +715,14 @@
 .wod.actor .window-content .editable.hunter .wrap .sheet-body .section-header .section-title {
   background-color: white;
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0;
+  font-size: 24px;
+  padding: 0 10px;
   margin: -10px 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.hunter .wrap .sheet-body .main .section-content .section-title {
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .logo {
@@ -758,6 +735,11 @@
   height: 130px;
   max-height: 130px;
   margin-top: -10px;
+}
+
+.wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Delavan", Serif;
+  font-size: 14px;
 }
 
 .wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .sheet-tabs {
@@ -775,14 +757,12 @@
 .wod.actor .window-content .editable.ghoul .wrap .sheet-body .section-header .section-title {
   background-color: white;
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0;
+  font-size: 24px;
+  padding: 0 10px;
   margin: -10px 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.ghoul .wrap .sheet-body .main .section-content .section-title {
   font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }

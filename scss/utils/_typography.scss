@@ -5,30 +5,6 @@
 /* ----------------------------------------- */
 
 @font-face {
-  font-family: "Georgia";
-  src: url('../fonts/georgia.ttf');
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-weight: bold;
-  src: url('../fonts/georgiab.ttf');
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-style: italic;
-  src: url('../fonts/georgiai.ttf');
-}
-
-@font-face {
-  font-family: "Georgia";
-  font-weight: bold;
-  font-style: italic;
-  src: url('../fonts/georgiaz.ttf');
-}
-
-@font-face {
   font-family: "MyriadPro";
   src: url('../fonts/MyriadPro-Regular.otf');
 }
@@ -78,11 +54,6 @@
 }
 
 @font-face {
-  font-family: "CaflischScriptPro";
-  src: url('../fonts/caflischscriptpro-regular.otf');
-}
-
-@font-face {
   font-family: "Delavan";
   src: url('../fonts/delavan.ttf');
 }
@@ -92,24 +63,11 @@
   src: url('../fonts/AbbessRegular.ttf');
 }
 
-@font-face {
-  font-family: "AbbessCompressed";
-  src: url('../fonts/AbbessCompressed.ttf');
-}
-
-@font-face {
-  font-family: "AbbessStretched";
-  src: url('../fonts/AbbessStretched.ttf');
-}
-
-//$font-primary: 'Roboto', sans-serif;
-//$font-secondary: 'Roboto', sans-serif;
-//$font-primary: 'MyriadPro', sans-serif;
-//$font-secondary: 'MyriadPro', sans-serif;
-
 $font-primary: 'MyriadPro', sans-serif;
 $font-secondary: "GoudyOldStyle", Serif;
+
 $font-werewolf: "Werewolf", Serif;
+$font-werewolf2: "CaflischScriptPro", Serif;
 $font-vampire: "Delavan", Serif;
 $font-ghoul: "Delavan", Serif;
 $font-hunter: "Delavan", Serif;
