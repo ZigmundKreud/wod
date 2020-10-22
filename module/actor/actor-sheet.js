@@ -95,12 +95,22 @@ export class WodActorSheet extends ActorSheet {
         const id = elt.data("itemId");
         const target = eval("this.actor.data." + id);
         const targetLabel = eval("game.i18n.localize('" + target.label + "')");
+
+        // Find any malus from ijuries to apply on roll if exists
+        let injuries = Object.values(this.actor.data.data.health.status).filter(s => s.checked && s.malus > 0);
+        if(injuries.length > 0) {
+            injuries.sort(function (a, b) {
+                return (a.malus < b.malus) ? 1 : -1
+            });
+        }
+        const malus = (injuries[0]) ? -(injuries.shift().malus) : 0;
+
         if (type == "attributes") {
             const label = game.i18n.localize("WOD.ui.rollAttribute") + " - " + targetLabel;
-            this._rollAttributeDialog(label, id, 0, 10, 6);
+            this._rollAttributeDialog(label, id, malus, 10, 6);
         } else if (type == "abilities") {
             const label = game.i18n.localize("WOD.ui.rollAbility") + " - " + targetLabel;
-            this._rollAbilityDialog(label, id, 0, 10, 6);
+            this._rollAbilityDialog(label, id, malus, 10, 6);
         }
     }
 
@@ -141,9 +151,15 @@ export class WodActorSheet extends ActorSheet {
                         const attrValue = attr.value;
                         const pool = parseInt(attrValue, 10) + parseInt(bonus, 10)
                         const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        const r = new WodRoll(pool, diff, expl);
-                        r.roll();
-                        r.toMessage(label, this.actor);
+                        if(pool>0){
+                            const r = new WodRoll(pool, diff, expl);
+                            r.roll();
+                            r.toMessage(label, this.actor);
+                        }
+                        else {
+                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
+                            return false;
+                        }
                     }
                 }
             },
@@ -195,13 +211,21 @@ export class WodActorSheet extends ActorSheet {
                         const abilityValue = ability.value;
                         const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus, 10)
                         const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        const r = new WodRoll(pool, diff, expl);
                         const attrLabel = game.i18n.localize(eval("this.actor.data." + attrKey + ".label"));
                         const abilityLabel = game.i18n.localize(eval("this.actor.data." + abilityKey + ".label"));
                         const prefix = game.i18n.localize("WOD.ui.rollAbility");
                         const fullLabel = `${prefix} - ${attrLabel}/${abilityLabel}`;
-                        r.roll();
-                        r.toMessage(fullLabel, this.actor);
+
+                        if(pool>0){
+                            const r = new WodRoll(pool, diff, expl);
+                            r.roll();
+                            r.toMessage(fullLabel, this.actor);
+                        }
+                        else {
+                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
+                            return false;
+                        }
+
                     }
                 }
             },
@@ -254,10 +278,12 @@ export class WodActorSheet extends ActorSheet {
         let rank = ranks.find(r => r.key === key);
 
         if (reset) {
+            // If reset, reset all ranks above current
             let upper = ranks.filter(r => r.ordinal >= rank.ordinal)
             upper.forEach(r => r.value = WOUND_TYPE.EMPTY);
         }
         else if (decrease) {
+            // If decrease, decrease all higher ranks whose values are greater
             rank.value = (rank.value <= WOUND_TYPE.EMPTY) ? WOUND_TYPE.EMPTY : rank.value - 1;
             let upper = ranks.filter(r => r.ordinal > rank.ordinal)
             upper.forEach(r => {
@@ -265,6 +291,7 @@ export class WodActorSheet extends ActorSheet {
             });
         }
         else {
+            // If increase, increase all lower ranks whose values are lower
             rank.value = (rank.value >= WOUND_TYPE.AGGRAVATED) ? WOUND_TYPE.AGGRAVATED : rank.value + 1;
             let lesser = ranks.filter(r => r.ordinal < rank.ordinal)
             lesser.forEach(r => {

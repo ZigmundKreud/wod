@@ -500,6 +500,10 @@
   padding: 5px;
 }
 
+.wod.actor .wrap .sheet-header .logo {
+  margin-left: -190px;
+}
+
 .wod.actor .wrap .sheet-header .portrait {
   background-color: lightgray;
   min-height: 250px;

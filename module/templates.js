@@ -18,6 +18,7 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-traits.hbs",
         "systems/wod/templates/actor/parts/actor-resources.hbs",
         "systems/wod/templates/actor/parts/score-rank.hbs",
+        "systems/wod/templates/actor/parts/resource-rank.hbs",
         "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
         "systems/wod/templates/dialogs/roll-ability-dialog.hbs",
         "systems/wod/templates/chat/roll-result-card.hbs"

@@ -14,19 +14,26 @@
 <div class="section-content abilities grid grid-3col">
     {{> "systems/wod/templates/actor/parts/actor-abilities.hbs"}}
 </div>
+{{#if (equals actor.type "werewolf")}}
 <div class="section-header flexrow">
-    <div class="flex3"></div>
-    <label class="section-title">{{localize "WOD.advantages.label"}}</label>
-    <div class="flex3"></div>
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.renown"}}</label>
+    </div>
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.label"}}</label>
+    </div>
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.health"}}</label>
+    </div>
 </div>
-<div class="section-content advantages grid grid-3col">
-    {{> "systems/wod/templates/actor/parts/actor-advantages.hbs"}}
-</div>
-<div class="section-header flexrow">
-    <div class="flex3"></div>
-    <label class="section-title">{{localize "WOD.resources.label"}}</label>
-    <div class="flex3"></div>
-</div>
+{{/if}}
+{{#if (equals actor.type "vampire")}}
+    <div class="section-header flexrow">
+        <div class="flex3"></div>
+        <label class="section-title">{{localize "WOD.resources.label"}}</label>
+        <div class="flex3"></div>
+    </div>
+{{/if}}
 <div class="section-content resources grid grid-3col">
     {{> "systems/wod/templates/actor/parts/actor-resources.hbs"}}
 </div>

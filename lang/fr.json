@@ -181,5 +181,15 @@
   "WOD.clan.toreador" : "Toréador",
   "WOD.clan.tremere" : "Tremere",
   "WOD.clan.tzimisce" : "Tzimisce",
-  "WOD.clan.venture" : "Ventrue"
+  "WOD.clan.venture" : "Ventrue",
+
+  "WOD.resources.humanity" : "Humanité",
+  "WOD.resources.bloodpool" : "Réserve de Sang",
+
+  "WOD.virtues.label" : "Vertues",
+  "WOD.virtues.cc" : "Conscience/Conviction",
+  "WOD.virtues.sci" : "Self-Control/Instinct",
+  "WOD.virtues.courage" : "Courage",
+
+  "WOD.error.negativeDicePool" : "Vous ne pouvez pas lancer un groupement de dés vide !"
 }

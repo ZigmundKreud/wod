@@ -272,6 +272,25 @@
             "temp": 0,
             "min": 0,
             "max": 10
+          },
+          "humanity": {
+            "type": "resource",
+            "key": "humanity",
+            "label": "WOD.resources.humanity",
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 10
+          },
+          "bloodpool": {
+            "type": "resource",
+            "key": "bloodpool",
+            "label": "WOD.resources.bloodpool",
+            "perturn": 0,
+            "value": 0,
+            "temp": 0,
+            "min": 0,
+            "max": 50
           }
         }
       },
@@ -713,7 +732,36 @@
         "base",
         "resources",
         "abilities"
-      ]
+      ],
+      "virtues": {
+        "cc": {
+          "type": "virtue",
+          "key": "cc",
+          "label": "WOD.virtues.cc",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "sci": {
+          "type": "virtue",
+          "key": "sci",
+          "label": "WOD.virtues.sci",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "courage": {
+          "type": "virtue",
+          "key": "courage",
+          "label": "WOD.virtues.courage",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      }
     },
     "human" : {
       "templates": [

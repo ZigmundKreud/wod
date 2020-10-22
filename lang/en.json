@@ -181,5 +181,15 @@
   "WOD.clan.toreador" : "Toreador",
   "WOD.clan.tremere" : "Tremere",
   "WOD.clan.tzimisce" : "Tzimisce",
-  "WOD.clan.venture" : "Ventrue"
+  "WOD.clan.venture" : "Ventrue",
+
+  "WOD.resources.humanity" : "Humanity",
+  "WOD.resources.bloodpool" : "Bloodpool",
+
+  "WOD.virtues.label" : "Virtues",
+  "WOD.virtues.cc" : "Conscience/Conviction",
+  "WOD.virtues.sci" : "Self-Control/Instinct",
+  "WOD.virtues.courage" : "Courage",
+
+  "WOD.error.negativeDicePool" : "You cannot roll an empty dice pool !"
 }
