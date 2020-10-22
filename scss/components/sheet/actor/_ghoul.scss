@@ -4,7 +4,7 @@
 
     .header-fields{
       .logo {
-        background-image: url("../ui/vampire/logo-v20.png") ;
+        background-image: url("../ui/ghoul/logo.png") ;
         background-repeat: no-repeat;
         background-position-x : center;
         background-position-y : top;
@@ -15,7 +15,7 @@
         margin-top:-10px;
       }
       .sheet-tabs {
-        font-family: $font-vampire;
+        font-family: $font-ghoul;
         font-weight: bold;
         font-size: 18px;
       }
@@ -25,12 +25,12 @@
   .sheet-body {
 
     .section-header{
-      background-image: url("../ui/vampire/separator.png");
+      background-image: url("../ui/ghoul/separator.png");
       background-repeat: no-repeat;
       background-size: 100% 37px;
       .section-title {
         background-color:white;
-        font-family: $font-vampire;
+        font-family: $font-ghoul;
         font-weight: bold;
         font-size: 20px;
         padding:0;
@@ -41,7 +41,7 @@
     .main {
       .section-content {
         .section-title {
-          font-family: $font-vampire;
+          font-family: $font-ghoul;
           font-weight: bold;
           font-size: 16px;
         }

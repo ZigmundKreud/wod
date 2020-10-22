@@ -71,14 +71,29 @@ export class WodActorSheet extends ActorSheet {
     async _onUpdateRank(event) {
         event.preventDefault();
         const header = $(event.currentTarget);
+        // console.log(event.currentTarget);
         const value = header.data("value");
-        const parent = $(event.currentTarget).parents(".score");
-        const ns = parent.data("namespace");
-        const key = parent.data("key");
-        const field = `data.${ns}.${key}.value`;
-        let data = {};
-        data[field] = value;
-        await this.actor.update(data);
+        const type = header.data("type");
+        console.log(value, type);
+        if(type === "score"){
+            const parent = $(event.currentTarget).parents(".score");
+            const ns = parent.data("namespace");
+            const key = parent.data("key");
+            const field = `data.${ns}.${key}.value`;
+            let data = {};
+            data[field] = value;
+            return this.actor.update(data);
+        }
+        if(type === "resource"){
+            const parent = $(event.currentTarget).parents(".resource");
+            const ns = parent.data("namespace");
+            const key = parent.data("key");
+            const field = `data.${ns}.${key}.value`;
+            console.log(ns, key, field);
+            // let data = {};
+            // data[field] = value;
+            // return this.actor.update(data);
+        }
     }
 
     /* -------------------------------------------- */

@@ -73,10 +73,10 @@ export const registerHandlebarsHelpers = async function() {
 
     Handlebars.registerHelper('score', function(value, min, max) {
         let str="";
-        if(min ==0) str += `<a class="rank rank-0" title="0" data-type="rank" data-value="0"><i class="fas fa-times"></i></a>&nbsp;`;
+        if(min ==0) str += `<a class="rank rank-0" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;`;
         for(let i=0; i < max; i++){
-            if(i < value) str += `<a class="rank" title="${i+1}" data-type="rank" data-value="${i+1}"><i class="fas fa-circle"></i></a>`;
-            else str += `<a class="rank" title="${i+1}" data-value="${i+1}"><i class="far fa-circle"></i></a>`;
+            if(i < value) str += `<a class="rank" title="${i+1}" data-type="score" data-value="${i+1}"><i class="fas fa-circle"></i></a>`;
+            else str += `<a class="rank" title="${i+1}" data-type="score" data-value="${i+1}"><i class="far fa-circle"></i></a>`;
         }
         return new Handlebars.SafeString(str);
     });

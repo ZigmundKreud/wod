@@ -33,8 +33,11 @@
         &.mage {
           @import 'scss/components/sheet/actor/mage';
         }
-        &.human {
-          @import 'scss/components/sheet/actor/human';
+        &.hunter {
+          @import 'scss/components/sheet/actor/hunter';
+        }
+        &.ghoul {
+          @import 'scss/components/sheet/actor/ghoul';
         }
       }
     }

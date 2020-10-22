@@ -87,6 +87,21 @@
   src: url('../fonts/delavan.ttf');
 }
 
+@font-face {
+  font-family: "Abbess";
+  src: url('../fonts/AbbessRegular.ttf');
+}
+
+@font-face {
+  font-family: "AbbessCompressed";
+  src: url('../fonts/AbbessCompressed.ttf');
+}
+
+@font-face {
+  font-family: "AbbessStretched";
+  src: url('../fonts/AbbessStretched.ttf');
+}
+
 //$font-primary: 'Roboto', sans-serif;
 //$font-secondary: 'Roboto', sans-serif;
 //$font-primary: 'MyriadPro', sans-serif;
@@ -94,6 +109,11 @@
 
 $font-primary: 'MyriadPro', sans-serif;
 $font-secondary: "GoudyOldStyle", Serif;
+$font-werewolf: "Werewolf", Serif;
+$font-vampire: "Delavan", Serif;
+$font-ghoul: "Delavan", Serif;
+$font-hunter: "Delavan", Serif;
+$font-mage: "Abbess", Serif;
 
 //$font-primary: 'Georgia', sans-serif;
 //$font-secondary: 'Georgia', sans-serif;

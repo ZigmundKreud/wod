@@ -15,7 +15,7 @@
         margin-top:-30px;
       }
       .sheet-tabs {
-        font-family: Werewolf;
+        font-family: $font-werewolf;
         font-weight: bold;
         font-size: 20px;
       }
@@ -31,7 +31,7 @@
 
       .section-title {
         background-color:white;
-        font-family: Werewolf;
+        font-family: $font-werewolf;
         font-weight: bold;
         font-size: 30px;
         padding:5px 10px 5px 10px;
@@ -43,7 +43,7 @@
     .main {
       .section-content {
         .section-title {
-          font-family: Werewolf;
+          font-family: $font-werewolf;
           font-weight: bold;
           font-size: 20px;
         }

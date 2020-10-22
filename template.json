@@ -3,12 +3,21 @@
     "types": [
       "werewolf",
       "vampire",
-      "human"
+      "ghoul",
+      "mage",
+      "hunter"
     ],
     "templates": {
       "base": {
-        "description": "",
-        "biography": "",
+        "details" : {
+          "description": "",
+          "biography": "",
+          "age": "",
+          "gender": "",
+          "player": "",
+          "chronicle": "",
+          "concept": ""
+        },
         "attributes": {
           "physical": {
             "key": "physical",
@@ -199,71 +208,15 @@
             }
           }
         },
-        "resources": {
-          "willpower": {
-            "type": "resource",
-            "key": "willpower",
-            "label": "WOD.resources.willpower",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "experience": {
-            "key": "experience",
-            "label": "WOD.experience",
-            "value": 0,
-            "max": 0
-          }
+        "experience": {
+          "key": "experience",
+          "label": "WOD.experience",
+          "value": 0,
+          "max": 0
         }
       },
       "resources": {
         "resources": {
-          "glory": {
-            "type": "renown",
-            "key": "glory",
-            "label": "WOD.resources.glory",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "honor": {
-            "type": "renown",
-            "key": "honor",
-            "label": "WOD.resources.honor",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "wisdom": {
-            "type": "renown",
-            "key": "wisdom",
-            "label": "WOD.resources.wisdom",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "rage": {
-            "type": "resource",
-            "key": "rage",
-            "label": "WOD.resources.rage",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "gnosis": {
-            "type": "resource",
-            "key": "gnosis",
-            "label": "WOD.resources.gnosis",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
           "willpower": {
             "type": "resource",
             "key": "willpower",
@@ -272,25 +225,6 @@
             "temp": 0,
             "min": 0,
             "max": 10
-          },
-          "humanity": {
-            "type": "resource",
-            "key": "humanity",
-            "label": "WOD.resources.humanity",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          },
-          "bloodpool": {
-            "type": "resource",
-            "key": "bloodpool",
-            "label": "WOD.resources.bloodpool",
-            "perturn": 0,
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 50
           }
         }
       },
@@ -311,6 +245,7 @@
             "label": "WOD.abilities.knowledges",
             "total": 0
           },
+
           "alertness": {
             "type": "talent",
             "key": "alertness",
@@ -320,10 +255,10 @@
             "min": 0,
             "max": 5
           },
-          "arts": {
+          "art": {
             "type": "talent",
-            "key": "arts",
-            "label": "WOD.talents.arts",
+            "key": "art",
+            "label": "WOD.talents.art",
             "value": 0,
             "temp": null,
             "min": 0,
@@ -392,15 +327,6 @@
             "min": 0,
             "max": 5
           },
-          "primalurge": {
-            "type": "talent",
-            "key": "primalurge",
-            "label": "WOD.talents.primalurge",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
           "streetwise": {
             "type": "talent",
             "key": "streetwise",
@@ -419,6 +345,7 @@
             "min": 0,
             "max": 5
           },
+
           "animalken": {
             "type": "skill",
             "key": "animalken",
@@ -464,24 +391,6 @@
             "min": 0,
             "max": 5
           },
-          "martialarts": {
-            "type": "skill",
-            "key": "martialarts",
-            "label": "WOD.skills.martialarts",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
-          "meditation": {
-            "type": "skill",
-            "key": "meditation",
-            "label": "WOD.skills.meditation",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
           "larceny": {
             "type": "skill",
             "key": "larceny",
@@ -495,15 +404,6 @@
             "type": "skill",
             "key": "melee",
             "label": "WOD.skills.melee",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
-          "research": {
-            "type": "skill",
-            "key": "research",
-            "label": "WOD.skills.research",
             "value": 0,
             "temp": null,
             "min": 0,
@@ -536,6 +436,7 @@
             "min": 0,
             "max": 5
           },
+
           "academics": {
             "type": "knowledge",
             "key": "academics",
@@ -554,37 +455,10 @@
             "min": 0,
             "max": 5
           },
-          "cosmology": {
-            "type": "knowledge",
-            "key": "cosmology",
-            "label": "WOD.knowledges.cosmology",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
           "finance": {
             "type": "knowledge",
             "key": "finance",
             "label": "WOD.knowledges.finance",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
-          "enigmas": {
-            "type": "knowledge",
-            "key": "enigmas",
-            "label": "WOD.knowledges.enigmas",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
-          "esoterica": {
-            "type": "knowledge",
-            "key": "esoterica",
-            "label": "WOD.knowledges.esoterica",
             "value": 0,
             "temp": null,
             "min": 0,
@@ -635,28 +509,10 @@
             "min": 0,
             "max": 5
           },
-          "rituals": {
-            "type": "knowledge",
-            "key": "rituals",
-            "label": "WOD.knowledges.rituals",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
           "science": {
             "type": "knowledge",
             "key": "science",
             "label": "WOD.knowledges.science",
-            "value": 0,
-            "temp": null,
-            "min": 0,
-            "max": 5
-          },
-          "technology": {
-            "type": "knowledge",
-            "key": "technology",
-            "label": "WOD.knowledges.technology",
             "value": 0,
             "temp": null,
             "min": 0,
@@ -671,15 +527,54 @@
         "resources",
         "abilities"
       ],
-      "breed": "",
-      "auspice": "",
-      "tribe": "",
-      "packname": "",
-      "packtotem": "",
-      "concept": "",
-      "deformity": "",
-      "battlescars": [],
-      "secondary" : {
+      "details" : {
+        "breed": "",
+        "auspice": "",
+        "tribe": "",
+        "packname": "",
+        "packtotem": "",
+        "deformities": [],
+        "battlescars": []
+      },
+      "abilities": {
+        "primalurge": {
+          "type": "talent",
+          "key": "primalurge",
+          "label": "WOD.talents.primalurge",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "enigmas": {
+          "type": "knowledge",
+          "key": "enigmas",
+          "label": "WOD.knowledges.enigmas",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "rituals": {
+          "type": "knowledge",
+          "key": "rituals",
+          "label": "WOD.knowledges.rituals",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "technology": {
+          "type": "knowledge",
+          "key": "technology",
+          "label": "WOD.knowledges.technology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
         "glory": {
           "type": "renown",
           "key": "glory",
@@ -733,6 +628,13 @@
         "resources",
         "abilities"
       ],
+      "details" : {
+        "nature": "",
+        "demeanor": "",
+        "clan": "",
+        "generation": "",
+        "sire": ""
+      },
       "virtues": {
         "cc": {
           "type": "virtue",
@@ -761,24 +663,340 @@
           "min": 0,
           "max": 5
         }
+      },
+      "abilities": {
+        "technology": {
+          "type": "knowledge",
+          "key": "technology",
+          "label": "WOD.knowledges.technology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
+        "humanity": {
+          "type": "resource",
+          "key": "humanity",
+          "label": "WOD.resources.humanity",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "bloodpool": {
+          "type": "resource",
+          "key": "bloodpool",
+          "label": "WOD.resources.bloodpool",
+          "perturn": 0,
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 50
+        }
       }
     },
-    "human" : {
+    "ghoul" : {
       "templates": [
         "base",
         "resources",
         "abilities"
-      ]
+      ],
+      "details" : {
+        "nature": "",
+        "demeanor": "",
+        "clan": "",
+        "generation": "",
+        "sire": ""
+      },
+      "virtues": {
+        "cc": {
+          "type": "virtue",
+          "key": "cc",
+          "label": "WOD.virtues.cc",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "sci": {
+          "type": "virtue",
+          "key": "sci",
+          "label": "WOD.virtues.sci",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "courage": {
+          "type": "virtue",
+          "key": "courage",
+          "label": "WOD.virtues.courage",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "abilities": {
+        "technology": {
+          "type": "knowledge",
+          "key": "technology",
+          "label": "WOD.knowledges.technology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
+        "humanity": {
+          "type": "resource",
+          "key": "humanity",
+          "label": "WOD.resources.humanity",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "bloodpool": {
+          "type": "resource",
+          "key": "bloodpool",
+          "label": "WOD.resources.bloodpool",
+          "perturn": 0,
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 50
+        }
+      }
+    },
+    "mage" : {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ],
+      "details" : {
+        "nature": "",
+        "demeanor": "",
+        "essence": "",
+        "affiliation": "",
+        "sect": ""
+      },
+      "abilities": {
+        "martialarts": {
+          "type": "skill",
+          "key": "martialarts",
+          "label": "WOD.skills.martialarts",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "meditation": {
+          "type": "skill",
+          "key": "meditation",
+          "label": "WOD.skills.meditation",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "research": {
+          "type": "skill",
+          "key": "research",
+          "label": "WOD.skills.research",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "technology": {
+          "type": "skill",
+          "key": "technology",
+          "label": "WOD.knowledges.technology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "cosmology": {
+          "type": "knowledge",
+          "key": "cosmology",
+          "label": "WOD.knowledges.cosmology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "enigmas": {
+          "type": "knowledge",
+          "key": "enigmas",
+          "label": "WOD.knowledges.enigmas",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "esoterica": {
+          "type": "knowledge",
+          "key": "esoterica",
+          "label": "WOD.knowledges.esoterica",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
+        "arete": {
+          "type": "resource",
+          "key": "arete",
+          "label": "WOD.resources.arete",
+          "value": 0,
+          "min": 0,
+          "max": 10
+        },
+        "quintessence": {
+          "type": "resource",
+          "key": "quintessence",
+          "label": "WOD.resources.quintessence",
+          "value": 0,
+          "min": 0,
+          "max": 10
+        },
+        "paradox": {
+          "type": "resource",
+          "key": "paradox",
+          "label": "WOD.resources.paradox",
+          "value": 0,
+          "min": 0,
+          "max": 10
+        }
+      }
+
+    },
+    "hunter" : {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ],
+      "details" : {
+        "nature": "",
+        "demeanor": "",
+        "residence": ""
+      },
+      "abilities": {
+        "technology": {
+          "type": "knowledge",
+          "key": "technology",
+          "label": "WOD.knowledges.technology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "virtues": {
+        "conscience": {
+          "type": "virtue",
+          "key": "conscience",
+          "label": "WOD.virtues.conscience",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "self-control": {
+          "type": "virtue",
+          "key": "self-control",
+          "label": "WOD.virtues.self-control",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "courage": {
+          "type": "virtue",
+          "key": "courage",
+          "label": "WOD.virtues.courage",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
+        "faith": {
+          "type": "resource",
+          "key": "faith",
+          "label": "WOD.resources.faith",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 5
+        },
+        "humanity": {
+          "type": "resource",
+          "key": "humanity",
+          "label": "WOD.resources.humanity",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        }
+      }
     }
   },
   "Item": {
     "types": [
-      "item"
+      "item",
+      "background",
+      "gift",
+      "rite",
+      "discipline",
+      "merit",
+      "flaw",
+      "fetish",
+      "talens"
     ],
+    "templates": {
+      "base": {
+        "description": "",
+        "quantity": 1,
+        "weight": 0
+      }
+    },
+
     "item": {
-      "description": "",
-      "quantity": 1,
-      "weight": 0
+      "templates": [ "base" ]
+    },
+    "background": {
+      "templates": [ "base" ]
+    },
+    "gift": {
+      "templates": [ "base" ]
+    },
+    "rite": {
+      "templates": [ "base" ]
+    },
+    "discipline": {
+      "templates": [ "base" ]
+    },
+    "merit": {
+      "templates": [ "base" ]
+    },
+    "flaw": {
+      "templates": [ "base" ]
+    },
+    "fetish": {
+      "templates": [ "base" ]
+    },
+    "talens": {
+      "templates": [ "base" ]
     }
   }
 }
