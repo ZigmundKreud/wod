@@ -1,0 +1,21 @@
+{{#each actor.data.health.status as | status id |}}
+    <div class="flexrow flex-between health-rank" data-key="{{status.key}}" data-item-id="health.status.{{status.key}}">
+        <div class="health-rank-label flex4 left ellipsis">
+            {{localize status.label}}
+            {{#if (equals status.value 1)}}&nbsp;<em style="color:darkgreen"><small>({{localize "WOD.damage.bashing"}})</small></em>{{/if}}
+            {{#if (equals status.value 2)}}&nbsp;<em style="color:orangered"><small>({{localize "WOD.damage.lethal"}})</small></em>{{/if}}
+            {{#if (equals status.value 3)}}&nbsp;<em style="color:darkred"><small>({{localize "WOD.damage.aggravated"}})</small></em>{{/if}}
+        </div>
+        <div class="health-rank-malus flex1 right" style="white-space: nowrap;">
+            {{#if status.malus}}
+                -{{status.malus}}
+            {{/if}}
+        </div>
+        <div class="health-rank-value flex1 right" style="white-space: nowrap;">
+        {{#if (equals status.value 0)}}<a class="health-rank-box empty"><img class="health-box" src="/systems/wod/ui/health/empty.png" height="12" width="12" style="border:none"/></a>{{/if}}
+        {{#if (equals status.value 1)}}<a class="health-rank-box bashing" title="{{localize "WOD.damage.bashing"}}"><img class="health-box" src="/systems/wod/ui/health/bashing.png" height="12" width="12" style="border:none"/></a>{{/if}}
+        {{#if (equals status.value 2)}}<a class="health-rank-box lethal" title="{{localize "WOD.damage.lethal"}}"><img class="health-box" src="/systems/wod/ui/health/lethal.png" height="12" width="12" style="border:none"/></a>{{/if}}
+        {{#if (equals status.value 3)}}<a class="health-rank-box aggravated" title="{{localize "WOD.damage.aggravated"}}"><img class="health-box" src="/systems/wod/ui/health/aggravated.png" height="12" width="12" style="border:none"/></a>{{/if}}
+        </div>
+    </div>
+{{/each}}

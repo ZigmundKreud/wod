@@ -25,6 +25,8 @@ export class WodActor extends Actor {
         console.log(actorData);
         let attributes = Object.values(actorData.data.attributes);
         let abilities = Object.values(actorData.data.abilities);
+        let healthStatuses = Object.values(actorData.data.health.status);
+        actorData.data.health.value = actorData.data.health.max - healthStatuses.filter(s => s.checked).length;
 
         let physical = attributes.filter(a => a.type === "physical")
         let social = attributes.filter(a => a.type === "social")

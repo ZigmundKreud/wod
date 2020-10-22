@@ -545,6 +545,11 @@
   margin-top: -10px;
 }
 
+.wod.actor .wrap .sheet-body .main .section-content .health .health-rank-label, .wod.actor .wrap .sheet-body .main .section-content .health .health-rank-malus {
+  font-family: "GoudyOldStyle", Serif;
+  font-size: 16px;
+}
+
 .wod.actor .wrap .sheet-body .main .section-content .score .score-label {
   font-family: "GoudyOldStyle", Serif;
   font-size: 16px;

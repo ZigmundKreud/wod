@@ -4,6 +4,7 @@
  */
 
 import {WodRoll} from "../roll.js";
+import {WOUND_TYPE, WodHealth} from "../health.js";
 
 export class WodActorSheet extends ActorSheet {
 
@@ -27,7 +28,19 @@ export class WodActorSheet extends ActorSheet {
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
 
+        let shiftKeyDown = false;
+        $(document).keydown(event => {
+            if (event.which === 16) shiftKeyDown = true;
+        });
+        $(document).keyup(() => shiftKeyDown = false);
+
         html.find('.attributes.score').contextmenu(this._onToggleActiveState.bind(this));
+
+        html.find('.health-rank-box').click(ev => {
+            if (shiftKeyDown) return this._onResetHealthRank(ev);
+            else return this._onIncreaseHealthRank(ev);
+        });
+        html.find('.health-rank-box').contextmenu(this._onDecreaseHealthRank.bind(this));
 
         // Add Inventory Item
         html.find('.rank').click(this._onUpdateRank.bind(this));
@@ -149,7 +162,7 @@ export class WodActorSheet extends ActorSheet {
         const activeAttribute = Object.values(this.actor.data.data.attributes).find(a => a.active);
         const rollData = {
             label: label,
-            attribute : (activeAttribute) ? `data.attributes.${activeAttribute.key}` : "data.attributes.str",
+            attribute: (activeAttribute) ? `data.attributes.${activeAttribute.key}` : "data.attributes.str",
             ability: id,
             explodes: explodes,
             bonus: bonus,
@@ -230,6 +243,62 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
+    _onUpdateHealthRank(event, decrease = false, reset = false) {
+        let data = this.getData();
+        let health = data.actor.data.health;
+
+        // Get health ranks
+        const li = $(event.currentTarget).closest(".health-rank");
+        const key = li.data("key");
+        let ranks = Object.values(health.status);
+        let rank = ranks.find(r => r.key === key);
+
+        if (reset) {
+            let upper = ranks.filter(r => r.ordinal >= rank.ordinal)
+            upper.forEach(r => r.value = WOUND_TYPE.EMPTY);
+        }
+        else if (decrease) {
+            rank.value = (rank.value <= WOUND_TYPE.EMPTY) ? WOUND_TYPE.EMPTY : rank.value - 1;
+            let upper = ranks.filter(r => r.ordinal > rank.ordinal)
+            upper.forEach(r => {
+                if(r.value > rank.value) r.value = rank.value
+            });
+        }
+        else {
+            rank.value = (rank.value >= WOUND_TYPE.AGGRAVATED) ? WOUND_TYPE.AGGRAVATED : rank.value + 1;
+            let lesser = ranks.filter(r => r.ordinal < rank.ordinal)
+            lesser.forEach(r => {
+                if(r.value < rank.value) r.value = rank.value
+            });
+        }
+
+        WodHealth.updateRanks(ranks);
+
+        return this.actor.update({"data.health": health});
+    }
+
+    /* -------------------------------------------- */
+
+    _onIncreaseHealthRank(event) {
+        event.preventDefault();
+        return this._onUpdateHealthRank(event, false, false)
+    }
+
+    /* -------------------------------------------- */
+
+    _onDecreaseHealthRank(event) {
+        event.preventDefault();
+        return this._onUpdateHealthRank(event, true, false)
+    }
+
+    /* -------------------------------------------- */
+
+    _onResetHealthRank(event) {
+        event.preventDefault();
+        return this._onUpdateHealthRank(event, false, true)
+    }
+
+    /* -------------------------------------------- */
     /**
      * Handle clickable rolls.
      * @param {Event} event   The originating click event
@@ -248,7 +317,7 @@ export class WodActorSheet extends ActorSheet {
         const active = eval(`attributes.${id}`);
         console.log(active);
         active.active = true;
-        return this.actor.update({"data.attributes" : attributes});
+        return this.actor.update({"data.attributes": attributes});
     }
 
     /* -------------------------------------------- */

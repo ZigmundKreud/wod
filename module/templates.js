@@ -12,6 +12,7 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-advantages.hbs",
         "systems/wod/templates/actor/parts/actor-attributes.hbs",
         "systems/wod/templates/actor/parts/actor-details.hbs",
+        "systems/wod/templates/actor/parts/actor-health.hbs",
         "systems/wod/templates/actor/parts/actor-main.hbs",
         "systems/wod/templates/actor/parts/actor-inventory.hbs",
         "systems/wod/templates/actor/parts/actor-traits.hbs",

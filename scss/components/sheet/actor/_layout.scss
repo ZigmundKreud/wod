@@ -59,6 +59,17 @@
       .main {
         .section-content {
           margin-top:-10px;
+          .health {
+            .health-rank-label, .health-rank-malus{
+              font-family: $font-secondary;
+              font-size : 16px;
+            }
+            .health-rank-value {
+              .health-rank-box {
+              }
+            }
+          }
+
           .score {
             .score-label {
               font-family: $font-secondary;
@@ -66,13 +77,6 @@
 
               &.active{
                 text-decoration: underline;
-                //color:darkred;
-                //&:before {
-                //  content : ">>"
-                //}
-                //&:after {
-                //  content : "<<"
-                //}
               }
             }
             .rank {

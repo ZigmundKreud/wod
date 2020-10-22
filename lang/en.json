@@ -1,10 +1,5 @@
 {
   "WOD.None" : "--",
-  "WOD.armor": "Armor",
-  "WOD.rank": "Rank",
-  "WOD.experience": "Experience",
-  "WOD.value": "Value",
-  "WOD.max": "Max",
   "WOD.ui.attribute": "Attribute",
   "WOD.ui.ability": "Capacity",
   "WOD.ui.difficulty": "Difficulty",
@@ -65,7 +60,6 @@
   "WOD.damage.lethal": "Lethal",
   "WOD.damage.aggravated": "Aggravated",
 
-  "WOD.health.label": "Health",
   "WOD.health.bruised": "Bruised",
   "WOD.health.hurt": "Hurt",
   "WOD.health.injured": "Injured",
@@ -74,6 +68,12 @@
   "WOD.health.crippled": "Crippled",
   "WOD.health.incapacitated": "Incapacitated",
 
+  "WOD.advantages.label": "Advantages",
+  "WOD.advantages.backgrounds" : "Backgrounds",
+  "WOD.advantages.gifts" : "Gifts",
+
+  "WOD.resources.rank": "Rank",
+  "WOD.resources.renown" : "Renown",
   "WOD.resources.label": "Resources",
   "WOD.resources.glory": "Glory",
   "WOD.resources.honor": "Honor",
@@ -81,6 +81,8 @@
   "WOD.resources.rage": "Rage",
   "WOD.resources.gnosis": "Gnosis",
   "WOD.resources.willpower": "Willpower",
+  "WOD.resources.health": "Health",
+  "WOD.resources.experience": "Experience",
 
   "WOD.attributes.label": "Attributes",
   "WOD.attributes.physical": "Physical",
@@ -143,7 +145,6 @@
   "WOD.knowledges.science": "Science",
   "WOD.knowledges.technology": "Technology",
 
-  "WOD.advantages.label": "Advantages",
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",
   "WOD.auspice.philodox": "Philodox",

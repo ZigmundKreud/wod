@@ -1,10 +1,5 @@
 {
   "WOD.None" : "--",
-  "WOD.armor": "Armure",
-  "WOD.rank": "Rang",
-  "WOD.experience": "Expérience",
-  "WOD.value": "Valeur",
-  "WOD.max": "Max",
   "WOD.ui.attribute": "Attribut",
   "WOD.ui.ability": "Capacité",
   "WOD.ui.difficulty": "Difficulté",
@@ -65,15 +60,20 @@
   "WOD.damage.lethal": "Létal",
   "WOD.damage.aggravated": "Aggravé",
 
-  "WOD.health.label": "Santé",
   "WOD.health.bruised": "Contusion",
   "WOD.health.hurt": "Blessure légère",
   "WOD.health.injured": "Blessure moyenne",
-  "WOD.health.wounded": "Blessure grapve",
+  "WOD.health.wounded": "Blessure grave",
   "WOD.health.mauled": "Handicap",
   "WOD.health.crippled": "Infirmité",
   "WOD.health.incapacitated": "Invalidité",
 
+  "WOD.advantages.label": "Avantages",
+  "WOD.advantages.backgrounds" : "Historiques",
+  "WOD.advantages.gifts" : "Dons",
+
+  "WOD.resources.rank": "Rang",
+  "WOD.resources.renown" : "Renommée",
   "WOD.resources.label": "Ressources",
   "WOD.resources.glory": "Gloire",
   "WOD.resources.honor": "Honneur",
@@ -81,6 +81,8 @@
   "WOD.resources.rage": "Rage",
   "WOD.resources.gnosis": "Gnose",
   "WOD.resources.willpower": "Volonté",
+  "WOD.resources.health": "Santé",
+  "WOD.resources.experience": "Expérience",
 
   "WOD.attributes.label": "Attributs",
   "WOD.attributes.physical": "Physiques",
@@ -143,8 +145,6 @@
   "WOD.knowledges.science": "Sciences",
   "WOD.knowledges.technology": "Technologie",
 
-  "WOD.advantages.label": "Avantages",
-
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",
   "WOD.auspice.philodox": "Philodox",
@@ -182,5 +182,4 @@
   "WOD.clan.tremere" : "Tremere",
   "WOD.clan.tzimisce" : "Tzimisce",
   "WOD.clan.venture" : "Ventrue"
-
 }
