@@ -1,11 +1,15 @@
 export const registerHandlebarsHelpers = async function() {
 
+    Handlebars.registerHelper('getAbilities', function (items, type) {
+        let abilities = (items instanceof Object) ?Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
+        abilities.sort(function (a, b) {
+            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+        });
+        return abilities;
+    });
+
     Handlebars.registerHelper('filterByType', function (items, type) {
-        if(items instanceof Object){
-            return Object.values(items).filter(item => item.type === type);
-        }else {
-            return items.filter(item => item.type === type);
-        }
+        return (items instanceof Object) ? Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
     });
 
     Handlebars.registerHelper('isOfType', function (item, type) {

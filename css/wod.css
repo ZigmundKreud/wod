@@ -7,42 +7,13 @@
 }
 
 @font-face {
-  font-family: "MyriadPro";
-  font-style: italic;
-  src: url("../fonts/MyriadPro-It.otf");
-}
-
-@font-face {
-  font-family: "MyriadPro";
-  font-weight: bold;
-  src: url("../fonts/MyriadPro-Bold.otf");
-}
-
-@font-face {
-  font-family: "MyriadPro";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../fonts/MyriadPro-BoldIt.otf");
-}
-
-@font-face {
-  font-family: "MyriadProLight";
-  src: url("../fonts/MyriadPro-Light.otf");
-}
-
-@font-face {
-  font-family: "MyriadProBlack";
-  src: url("../fonts/MyriadPro-Black.otf");
-}
-
-@font-face {
   font-family: "Werewolf";
   src: url("../fonts/werewolf.ttf");
 }
 
 @font-face {
   font-family: "GoudyOldStyle";
-  src: url("../fonts/GoudyOldStyle.ttf");
+  src: url("../fonts/GoudyOldStyleRegular.ttf");
 }
 
 @font-face {
@@ -58,6 +29,16 @@
 @font-face {
   font-family: "Abbess";
   src: url("../fonts/AbbessRegular.ttf");
+}
+
+@font-face {
+  font-family: "DeRoos";
+  src: url("../fonts/DeRoosCaps.ttf");
+}
+
+@font-face {
+  font-family: "Emerald Isle";
+  src: url("../fonts/emeri.ttf");
 }
 
 .ellipsis {
@@ -578,6 +559,7 @@
   background-image: url("../ui/werewolf/separator-short.png");
   background-repeat: repeat-x;
   background-size: 311px 37px;
+  background-position-y: center;
 }
 
 .wod.actor .window-content .editable.werewolf .wrap .sheet-body .section-header .section-title {
@@ -586,7 +568,7 @@
   font-weight: bold;
   font-size: 30px;
   padding: 5px 10px 5px 10px;
-  margin: 0 10px 0 10px;
+  margin: 7px 10px 0 10px;
   -webkit-box-shadow: 0 0 10px white;
   box-shadow: 0 0 10px white;
 }
@@ -623,6 +605,7 @@
   background-image: url("../ui/vampire/separator.png");
   background-repeat: no-repeat;
   background-size: 100% 37px;
+  background-position-y: center;
 }
 
 .wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header .section-title {
@@ -630,11 +613,53 @@
   font-family: "Delavan", Serif;
   font-size: 24px;
   padding: 0 10px;
-  margin: -10px 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.vampire .wrap .sheet-body .main .section-content .section-title {
   font-family: "Delavan", Serif;
+  font-size: 18px;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .logo {
+  background-image: url("../ui/vampire_da/logo.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: auto 130px;
+  min-height: 130px;
+  height: 130px;
+  max-height: 130px;
+  margin-top: -10px;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Emerald Isle", Serif;
+  font-size: 14px;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .sheet-tabs {
+  font-family: "Emerald Isle", Serif;
+  font-size: 18px;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .section-header {
+  background-image: url("../ui/vampire_da/separator.png");
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  background-position-y: center;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .section-header .section-title {
+  background-color: white;
+  font-family: "Emerald Isle", Serif;
+  font-size: 24px;
+  padding: 0 10px;
+  margin: 0 10px 0 10px;
+}
+
+.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .main .section-content .section-title {
+  font-family: "Emerald Isle", Serif;
   font-size: 18px;
 }
 
@@ -666,6 +691,7 @@
   background-image: url("../ui/mage/separator.png");
   background-repeat: no-repeat;
   background-size: 100% 22px;
+  background-position-y: center;
 }
 
 .wod.actor .window-content .editable.mage .wrap .sheet-body .section-header .section-title {
@@ -674,7 +700,7 @@
   font-weight: bold;
   font-size: 25px;
   padding: 0 10px 0 10px;
-  margin: -30px 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .section-title {
@@ -710,6 +736,7 @@
   background-image: url("../ui/vampire/separator.png");
   background-repeat: no-repeat;
   background-size: 100% 37px;
+  background-position-y: center;
 }
 
 .wod.actor .window-content .editable.hunter .wrap .sheet-body .section-header .section-title {
@@ -717,7 +744,7 @@
   font-family: "Delavan", Serif;
   font-size: 24px;
   padding: 0 10px;
-  margin: -10px 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.hunter .wrap .sheet-body .main .section-content .section-title {
@@ -752,6 +779,7 @@
   background-image: url("../ui/ghoul/separator.png");
   background-repeat: no-repeat;
   background-size: 100% 37px;
+  background-position-y: center;
 }
 
 .wod.actor .window-content .editable.ghoul .wrap .sheet-body .section-header .section-title {
@@ -759,7 +787,7 @@
   font-family: "Delavan", Serif;
   font-size: 24px;
   padding: 0 10px;
-  margin: -10px 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 .wod.actor .window-content .editable.ghoul .wrap .sheet-body .main .section-content .section-title {

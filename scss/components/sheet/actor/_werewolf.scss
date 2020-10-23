@@ -35,14 +35,14 @@
       background-image: url("../ui/werewolf/separator-short.png");
       background-repeat: repeat-x;
       background-size: 311px 37px;
-
+      background-position-y: center;
       .section-title {
         background-color:white;
         font-family: $font-werewolf;
         font-weight: bold;
         font-size: 30px;
         padding:5px 10px 5px 10px;
-        margin:0 10px 0 10px;
+        margin:7px 10px 0 10px;
         box-shadow: 0 0 10px white;
       }
     }

@@ -1,0 +1,55 @@
+<div class="section-header flexrow">
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.renown"}}</label>
+    </div>
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.label"}}</label>
+    </div>
+    <div class="flex1 center">
+        <label class="section-title">{{localize "WOD.resources.health"}}</label>
+    </div>
+</div>
+<div class="section-content resources grid grid-3col">
+    <div class="primary flex-group-center" style="padding: 0 40px;">
+        <label class="section-title">{{localize "WOD.resources.glory"}}</label>
+        {{#with data.resources.glory as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="glory"}}
+        {{/with}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.honor"}}</label>
+        {{#with data.resources.honor as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="honor"}}
+        {{/with}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.wisdom"}}</label>
+        {{#with data.resources.wisdom as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="wisdom"}}
+        {{/with}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.rank"}}</label>
+        <br/>
+    </div>
+    <div class="secondary flex-group-center" style="padding: 0 40px;">
+        <label class="section-title">{{localize "WOD.resources.rage"}}</label>
+        {{#with data.resources.rage as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="rage"}}
+        {{/with}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.gnosis"}}</label>
+        {{#with data.resources.gnosis as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="gnosis"}}
+        {{/with}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.willpower"}}</label>
+        {{#with data.resources.willpower as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="willpower"}}
+        {{/with}}
+    </div>
+    <div class="health flex-group-center" style="padding: 0 10px;">
+        <label class="section-title">{{localize "WOD.resources.health"}}</label>
+        {{> "systems/wod/templates/actor/parts/actor-health.hbs"}}
+        <br/>
+        <label class="section-title">{{localize "WOD.resources.experience"}}</label>
+        <br/>
+    </div>
+</div>

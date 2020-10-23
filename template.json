@@ -3,6 +3,7 @@
     "types": [
       "werewolf",
       "vampire",
+      "vampire_da",
       "ghoul",
       "mage",
       "hunter"
@@ -697,6 +698,126 @@
         }
       }
     },
+    "vampire_da" : {
+      "templates": [
+        "base",
+        "resources",
+        "abilities"
+      ],
+      "details" : {
+        "nature": "",
+        "demeanor": "",
+        "clan": "",
+        "generation": "",
+        "sire": ""
+      },
+      "virtues": {
+        "cc": {
+          "type": "virtue",
+          "key": "cc",
+          "label": "WOD.virtues.cc",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "sci": {
+          "type": "virtue",
+          "key": "sci",
+          "label": "WOD.virtues.sci",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "courage": {
+          "type": "virtue",
+          "key": "courage",
+          "label": "WOD.virtues.courage",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "abilities": {
+        "legerdemain": {
+          "type": "talent",
+          "key": "legerdemain",
+          "label": "WOD.talents.legerdemain",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "archery": {
+          "type": "skill",
+          "key": "archery",
+          "label": "WOD.skills.archery",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "commerce": {
+          "type": "skill",
+          "key": "commerce",
+          "label": "WOD.skills.commerce",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "hearth-wisdom": {
+          "type": "knowledge",
+          "key": "hearth-wisdom",
+          "label": "WOD.knowledges.hearth-wisdom",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "seneschal": {
+          "type": "knowledge",
+          "key": "seneschal",
+          "label": "WOD.knowledges.seneschal",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "theology": {
+          "type": "knowledge",
+          "key": "theology",
+          "label": "WOD.knowledges.theology",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "resources" : {
+        "humanity": {
+          "type": "resource",
+          "key": "humanity",
+          "label": "WOD.resources.humanity",
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 10
+        },
+        "bloodpool": {
+          "type": "resource",
+          "key": "bloodpool",
+          "label": "WOD.resources.bloodpool",
+          "perturn": 0,
+          "value": 0,
+          "temp": 0,
+          "min": 0,
+          "max": 50
+        }
+      }
+    },
     "ghoul" : {
       "templates": [
         "base",
@@ -875,8 +996,90 @@
           "min": 0,
           "max": 10
         }
+      },
+      "spheres": {
+        "correspondence": {
+          "type": "sphere",
+          "key": "correspondence",
+          "label": "WOD.spheres.correspondence",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "entropy": {
+          "type": "sphere",
+          "key": "entropy",
+          "label": "WOD.spheres.entropy",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "forces": {
+          "type": "sphere",
+          "key": "forces",
+          "label": "WOD.spheres.forces",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "life": {
+          "type": "sphere",
+          "key": "life",
+          "label": "WOD.spheres.life",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "matter": {
+          "type": "sphere",
+          "key": "matter",
+          "label": "WOD.spheres.matter",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "mind": {
+          "type": "sphere",
+          "key": "mind",
+          "label": "WOD.spheres.mind",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "prime": {
+          "type": "sphere",
+          "key": "prime",
+          "label": "WOD.spheres.prime",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "spirit": {
+          "type": "sphere",
+          "key": "spirit",
+          "label": "WOD.spheres.spirit",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        },
+        "time": {
+          "type": "sphere",
+          "key": "time",
+          "label": "WOD.spheres.time",
+          "value": 0,
+          "temp": null,
+          "min": 0,
+          "max": 5
+        }
       }
-
     },
     "hunter" : {
       "templates": [

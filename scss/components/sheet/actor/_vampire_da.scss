@@ -4,7 +4,7 @@
 
     .header-fields{
       .logo {
-        background-image: url("../ui/hunter/logo.png") ;
+        background-image: url("../ui/vampire_da/logo.png") ;
         background-repeat: no-repeat;
         background-position-x : center;
         background-position-y : top;
@@ -16,13 +16,12 @@
       }
       .details {
         .field-label{
-          font-family: $font-hunter;
+          font-family: $font-vampire_da;
           font-size: 14px;
         }
       }
       .sheet-tabs {
-        font-family: $font-hunter;
-        font-weight: bold;
+        font-family: $font-vampire_da;
         font-size: 18px;
       }
     }
@@ -31,13 +30,13 @@
   .sheet-body {
 
     .section-header{
-      background-image: url("../ui/vampire/separator.png");
+      background-image: url("../ui/vampire_da/separator.png");
       background-repeat: no-repeat;
-      background-size: 100% 37px;
+      background-size: 100% 10px;
       background-position-y: center;
       .section-title {
         background-color:white;
-        font-family: $font-hunter;
+        font-family: $font-vampire_da;
         font-size: 24px;
         padding:0 10px;
         margin:0 10px 0 10px;
@@ -47,7 +46,7 @@
     .main {
       .section-content {
         .section-title {
-          font-family: $font-hunter;
+          font-family: $font-vampire_da;
           font-size: 18px;
         }
       }

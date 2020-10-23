@@ -30,6 +30,9 @@
         &.vampire {
           @import 'scss/components/sheet/actor/vampire';
         }
+        &.vampire_da {
+          @import 'scss/components/sheet/actor/vampire_da';
+        }
         &.mage {
           @import 'scss/components/sheet/actor/mage';
         }

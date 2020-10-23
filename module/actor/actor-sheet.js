@@ -167,7 +167,7 @@ export class WodActorSheet extends ActorSheet {
                         const pool = parseInt(attrValue, 10) + parseInt(bonus, 10)
                         const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
                         if(pool>0){
-                            const r = new WodRoll(pool, diff, expl);
+                            const r = new WodRoll(pool, bonus, diff, expl);
                             r.roll();
                             r.toMessage(label, this.actor);
                         }
@@ -232,7 +232,7 @@ export class WodActorSheet extends ActorSheet {
                         const fullLabel = `${prefix} - ${attrLabel}/${abilityLabel}`;
 
                         if(pool>0){
-                            const r = new WodRoll(pool, diff, expl);
+                            const r = new WodRoll(pool, bonus, diff, expl);
                             r.roll();
                             r.toMessage(fullLabel, this.actor);
                         }

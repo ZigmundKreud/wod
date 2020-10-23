@@ -10,8 +10,9 @@ const SUCCESS_DEGREE = {
 
 export class WodRoll {
 
-    constructor(pool, difficulty = 6, explodes = 10) {
+    constructor(pool, bonus, difficulty = 6, explodes = 10) {
         this._pool = pool;
+        this._bonus = bonus;
         this._difficulty = difficulty;
         this._explodes = explodes;
         this._sd = 0;
@@ -86,7 +87,9 @@ export class WodRoll {
         const rollData = {
             roll : this._roll,
             dices : this._roll.terms[0].results,
+            pool : this._pool - this._bonus,
             difficulty : this._difficulty,
+            bonus : this._bonus,
             successes : this._successes,
             ones : this._ones
         }

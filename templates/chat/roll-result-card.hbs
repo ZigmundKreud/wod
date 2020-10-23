@@ -6,8 +6,16 @@
                 <section class="tooltip-part">
                     <div class="dice">
                         <header class="part-header flexrow">
+                            <span class="part-formula">{{localize "WOD.ui.dicepool"}}</span>
+                            <span class="part-total">{{pool}}</span>
+                        </header>
+                        <header class="part-header flexrow">
                             <span class="part-formula">{{localize "WOD.ui.difficulty"}}</span>
                             <span class="part-total">{{difficulty}}</span>
+                        </header>
+                        <header class="part-header flexrow">
+                            <span class="part-formula">{{localize "WOD.ui.bonus"}}/{{localize "WOD.ui.malus"}}</span>
+                            <span class="part-total">{{bonus}}</span>
                         </header>
                         <header class="part-header flexrow">
                             <span class="part-formula">{{localize "WOD.ui.successes"}}</span>

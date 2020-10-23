@@ -10,42 +10,13 @@
 }
 
 @font-face {
-  font-family: "MyriadPro";
-  font-style: italic;
-  src: url('../fonts/MyriadPro-It.otf');
-}
-
-@font-face {
-  font-family: "MyriadPro";
-  font-weight: bold;
-  src: url('../fonts/MyriadPro-Bold.otf');
-}
-
-@font-face {
-  font-family: "MyriadPro";
-  font-weight: bold;
-  font-style: italic;
-  src: url('../fonts/MyriadPro-BoldIt.otf');
-}
-
-@font-face {
-  font-family: "MyriadProLight";
-  src: url('../fonts/MyriadPro-Light.otf');
-}
-
-@font-face {
-  font-family: "MyriadProBlack";
-  src: url('../fonts/MyriadPro-Black.otf');
-}
-
-@font-face {
   font-family: "Werewolf";
   src: url('../fonts/werewolf.ttf');
 }
 
 @font-face {
   font-family: "GoudyOldStyle";
-  src: url('../fonts/GoudyOldStyle.ttf');
+  src: url('../fonts/GoudyOldStyleRegular.ttf');
 }
 
 @font-face {
@@ -63,12 +34,23 @@
   src: url('../fonts/AbbessRegular.ttf');
 }
 
+@font-face {
+  font-family: "DeRoos";
+  src: url('../fonts/DeRoosCaps.ttf');
+}
+
+@font-face {
+  font-family: "Emerald Isle";
+  src: url('../fonts/emeri.ttf');
+}
+
 $font-primary: 'MyriadPro', sans-serif;
 $font-secondary: "GoudyOldStyle", Serif;
 
 $font-werewolf: "Werewolf", Serif;
 $font-werewolf2: "CaflischScriptPro", Serif;
 $font-vampire: "Delavan", Serif;
+$font-vampire_da: "Emerald Isle", Serif;
 $font-ghoul: "Delavan", Serif;
 $font-hunter: "Delavan", Serif;
 $font-mage: "Abbess", Serif;

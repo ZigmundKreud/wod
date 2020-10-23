@@ -19,6 +19,19 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-resources.hbs",
         "systems/wod/templates/actor/parts/score-rank.hbs",
         "systems/wod/templates/actor/parts/resource-rank.hbs",
+
+        "systems/wod/templates/actor/parts/ghoul/actor-details.hbs",
+        "systems/wod/templates/actor/parts/ghoul/actor-secondary.hbs",
+        "systems/wod/templates/actor/parts/hunter/actor-details.hbs",
+        "systems/wod/templates/actor/parts/hunter/actor-secondary.hbs",
+        "systems/wod/templates/actor/parts/mage/actor-details.hbs",
+        "systems/wod/templates/actor/parts/mage/actor-secondary.hbs",
+        "systems/wod/templates/actor/parts/vampire/actor-details.hbs",
+        "systems/wod/templates/actor/parts/vampire/actor-secondary.hbs",
+        "systems/wod/templates/actor/parts/vampire/bloodpool.hbs",
+        "systems/wod/templates/actor/parts/werewolf/actor-details.hbs",
+        "systems/wod/templates/actor/parts/werewolf/actor-secondary.hbs",
+
         "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
         "systems/wod/templates/dialogs/roll-ability-dialog.hbs",
         "systems/wod/templates/chat/roll-result-card.hbs"

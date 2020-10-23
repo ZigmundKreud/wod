@@ -1,0 +1,29 @@
+<div class="section-header flexrow">
+    <div class="flex3"></div>
+    <label class="section-title">{{localize "WOD.resources.label"}}</label>
+    <div class="flex3"></div>
+</div>
+<div class="section-content resources grid grid-3col">
+    <div class="primary flex-group-center">
+        <label class="section-title">{{localize "WOD.virtues.label"}}</label>
+        {{#each (filterByType data.virtues "virtue") as |attr id|}}
+            {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="virtues"}}
+        {{/each}}
+    </div>
+    <div class="secondary flex-group-center" style="padding: 0 40px;">
+        <label class="section-title">{{localize "WOD.resources.humanity"}}</label>
+        {{#with data.resources.humanity as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="humanity"}}
+        {{/with}}
+        <br/> <label class="section-title">{{localize "WOD.resources.willpower"}}</label>
+        {{#with data.resources.willpower as |res id|}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="willpower"}}
+        {{/with}}
+        <br/> <label class="section-title">{{localize "WOD.resources.bloodpool"}}</label>
+    </div>
+    <div class="health flex-group-center" style="padding: 0 10px;">
+        <label class="section-title">{{localize "WOD.resources.health"}}</label>
+        {{> "systems/wod/templates/actor/parts/actor-health.hbs"}}
+        <br/> <label class="section-title">{{localize "WOD.resources.experience"}}</label> <br/>
+    </div>
+</div>

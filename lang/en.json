@@ -15,6 +15,7 @@
   "WOD.ui.description" : "Description",
   "WOD.ui.traits" : "Traits",
   "WOD.ui.inventory" : "Inventory",
+  "WOD.ui.dicepool" : "Dice Pool",
 
   "WOD.difficulty.mundane" : "Mundane",
   "WOD.difficulty.trivial" : "Trivial",
@@ -117,11 +118,14 @@
   "WOD.talents.expression": "Expression",
   "WOD.talents.intimidation": "Intimidation",
   "WOD.talents.leadership": "Leadership",
+  "WOD.talents.legerdemain": "Legerdemain",
   "WOD.talents.primalurge": "Primal Urge",
   "WOD.talents.streetwise": "Streewise",
   "WOD.talents.subterfuge": "Subterfuge",
 
   "WOD.skills.animalken": "Animal ken",
+  "WOD.skills.archery": "Archery",
+  "WOD.skills.commerce": "Commerce",
   "WOD.skills.crafts": "Crafts",
   "WOD.skills.drive": "Drive",
   "WOD.skills.etiquette": "Etiquette",
@@ -138,8 +142,9 @@
   "WOD.knowledges.academics": "Academics",
   "WOD.knowledges.computer": "Computer",
   "WOD.knowledges.cosmology": "Cosmology",
-  "WOD.knowledges.finance": "Finance",
   "WOD.knowledges.enigmas": "Enigmas",
+  "WOD.knowledges.hearth-wisdom": "Hearth Wisdom",
+  "WOD.knowledges.finance": "Finance",
   "WOD.knowledges.esoterica": "Esoterica",
   "WOD.knowledges.investigation": "Investigation",
   "WOD.knowledges.law": "Law",
@@ -147,8 +152,10 @@
   "WOD.knowledges.occult": "Occult",
   "WOD.knowledges.politics": "Politics",
   "WOD.knowledges.rituals": "Rituals",
+  "WOD.knowledges.seneschal": "Seneschal",
   "WOD.knowledges.science": "Science",
   "WOD.knowledges.technology": "Technology",
+  "WOD.knowledges.theology": "Theology",
 
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",
@@ -190,11 +197,28 @@
 
   "WOD.resources.humanity" : "Humanity",
   "WOD.resources.bloodpool" : "Bloodpool",
+  "WOD.resources.road" : "Road",
+  "WOD.resources.aura" : "Aura",
+  "WOD.resources.weakness" : "Weakness",
 
   "WOD.virtues.label" : "Virtues",
   "WOD.virtues.cc" : "Conscience/Conviction",
   "WOD.virtues.sci" : "Self-Control/Instinct",
+  "WOD.virtues.conscience" : "Conscience",
+  "WOD.virtues.self-control" : "Self-Control",
   "WOD.virtues.courage" : "Courage",
+
+  "WOD.disciplines.label" : "Disciplines",
+
+  "WOD.spheres.correspondence" : "Correspondence",
+  "WOD.spheres.entropy" : "Entropy",
+  "WOD.spheres.forces" : "Forces",
+  "WOD.spheres.life" : "Life",
+  "WOD.spheres.matter" : "Matter",
+  "WOD.spheres.mind" : "Mind",
+  "WOD.spheres.prime" : "Prime",
+  "WOD.spheres.spirit" : "Spirit",
+  "WOD.spheres.time" : "Time",
 
   "WOD.error.negativeDicePool" : "You cannot roll an empty dice pool !"
 }

@@ -15,6 +15,7 @@
   "WOD.ui.description" : "Description",
   "WOD.ui.traits" : "Traits",
   "WOD.ui.inventory" : "Inventaire",
+  "WOD.ui.dicepool" : "Réserve de dés",
 
   "WOD.difficulty.mundane" : "Banal",
   "WOD.difficulty.trivial" : "Routinier",
@@ -117,11 +118,14 @@
   "WOD.talents.expression": "Expression",
   "WOD.talents.intimidation": "Intimidation",
   "WOD.talents.leadership": "Commandement",
+  "WOD.talents.legerdemain": "Adresse",
   "WOD.talents.primalurge": "Intuition primitive",
   "WOD.talents.streetwise": "Expérience de la rue",
   "WOD.talents.subterfuge": "Subterfuge",
 
   "WOD.skills.animalken": "Animaux",
+  "WOD.skills.archery": "Tir à l'arc",
+  "WOD.skills.commerce": "Commerce",
   "WOD.skills.crafts": "Artisanats",
   "WOD.skills.drive": "Conduite",
   "WOD.skills.etiquette": "Etiquette",
@@ -138,8 +142,9 @@
   "WOD.knowledges.academics": "Erudition",
   "WOD.knowledges.computer": "Informatique",
   "WOD.knowledges.cosmology": "Cosmologie",
-  "WOD.knowledges.finance": "Finance",
   "WOD.knowledges.enigmas": "Enigmes",
+  "WOD.knowledges.hearth-wisdom": "Sagesse populaire",
+  "WOD.knowledges.finance": "Finance",
   "WOD.knowledges.esoterica": "Esotérisme",
   "WOD.knowledges.investigation": "Investigation",
   "WOD.knowledges.law": "Droit",
@@ -148,7 +153,9 @@
   "WOD.knowledges.politics": "Politique",
   "WOD.knowledges.rituals": "Rituels",
   "WOD.knowledges.science": "Sciences",
+  "WOD.knowledges.seneschal": "Sénéchal",
   "WOD.knowledges.technology": "Technologie",
+  "WOD.knowledges.theology": "Théologie",
 
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",
@@ -190,11 +197,28 @@
 
   "WOD.resources.humanity" : "Humanité",
   "WOD.resources.bloodpool" : "Réserve de Sang",
+  "WOD.resources.road" : "Voie",
+  "WOD.resources.aura" : "Aura",
+  "WOD.resources.weakness" : "Faiblesse",
 
-  "WOD.virtues.label" : "Vertues",
+  "WOD.virtues.label" : "Vertus",
   "WOD.virtues.cc" : "Conscience/Conviction",
-  "WOD.virtues.sci" : "Self-Control/Instinct",
+  "WOD.virtues.sci" : "Maîtrise de soi/Instinct",
+  "WOD.virtues.conscience" : "Conscience",
+  "WOD.virtues.self-control" : "Maîtrise de soi",
   "WOD.virtues.courage" : "Courage",
+
+  "WOD.disciplines.label" : "Disciplines",
+
+  "WOD.spheres.correspondence" : "Correspondance",
+  "WOD.spheres.entropy" : "Entropie",
+  "WOD.spheres.forces" : "Forces",
+  "WOD.spheres.life" : "Vie",
+  "WOD.spheres.matter" : "Matière",
+  "WOD.spheres.mind" : "Psyché",
+  "WOD.spheres.prime" : "Prime",
+  "WOD.spheres.spirit" : "Esprit",
+  "WOD.spheres.time" : "Temps",
 
   "WOD.error.negativeDicePool" : "Vous ne pouvez pas lancer un groupement de dés vide !"
 }
