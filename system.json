@@ -2,7 +2,7 @@
   "name": "wod",
   "title": "World of Darkness",
   "description": "World of Darkness system for FoundryVTT",
-  "version": "0.1",
+  "version": "0.2",
   "minimumCoreVersion": "0.7.3",
   "compatibleCoreVersion": "0.7.5",
   "templateVersion": 2,
