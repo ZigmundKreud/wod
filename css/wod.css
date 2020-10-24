@@ -336,6 +336,18 @@
   color: mediumseagreen;
 }
 
+.message-content .score-value {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
 /* Styles limited to wod sheets */
 .wod .field-label {
   min-height: 25px;
@@ -521,6 +533,10 @@
 
 .wod.actor .wrap .sheet-body .main .section-content .score .rank {
   font-size: 12px;
+}
+
+.wod.actor .wrap .sheet-body .main .section-content .score .rank.temp {
+  color: red;
 }
 
 .wod.actor .wrap .sheet-body .main .section-content .score .rank-0 {

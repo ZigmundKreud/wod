@@ -5,8 +5,15 @@
 
 import {WodRoll} from "../roll.js";
 import {WOUND_TYPE, WodHealth} from "../health.js";
+import {WodChat} from "../chat.js";
 
 export class WodActorSheet extends ActorSheet {
+
+    constructor(...args) {
+        super(...args);
+        this._shiftKeyDown = false;
+        this._altKeyDown = false;
+    }
 
     /** @override */
     static get defaultOptions() {
@@ -28,22 +35,59 @@ export class WodActorSheet extends ActorSheet {
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
 
-        let shiftKeyDown = false;
         $(document).keydown(event => {
-            if (event.which === 16) shiftKeyDown = true;
+            // console.log(event.which);
+            if (event.which === 16) this._shiftKeyDown = true;
+            if (event.which === 18) this._altKeyDown = true;
         });
-        $(document).keyup(() => shiftKeyDown = false);
+        $(document).keyup(event => {
+            if (event.which === 16) {
+                this._shiftKeyDown = false;
+                return this._onResetAllHighlights(event)
+            }
+            if (event.which === 18) this._altKeyDown = false;
+        });
 
         html.find('.attributes.score').contextmenu(this._onToggleActiveState.bind(this));
 
         html.find('.health-rank-box').click(ev => {
-            if (shiftKeyDown) return this._onResetHealthRank(ev);
+            if (this._shiftKeyDown) return this._onResetHealthRank(ev);
             else return this._onIncreaseHealthRank(ev);
         });
         html.find('.health-rank-box').contextmenu(this._onDecreaseHealthRank.bind(this));
 
         // Add Inventory Item
-        html.find('.rank').click(this._onUpdateRank.bind(this));
+        html.find('.rank').click(ev => {
+            if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
+            else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
+            else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
+            else return this._onUpdateRank(ev, false, false)
+        });
+        html.find('.rank').mouseenter(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.rank').mouseover(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.rank').mousemove(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.rank').keydown(ev => {
+            if (ev.which === 16) return this._onHighlightRank(ev)
+        });
+        html.find('.score').mouseleave(ev => {
+            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
+        });
+        html.find('.score').mouseout(ev => {
+            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
+        });
+        html.find('.curres').click(ev => {
+            if (this._altKeyDown) return this._onUpdateCurrentResource(ev, true, false)
+            return this._onUpdateCurrentResource(ev, false, false)
+        });
+        html.find('.curres').contextmenu(ev => {
+            return this._onUpdateCurrentResource(ev, false, true)
+        });
 
         // Add Inventory Item
         html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -68,32 +112,106 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
-    async _onUpdateRank(event) {
+    async _onUpdateRank(event, isTemp=false, isReset=false) {
         event.preventDefault();
         const header = $(event.currentTarget);
-        // console.log(event.currentTarget);
         const value = header.data("value");
         const type = header.data("type");
-        console.log(value, type);
-        if(type === "score"){
-            const parent = $(event.currentTarget).parents(".score");
-            const ns = parent.data("namespace");
-            const key = parent.data("key");
-            const field = `data.${ns}.${key}.value`;
-            let data = {};
-            data[field] = value;
-            return this.actor.update(data);
+        const parent = (type === "score") ? $(event.currentTarget).parents(".score") : $(event.currentTarget).parents(".resource");
+        const ns = parent.data("namespace");
+        const key = parent.data("key");
+        return this._setRankValue(ns, key, value, isTemp, isReset);
+
+        // if(type === "resource"){
+        //     const parent = $(event.currentTarget).parents(".resource");
+        //     const ns = parent.data("namespace");
+        //     const key = parent.data("key");
+        //     const field = `data.${ns}.${key}.value`;
+        //     console.log(ns, key, field);
+        //     // let data = {};
+        //     // data[field] = value;
+        //     // return this.actor.update(data);
+        // }
+    }
+
+    /* -------------------------------------------- */
+
+    _setRankValue(ns, key, value, isTemp=false, isReset=false){
+        let data = this.getData().actor.data;
+        const fieldname = `data.${ns}.${key}`;
+        const field = eval(fieldname);
+        let fromValue = (isTemp) ? field.temp : field.value;
+        if(isReset) {
+            if(isTemp) {
+                field.temp = null;
+                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, 0, isTemp);
+            }
+            else {
+                field.value = field.min;
+                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.min, isTemp);
+            }
+        }else {
+            if(isTemp) {
+                field.temp = value;
+                if(!fromValue) fromValue = 0;
+            }
+            else field.value = value;
+            WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
         }
-        if(type === "resource"){
-            const parent = $(event.currentTarget).parents(".resource");
-            const ns = parent.data("namespace");
-            const key = parent.data("key");
-            const field = `data.${ns}.${key}.value`;
-            console.log(ns, key, field);
-            // let data = {};
-            // data[field] = value;
-            // return this.actor.update(data);
-        }
+        let fieldData = {};
+        fieldData[fieldname] = field;
+        return this.actor.update(fieldData);
+    }
+
+    /* -------------------------------------------- */
+
+    _setCurrentResourceValue(ns, key, value, isReset=false, isDecrease=false){
+        let data = this.getData().actor.data;
+        const fieldname = `data.${ns}.${key}`;
+        const field = eval(fieldname);
+        const fromValue = field.temp;
+        if(isReset)         field.temp = field.value;
+        else if(isDecrease) field.temp = (field.temp > 0) ? field.temp -1 : field.temp;
+        else                field.temp = value;
+        WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.temp);
+        let fieldData = {};
+        fieldData[fieldname] = field;
+        return this.actor.update(fieldData);
+    }
+
+    /* -------------------------------------------- */
+
+    _onUpdateCurrentResource(event, isReset=false, isDecrease=false){
+        event.preventDefault();
+        const header = $(event.currentTarget);
+        const value = header.data("value");
+        const parent = $(event.currentTarget).parents(".resource");
+        const ns = parent.data("namespace");
+        const key = parent.data("key");
+        return this._setCurrentResourceValue(ns, key, value, isReset);
+    }
+
+    /* -------------------------------------------- */
+
+    _onResetHighlightScore(event){
+        event.preventDefault();
+        const score = $(event.currentTarget);
+        score.find(".rank").css( "color", "");
+    }
+
+    /* -------------------------------------------- */
+    _onResetAllHighlights(event){
+        event.preventDefault();
+        const ranks = $(".rank");
+        ranks.css( "color", "");
+    }
+    /* -------------------------------------------- */
+
+    _onHighlightRank(event){
+        event.preventDefault();
+        const rank = $(event.currentTarget);
+        rank.css( "color", "red");
+        rank.prevAll().css( "color", "red");
     }
 
     /* -------------------------------------------- */
@@ -126,6 +244,9 @@ export class WodActorSheet extends ActorSheet {
         } else if (type == "abilities") {
             const label = game.i18n.localize("WOD.ui.rollAbility") + " - " + targetLabel;
             this._rollAbilityDialog(label, id, malus, 10, 6);
+        } else if (type == "resources") {
+            const label = game.i18n.localize("WOD.ui.rollResource") + " - " + targetLabel;
+            this._rollResourceDialog(label, id, malus, 10, 6);
         }
     }
 
@@ -136,6 +257,7 @@ export class WodActorSheet extends ActorSheet {
         const rollOptionTpl = 'systems/wod/templates/dialogs/roll-attribute-dialog.hbs';
 
         const rollData = {
+            actor: this.actor.data,
             label: label,
             attribute: id,
             explodes: explodes,
@@ -192,6 +314,7 @@ export class WodActorSheet extends ActorSheet {
         const rollOptionTpl = 'systems/wod/templates/dialogs/roll-ability-dialog.hbs';
         const activeAttribute = Object.values(this.actor.data.data.attributes).find(a => a.active);
         const rollData = {
+            actor: this.actor.data,
             label: label,
             attribute: (activeAttribute) ? `data.attributes.${activeAttribute.key}` : "data.attributes.str",
             ability: id,
@@ -230,6 +353,68 @@ export class WodActorSheet extends ActorSheet {
                         const abilityLabel = game.i18n.localize(eval("this.actor.data." + abilityKey + ".label"));
                         const prefix = game.i18n.localize("WOD.ui.rollAbility");
                         const fullLabel = `${prefix} - ${attrLabel}/${abilityLabel}`;
+
+                        if(pool>0){
+                            const r = new WodRoll(pool, bonus, diff, expl);
+                            r.roll();
+                            r.toMessage(fullLabel, this.actor);
+                        }
+                        else {
+                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
+                            return false;
+                        }
+
+                    }
+                }
+            },
+            default: "submit",
+            close: () => {
+            }
+        });
+        d.render(true);
+    }
+
+
+    /* -------------------------------------------- */
+
+    async _rollResourceDialog(label, id, bonus, explodes, difficulty) {
+
+        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-resource-dialog.hbs';
+        const rollData = {
+            actor: this.actor.data,
+            label: label,
+            resource: id,
+            explodes: explodes,
+            bonus: bonus,
+            difficulty: difficulty
+        };
+
+        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
+
+        let d = new Dialog({
+            title: label,
+            content: rollOptionContent,
+            buttons: {
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Cancel",
+                    callback: () => {
+                    }
+                },
+                submit: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Submit",
+                    callback: (html) => {
+                        const resKey = html.find("#resource").val();
+                        const bonus = html.find("#bonus").val();
+                        const diff = html.find('#difficulty').val();
+                        const res = eval("this.actor.data." + resKey);
+                        const resValue = res.value;
+                        const pool = parseInt(resValue, 10) + parseInt(bonus, 10)
+                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
+                        const resLabel = game.i18n.localize(eval("this.actor.data." + resKey + ".label"));
+                        const prefix = game.i18n.localize("WOD.ui.rollResource");
+                        const fullLabel = `${prefix} - ${resLabel}`;
 
                         if(pool>0){
                             const r = new WodRoll(pool, bonus, diff, expl);

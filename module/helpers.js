@@ -1,4 +1,31 @@
+import {WodScore} from "./score.js";
+import {WodResource} from "./resource.js";
+
 export const registerHandlebarsHelpers = async function() {
+
+    Handlebars.registerHelper('getAllAttributes', function (actor) {
+        const attributes = Object.values(actor.data.attributes);
+        attributes.sort(function (a, b) {
+            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+        });
+        return attributes;
+    });
+
+    Handlebars.registerHelper('getAllAbilities', function (actor) {
+        const abilities = Object.values(actor.data.abilities).filter(a => a.type === "talent" || a.type === "skill" || a.type === "knowledge");
+        abilities.sort(function (a, b) {
+            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+        });
+        return abilities;
+    });
+
+    Handlebars.registerHelper('getAllResources', function (actor) {
+        const resources = Object.values(actor.data.resources).filter(a => a.type === "resource");
+        resources.sort(function (a, b) {
+            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+        });
+        return resources;
+    });
 
     Handlebars.registerHelper('getAbilities', function (items, type) {
         let abilities = (items instanceof Object) ?Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
@@ -75,14 +102,19 @@ export const registerHandlebarsHelpers = async function() {
         return outStr;
     });
 
-    Handlebars.registerHelper('score', function(value, min, max) {
-        let str="";
-        if(min ==0) str += `<a class="rank rank-0" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;`;
-        for(let i=0; i < max; i++){
-            if(i < value) str += `<a class="rank" title="${i+1}" data-type="score" data-value="${i+1}"><i class="fas fa-circle"></i></a>`;
-            else str += `<a class="rank" title="${i+1}" data-type="score" data-value="${i+1}"><i class="far fa-circle"></i></a>`;
-        }
-        return new Handlebars.SafeString(str);
+    Handlebars.registerHelper('score', function(value, temp, min, max, namespace) {
+        let score = new WodScore(value, temp, min, max, namespace);
+        return new Handlebars.SafeString(score.toString());
+    });
+
+    Handlebars.registerHelper('resource-score', function(value, max) {
+        let resource = new WodResource(value, max);
+        return new Handlebars.SafeString(resource.getScore());
+    });
+
+    Handlebars.registerHelper('resource-current', function(value, max) {
+        let resource = new WodResource(value, max);
+        return new Handlebars.SafeString(resource.getCurrent());
     });
 
     Handlebars.registerHelper('temp', function(value, min, max) {

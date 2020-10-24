@@ -28,3 +28,15 @@
     }
   }
 }
+
+.message-content {
+  .score-value {
+    flex: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #999;
+    border-radius: 3px;
+  }
+}

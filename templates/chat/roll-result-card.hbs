@@ -2,7 +2,11 @@
     <div class="dice-roll">
         <div class="dice-result">
 <!--            <div class="dice-formula">{{!roll.formula}}</div>-->
+            {{#if (isEnabled "unfoldRollResult")}}
             <div class="dice-tooltip" style="display: block;">
+            {{else}}
+            <div class="dice-tooltip" style="display: none;">
+            {{/if}}
                 <section class="tooltip-part">
                     <div class="dice">
                         <header class="part-header flexrow">
@@ -33,7 +37,11 @@
                     </div>
                 </section>
             </div>
-            <h4 class="dice-total">{{roll.total}} {{#if (isNegativeOrNull roll.total)}}{{localize "WOD.ui.success"}}{{else}}{{localize "WOD.ui.successes"}}{{/if}}</h4>
+            {{#if (isNegativeOrNull roll.total)}}
+                <h4 class="dice-total">{{localize "WOD.ui.nosuccess"}}</h4>
+            {{else}}
+                <h4 class="dice-total">{{roll.total}} {{#if (isNegativeOrNull roll.total)}}{{localize "WOD.ui.success"}}{{else}}{{localize "WOD.ui.successes"}}{{/if}}</h4>
+            {{/if}}
         </div>
     </div>
 </div>

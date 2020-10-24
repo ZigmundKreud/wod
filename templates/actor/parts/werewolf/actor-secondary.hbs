@@ -11,38 +11,38 @@
 </div>
 <div class="section-content resources grid grid-3col">
     <div class="primary flex-group-center" style="padding: 0 40px;">
-        <label class="section-title">{{localize "WOD.resources.glory"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.glory">{{localize "WOD.resources.glory"}}</a></label>
         {{#with data.resources.glory as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="glory"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
-        <label class="section-title">{{localize "WOD.resources.honor"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.honor">{{localize "WOD.resources.honor"}}</a></label>
         {{#with data.resources.honor as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="honor"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
-        <label class="section-title">{{localize "WOD.resources.wisdom"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.wisdom">{{localize "WOD.resources.wisdom"}}</label>
         {{#with data.resources.wisdom as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="wisdom"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
         <label class="section-title">{{localize "WOD.resources.rank"}}</label>
         <br/>
     </div>
     <div class="secondary flex-group-center" style="padding: 0 40px;">
-        <label class="section-title">{{localize "WOD.resources.rage"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.rage">{{localize "WOD.resources.rage"}}</a></label>
         {{#with data.resources.rage as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="rage"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
-        <label class="section-title">{{localize "WOD.resources.gnosis"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.gnosis">{{localize "WOD.resources.gnosis"}}</a></label>
         {{#with data.resources.gnosis as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="gnosis"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
-        <label class="section-title">{{localize "WOD.resources.willpower"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.willpower">{{localize "WOD.resources.willpower"}}</a></label>
         {{#with data.resources.willpower as |res id|}}
-            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="willpower"}}
+            {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
     </div>
     <div class="health flex-group-center" style="padding: 0 10px;">

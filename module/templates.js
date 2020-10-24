@@ -34,6 +34,7 @@ export const preloadHandlebarsTemplates = async function() {
 
         "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
         "systems/wod/templates/dialogs/roll-ability-dialog.hbs",
+        "systems/wod/templates/dialogs/roll-resource-dialog.hbs",
         "systems/wod/templates/chat/roll-result-card.hbs"
     ];
 

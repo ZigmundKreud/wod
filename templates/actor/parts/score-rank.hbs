@@ -1,4 +1,4 @@
 <div class="flexrow flex-between score {{namespace}}" data-namespace="{{namespace}}" data-key="{{key}}" data-item-id="{{namespace}}.{{key}}.value">
-    <div class="score-label flex3 left ellipsis {{#if active}}active{{/if}}"><a class="rollable" title="Roll {{namespace}}" data-type="{{namespace}}" data-item-id="data.{{namespace}}.{{key}}">{{localize label}}</a></div>
-    <div class="score-value flex1 right" style="white-space: nowrap;">{{score value min max}}</div>
+    <div class="score-label flex3 left ellipsis {{#if active}}active{{/if}}"><a class="rollable" title="{{localize (concat "WOD.roll." namespace)}}" data-type="{{namespace}}" data-item-id="data.{{namespace}}.{{key}}">{{localize label}}</a></div>
+    <div class="score-value flex1 right" style="white-space: nowrap;">{{score value temp min max namespace}}</div>
 </div>

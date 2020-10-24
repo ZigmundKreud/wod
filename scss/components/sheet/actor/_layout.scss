@@ -73,6 +73,9 @@
             }
             .rank {
               font-size: 12px;
+              &.temp{
+                color:red;
+              }
             }
             .rank-0{
               visibility:hidden;

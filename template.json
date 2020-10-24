@@ -41,7 +41,7 @@
             "label": "WOD.attributes.str",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -51,7 +51,7 @@
             "label": "WOD.attributes.dex",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -61,7 +61,7 @@
             "label": "WOD.attributes.stam",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -71,7 +71,7 @@
             "label": "WOD.attributes.cha",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -81,7 +81,7 @@
             "label": "WOD.attributes.man",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -91,7 +91,7 @@
             "label": "WOD.attributes.app",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -101,7 +101,7 @@
             "label": "WOD.attributes.per",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -111,7 +111,7 @@
             "label": "WOD.attributes.int",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           },
@@ -121,7 +121,7 @@
             "label": "WOD.attributes.wits",
             "value": 1,
             "min": 1,
-            "max": 5,
+            "max": 9,
             "temp": null,
             "active": false
           }
@@ -250,274 +250,274 @@
           "alertness": {
             "type": "talent",
             "key": "alertness",
-            "label": "WOD.talents.alertness",
+            "label": "WOD.abilities.alertness",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "art": {
             "type": "talent",
             "key": "art",
-            "label": "WOD.talents.art",
+            "label": "WOD.abilities.art",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "athletics": {
             "type": "talent",
             "key": "athletics",
-            "label": "WOD.talents.athletics",
+            "label": "WOD.abilities.athletics",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "awareness": {
             "type": "talent",
             "key": "awareness",
-            "label": "WOD.talents.awareness",
+            "label": "WOD.abilities.awareness",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "brawl": {
             "type": "talent",
             "key": "brawl",
-            "label": "WOD.talents.brawl",
+            "label": "WOD.abilities.brawl",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "empathy": {
             "type": "talent",
             "key": "empathy",
-            "label": "WOD.talents.empathy",
+            "label": "WOD.abilities.empathy",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "expression": {
             "type": "talent",
             "key": "expression",
-            "label": "WOD.talents.expression",
+            "label": "WOD.abilities.expression",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "intimidation": {
             "type": "talent",
             "key": "intimidation",
-            "label": "WOD.talents.intimidation",
+            "label": "WOD.abilities.intimidation",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "leadership": {
             "type": "talent",
             "key": "leadership",
-            "label": "WOD.talents.leadership",
+            "label": "WOD.abilities.leadership",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "streetwise": {
             "type": "talent",
             "key": "streetwise",
-            "label": "WOD.talents.streetwise",
+            "label": "WOD.abilities.streetwise",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "subterfuge": {
             "type": "talent",
             "key": "subterfuge",
-            "label": "WOD.talents.subterfuge",
+            "label": "WOD.abilities.subterfuge",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
 
           "animalken": {
             "type": "skill",
             "key": "animalken",
-            "label": "WOD.skills.animalken",
+            "label": "WOD.abilities.animalken",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "crafts": {
             "type": "skill",
             "key": "crafts",
-            "label": "WOD.skills.crafts",
+            "label": "WOD.abilities.crafts",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "drive": {
             "type": "skill",
             "key": "drive",
-            "label": "WOD.skills.drive",
+            "label": "WOD.abilities.drive",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "etiquette": {
             "type": "skill",
             "key": "etiquette",
-            "label": "WOD.skills.etiquette",
+            "label": "WOD.abilities.etiquette",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "firearms": {
             "type": "skill",
             "key": "firearms",
-            "label": "WOD.skills.firearms",
+            "label": "WOD.abilities.firearms",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "larceny": {
             "type": "skill",
             "key": "larceny",
-            "label": "WOD.skills.larceny",
+            "label": "WOD.abilities.larceny",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "melee": {
             "type": "skill",
             "key": "melee",
-            "label": "WOD.skills.melee",
+            "label": "WOD.abilities.melee",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "performance": {
             "type": "skill",
             "key": "performance",
-            "label": "WOD.skills.performance",
+            "label": "WOD.abilities.performance",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "stealth": {
             "type": "skill",
             "key": "stealth",
-            "label": "WOD.skills.stealth",
+            "label": "WOD.abilities.stealth",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "survival": {
             "type": "skill",
             "key": "survival",
-            "label": "WOD.skills.survival",
+            "label": "WOD.abilities.survival",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
 
           "academics": {
             "type": "knowledge",
             "key": "academics",
-            "label": "WOD.knowledges.academics",
+            "label": "WOD.abilities.academics",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "computer": {
             "type": "knowledge",
             "key": "computer",
-            "label": "WOD.knowledges.computer",
+            "label": "WOD.abilities.computer",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "finance": {
             "type": "knowledge",
             "key": "finance",
-            "label": "WOD.knowledges.finance",
+            "label": "WOD.abilities.finance",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "investigation": {
             "type": "knowledge",
             "key": "investigation",
-            "label": "WOD.knowledges.investigation",
+            "label": "WOD.abilities.investigation",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "law": {
             "type": "knowledge",
             "key": "law",
-            "label": "WOD.knowledges.law",
+            "label": "WOD.abilities.law",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "medecine": {
             "type": "knowledge",
             "key": "medecine",
-            "label": "WOD.knowledges.medecine",
+            "label": "WOD.abilities.medecine",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "occult": {
             "type": "knowledge",
             "key": "occult",
-            "label": "WOD.knowledges.occult",
+            "label": "WOD.abilities.occult",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "politics": {
             "type": "knowledge",
             "key": "politics",
-            "label": "WOD.knowledges.politics",
+            "label": "WOD.abilities.politics",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           },
           "science": {
             "type": "knowledge",
             "key": "science",
-            "label": "WOD.knowledges.science",
+            "label": "WOD.abilities.science",
             "value": 0,
             "temp": null,
             "min": 0,
-            "max": 5
+            "max": 9
           }
         }
       }
@@ -541,43 +541,43 @@
         "primalurge": {
           "type": "talent",
           "key": "primalurge",
-          "label": "WOD.talents.primalurge",
+          "label": "WOD.abilities.primalurge",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "enigmas": {
           "type": "knowledge",
           "key": "enigmas",
-          "label": "WOD.knowledges.enigmas",
+          "label": "WOD.abilities.enigmas",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "rituals": {
           "type": "knowledge",
           "key": "rituals",
-          "label": "WOD.knowledges.rituals",
+          "label": "WOD.abilities.rituals",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "technology": {
           "type": "knowledge",
           "key": "technology",
-          "label": "WOD.knowledges.technology",
+          "label": "WOD.abilities.technology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "resources" : {
         "glory": {
-          "type": "renown",
+          "type": "special",
           "key": "glory",
           "label": "WOD.resources.glory",
           "value": 0,
@@ -586,7 +586,7 @@
           "max": 10
         },
         "honor": {
-          "type": "renown",
+          "type": "special",
           "key": "honor",
           "label": "WOD.resources.honor",
           "value": 0,
@@ -595,7 +595,7 @@
           "max": 10
         },
         "wisdom": {
-          "type": "renown",
+          "type": "special",
           "key": "wisdom",
           "label": "WOD.resources.wisdom",
           "value": 0,
@@ -669,11 +669,11 @@
         "technology": {
           "type": "knowledge",
           "key": "technology",
-          "label": "WOD.knowledges.technology",
+          "label": "WOD.abilities.technology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "resources" : {
@@ -687,7 +687,7 @@
           "max": 10
         },
         "bloodpool": {
-          "type": "resource",
+          "type": "special",
           "key": "bloodpool",
           "label": "WOD.resources.bloodpool",
           "perturn": 0,
@@ -744,56 +744,56 @@
         "legerdemain": {
           "type": "talent",
           "key": "legerdemain",
-          "label": "WOD.talents.legerdemain",
+          "label": "WOD.abilities.legerdemain",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "archery": {
           "type": "skill",
           "key": "archery",
-          "label": "WOD.skills.archery",
+          "label": "WOD.abilities.archery",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "commerce": {
           "type": "skill",
           "key": "commerce",
-          "label": "WOD.skills.commerce",
+          "label": "WOD.abilities.commerce",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "hearth-wisdom": {
           "type": "knowledge",
           "key": "hearth-wisdom",
-          "label": "WOD.knowledges.hearth-wisdom",
+          "label": "WOD.abilities.hearth-wisdom",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "seneschal": {
           "type": "knowledge",
           "key": "seneschal",
-          "label": "WOD.knowledges.seneschal",
+          "label": "WOD.abilities.seneschal",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "theology": {
           "type": "knowledge",
           "key": "theology",
-          "label": "WOD.knowledges.theology",
+          "label": "WOD.abilities.theology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "resources" : {
@@ -807,7 +807,7 @@
           "max": 10
         },
         "bloodpool": {
-          "type": "resource",
+          "type": "special",
           "key": "bloodpool",
           "label": "WOD.resources.bloodpool",
           "perturn": 0,
@@ -864,11 +864,11 @@
         "technology": {
           "type": "knowledge",
           "key": "technology",
-          "label": "WOD.knowledges.technology",
+          "label": "WOD.abilities.technology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "resources" : {
@@ -882,7 +882,7 @@
           "max": 10
         },
         "bloodpool": {
-          "type": "resource",
+          "type": "special",
           "key": "bloodpool",
           "label": "WOD.resources.bloodpool",
           "perturn": 0,
@@ -910,65 +910,65 @@
         "martialarts": {
           "type": "skill",
           "key": "martialarts",
-          "label": "WOD.skills.martialarts",
+          "label": "WOD.abilities.martialarts",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "meditation": {
           "type": "skill",
           "key": "meditation",
-          "label": "WOD.skills.meditation",
+          "label": "WOD.abilities.meditation",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "research": {
           "type": "skill",
           "key": "research",
-          "label": "WOD.skills.research",
+          "label": "WOD.abilities.research",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "technology": {
           "type": "skill",
           "key": "technology",
-          "label": "WOD.knowledges.technology",
+          "label": "WOD.abilities.technology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "cosmology": {
           "type": "knowledge",
           "key": "cosmology",
-          "label": "WOD.knowledges.cosmology",
+          "label": "WOD.abilities.cosmology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "enigmas": {
           "type": "knowledge",
           "key": "enigmas",
-          "label": "WOD.knowledges.enigmas",
+          "label": "WOD.abilities.enigmas",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "esoterica": {
           "type": "knowledge",
           "key": "esoterica",
-          "label": "WOD.knowledges.esoterica",
+          "label": "WOD.abilities.esoterica",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "resources" : {
@@ -981,7 +981,7 @@
           "max": 10
         },
         "quintessence": {
-          "type": "resource",
+          "type": "special",
           "key": "quintessence",
           "label": "WOD.resources.quintessence",
           "value": 0,
@@ -989,7 +989,7 @@
           "max": 10
         },
         "paradox": {
-          "type": "resource",
+          "type": "special",
           "key": "paradox",
           "label": "WOD.resources.paradox",
           "value": 0,
@@ -1005,7 +1005,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "entropy": {
           "type": "sphere",
@@ -1014,7 +1014,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "forces": {
           "type": "sphere",
@@ -1023,7 +1023,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "life": {
           "type": "sphere",
@@ -1032,7 +1032,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "matter": {
           "type": "sphere",
@@ -1041,7 +1041,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "mind": {
           "type": "sphere",
@@ -1050,7 +1050,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "prime": {
           "type": "sphere",
@@ -1059,7 +1059,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "spirit": {
           "type": "sphere",
@@ -1068,7 +1068,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         },
         "time": {
           "type": "sphere",
@@ -1077,7 +1077,7 @@
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       }
     },
@@ -1096,11 +1096,11 @@
         "technology": {
           "type": "knowledge",
           "key": "technology",
-          "label": "WOD.knowledges.technology",
+          "label": "WOD.abilities.technology",
           "value": 0,
           "temp": null,
           "min": 0,
-          "max": 5
+          "max": 9
         }
       },
       "virtues": {

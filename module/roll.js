@@ -11,7 +11,7 @@ const SUCCESS_DEGREE = {
 export class WodRoll {
 
     constructor(pool, bonus, difficulty = 6, explodes = 10) {
-        this._pool = pool;
+        this._pool = (pool > 10 && game.settings.get("wod", "10dicesMax")) ? 10 : pool;
         this._bonus = bonus;
         this._difficulty = difficulty;
         this._explodes = explodes;

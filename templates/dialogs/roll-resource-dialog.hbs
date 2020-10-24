@@ -1,13 +1,13 @@
 <div class="flexrow">
     <div class="flex1 center">
-        <label for="dice">{{localize "WOD.ui.attribute"}}</label>
+        <label for="dice">{{localize "WOD.ui.resource"}}</label>
     </div>
     <div class="flex1 center cell">
-        <select id="attribute" name="attribute" data-type="String" style="width:100%">
-            {{#select attribute}}
+        <select id="resource" name="resource" data-type="String" style="width:100%">
+            {{#select resource}}
                 <option value="">{{localize "WOD.None"}}</option>
-                {{#each (getAllAttributes actor) as | attr id |}}
-                    <option value="data.attributes.{{attr.key}}">{{localize attr.label}}</option>
+                {{#each (getAllResources actor) as | attr id |}}
+                    <option value="data.resources.{{attr.key}}">{{localize attr.label}}</option>
                 {{/each}}
             {{/select}}
         </select>
