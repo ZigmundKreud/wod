@@ -21,13 +21,10 @@
             {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
         <br/>
-        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.wisdom">{{localize "WOD.resources.wisdom"}}</label>
+        <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.wisdom">{{localize "WOD.resources.wisdom"}}</a></label>
         {{#with data.resources.wisdom as |res id|}}
             {{> "systems/wod/templates/actor/parts/resource-rank.hbs" res namespace="resources"}}
         {{/with}}
-        <br/>
-        <label class="section-title">{{localize "WOD.resources.rank"}}</label>
-        <br/>
     </div>
     <div class="secondary flex-group-center" style="padding: 0 40px;">
         <label class="section-title"><a class="rollable" title="{{localize "WOD.roll.resources"}}" data-type="resources" data-item-id="data.resources.rage">{{localize "WOD.resources.rage"}}</a></label>
@@ -48,8 +45,10 @@
     <div class="health flex-group-center" style="padding: 0 10px;">
         <label class="section-title">{{localize "WOD.resources.health"}}</label>
         {{> "systems/wod/templates/actor/parts/actor-health.hbs"}}
-        <br/>
-        <label class="section-title">{{localize "WOD.resources.experience"}}</label>
-        <br/>
+<!--        <br/>-->
+<!--        <label class="section-title">{{localize "WOD.resources.rank"}}</label>-->
+<!--        <br/>-->
+<!--        <label class="section-title">{{localize "WOD.resources.experience"}}</label>-->
+<!--        <br/>-->
     </div>
 </div>

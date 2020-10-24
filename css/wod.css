@@ -468,6 +468,34 @@
   padding: 5px;
 }
 
+.wod.actor .wrap .toolbar {
+  position: absolute;
+  float: right;
+  top: 32px;
+  z-index: 1000;
+  left: 3px;
+}
+
+.wod.actor .wrap .toolbar .btn {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+  background: white;
+  -webkit-box-shadow: 0 0 5px #999 inset;
+  box-shadow: 0 0 5px #999 inset;
+  border: 1px outset #999;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  color: #777;
+}
+
+.wod.actor .wrap .toolbar .btn.active {
+  border: 1px inset #999;
+  background: rgba(180, 180, 180, 0.9);
+  color: #333;
+}
+
 .wod.actor .wrap .sheet-header .logo {
   margin-left: -190px;
 }
@@ -477,11 +505,13 @@
   min-height: 250px;
   height: 250px;
   max-height: 250px;
+  min-width: 190px;
+  width: 190px;
+  max-width: 190px;
   border-radius: 4px;
   -webkit-box-shadow: 5px 5px 5px gray;
   box-shadow: 5px 5px 5px gray;
   cursor: pointer;
-  margin: -10px 10px 0 -10px;
 }
 
 .wod.actor .wrap .sheet-header .portrait img {
@@ -493,6 +523,7 @@
 }
 
 .wod.actor .wrap .sheet-header .header-fields .details {
+  padding-left: 10px;
   margin-top: -15px;
 }
 
@@ -545,6 +576,11 @@
 
 .wod.actor .wrap .sheet-body .main .section-content .score:hover .rank-0 {
   visibility: visible;
+}
+
+.wod.actor .window-content .editable.werewolf .wrap .toolbar .btn {
+  font-family: Werewolf;
+  font-size: 16px;
 }
 
 .wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .logo {

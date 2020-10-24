@@ -183,6 +183,12 @@
   "WOD.breed.metis" : "Metis",
   "WOD.breed.lupus" : "Lupus",
 
+  "WOD.forms.homid" : "Homid",
+  "WOD.forms.glabro" : "Glabro",
+  "WOD.forms.crinos" : "Crinos",
+  "WOD.forms.hispo" : "Hispo",
+  "WOD.forms.lupus" : "Lupus",
+
   "WOD.tribe.black-furies" : "Black Furies",
   "WOD.tribe.bone-gnawers" : "Bone Gnawers",
   "WOD.tribe.children-of-gaia" : "Children of Gaia",
@@ -238,6 +244,7 @@
 
   "WOD.notifications.scoreUpdate" : "Score update",
   "WOD.notifications.tempScoreUpdate" : "Temporary score update",
+  "WOD.notifications.metamorphosis" : "Metamorphosis",
   "WOD.error.negativeDicePool" : "You cannot roll an empty dice pool !",
 
   "WOD.roll.attributes" : "Roll an attribute check",

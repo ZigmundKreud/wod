@@ -621,6 +621,33 @@
           "min": 0,
           "max": 10
         }
+      },
+      "forms": {
+        "homid" : {
+          "key": "homid",
+          "label": "WOD.forms.homid",
+          "active" : true
+        },
+        "glabro" : {
+          "key": "glabro",
+          "label": "WOD.forms.glabro",
+          "active" : false
+        },
+        "crinos" : {
+          "key": "crinos",
+          "label": "WOD.forms.crinos",
+          "active" : false
+        },
+        "hispo" : {
+          "key": "hispo",
+          "label": "WOD.forms.hispo",
+          "active" : false
+        },
+        "lupus" : {
+          "key": "lupus",
+          "label": "WOD.forms.lupus",
+          "active" : false
+        }
       }
     },
     "vampire" : {

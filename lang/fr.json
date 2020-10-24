@@ -183,6 +183,12 @@
   "WOD.breed.metis" : "Métis",
   "WOD.breed.lupus" : "Lupus",
 
+  "WOD.forms.homid" : "Homidé",
+  "WOD.forms.glabro" : "Glabro",
+  "WOD.forms.crinos" : "Crinos",
+  "WOD.forms.hispo" : "Hispo",
+  "WOD.forms.lupus" : "Lupus",
+
   "WOD.tribe.black-furies" : "Furies Noires",
   "WOD.tribe.bone-gnawers" : "Rongeurs d'Os",
   "WOD.tribe.children-of-gaia" : "Enfants de Gaïa",
@@ -238,6 +244,7 @@
 
   "WOD.notifications.scoreUpdate" : "Score mis à jour",
   "WOD.notifications.tempScoreUpdate" : "Score temporaire mis à jour",
+  "WOD.notifications.metamorphosis" : "Métamorphose",
   "WOD.error.negativeDicePool" : "Vous ne pouvez pas lancer un groupement de dés vide !",
 
   "WOD.roll.attributes" : "Test d'attribut",

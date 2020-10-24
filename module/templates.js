@@ -15,6 +15,7 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-health.hbs",
         "systems/wod/templates/actor/parts/actor-main.hbs",
         "systems/wod/templates/actor/parts/actor-inventory.hbs",
+        "systems/wod/templates/actor/parts/actor-toolbar.hbs",
         "systems/wod/templates/actor/parts/actor-traits.hbs",
         "systems/wod/templates/actor/parts/actor-resources.hbs",
         "systems/wod/templates/actor/parts/score-rank.hbs",
@@ -31,6 +32,7 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/vampire/bloodpool.hbs",
         "systems/wod/templates/actor/parts/werewolf/actor-details.hbs",
         "systems/wod/templates/actor/parts/werewolf/actor-secondary.hbs",
+        "systems/wod/templates/actor/parts/werewolf/toolbar-actions.hbs",
 
         "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
         "systems/wod/templates/dialogs/roll-ability-dialog.hbs",

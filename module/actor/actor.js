@@ -22,7 +22,7 @@ export class WodActor extends Actor {
 
     _prepareCharacterData(actorData) {
         // const data = actorData.data;
-        // console.log(actorData);
+        console.log(actorData);
         let attributes = Object.values(actorData.data.attributes);
         let abilities = Object.values(actorData.data.abilities);
         let healthStatuses = Object.values(actorData.data.health.status);

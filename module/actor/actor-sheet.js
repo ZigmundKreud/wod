@@ -6,6 +6,7 @@
 import {WodRoll} from "../roll.js";
 import {WOUND_TYPE, WodHealth} from "../health.js";
 import {WodChat} from "../chat.js";
+import {WodMetamorphosis} from "../metamorphosis.js";
 
 export class WodActorSheet extends ActorSheet {
 
@@ -47,6 +48,8 @@ export class WodActorSheet extends ActorSheet {
             }
             if (event.which === 18) this._altKeyDown = false;
         });
+
+        html.find('.metamorphosis').click(this._onToggleMetamorphosis.bind(this));
 
         html.find('.attributes.score').contextmenu(this._onToggleActiveState.bind(this));
 
@@ -106,6 +109,11 @@ export class WodActorSheet extends ActorSheet {
             li.slideUp(200, () => this.render(false));
         });
 
+        html.find('.tb-toggle-link').click(ev => {
+            ev.preventDefault();
+            $("#tb-menu").slideToggle('fast');
+        });
+
         // Rollable abilities.
         html.find('.rollable').click(this._onRoll.bind(this));
     }
@@ -121,17 +129,6 @@ export class WodActorSheet extends ActorSheet {
         const ns = parent.data("namespace");
         const key = parent.data("key");
         return this._setRankValue(ns, key, value, isTemp, isReset);
-
-        // if(type === "resource"){
-        //     const parent = $(event.currentTarget).parents(".resource");
-        //     const ns = parent.data("namespace");
-        //     const key = parent.data("key");
-        //     const field = `data.${ns}.${key}.value`;
-        //     console.log(ns, key, field);
-        //     // let data = {};
-        //     // data[field] = value;
-        //     // return this.actor.update(data);
-        // }
     }
 
     /* -------------------------------------------- */
@@ -144,7 +141,7 @@ export class WodActorSheet extends ActorSheet {
         if(isReset) {
             if(isTemp) {
                 field.temp = null;
-                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, 0, isTemp);
+                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, "-", isTemp);
             }
             else {
                 field.value = field.min;
@@ -153,7 +150,7 @@ export class WodActorSheet extends ActorSheet {
         }else {
             if(isTemp) {
                 field.temp = value;
-                if(!fromValue) fromValue = 0;
+                if(!fromValue) fromValue = "-";
             }
             else field.value = value;
             WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
@@ -523,6 +520,25 @@ export class WodActorSheet extends ActorSheet {
     _onResetHealthRank(event) {
         event.preventDefault();
         return this._onUpdateHealthRank(event, false, true)
+    }
+
+    /* -------------------------------------------- */
+    _onToggleMetamorphosis(event){
+        event.preventDefault();
+        const btn = $(event.currentTarget);
+        const id = btn.data("itemId");
+        let actorData = this.getData().actor.data;
+        if(id === "homid") actorData = WodMetamorphosis.homid(actorData);
+        else if(id === "glabro") actorData = WodMetamorphosis.glabro(actorData);
+        else if(id === "crinos") actorData = WodMetamorphosis.crinos(actorData);
+        else if(id === "hispo")  actorData = WodMetamorphosis.hispo(actorData);
+        else if(id === "lupus")  actorData = WodMetamorphosis.lupus(actorData);
+
+        WodChat.metamorphosisNotification(this.actor, id);
+        return this.actor.update({
+            "data.attributes" : actorData.attributes,
+            "data.forms" : actorData.forms
+        });
     }
 
     /* -------------------------------------------- */

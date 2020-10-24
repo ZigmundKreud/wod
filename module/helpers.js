@@ -103,6 +103,7 @@ export const registerHandlebarsHelpers = async function() {
     });
 
     Handlebars.registerHelper('score', function(value, temp, min, max, namespace) {
+        // console.log(value, temp, min, max, namespace);
         let score = new WodScore(value, temp, min, max, namespace);
         return new Handlebars.SafeString(score.toString());
     });
