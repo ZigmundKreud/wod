@@ -28,6 +28,6 @@
   "primaryTokenAttribute": "health",
   "url": "https://github.com/ZigmundKreud/wod",
   "manifest": "https://raw.githubusercontent.com/ZigmundKreud/wod/master/system.json",
-  "download": "https://github.com/ZigmundKreud/wod/archive/0.1-alpha.zip",
+  "download": "https://github.com/ZigmundKreud/wod/archive/0.2-alpha.zip",
   "license": "licence.txt"
 }
