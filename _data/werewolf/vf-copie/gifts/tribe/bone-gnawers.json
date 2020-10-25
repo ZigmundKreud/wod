@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Cuisine",
+    "description": "<p>le Rongeur d’Os prend une casserole (une vieille boîte de café fera l’affaire), met ce qu’il trouve dedans (mégots, canettes de bière, vieux journaux, feuilles mortes, etc.), ajoute de l’eau (un peu de salive, ça ira) et touille avec une cuillère. Le résultat est une bouillie pâteuse et fade, mais nourrissante et roborative. Ce don est enseigné par un esprit-raton-laveur.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 1,
+      "system": "<p>le joueur fait un jet d’Astuce +Survie (difficulté 6). Le repas qui en résulte nourrit une personne par réussite.</p>",
+    }
+  },
+  {
+    "name": "Force du désespoir",
+    "description": "<p>le loup-garou puise dans ses dernières réserves et en tire une énergie soudaine. Un esprit-blaireau enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 1,
+      "system": "<p>lorsqu’il accomplit un tour de force (voir page 270), le loup-garou peut ajouter un dé à son jet pour chaque point de dégâts contondants qu’il accepte volontairement de subir comme prix de l’activation de ce don.</p>",
+    }
+  },
+  {
+    "name": "Odeur mielleuse",
+    "description": "<p>une cible que le Garou a touchée durant la dernière heure commence à exhaler un arôme merveilleusement sucré, et devient légèrement collante au toucher. Toutes sortes de vermines apparaissent rapidement et recouvrent la victime. La couche de mouches, moucherons, abeilles et scarabées qui en résulte pique, rampe et gêne la vision et l’ouïe. Un esprit-insecte enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Astuce + Subterfuge (difficulté 7). La cible souffre d’une pénalité de –1 à toutes ses actions pendant une heure par réussite ; l’odeur ne partira pas pendant toute la durée.</p>",
+    }
+  },
+  {
+    "name": "Récupérateur",
+    "description": "<p>les déchets de l’humanité fournissent à un Rongeur d’Os débrouillard tout ce dont il a besoin. Par l’usage de ce don, tout objet cassé peut être rendu temporairement utilisable. Ce don est enseigné par un esprit-raton-laveur.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 1,
+      "system": "<p>le joueur prend un objet cassé et fait un jet d’Astuce + Artisanats. L’objet fonctionne parfaitement pendant un tour par réussite, et fournit sa propre énergie, son propre carburant, ses propres munitions... Un couteau émoussé coupe, un micro-onde défoncé fonctionne (sans même être branché à quoi que ce soit), un vieux calibre .38 rouillé tire en l’absence de balles, une voiture bonne pour la casse démarre et roule. La durée de l’utilité de l’objet peut être allongée jusqu’à un jour complet en dépensant 1 point de Volonté, mais, en ces circonstances, l’objet requiert de l’énergie, du carburant et des munitions.</p>",
+    }
+  },
+  {
+    "name": "Résistance aux toxines",
+    "description": "<p>le corps du loup-garou est habitué aux toxines de toutes sortes. Un esprit-rat enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 1,
+      "system": "<p>le loup-garou est immunisé de manière permanente aux poisons normaux, de l’arsenic à l’alcool, et ajoute trois dés pour résister aux effets de toute toxine « améliorée » par le Ver. Ce don peut être désactivé et réactivé à volonté (pour profiter des effets de l’alcool, par exemple).</p>",
+    }
+  },
+  {
+    "name": "Arôme ignoble",
+    "description": "<p>le Rongeur d’Os peut amplifier son musc naturel jusqu’à ce qu’il suffoque ses adversaires. Un esprit-punaise enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose. Pour cette scène, tous les personnages dotés d’un odorat et situés à 6 m ou moins du Garou peinent à respirer, ce qui soustrait deux dés à toutes leurs réserves; le Rongeur et sa meute sont immunisés à cet effet.</p>",
+    }
+  },
+  {
+    "name": "Entre les fissures",
+    "description": "<p>les zones urbaines sinistrées sont des antres du Ver, et les Rongeurs d’Os le savent plus qu’aucune autre tribu. Les instincts du loup-garou le guident vers le site désert le plus proche dans un centre urbain (un endroit où aucun humain n’a mis le pied depuis au moins une semaine, un lieu isolé et actuellement inoccupé qui ne risque pas de recevoir de visite pour le reste de la nuit). Il peut s’agir d’un immeuble abandonné aux issues barrées de planches, d’un appartement vide, ou même d’une station de métro inutilisée. Les Rongeurs d’Os trouvent ce don utile pour sécuriser un espace rituel, monter des embuscades tout en préservant la Litanie, et trouver un endroit où dormir pour une nuit. N’importe quel esprit urbain peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Volonté et fait un jet d’Astuce + Connaissance de la rue (difficulté 5). Plus il obtient de réussites, plus la destination sera isolée et difficile à localiser.</p>",
+    }
+  },
+  {
+    "name": "Férocité du rat acculé",
+    "description": "<p>acculé, il n’y a que deux options : implorer la pitié ou résister et se battre. Les esprits-rats enseignent aux Rongeurs d’Os à exceller dans ce second cas.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Rage (difficulté 8) et en dépense 1 point. Chaque réussite donne au personnage un dé supplémentaire lors de ses jets de Bagarre jusqu’à la fin du combat. Ce don plonge automatiquement le Rongeur d’Os en frénésie ; tout pouvoir mettant fin à cet état annule aussitôt ses effets.</p>",
+    }
+  },
+  {
+    "name": "Ignorance bénie",
+    "description": "<p>en restant immobile, le Garou peut devenir totalement invisible aux sens, esprits et appareils d’enregistrement. Un esprit-caméléon enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Vigueur + Furtivité (difficulté 5). Chaque réussite en soustrait une au résultat des jets de Perception + Vigilance faits pour remarquer le personnage. Si personne ne cherche activement le loup-garou, une réussite suffit à le dissimuler parfaitement.</p>",
+    }
+  },
+  {
+    "name": "Masque du Molosse",
+    "description": "<p>le Rongeur d’Os se masque de façon à se fondre dans le paysage urbain, déguisant sa forme lupus pour lui donner l’apparence d’un grand chien plutôt qu’un loup. En dépit de son énorme utilité, la plupart des autres tribus méprisent ce don, car elles considèrent qu’il entache la dignité d’un Garou. Ce don est enseigné par un esprit-chien.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Manipulation + Subterfuge (difficulté 7). Le déguisement dure une scène par réussite.</p>",
+    }
+  },
+  {
+    "name": "Appeler la rouille",
+    "description": "<p>en sifflant doucement entre ses dents, le loup-garou peut provoquer une corrosion foudroyante et dévastatrice de n’importe quel métal dans son voisinage immédiat. Les armes à feu se corrodent et s’enrayent, les couteaux s’effritent, et les voitures s’effondrent comme des tas de ferraille. Ce don est enseigné par un élémentaire d’eau.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Astuce + Artisanats, la difficulté dépendant de la quantité de métal à corroder. Un couteau ou un pistolet auraient une difficulté de 6, tandis que celle d’une voiture pourrait être de 8.</p>",
+    }
+  },
+  {
+    "name": "Bénédiction du putois",
+    "description": "<p>grâce à ce don, le Garou peut faire enfler ses glandes, ce qui lui permet de projeter son musc comme un putois. Ce don est bien entendu enseigné par un esprit de cet animal.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 3,
+      "system": "<p>la projection est dirigée avec un jet de Dextérité + Intuition primitive (difficulté 7, portée maximale de 3 m). Une cible frappée par cette attaque doit dépenser 1 point de Volonté pour faire quoi que ce soit d’autre que vomir. Après quoi, la victime soustrait un dé de ses réserves pour chaque tranche de deux réussites du Garou jusqu’à la fin de la scène. S’immerger dans l’eau annule les effets de ce don, et ce don n’agit pas sur les cibles n’ayant pas d’odorat.</p>",
+    }
+  },
+  {
+    "name": "Bénédiction du termite",
+    "description": "<p>le Rongeur d’Os peut faire pourrir le bois et le papier à une vitesse phénoménale. Les meubles croulent, les documents tombent en poussière, et même les bâtiments peuvent s’effondrer. Ce don est enseigné par un esprit-termite.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Intelligence + Artisanats (difficulté 7). Une réussite fera pourrir une ramette de papier, trois détruiront un mur, et cinq pourront faire s’effondrer le toit d’un petit bâtiment.</p>",
+    }
+  },
+  {
+    "name": "Remodeler un objet",
+    "description": "<p>le Garou peut modeler un matériau jadis vivant (mais pas mort-vivant) en quelque chose d’autre instantanément. Des arbres peuvent devenir un abri, des bois de cerf une lance, des peaux d’animaux une armure, et des fleurs un parfum capiteux. L’objet ressemblera à ce à partir de quoi il a été créé (c’est-à-dire que la lance susmentionnée sera faite de bois de cerf, pas de bois d’arbre). C’est une araignée du Motif (un esprit de la Tisseuse) qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Manipulation + Artisanats, dont la difficulté est définie par l’ampleur et la complexité de la transformation (changer une branche cassée en épieu aurait une difficulté de 5, mais créer un canoë à partir d’un arbre déraciné aurait une difficulté de 8), et dépense 1 point de Gnose. La transformation dure pendant une scène par réussite, ou de manière permanente s’il y en a cinq ou plus. Dépenser 1 point de Gnose supplémentaire permet à une arme fabriquée de cette façon d’infliger des dégâts aggravés tant que dure la scène où elle est créée.</p>",
+    }
+  },
+  {
+    "name": "Rire de la hyène",
+    "description": "<p>la hyène ne suit personne, au lieu de cela, elle rit de ceux qui s’autoproclament rois. Le Rongeur d’Os manie le pouvoir de ce rire moqueur, lui permettant de résister à tout commandement, toute séduction ou toute demande (appuyée ou non) tant qu’il ne souhaite pas y consentir. De tels refus ne sont jamais subtils, car le loup-garou ricane comme une hyène lorsqu’il fait appel à ce don. C’est un esprit-hyène qui l’enseigne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 3,
+      "system": "<p>toutes les tentatives pour influencer mentalement le loup-garou souffrent d’une pénalité de +2 à leur difficulté, tant qu’il en rit tout haut.</p>",
+    }
+  },
+  {
+    "name": "En un clin d’œil",
+    "description": "<p>le Rongeur d’Os peut plonger dans un coin d’ombre (une benne à ordures ouverte, une ruelle sombre, sous une voiture à l’arrêt) et ressortir d’une autre zone sombre à quelque distance. Ce don est enseigné par un esprit-rat.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Manipulation + Furtivité (difficulté 6). Le personnage peut réapparaître depuis n’importe quel coin sombre à une distance de 20 m par réussite.</p>",
+    }
+  },
+  {
+    "name": "Infestation",
+    "description": "<p>le Rongeur d’Os invoque une horde de vermines qui envahit un bâtiment (pas plus important qu’une grande maison). N’importe quelle sorte de vermine commune dans la région peut être appelée, mais c’est habituellement un assortiment d’insectes, de limaces et de rongeurs. La nuée se comporte en conformité avec ses instincts naturels : plutôt que d’attaquer les humains, elle infestera durablement les lieux. N’importe quel esprit-vermine peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Manipulation + Animaux (difficulté 7). Une réussite déclenchera un appel immédiat à une société de désinfection, cinq succès rendront l’immeuble complètement inhabitable pour un bon moment.</p>",
+    }
+  },
+  {
+    "name": "Syntonie",
+    "description": "<p>le loup-garou peut communier avec les esprits d’une ville pour obtenir des informations sur les populations alentour, comme le nombre d’habitants, l’existence d’éventuelles enclaves garous ou la présence d’autres êtres surnaturels.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Perception + Connaissance de la rue (difficulté 6). La quantité et la précision des informations dépendent du nombre de succès.</p>",
+    }
+  },
+  {
+    "name": "Émeute",
+    "description": "<p>le loup-garou invoque une horde d’esprits malveillants qui poussent les habitants de la ville à manifester violemment. Ce don joue sur la haine et la peur des laissés-pour-compte de la ville : les pauvres, les sans-abri, les migrants et tous ceux que les citoyens préféreraient ne pas voir. Le Rongeur d’Os peut diriger l’émeute dans une certaine mesure. C’est un esprit-rat qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Astuce + Subterfuge (difficulté 8). S’il réussit, les esprits dirigent leurs hôtes vers une cible au choix du Garou... bien que les choses puissent s’envenimer et devenir incontrôlables facilement. L’émeute affecte une zone de 1,5 km par réussite.</p>",
+    }
+  },
+  {
+    "name": "Survivant",
+    "description": "<p>le loup-garou devient un survivant ultime, n’ayant plus besoin de nourriture, d’eau ou de sommeil. Il ignore les températures extrêmes, les maladies naturelles ainsi que les poisons, et les effets des toxines du Ver sont réduits de moitié. Ce don est enseigné par un esprit-tortue.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "bone-gnawers",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Vigueur + Survie. Les effets durent un jour par réussite. En dépensant un second point de Gnose, le personnage peut gagner 3 points de Vigueur supplémentaires, et ne plus souffrir de pénalités de blessures, mais le don expirera prématurément, 10 rounds plus tard. Le Garou doit dormir pendant au moins huit heures lorsque les effets du don cessent, et il s’éveille affamé.</p>",
+    }
+  }
+]

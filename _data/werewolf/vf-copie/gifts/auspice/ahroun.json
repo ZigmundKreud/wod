@@ -1,0 +1,211 @@
+[
+  {
+    "name": "Dards",
+    "description": "<p>dans les temps anciens, les guerriers Ahroun firent cause commune avec l’esprit Reine des abeilles. Alors que les enfants de sa propre ruche se ralliaient pour la protéger, les Garous répondirent aussi à l’appel pour défendre Gaïa, et la Reine décréta qu’ils devraient être équipés convenablement pour la bataille. Ce don, enseigné par un esprit-abeille en mémoire de cette alliance, permet à l’Ahroun de transformer ses griffes en dards barbelés et crochus.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 1,
+      "system": "<p>le personnage dépense 1 point de Rage. La prochaine fois qu’il attaquera au moyen de ses «dards», ses griffes iront se ficher profondément dans les chairs de sa cible, après s’être détachées des mains du Garou. Tant que la victime n’a pas pris le temps de les retirer (ce qui prend un tour complet), la difficulté de toutes ses actions augmente de +2. Les griffes du Garou prennent un tour complet à régénérer.</p>",
+    }
+  },
+  {
+    "name": "Griffes acérées",
+    "description": "<p>en raclant ses griffes sur la pierre, l’acier ou quelque autre surface dure, le loup-garou les aiguise comme des rasoirs. Un esprit-ours ou chat peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Rage et l’Ahroun prend un tour complet pour aiguiser ses griffes. Jusqu’à la fin de la scène, toutes les attaques qu’il porte au moyen de celles-ci bénéficient de deux dés de dégâts supplémentaires et d’une difficulté réduite de –1.</p>",
+    }
+  },
+  {
+    "name": "Inspiration",
+    "description": "<p>les lycanthropes considèrent les Ahroun comme des chefs de guerre, et ce don les aide à mériter cette confiance. Au moyen de ce don, le loup-garou peut prêter sa détermination et son juste courroux à ceux qui partagent sa cause. Ce don est enseigné par un esprit-lion ou un esprit-loup.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 1,
+      "system": "<p>le personnage dépense 1 point de Gnose. Tous ses compagnons (mais pas lui) reçoivent 1 point de Volonté, qui disparaît s’il n’est pas utilisé avant la fin de la scène.</p>",
+    }
+  },
+  {
+    "name": "Mise au sol",
+    "description": "<p>ce don accorde au Garou le pouvoir de projeter ses ennemis par simple contact. Il est enseigné par n’importe quel esprit aérien.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Volonté dont la difficulté est égale à Vigueur + Athlétisme de l’adversaire. Une réussite envoie la victime au sol. Ce don peut être employé même grâce à l’effleurement le plus infime sans le moindre coût, ou peut être déclenché à l’occasion d’une attaque en payant 1 point de Volonté ou de Rage, auquel cas les dés de dégâts obtenus sont des réussites automatiques ; la victime est de plus jetée au sol et sans défense. Tactiques de meute (niveau un) : bien que le statut de chefs des Ahroun soit discutable, ils sont indubitablement appelés à prendre la tête de la meute dans la bataille. En prenant le commandement et en coordonnant les actions de celle-ci, l’Ahroun accroît les capacités de ses frères dans le feu de l’action. Ce don est enseigné par un esprit-loup. Système: le joueur dépense 1 point de Volonté avant d’amorcer la manœuvre Tactiques de meute (voir page 300) et divise un groupement de dés supplémentaires, égal à son Commandement, entre tous ceux qui accomplissent la manœuvre avec lui. Les dés doivent être divisés aussi équitablement que possible, mais le joueur peut distribuer les dés supplémentaires à sa guise, ou tous les dés, si le score de Commandement de l’Ahroun ne lui permet pas d’en donner un à chacun.</p>",
+    }
+  },
+  {
+    "name": "Bouclier de rage",
+    "description": "<p>la Rage qui brûle dans le cœur de l’Ahroun est telle que les colères moindres s’inclinent devant lui, dérisoires. Ce don est enseigné par un esprit-carcajou.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Volonté. Pour le restant de la scène, le score de Rage des esprits est considéré comme étant diminué de 2 pour ce qui est d’occasionner des dégâts à l’Ahroun.</p>",
+    }
+  },
+  {
+    "name": "Esprit de la mêlée",
+    "description": "<p>un esprit-chat transmet à l’Ahroun une vitesse aveuglante et des réflexes foudroyants, lui permettant d’attaquer avant n’importe quel ennemi.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 2,
+      "system": "<p>une fois que l’Ahroun a appris ce don, ses effets sont permanents. Il ajoute 10 à tous ses jets d’initiative, et peut, s’il le souhaite, dépenser 1 point de Gnose pour doubler ce bonus (un tel acte l’empêche cependant de dépenser des points de Rage pour faire des actions supplémentaires).</p>",
+    }
+  },
+  {
+    "name": "Sentir l’argent",
+    "description": "<p>Luna donne à ceux qui sont vraiment nés Garous la faculté de flairer leur plus grande faiblesse. Ce don, enseigné par des lunaires, permet au métis de détecter la présence de l’argent.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Perception + Intuition primitive (difficulté 7). S’il réussit, il peut détecter la présence de toute quantité d’argent dans un rayon de 100 m. Trois réussites ou plus lui permettent de localiser précisément l’argent.</p>",
+    }
+  },
+  {
+    "name": "Vraie peur",
+    "description": "<p>le loup-garou laisse voir la terrible étendue de sa puissance pour immobiliser son adversaire, en montrant les dents, découvrant ses griffes, hurlant, ou surplombant son adversaire de façon menaçante. Les esprits de la peur peuvent enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Force +Intimidation (difficulté égale à la Volonté de la cible). Chaque réussite paralyse l’ennemi de peur pour un tour. La victime ne peut pas attaquer tant qu’elle est ainsi soumise, mais elle peut se défendre et agir normalement (bien que ses actions soient probablement guidées par la terreur abjecte qui l’envahit).</p>",
+    }
+  },
+  {
+    "name": "Cœur de fureur",
+    "description": "<p>le Garou se coupe de sa colère, refoulant sa Rage, créant un mur mental pour contenir la vague de juste courroux qui menace de le noyer. Cependant, la colère revient toujours, et il devra alors être prêt à payer la facture. Ce don est enseigné par un esprit-sanglier.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Volonté (difficulté égale à sa Rage permanente). La difficulté des jets de frénésie augmente de +1 par tranche de deux réussites pour le restant de la scène. Lorsque celle-ci prend fin, les blessures et les insultes passées reviennent au galop pour hanter le loup-garou, emplissant son âme et son cœur. Il doit dépenser 1 point de Volonté ou faire un jet de frénésie immédiat, de difficulté normale.</p>",
+    }
+  },
+  {
+    "name": "Griffes d’argent",
+    "description": "<p>Luna envoie ses enfants pour enseigner ce puissant, mais douloureux don aux guerriers qui ont sa faveur. Lorsqu’il est invoqué, il change les griffes du loup-garou en argent.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 3,
+      "system": "<p>un jet de Gnose (difficulté 7) est nécessaire pour activer ce don. Les griffes d’argent infligent des dégâts aggravés à toutes les cibles, et ne peuvent pas naturellement être absorbés par les Garous et la plupart des Fera. L’Ahroun souffre le martyre tant que ces griffes d’argent se manifestent. Il gagne chaque tour 1 point de Rage automatiquement, et la difficulté de toutes ses actions qui ne concernent pas le combat augmente de +1 à cause de cette distraction; il doit de plus faire un test de frénésie tant que sa Rage excède sa Volonté. Les effets du don durent une scène, à moins que le Garou ne consacre un tour à le désactiver volontairement.</p>",
+    }
+  },
+  {
+    "name": "Griffes du vent",
+    "description": "<p>les griffes et crocs de l’Ahroun passent au travers des faibles protections de l’ennemi, comme s’il n’était protégé que par de l’air et ses espoirs. Ce don est enseigné par un élémentaire d’air.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 3,
+      "system": "<p>le personnage dépense 1 point de Rage. Pour le restant du tour, toutes ses attaques ignorent complètement tout équipement protecteur (normal ou magique) que la cible pourrait avoir. La cible doit aussi renoncer à tout dé d’absorption conféré par de telles protections.</p>",
+    }
+  },
+  {
+    "name": "Soins de bataille",
+    "description": "<p>ce don permet au loup-garou de panser ses blessures sans repos ni hésitation au cœur du combat, même quand sa chair est lacérée par les griffes ou les balles. Alors que d’autres Garous auront du mal à soigner leurs plaies sous le feu de l’ennemi, l’Ahroun ne s’arrêtera jamais de l’affronter. Les esprits élémentaires enseignent ce don, bien qu’il faille généralement les combattre pour les convaincre de le faire.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 3,
+      "system": "<p>l’Ahroun n’a pas besoin de s’arrêter pour faire un jet de Vigueur afin de guérir pendant un combat, et régénère automatiquement un niveau de dégâts non aggravés par round. Ces bénéfices sont permanents.</p>",
+    }
+  },
+  {
+    "name": "Adaptation corporelle",
+    "description": "<p>les Garous élevés dans le labyrinthe mouvant de la société humaine sont bien préparés aux adaptations infinies que Gaïa impose à ses protecteurs. C’est un esprit-ancêtre qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 4,
+      "system": "<p>le Garou peut utiliser ses talents de métamorphe pour modifier ses attributs physiques : 1 point de Dextérité peut être transféré en Force ou en Vigueur, et ainsi de suite. Le joueur fait un jet de Vigueur + Intuition primitive (difficulté 9). 1 point d’un attribut physique peut être déplacé par tranche de deux réussites, et ce pour le restant de la scène.</p>",
+    }
+  },
+  {
+    "name": "Attiser le brasier de la fureur",
+    "description": "<p>ce don permet au Garou d’entretenir sa Rage, faisant brûler sa flamme tant que des ennemis de Gaïa restent à vaincre. Il est appris d’un esprit-carcajou.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 4,
+      "system": "<p>les effets de ce don sont permanents. Le loup-garou regagne 1 point de Rage chaque fois qu’il a pris des dégâts au cours d’un tour. Cette Rage n’entraîne pas de jet de frénésie, bien que celle-ci puisse sinon se déclencher de façon normale. De plus, le personnage peut dépenser un seul point de Rage par tour sans perdre de Rage temporaire. Si plusieurs points de Rage sont dépensés en un tour, cependant, tous sont soustraits de façon normale.</p>",
+    }
+  },
+  {
+    "name": "Lumière de la pleine lune",
+    "description": "<p>quand elle est pleine, la Lune entre dans une phase guerrière et part à la recherche de ses ennemis. Un Ahroun recherchant ses adversaires peut faire appel à la détermination de Luna pour qu’elle les baigne de sa lumière. Les lunaires enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose. Pour le restant de la scène, quiconque œuvre contre l’Ahroun ou sa meute à moins de 1,5 km est environné d’un doux halo, comme s’il était illuminé par la lune. Ce don peut être utilisé pour démasquer ceux qui utilisent des pouvoirs de furtivité ou même d’invisibilité, mais seulement s’ils essaient activement de nuire ou de déjouer les plans de l’Ahroun ou de sa meute.</p>",
+    }
+  },
+  {
+    "name": "Mâchoire de fer",
+    "description": "<p>le loup-garou mord avec une telle puissance que sa prise ne se desserrera jamais malgré lui; même dans la mort, ses mâchoires restent bloquées. Ce don est appris d’un esprit-hyène ou loup.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 4,
+      "system": "<p>le Garou peut dépenser 1 point de Rage pour invoquer ce don après avoir réussi une attaque de morsure. Pour chaque tour successif durant lequel il choisit de maintenir sa prise, il fait une nouvelle attaque de morsure (difficulté 3). Sa cible peut bien sûr tenter de se dégager au moyen d’un jet de Force en opposition, mais elle subit 1 point de dégât à cette occasion, et l’Ahroun peut ajouter la moitié de sa Volonté à son groupement de dés (arrondie au supérieur).</p>",
+    }
+  },
+  {
+    "name": "Baiser d’Hélios",
+    "description": "<p>l’Ahroun peut invoquer le pouvoir du soleil pour s’immuniser au feu et enflammer n’importe quelle partie de son corps aussi longtemps qu’il le souhaite. Les Garous pourvus de ce don sont aussi prompts à embraser leur crinière en l’honneur du soleil lors de cérémonies, que leurs griffes ou crocs en combat. Un élémentaire de feu ou un esprit-soleil est susceptible d’enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 5,
+      "system": "<p>en dépensant 1 point de Gnose, le personnage devient immunisé aux dégâts causés par la chaleur ou les flammes naturelles. Les feux artificiels (napalm, explosions de gaz, etc.) et surnaturels ne peuvent pas infliger plus d’un seul niveau de dégâts contondants par tour. L’Ahroun inflige deux dés de dégâts aggravés supplémentaires si ses attaques sont enflammées. Ces effets durent jusqu’à la fin de la scène.</p>",
+    }
+  },
+  {
+    "name": "Force de volonté",
+    "description": "<p>Un loup-garou doté de ce don est un roc indomptable. Il peut partager cette force terrible avec autrui et les conduire au-delà des portes de Malféas, sans qu’ils connaissent la moindre peur ou hésitation. Un avatar d’incarna ou un esprit-loup peuvent enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Volonté et fait un jet de Charisme + Commandement (difficulté 8). Chaque réussite donne à tous les alliés du Garou à moins de 30 m (et à ses frères de meute n’importe où à moins de 160 km) 1 point de Volonté supplémentaire. Ce point perdure pour le restant de la scène et peut élever la Volonté d’un allié au-delà de son maximum (et même au-delà de 10). Ce don ne peut être utilisé qu’une fois par scène.</p>",
+    }
+  },
+  {
+    "name": "Guerrier implacable",
+    "description": "<p>ce puissant don permet à son détenteur d’encaisser sans broncher les dégâts du feu, et même les griffures de ses congénères. C’est un incarna guerrier qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "ahroun",
+      "level": 6,
+      "system": "<p>le Garou devient capable, de manière permanente, de guérir tous les dégâts aggravés comme s’il s’agissait de dégâts létaux, à l’exception des blessures infligées par l’argent.</p>",
+    }
+  }
+]

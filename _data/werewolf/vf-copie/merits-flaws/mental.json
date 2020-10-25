@@ -1,0 +1,372 @@
+[
+  {
+    "name": "Amnésie",
+    "type": "handicap",
+    "description": "<p>Vous n’avez aucun souvenir de votre vie avant votre Premier Changement. Vous ne savez pas si vous avez encore de la famille ou si quelqu’un est à vos trousses, et vous vous rappelez encore moins de votre lieu de naissance et de vos études (même si vous vous souvenez de ce que vous avez appris). Toutefois, votre passé pourrait vous rattraper, révélant de nombreux faits surprenants. Le conteur peut choisir des handicaps dont vous ignorez la nature pour un total de 5 points. Il les intégrera ensuite au jeu (et à votre grande surprise !) au cours de la chronique.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "As du volant",
+    "type": "atout",
+    "description": "<p>Vous conduisez comme si vous étiez né avec un volant dans les mains. Toutes les difficultés des jets de Conduite sont réduites de –2.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Berserker",
+    "type": "atout",
+    "description": "<p>Vous contrôlez votre colère enfouie de façon troublante, et pouvez canaliser votre Rage mieux que la plupart. Vous pouvez entrer en frénésie guerrière à volonté, tout en ignorant vos pénalités de blessure. Vous subirez toujours les conséquences de toutes les actions commises sous son emprise. Cet atout n’a pas d’impact sur les jets habituels de frénésie.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Bosse de la mécanique",
+    "type": "atout ",
+    "description": "<p>Vous êtes naturellement doué avec toutes sortes d’appareils mécaniques (à noter que cette aptitude ne couvre ni les appareils électroniques, tels les ordinateurs, ni tout ce qui ne fonctionne pas principalement sous l’effet d’éléments en mouvement). La difficulté de toutes vos actions visant à comprendre, réparer ou faire fonctionner n’importe quel engin mécanique est réduite de –2. Toutefois, cet atout ne vous aide en rien à prendre les commandes de véhicules ; une fois au volant, vous êtes tout seul.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Bosse de l’informatique",
+    "type": "atout ",
+    "description": "<p>Vous avez l’habitude des ordinateurs et des facilités pour vous en servir. La difficulté de tous vos tests les impliquant est réduite de –2, qu’ils concernent les aspects matériels ou logiciels de l’informatique.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Calcul mental",
+    "type": "atout",
+    "description": "<p>Vous avez une affinité naturelle avec les nombres et le calcul mental, ce qui vous avantage dans les domaines de la finance, de l’estimation immédiate de biens, des probabilités, de la résolution d’équations variables complexes, etc. Tous les jets faisant intervenir le calcul mental s’effectuent à une difficulté de –2. Une autre utilisation de cet atout consiste à déterminer les probabilités d’échec ou de réussite d’une action, à supposer que vous disposiez d’assez de données sur lesquelles baser vos calculs. Dans les situations appropriées, vous pouvez demander au conteur la difficulté de la tâche que vous êtes sur le point d’entreprendre avant de commencer.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Cauchemars",
+    "type": "handicap",
+    "description": "<p>Vous faites d’abominables cauchemars dès que vous vous endormez, et leur souvenir vous hante quand vous êtes éveillé. Au réveil, vous devez réussir un jet de Volonté (difficulté 7) ou perdre un dé sur toutes les actions de la journée.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Code de l’honneur",
+    "type": "atout",
+    "description": "<p>Vous avez une conception très rigide de la morale. Les détails de ce code éthique devront être fixés avec le conteur avant le début de la partie, et votre personnage doit y adhérer strictement. Quand il agit en accord avec son code (en défendant les faibles, par exemple), ou quand il tente d’éviter de le transgresser, le personnage gagne deux dés supplémentaires à tous ses jets de Volonté. Vous pouvez choisir un code déjà établi (la Litanie est un code l’honneur courant chez les Garous), ou dresser votre propre liste de préceptes éthiques et moraux, avec l’accord de votre conteur.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Cœur sensible",
+    "type": "handicap",
+    "description": "<p>En raison d’une grande empathie et de votre compassion, ou simplement parce que vous avez l’estomac fragile, vous ne supportez pas de voir les autres souffrir. Vous devez éviter ou vous éloigner de toute situation impliquant la souffrance physique ou émotionnelle d’autrui, à moins de réussir un jet de Volonté (difficulté 8).</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Colérique",
+    "type": "handicap",
+    "description": "<p>Vous êtes plus proche du Ver que la plupart des Garous; la Rage brûle plus intensément en vous que chez les autres. Votre difficulté pour les jets de Rage est diminuée de –2, et vous tombez plus facilement sous le joug du Ver. Soyez prudent quand vous prenez ce handicap, car il est susceptible de vous attirer des tonnes d’ennuis, à vous comme à votre meute.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Compulsion",
+    "type": "handicap",
+    "description": "<p>Vous vous sentez forcé d’entreprendre certaines actions à certains moments ou dans des circonstances spécifiques. Cette excentricité prend parfois une forme extrêmement ritualisée (se coiffer ou se laver les mains constamment) ou peut se manifester dans des situations déclenchantes (jouer de l’argent de façon compulsive, jurer, parler, voler). Non seulement ce handicap vous pose des problèmes, mais aussi à vos compagnons de meute. Vous pouvez dépenser 1 point de Volonté pour refouler temporairement votre compulsion. Voyez avec votre conteur pour déterminer combien de temps vous pouvez résister avant de devoir dépenser un autre point de Volonté ou succomber.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Concentration",
+    "type": "atout",
+    "description": "<p>Vous êtes capable de vous concentrer assez pour refouler toute gêne ou distraction. Les personnages avec cet atout ne souffrent d’aucune des pénalités circonstancielles qui pourraient autrement modifier leurs groupements de dés ou le niveau de difficulté d’un jet (une fusillade proche, des arômes entêtants ou se retrouver la tête en bas, par exemple).</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Confiance en soi",
+    "type": "atout",
+    "description": "<p>Vous êtes si sûr de vous que vous pouvez occasionnellement être «remboursé» lorsque vous dépensez 1 point de Volonté pour obtenir une réussite automatique. Il suffit pour cela que votre jet produise d’autres réussites que celle que vous avez obtenue automatiquement. Cet atout ne peut être employé que dans des situations éprouvantes, c’est-à-dire quand la difficulté du jet est supérieure ou égale à 6. Vous pouvez bien sûr toujours utiliser 1 point de Volonté à l’occasion de jets de difficulté inférieure, mais ce point ne sera jamais remboursé au moyen de cet atout.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "5 points"
+    }
+  },
+  {
+    "name": "Curiosité",
+    "type": "handicap",
+    "description": "<p>Vous ne pouvez résister à aucun mystère. Que ce soit un tiroir fermé, des chuchotements ou une lueur mystérieuse derrière les arbres, il faut que vous sachiez toujours ce qu’il se passe. Dès que vous êtes confronté à l’inconnu, vous devez réussir un jet d’Astuce ou partir voir de quoi il retourne. La difficulté varie selon le jet impliqué: 5 pour les choses simples («Qu’y a-t-il dans ce conteneur ? ») et jusqu’à 9 pour les circonstances extrêmes («Je me demande ce que ces fomori mijotent. Je ferais mieux d’aller les écouter. Ça ne peut pas faire de mal, non ? »).</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Défaut d’élocution",
+    "type": "handicap",
+    "description": "<p>Vous souffrez de bégaiement, de zézaiement ou d’un quelconque défaut d’élocution gênant la communication verbale. Ce trouble est perceptible que vous soyez sous forme humaine ou parliez en langue garou, brouillant vos hurlements et grognements et les rendant difficiles à comprendre. La difficulté de tous vos jets de dés impliquant la communication verbale augmente de +2. Ce handicap doit être interprété de vive voix dès que cela est possible.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Dérangé",
+    "type": "handicap",
+    "description": "<p>Vous êtes atteint d’une forme permanente de démence, en raison d’un défaut congénital ou suite à un traumatisme. Choisissez un dérangement mental parmi ceux disponibles page 487. La Volonté pourra vous permettre de refouler momentanément votre folie, mais elle reviendra toujours.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Détestation",
+    "type": "handicap",
+    "description": "<p>Certaines personnes ou situations éveillent en vous une haine incontrôlable et irraisonnée, ce qui vous oblige à réussir un jet de frénésie dès que vous êtes confronté à l’objet de votre détestation. En outre, vous cherchez activement des occasions de semer la destruction sur vos cibles d’élection. Il vous est conseillé de choisir soigneusement votre ennemi juré, dans la mesure où ce handicap peut influer sur votre relation avec votre meute ou votre sept, et où il peut interférer avec vos devoirs de Garou. La haine du Ver est considérée comme acquise et n’est donc pas éligible.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Don pour les langues",
+    "type": "atout",
+    "description": "<p>Vous êtes doué pour les langues. Ajoutez trois dés à tout groupement impliquant une langue écrite ou parlée, et chaque achat de Langue étrangère vous accorde deux langues au lieu d’une.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 point"
+    }
+  },
+  {
+    "name": "Esprit de meute",
+    "type": "handicap",
+    "description": "<p>Sans votre meute, vous êtes perdu. Elle vous soutient par sa présence, mais tend aussi à vous définir. Quand vous êtes avec au moins un membre de votre meute, vous avez une difficulté minorée de –1 à tous les jets impliquant des activités ou des stratégies de groupe ; quand ce n’est pas le cas, votre difficulté augmente de +2 pour toutes les tâches. Vous avez parfois du mal à prendre une décision sans l’aide de votre meute, même quand vous en êtes le chef. Enfin, le conteur peut vous demander de réussir un jet de Volonté pour agir seul.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Flashbacks",
+    "type": "handicap",
+    "description": "<p>Vous êtes parvenu à survivre à votre Premier Changement, mais n’en êtes pas sorti complètement indemne. Les choses les plus insignifiantes peuvent modifier votre humeur ou votre état d’esprit et, par conséquent, votre comportement est très imprévisible. En raison de votre état émotionnel précaire, votre Volonté fluctue. Au début de chaque histoire, effectuez un jet de Volonté (vous ne pouvez pas en dépenser pour réussir automatiquement). Si c’est une réussite, vous pouvez participer normalement à l’histoire. Si c’est un échec, en revanche, votre score de Volonté est considéré comme étant de 1 pour la durée de la séance, et vous n’avez qu’1 point de Volonté à dépenser. Vous pourrez relancer les dés au début de la session suivante pour voir si votre Volonté fonctionnera normalement, cette fois-ci.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "6 points"
+    }
+  },
+  {
+    "name": "Force intérieure",
+    "type": "atout",
+    "description": "<p>Vous avez l’étoffe d’un vrai survivant. En situation de crise, vous vous en sortez grâce à votre profonde détermination. Réduisez de –2 la difficulté des jets de Volonté si toutes les chances sont désespérément contre vous.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Horloge interne",
+    "type": "atout",
+    "description": "<p>Vous ressentez de façon innée le temps qui passe, et vous pouvez en estimer précisément la durée sans instrument, même quand vous avez perdu connaissance pendant longtemps. Cela vous permet (entre autres) de connaître la phase de la Lune.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Hyposomnie",
+    "type": "atout",
+    "description": "<p>En raison d’une robuste constitution, d’une nature frénétique, voire d’un soupçon de magie ancestrale dans votre sang, vous avez besoin de beaucoup moins de sommeil que le Garou moyen. Bien que le repos reste nécessaire après l’effort, le sommeil est rarement indispensable. Une heure par nuit vous suffit tout à fait, et même une heure tous les trois jours ne fera que vous rougir les yeux. Vous n’êtes pas immunisé aux effets surnaturels provoquant le sommeil, et vous devez toujours vous reposer après avoir fait appel à d’éprouvants dons ou rituels. Vous n’êtes pas toujours pimpant ou guilleret, mais vous ne subirez aucune pénalité ou effet secondaire en raison d’une veille prolongée.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Impatient",
+    "type": "handicap",
+    "description": "<p>Vous ne supportez pas de rester inactif, car il y a toujours quelque chose à faire. Faites un jet de Volonté (diffculté 6) chaque fois que vous tentez de patienter au lieu d’agir sur-le-champ. En cas d’échec, vous passez immédiatement à l’action, tout seul s’il le faut. Faites un jet de Volonté (difficulté 6) dès que vous tentez d’attendre plutôt que d’agir sur-le-champ. Un échec signifie que vous foncez faire ce qu’il y a à faire, tout seul si nécessaire.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Indomptable",
+    "type": "atout",
+    "description": "<p>Vous êtes une âme farouche qui ne s’est jamais laissé tenir en laisse. Vous êtes immunisé à la Domination vampirique (mais pas contre la manipulation des émotions par la Présence) et les dons suivants ne vous affecteront pas: Couché !, Obéissance et Maîtrise.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "5 points"
+    }
+  },
+  {
+    "name": "Intolérance",
+    "type": "handicap",
+    "description": "<p>Un type d’animal, de personne, de situation ou d’objet vous inspire une aversion irrationnelle, augmentant de +2 la difficulté de tous vos jets impliquant cette chose. Le conteur a le dernier mot pour déterminer ce qui peut faire l’objet d’une intolérance: certaines peuvent être trop triviales pour être valides (les beignets ou les porte-mines, par exemple), tandis que la haine du « Ver », courante chez les Garous, saurait difficilement compter pour un handicap.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Lacunes",
+    "type": "handicap",
+    "description": "<p>En raison d’une faible éducation, d’un manque d’opportunités ou par pure paresse, vous n’avez pas atteint votre plein potentiel. Vous avez 5 points de moins à distribuer dans un type de capacités (talents, compétences ou connaissances), ce qui veut dire que vous aurez 8, 4 ou 0 points dans l’une de ces catégories. Bien entendu, vous pouvez toujours dépenser des points de bonus pour acheter des capacités dans la catégorie affectée. Toutefois, aucune capacité de cette catégorie ne peut commencer avec un score supérieur à deux. Ce handicap est particulièrement adapté aux personnages lupus qui doivent encore apprendre beaucoup sur la vie de Garou.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "5 points"
+    }
+  },
+  {
+    "name": "Langue",
+    "type": "atout",
+    "description": "<p>Vous connaissez une langue étrangère. Vous pouvez prendre cet atout plusieurs fois, chacune représentant une langue différente. Langage des esprits est un don et ne peut pas être appris à l’aide de cet atout. Les Garous ne sont pas obligés d’utiliser cet atout pour acheter la langue garou ou lupine; elles sont considérées comme acquises aussi naturellement que leur langue natale d’homidé.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Mémoire eidétique",
+    "type": "atout",
+    "description": "<p>Vous vous souvenez parfaitement de ce que vous voyez et entendez. Vous pouvez mémoriser des documents, des photographies, des conversations, des pistes compliquées, des odeurs complexes ou des hurlements distinctifs, rien qu’en vous concentrant. Dans des conditions de stress impliquant de nombreuses distractions, vous devez réussir un jet de Perception + Vigilance (difficulté 6) pour parvenir à vous concentrer suffisamment afin d’absorber ce que détectent vos sens.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Monomanie",
+    "type": "handicap",
+    "description": "<p>Un but personnel vous anime de façon parfois surprenante. Ce but est toujours inaccessible : réformer les Danseurs de la Spirale Noire, rétablir l’équilibre au sein de la Trinité, réparer les crimes commis par vos ancêtres lors de la guerre de la Rage... Mais, bien que certains Garous puissent comprendre vos objectifs, peu ressentent votre obsession de façon aussi aiguë. Vous devez vous efforcer de vous rapprocher de votre objectif au fil de la chronique (même si vous pouvez éviter de le faire sur de courtes périodes en dépensant de la Volonté), et votre idée fixe vous met constamment dans l’embarras vis-à-vis de ceux qui ne partagent pas l’intensité de votre vision. Choisissez soigneusement votre objectif, car il sera le point d’ancrage de toutes les actions entreprises par votre personnage.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Phobie",
+    "type": "handicap",
+    "description": "<p>Vous avez une peur bleue de quelque chose. Les araignées, les serpents et l’altitude sont des exemples courants de phobies. Si vous avez une phobie bénigne (2 points), vous devez réussir un jet de Volonté dès que vous rencontrez l’objet de votre peur. La difficulté de ce jet est déterminée par le conteur et se base sur les circonstances de la rencontre. Vous devez obtenir au moins trois réussites pour approcher l’objet de votre peur ou faire face à la situation anxiogène. Si ce jet est un échec, vous devez fuir. La version à 3 points de ce handicap vous oblige à réussir un jet de frénésie pour résister à la frénésie du renard lorsque vous êtes confronté à ce que vous craignez. Votre conteur doit approuver la phobie que vous choisirez.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 ou 3 points"
+    }
+  },
+  {
+    "name": "Présomptueux",
+    "type": "handicap",
+    "description": "<p>Vous pouvez tout faire, du moins, vous le pensez. Aucun défi ne saurait vous impressionner, que vous ayez ou non les compétences indispensables à sa réussite. Ne refusez jamais d’essayer parce que vous êtes dépassé en nombre ou en moyens. Si vous échouez, vous trouverez bien quelqu’un ou quelque chose à blâmer ; en tout cas, ça ne sera certainement pas de votre faute.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Sang-froid",
+    "type": "atout",
+    "description": "<p>Vous restez calme et posé même dans les circonstances les plus éprouvantes. Vous recevez deux dés supplémentaires quand vous tentez de résister à la frénésie.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Sens commun",
+    "type": "atout",
+    "description": "<p>Vous êtes plein de bon sens (ce qui n’est pas courant chez les humains ou les Garous). Dès que vous êtes sur le point de faire une chose contraire au sens commun, le conteur peut intervenir et vous prévenir que votre personnage vous trouverait plutôt imprudent. Cet atout est particulièrement recommandé aux novices qui commencent tout juste à découvrir le monde de Loup-Garou et ses dangers.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Territorial",
+    "type": "handicap",
+    "description": "<p>Vous avez la nature territoriale d’un loup. Vous n’aimez ni quitter votre zone de confort ni voir des inconnus empiéter sur votre espace vital. Avant de jouer, travaillez avec votre conteur afin de définir votre territoire. Dès que des inconnus y pénètrent sans votre autorisation, vous devez réussir un jet pour ne pas succomber à la frénésie et serez réticent à quitter les lieux, sauf dans des cas désespérés.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Tête en l’air",
+    "type": "handicap",
+    "description": "<p>Vous avez du mal à vous rappeler de choses importantes, comme les noms, les numéros de téléphone ou l’itinéraire menant au cairn. Vous oubliez souvent les tâches que l’on vous confie, les date et heure de certains événements, voire votre dernier repas. Bien que vous n’oubliiez ni compétence, ni talent, ni connaissance, vous devez réussir un jet d’Intelligence d’une difficulté déterminée par le conteur pour vous souvenir de détails précis sur tout ce qui touche à des choses plus importantes que votre nom.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Timidité",
+    "type": "handicap",
+    "description": "<p>Vous détestez être le centre d’attention, et les foules vous mettent mal à l’aise. La difficulté de tous vos jets impliquant une interaction sociale avec des inconnus est augmentée de +2. Si vous êtes au cœur de la situation, même avec des gens que vous connaissez, la difficulté augmente de +3.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Touche-à-tout",
+    "type": "atout",
+    "description": "<p>Vous en savez un peu sur beaucoup de choses. Si vous effectuez un jet avec une compétence que vous ne possédez pas, vous ne subissez pas la pénalité de difficulté habituelle. Vous pouvez tenter un jet sur une connaissance que vous ne n’avez pas, mais la difficulté de ce jet est alors augmentée de +2. Seuls les homidés et métis peuvent prendre cet atout.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Velléitaire",
+    "type": "handicap",
+    "description": "<p>Vous résistez peu aux tentatives de domination ou d’intimidation. Les dons qui entraînent une soumission, comme Regard de tueur ou Couché! réussissent automatiquement contre vous. Vos difficultés pour résister aux talents sociaux comme l’Intimidation ou le Commandement, ainsi que les sorts ou la magie altérant l’esprit, sont augmentées de +2. Votre Volonté ne pourra jamais dépasser 4.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Vindicatif",
+    "type": "handicap",
+    "description": "<p>Vous avez un compte à régler; peut-être les Danseurs de la Spirale Noire ont-ils assassiné votre famille ou une Première équipe de Pentex a-t-elle décimé votre première meute. Vous vengez du groupe ou de l’individu responsable est votre priorité absolue dès que vous les rencontrez ou que vous pouvez saisir l’occasion de vous venger. Vous pouvez temporairement résister à ce besoin en dépensant 1 point de Volonté.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Volonté de fer",
+    "type": "atout",
+    "description": "<p>Votre résistance aux tentatives extérieures pour prendre le contrôle de votre esprit est phénoménale. Vous recevez trois dés supplémentaires pour résister aux efforts pour manipuler votre esprit et pouvez dépenser 1 point de Volonté pour repousser le contrôle direct d’un vampire. Cet atout ne fonctionne que contre le contrôle direct, non contre la manipulation des émotions; les dons induisant la frénésie auront toujours les mêmes chances de réussir, par exemple.</p>",
+    "data": {
+      "scope": "mental",
+      "cost": "3 points"
+    }
+  }
+]
+ 

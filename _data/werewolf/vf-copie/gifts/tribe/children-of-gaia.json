@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Enrayer",
+    "description": "<p>l’Enfant peut empêcher n’importe quelle arme engendrée par la Tisseuse de fonctionner à portée de sa voix. Un esprit-colombe enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 1,
+      "system": "<p>le Garou crie un ancien mot de pouvoir et de grâce, puis dépense 1 point de Gnose. Le joueur fait un jet de Volonté dont la difficulté est égale à la plus haute Volonté parmi les individus armés qui l’entendent. Pour chaque réussite, toutes les armes manufacturées cessent de fonctionner pendant un tour. Ceci inclut les armes à feu, arbalètes et lance-flammes, ainsi que les couteaux et épées, qui refusent de trancher. Les armes naturelles (comme les griffes) et les objets naturels transformés en armes (cailloux, branches mortes tombées naturellement) ne sont pas affectés.</p>",
+    }
+  },
+  {
+    "name": "Odeur fraternelle",
+    "description": "<p>puisant dans la fraternité universelle de toutes les créatures de Gaïa, le loup-garou s’intègre partout où il va. Ceux qui n’ont aucune raison de soupçonner la présence de l’Enfant ne le remarquent pas. Un serviteur de Licorne enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Apparence + Empathie (difficulté 6). Quiconque n’est pas activement en quête d’intrus manquera de remarquer les incongruités de l’apparence du Garou, quelles qu’elles soient. Par exemple, ni un homme nu et couvert de sang transportant un grand klaive au beau milieu d’un bal élégant, ni un loup se promenant dans un quartier résidentiel n’attireront l’attention. Le Garou n’est pas invisible, mais il ne se démarque pas comme il le devrait. Son apparence semble banale, même par ceux qui interagissent avec lui. En revanche, l’illusion se brise immédiatement s’il entreprend une action qui attirerait normalement l’attention sur lui (crier, déclencher un combat, tenter de défoncer une porte verrouillée). Ceux qui guettent spécifiquement les individus qui ne rentrent pas dans le moule (les agents de sécurité d’un bâtiment privé, par exemple) ne succombent pas à ce don à moins que leur score de Volonté soit inférieur au nombre de réussites du Garou au jet d’activation.</p>",
+    }
+  },
+  {
+    "name": "Pitié",
+    "description": "<p>les Enfants de Gaïa ne voient pas l’utilité de tuer lorsqu’il ne s’agit pas de combattre les serviteurs du Ver, mais même eux succombent à la frénésie. Ce don permet au Garou d’utiliser ses armes naturelles et sa Rage sans craindre de tuer ses adversaires. Ce don est enseigné par un esprit-colombe.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose. Pour le restant de la scène, tous les dégâts que le Garou inflige avec son corps sont considérés comme contondants. Une créature « tuée » par de tels dégâts tombe seulement inconsciente, et peut guérir de ses blessures au rythme normal pour les dégâts contondants (voir page 254).</p>",
+    }
+  },
+  {
+    "name": "Résistance à la douleur",
+    "description": "<p>par sa force de caractère et sa volonté, le loup-garou bloque la douleur que lui causent ses blessures. Un esprit-ours ou un esprit-blaireau enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 1,
+      "system": "<p>en dépensant 1 point de Volonté, le personnage peut ignorer toutes les pénalités de blessures jusqu’à la fin de la scène.</p>",
+    }
+  },
+  {
+    "name": "Toucher de la Mère",
+    "description": "<p>le Théurge canalise l’énergie spirituelle dans ses mains, apaisant les blessures de n’importe quelle autre créature vivante. Enseigné par un esprit-ours ou un esprit-licorne, ce pouvoir ne peut pas guérir le loup-garou lui-même, les esprits ou les morts-vivants.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "auspice",
+      "auspice": "theurge",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Intelligence + Empathie (difficulté égale à la Rage actuelle de la cible, ou 5 pour une cible qui en est dépourvue). Chaque réussite guérit un niveau de dégât létal, contondant ou aggravé. Le guérisseur peut même soigner ainsi les cicatrices de bataille (voir page 259) s’il emploie ce don lors de la scène où elles sont infligées et dépense 1 point de Gnose supplémentaire.</p>",
+    }
+  },
+  {
+    "name": "Armure de Luna",
+    "description": "<p>le Croc d’Argent invoque le pouvoir sacré de la Lune. Son corps est brièvement enveloppé d’un scintillement de lumière lunaire qui lui accorde la protection de Luna. Ce don est enseigné par une lunaire.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 2,
+      "system": "<p>le loup-garou se concentre pendant un tour puis dépense 1 point de Gnose et le joueur fait un jet de Vigueur + Survie (difficulté 6). Chaque réussite confère au Garou un dé supplémentaire pour ses jets d’absorption. Ces dés (et seulement ceux-là) peuvent même être employés pour absorber les dégâts infligés par de l’argent. L’effet dure une scène.</p>",
+    }
+  },
+  {
+    "name": "Arsenal de la Licorne",
+    "description": "<p>les griffes et les crocs du loup-garou deviennent nacrés et iridescents, scintillant glorieusement d’une opalescence intérieure. Ceux qui sont blessés par ces armes naturelles perdent toute animosité. Ce don est enseigné par un avatar de Licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose pour activer la transformation. Un adversaire qui subit une blessure infligée par l’Arsenal de la Licorne perd deux dés à tous ses jets d’attaque jusqu’à ce que la blessure guérisse.</p>",
+    }
+  },
+  {
+    "name": "Calme",
+    "description": "<p>ce don révèle le secret qui permet d’apaiser la colère d’autrui. Il est enseigné par un esprit-licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Charisme + Empathie (difficulté égale à la Volonté de la cible). Chaque réussite ôte 1 point de Rage à la cible, qui peut les récupérer normalement. S’il est utilisé contre une créature capable de frénésie, mais dépourvue de Rage (comme les vampires ou certains fomori), le don annule celle-ci si le joueur obtient au moins trois réussites.</p>",
+    }
+  },
+  {
+    "name": "Para bellum",
+    "description": "<p>bien que les Enfants aiment la vie, le printemps et tout ce que Gaïa offre de bon, ce ne sont pas des pacifistes ; ils sont toujours prêts à protéger la Mère. La Rage du loup-garou explose comme un torrent lorsque quelqu’un brise la paix qu’ils chérissent tant. Ce don est enseigné par un esprit-ours.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 2,
+      "system": "<p>ce pouvoir peut uniquement être utilisé au commencement d’un combat qui n’a pas été déclenché par le Garou, sa meute ou ses alliés. Le joueur dépense 1 point de Rage; pour le restant de la scène, son personnage jouit d’1 point supplémentaire en Force et en Dextérité lorsqu’il attaque l’ennemi qui a déclenché le combat ou tout individu ayant infligé des dégâts à un membre de sa meute pendant la scène.</p>",
+    }
+  },
+  {
+    "name": "Toucher de la Grand-Mère ",
+    "description": "<p>le loup-garou canalise l’énergie spirituelle dans ses mains, apaisant ses blessures (et seulement les siennes). Il n’est pas possible d’apprendre ce don sans avoir d’abord maîtrisé le \"Toucher de la Mère\".</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Intelligence + Empathie (difficulté égale à sa Rage actuelle). Chaque réussite guérit un niveau de dégât létal, contondant ou aggravé. Le guérisseur peut même se soigner ainsi des cicatrices de bataille (voir page 259) s’il emploie ce don lors de la scène où elles sont infligées et dépense 1 point de Gnose supplémentaire.</p>",
+    }
+  },
+  {
+    "name": "Ami des esprits",
+    "description": "<p>le loup-garou projette un sentiment de tranquillité et de camaraderie que les esprits perçoivent naturellement. À part les fous et les corrompus parmi eux, ils le traitent avec courtoisie et honneur. Ce don est enseigné par un esprit-licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Charisme + Empathie (difficulté 7). Chaque réussite ajoute un dé à tous les jets du Garou quand il interagit avec les esprits autres que les flaïels pour le reste de la scène.</p>",
+    }
+  },
+  {
+    "name": "Calmer la bête sauvage",
+    "description": "<p>même le plus cynique des homidés peut compatir avec la Rage qui anime ses frères garous en ces derniers jours. Ce don permet au personnage de prêter main-forte à un lycanthrope en frénésie pour lui permettre d’échapper au joug de la Rage. Ce don est enseigné par un esprit-ancêtre.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 3,
+      "system": "<p>le personnage dépense 1 point de Volonté et fait un jet de Manipulation + Intuition primitive (difficulté 8). S’il réussit, il parvient à apaiser un Garou situé à 10 mètres ou moins, annulant la frénésie. En dépensant 1 point de Volonté supplémentaire, ce don peut affecter un non-Garou en état de frénésie, par exemple un autre change-forme ou un vampire.</p>",
+    }
+  },
+  {
+    "name": "Éblouir",
+    "description": "<p>le Garou peut inonder l’esprit de sa cible de la gloire et l’amour de Gaïa, le désarmant totalement pour un court moment. Ce don est enseigné par un esprit-licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Charisme + Empathie contre une difficulté égale à la Volonté de la cible (+1 si c’est une créature du Ver). Tant que la victime n’est pas attaquée, elle reste béate et en adoration pendant le restant de la scène. Ce don ne peut être employé qu’une fois par scène contre une même cible.</p>",
+    }
+  },
+  {
+    "name": "Toucher de l’amant",
+    "description": "<p>le Garou peut restaurer ce qu’il manque chez autrui; il guérira non seulement ses blessures, mais renforcera aussi sa détermination, et même son essence spirituelle. Tout esprit de l’amour ou avatar de Licorne peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 3,
+      "system": "<p>le Garou touche l’individu affligé de manière affectueuse. Ils n’ont pas besoin d’être amants, mais le contact doit transmettre de l’affection et de la chaleur humaine (une étreinte, une caresse, ou un contact encore plus intime). Le joueur dépense 1 point de Gnose et fait un jet d’Intelligence +Médecine; chaque réussite peut servir soit à soigner un niveau de dégâts contondants ou létaux, soit à restaurer 1 point de Volonté (ou d’Essence si la cible est un esprit). La difficulté est la Rage ou la Volonté de la cible (valeur la plus haute). Le joueur a le droit de diviser ses réussites pour obtenir plusieurs types de résultats. Il peut aussi choisir de ne restaurer aucun point et de ne soigner aucune blessure, et d’annuler plutôt les effets d’un dérangement pendant un jour par réussite. Ce don ne peut pas soulager ces afflictions de manière permanente, mais peut constituer un premier pas vers la guérison.</p>",
+    }
+  },
+  {
+    "name": "Frappe dans le Vide",
+    "description": "<p>le Garou devient l’exemple ultime de la résistance passive. Il ne peut pas attaquer, mais son adversaire en est tout aussi incapable, et se fatigue à force de voir ses coups manquer. Ce don est enseigné par un esprit-mangouste.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Volonté et fait un jet d’Astuce + Athlétisme (difficulté égale à la Volonté de la cible). Pendant toute la scène, l’adversaire ne peut pas frapper le Garou, quel que soit le résultat de ses jets. Ce don est immédiatement annulé si le loup-garou attaque son adversaire, ou si quelqu’un d’autre le fait pour lui. Ce don peut affecter plusieurs combattants à la fois, mais le joueur doit dépenser 1 point de Volonté et effectuer un nouveau jet pour chacun d’entre eux.</p>",
+    }
+  },
+  {
+    "name": "Libre depuis le premier matin",
+    "description": "<p>ce don octroie la vitesse parfaite de Licorne au loup-garou, lui permettant de distancer virtuellement n’importe quel poursuivant. Ce don est enseigné par un avatar de Licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Vigueur + Athlétisme (difficulté égale à la somme Vigueur + Athlétisme la plus haute de tous les poursuivants). Le Garou est infailliblement plus rapide que ses pourchasseurs pendant une scène par réussite.</p>",
+    }
+  },
+  {
+    "name": "Sérénité",
+    "description": "<p>le Garou peut offrir la paix de Gaïa à un cœur agité, même au milieu d’une bataille. Ce don est enseigné par un avatar de Licorne.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Charisme + Expression dont la difficulté est égale à la Volonté de la cible. Pendant un tour par réussite, cette dernière rate automatiquement tous ses jets de Rage, ne peut plus en dépenser, et est immunisée à la frénésie.</p>",
+    }
+  },
+  {
+    "name": "Vie animale",
+    "description": "<p>le loup-garou peut communiquer avec les autres bêtes sauvages et les appeler à lui, ou même leur commander. S’étant laissé séduire par les façons des hommes, les animaux domestiques peuvent transmettre des informations au Garou, mais ne lui fourniront aucun autre genre d’aide. Tout esprit animal peut enseigner ce don, bien que les lupus préfèrent l’apprendre d’esprits-lions ou d’esprits-loups.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 4,
+      "system": "<p>le personnage gagne la faculté permanente de communiquer avec tous les animaux, quelle que soit la forme qu’il revêt. Pour les attirer, le joueur dépense 1 point de Gnose et fait un jet de Charisme + Animaux (difficulté 7). Tous les animaux à moins de 15 km par réussite répondent à l’appel, et respecteront les demandes du Garou. La coutume veut qu’on rende hommage à l’esprit de tout animal auquel on ordonne de se sacrifier au moyen de ce don; quiconque omet de le faire encourt la colère du monde des esprits.</p>",
+    }
+  },
+
+  {
+    "name": "Bois vivant",
+    "description": "<p>l’Enfant de Gaïa fait appel au pouvoir de la forêt afin qu’elle vienne à son aide. Les arbres proches se mettent à bouger et tentent de protéger le Garou. Les branches, lianes et autres vignes restreignent, bloquent ou combattent ceux qui tentent de lui faire du mal. Un enfant des clairières peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Charisme + Survie (difficulté 8). Le personnage anime un arbre par réussite.</p>",
+    }
+  },
+  {
+    "name": "Halo solaire",
+    "description": "<p>prononçant un antique mot sacré pour Hélios, le Garou se retrouve immédiatement entouré d’une éclatante sphère de lumière solaire, faisant fuir les créatures du Ver qui craignent l’astre du jour. Ce don est enseigné par un serviteur d’Hélios.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "children-of-gaia",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et l’effet dure une scène. Le personnage bénéficie de deux dés de dégâts supplémentaires lorsqu’il attaque au corps à corps, et inflige des dégâts aggravés tant qu’il est sous forme homidée ou glabro. Quiconque regarde directement le loup-garou voit la difficulté de ses attaques augmentée de +3 à cause de l’éblouissement. Tout vampire à moins de 20 m subit trois niveaux de dégâts aggravés par tour.</p>",
+    }
+  }
+]

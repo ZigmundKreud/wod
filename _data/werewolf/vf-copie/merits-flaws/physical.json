@@ -1,0 +1,299 @@
+[
+  {
+    "name": "Achromatopsie",
+    "type": "handicap",
+    "description": "<p>Vous ne distinguez pas les couleurs, mais voyez le monde en tons variés de noir, blanc et gris. Il ne s’agit pas là d’une véritable achromatopsie, qui désigne généralement l’incapacité à faire la différence entre certaines couleurs (tels le rouge et le vert). La couleur ne signifie rien pour vous, bien que vous puissiez percevoir les nuances d’obscurité (gris, gris foncé ou gris clair, etc.). Ce handicap se rencontre le plus souvent chez les lupus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Ambidextrie",
+    "type": "atout",
+    "description": "<p>Vous vous servez suffisamment bien de votre main faible pour n’en souffrir aucun désavantage. Les règles pour entreprendre des actions multiples s’appliquent toujours, mais il ne vous est imposé aucune pénalité de difficulté si vous utilisez deux armes ou si vous êtes contraint de vous servir de votre main faible pour achever une tâche.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Amblyopie",
+    "type": "handicap",
+    "description": "<p>Votre vue est très mauvaise, en raison d’un défaut impossible à corriger. Les difficultés de tous les jets de dés liés à la vue augmentent de +2. Votre forme lupus ne bénéficie pas du bonus standard à la Perception pour les jets visuels, bien que les autres sens ne soient pas affectés. À la différence de la myopie ou de l’hypermétropie, cette anomalie ne peut pas être corrigée.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Anosmie",
+    "type": "handicap",
+    "description": "<p>De naissance, ou en raison d’une maladie ou d’un accident, vous avez totalement perdu les sens du goût et de l’odorat. Vous ratez automatiquement tous les jets les faisant intervenir, y compris les jets d’Intuition primitive liés à la chasse ou au pistage. Sous forme hispo et lupus, cela se révèle encore plus handicapant, puisque l’odorat est le sens le plus aiguisé des loups; ce handicap annule la réduction de difficulté aux jets de Perception dont un Garou bénéficie sous ces formes. Il existe toutefois un léger bénéfice: à la discrétion du conteur, vous pouvez être immunisé aux effets débilitants de conditions environnementales, de dons et de capacités surnaturelles dépendant des odeurs.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Armes naturelles",
+    "type": "atout",
+    "description": "<p>Vous êtes en étroite harmonie avec votre forme lupus. Votre équilibre et votre acuité physique sous cet aspect sont supérieurs à ceux que vous possédez sous forme humaine. Réduisez de –1 la difficulté de tout jet d’attaque faisant intervenir une arme naturelle (griffe, morsure, ruade, etc.) quand vous êtes sous forme lupus. La difficulté de vos attaques sous forme homidée augmente de +1 ; en revanche, rien ne change dans le cas des autres formes. Cet atout coûte 3 points aux personnages lupus ou métis, 4 aux homidés.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 ou 4 points"
+    }
+  },
+  {
+    "name": "Audition déficiente",
+    "type": "handicap",
+    "description": "<p>Vous éprouvez des difficultés à entendre certains sons, ou un quelconque problème affecte votre ouïe. Tous vos jets faisant intervenir l’audition se font à une difficulté de +2. Sous forme hispo et lupus, vous ne bénéficiez pas du bonus normal à la Perception pour ces jets.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Beau glabro",
+    "type": "atout",
+    "description": "<p>Votre apparence de glabro peut passer pour humaine, même si votre carrure reste plus imposante que la normale. Sous cette forme, aucune pénalité ne s’applique à vos attributs sociaux.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Boiteux",
+    "type": "handicap",
+    "description": "<p>De naissance, ou suite à un accident ou une grave blessure de guerre, vos jambes sont atteintes, ce qui vous empêche de courir ou de marcher sans peine. Vous boitez de façon prononcée et avez peut-être besoin d’une canne ou d’un bâton. Votre vitesse de marche est le quart de celle d’un humain normal, et courir vous est impossible. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Borgne",
+    "type": "handicap",
+    "description": "<p>Vous n’avez aucune perception de la profondeur et votre vue est limitée, car vous êtes borgne. Votre côté aveugle n’a aucune vision périphérique. La difficulté de tous vos jets faisant intervenir la vue est augmentée de +2, ou de +3 si la perception de la profondeur est impliquée (en combat à distance, par exemple).</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Carrure impressionnante",
+    "type": "atout ",
+    "description": "<p>Votre apparence extérieure et votre attitude physique vous font paraître dangereux, et vous dégagez une confiance en vous qui impressionne vos adversaires. Ajoutez un dé à tout jet social impliquant l’intimidation.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Cécité",
+    "type": "handicap",
+    "description": "<p>Vous êtes aveugle. Vous échouez automatiquement à tous les jets uniquement basés sur la vision. La difficulté de tous les jets basés sur la Dextérité augmente également de +2. Tous les jets pour vous décaler s’effectuent à une difficulté de +1, dans la mesure où il vous est impossible de visualiser le monde extérieur. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "6 points"
+    }
+  },
+  {
+    "name": "Désarticulé",
+    "type": "atout",
+    "description": "<p>Vous êtes d’une souplesse prodigieuse et effectuez tous les jets de dés impliquant cette qualité (se libérer d’un adversaire, par exemple) avec une difficulté de –2. Vous pouvez vous contorsionner, adopter des positions bizarres ou encore vous faufiler dans des espaces restreints.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Difformité",
+    "type": "handicap",
+    "description": "<p>Un de vos membres est difforme. Vous souffrez de cyphose ou d’une déformation qui réduit vos capacités physiques et limite vos interactions avec autrui. Un bossu, par exemple, souffrirait d’une réduction de –2 points à sa Dextérité et d’une difficulté de +1 aux jets liés aux compétences sociales. Un bras atrophié pourrait réduire la Dextérité de –2 pour tous les jets de manipulation, réduire votre vitesse de course sous toutes vos formes quadrupèdes, et augmenter de +1 la difficulté de vos jets de compétences sociales. Vous êtes invité à déterminer la nature de votre difformité avec votre conteur, ainsi que les pénalités Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Double peine",
+    "type": "handicap",
+    "description": "<p>Gaïa vous a gratifié d’importants stigmates. Vous êtes né, non pas avec une, mais deux difformités majeures. Elles peuvent être liées, mais doivent constituer deux éléments bien distincts. Deux bois de cerf ou deux rangées de dents de requin ne constitueraient qu’une seule difformité, mais une ramure et des sabots ou une rangée de dents de requin et une paire d’ouïes seraient acceptables. Le conteur a le dernier mot quant à l’éligibilité des deux difformités. Ce handicap ne peut être pris que par des garous métis.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Équilibre parfait",
+    "type": "atout",
+    "description": "<p>Votre don pour tenir debout est prodigieux (que ce soit sur vos deux pieds ou vos quatre pattes), grâce un talent inné ou à de nombreuses heures d’entraînement. Tous les jets que vous effectuez pour entreprendre des activités impliquant l’équilibre (Dextérité + Athlétisme pour le funambulisme, manœuvrer sur la glace, l’alpinisme ou la varappe, par exemple), se font à une difficulté de –2.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Inodorance",
+    "type": "atout",
+    "description": "<p>Soit vous ne dégagez aucune odeur, soit celle-ci est très faible. Tout humain, animal ou Garou tentant de vous pister par ce moyen le fera à une difficulté de +2. Cela dit, vous rencontrerez peut-être des difficultés avec les lupus ou les loups, ceux-ci ayant tendance à se méfier de votre absence d’odeur « naturelle ».</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Intrépidité",
+    "type": "atout",
+    "description": "<p>Vous excellez à la prise de risque et êtes doué pour y survivre. Lorsque vous tentez des actions (hors combat) exceptionnellement risquées (bondir de toit en toit à trente étages de haut, par exemple), vous pouvez ajouter trois dés à votre jet et pouvez annuler un éventuel échec critique à cette occasion. Pour prétendre à ce bonus, une action doit généralement être d’une difficulté au moins égale à 8 et avoir le potentiel d’infliger au moins 3 points de dégâts en cas d’échec.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Manchot",
+    "type": "handicap",
+    "description": "<p>Vous êtes né avec un seul bras, ou vous l’avez perdu suite à une blessure. Vous ne souffrez d’aucune pénalité de main faible, car vous avez appris à vous servir de votre main valide pour la plupart des activités. Dans des situations nécessitant les deux mains, en revanche, vous perdez deux dés de votre groupement. Sous formes hispo et lupus, votre vitesse de course est réduite à la moitié de la normale. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Marathonien",
+    "type": "atout",
+    "description": "<p>Grâce à votre entraînement ou à vos dons innés, vous avez développé la capacité de courir très vite et longtemps. Vous pouvez courir au double de votre vitesse normale pendant une heure par point de Vigueur. Cet atout est très populaire chez les Arpenteurs Silencieux, et vous devez avoir au moins 4 points de Vigueur pour l’acheter.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Métamorphose partielle",
+    "type": "atout",
+    "description": "<p>Pour vous, l’art de la transformation est relativement facile, et vous effectuez le jet requis de Dextérité + Intuition primitive à une difficulté de 6 et non de 9 (cf. page 285). La version à 5 points de cet atout élimine l’exigence d’1 point de Volonté ; vous pouvez vous transformer partiellement quasiment à volonté.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point ou 5 points"
+    }
+  },
+  {
+    "name": "Monstrueux",
+    "type": "handicap",
+    "description": "<p>Physiquement, vos congénères garous vous considèrent comme véritablement hideux. Toutes vos formes sont extravagantes, vous n’avez presque rien d’humain quand vous adoptez les traits d’un homidé, et le reste souffre toujours d’une anomalie majeure. Vous êtes invité à décider de ce à quoi vous ressemblez. Votre score d’Apparence est de 0 et ne saurait être augmenté à l’aide de points d’expérience dans des circonstances ordinaires. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "3 points"
+    }
+  },
+  {
+    "name": "Muet",
+    "type": "handicap",
+    "description": "<p>Vous ne pouvez pas parler, quelle que soit la forme que vous adoptiez. Même communiquer en langue garou ou lupus (qui s’appuient à la fois sur les vocalisations et le langage corporel) vous échappe, tout comme le langage des esprits. En tant que joueur, vous pouvez communiquer avec le conteur et décrire vos actions, mais votre personnage ne peut pas parler à ceux qui l’entourent, à moins d’avoir convenu d’un langage des signes compréhensible par tous (par le biais de l’atout Langue). Sans quoi, votre personnage doit communiquer en écrivant ou en s’exprimant par gestes. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "4 points"
+    }
+  },
+  {
+    "name": "Musc animal",
+    "type": "handicap",
+    "description": "<p>Vous dégagez une odeur animale, même sous forme homidée. Dès que vous vous retrouvez dans un lieu clos ou au milieu d’une foule, vous effectuez tous vos jets d’attributs sociaux à une difficulté de +2. À l’extérieur, ou dans des situations où il vous est possible de vous distancier des humains, votre odeur n’est pas décelable. Les loups (et les garous nés lupus) font peu attention à ce handicap.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "OEil de loup",
+    "type": "atout",
+    "description": "<p>Sous toutes vos formes, vous percevez les couleurs et les intensités de lumière à la façon d’un loup. Votre vision des couleurs est légèrement moins précise que celle des humains, même si vous les percevez toutes. La nuit, en revanche, votre vue surpasse de loin la leur. Vous repérez aussi plus rapidement les mouvements. Vous gagnez un dé supplémentaire à tous vos jets de Perception visuelle nocturne ou impliquant un mouvement.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Petite taille",
+    "type": "handicap",
+    "description": "<p>Vous êtes bien plus petit que la moyenne (1 m 50 ou moins sous forme homidée). Votre petite taille vous complique certaines tâches, comme voir par-dessus des obstacles, atteindre les étagères supérieures ou manipuler des objets destinés à des individus moyens. Ce manque de stature se voit sous toutes vos formes. Votre vitesse de course est diminuée de moitié, et votre conteur peut décider de vous infliger des pénalités additionnelles en fonction de la situation, même si ce handicap pourra parfois vous aider à vous dissimuler.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Régime strictement carnivore",
+    "type": "handicap",
+    "description": "<p>Pour vous, un «végétarien» n’est rien d’autre qu’un «chasseur paresseux». Les légumes et les céréales ne vous nourrissent pas ; vous ne pouvez survivre qu’en consommant de la viande, et moins elle est cuite, mieux ça vous va. Les lieux où la viande est rare vous posent de vrais problèmes.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Répugnance",
+    "type": "atout",
+    "description": "<p>Vous êtes odieux au palais, et vous scandalisez les papilles. Bref, vous êtes immangeable. Quiconque vous mord (vampire, Garou, fomor, engeance du Ver...) est immédiatement pris de nausées et doit dépenser 1 point de Volonté ou vomir sans pouvoir s’arrêter pendant une scène. Il y a toutefois une contrepartie : les lupus et les loups seront peu enclins à vous faire des léchouilles où à vous cajoler, et même les petits baisers affectueux souffrent de votre immonde saveur.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "2 points"
+    }
+  },
+  {
+    "name": "Sens développé",
+    "type": "atout",
+    "description": "<p>Un de vos sens est exceptionnellement développé (même pour un Garou). Choisissez la vue, l’ouïe, l’odorat, le toucher ou le goût. La difficulté de toute action impliquant ce sens est réduite de –2. Cet atout peut être acheté à plusieurs reprises, mais jamais deux fois pour le même sens. La réduction de difficulté qu’il confère peut être cumulée avec une autre (provenant d’un don par exemple), sauf si celle-ci provient d’un autre Sens développé. Cet atout ne peut être acheté si le sens concerné manque ou est amoindri en raison d’un handicap (par exemple: Cécité, Amblyopie, Surdité, Audition déficiente, Anosmie, etc.).</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Surdité",
+    "type": "handicap",
+    "description": "<p>Vous êtes sourd de naissance, ou vous avez perdu l’ouïe. Vous pouvez parfois sentir les vibrations en cas de bruits suffisamment forts, mais vous n’entendez rien. La difficulté de tous les jets de Perception liés au son est augmentée de +3. Ce handicap peut tenir lieu de difformité pour un métis, mais il ne rapporte dans ce cas aucun point de bonus.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "4 points"
+    }
+  },
+  {
+    "name": "Taille gigantesque",
+    "type": "atout",
+    "description": "<p>Vous mesurez près de 2,10 m et pouvez peser jusqu’à deux quintaux sous votre forme homidée ; vos autres formes sont elles aussi proportionnellement énormes. Cet atout vous accorde un niveau de santé supplémentaire, qui compte comme un niveau de santé Contusion additionnel pour ce qui concerne le calcul des dégâts et des pénalités de blessure. Bien entendu, votre imposante carrure vous pose d’autres problèmes (pour vous fondre dans la foule, trouver des vêtements à votre taille, tenir dans un siège d’avion, etc.).</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "4 points"
+    }
+  },
+  {
+    "name": "Tolérance à l’alcool",
+    "type": "atout",
+    "description": "<p>Avec un jet de Vigueur réussi (difficulté 7), vous pouvez vous libérer des effets de l’ivresse et ne souffrir d’aucun des déficits de coordination affectant normalement les combattants ivres. Cet atout fonctionne avec tous les stupéfiants naturels, même transformés (telle la cocaïne), mais pas avec les poisons ou les drogues chimiques entièrement par artificielles (comme la méthamphétamine).</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  },
+  {
+    "name": "Transfiguration",
+    "type": "atout",
+    "description": "<p>Pour vous, changer de forme est aussi facile que respirer. Vous ne devez réussir aucun jet pour changer de forme, pas plus qu’il ne vous est nécessaire de dépenser 1 point de Rage pour une transformation instantanée. Vous changez de forme comme si vous aviez obtenu cinq réussites sur votre jet de transformation. Si vous perdez connaissance en raison de blessures ou pour une quelconque autre raison, vous pouvez effectuer un jet d’Astuce + Intuition primitive (difficulté 8), afin de choisir la forme que vous adoptez plutôt que de revenir à votre état naturel.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "7 points"
+    }
+  },
+  {
+    "name": "Transformation complète",
+    "type": "handicap",
+    "description": "<p>Vous ne pouvez pas hybrider vos formes ; sous forme lupus, vous ne pouvez pas modifier votre larynx pour le rendre capable de langage humain, ou vous faire pousser un museau sous forme glabro. Vous ne pouvez adopter que des formes complètes.</p>",
+    "data": {
+      "scope": "physical",
+      "cost": "1 point"
+    }
+  }
+]

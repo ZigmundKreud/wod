@@ -1,7 +1,7 @@
 {
   "name": "wod",
   "version": "1.0.0",
-  "description": "CSS compiler for the Werewolf the Apocalypse system",
+  "description": "<p>CSS compiler for the Werewolf the Apocalypse system</p>",
   "scripts": {
     "build": "gulp",
     "compile": "gulp css",

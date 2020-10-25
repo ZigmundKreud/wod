@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Colère primitive",
+    "description": "<p>le Garou donne de lui-même pour alimenter la Rage dans son cœur, consumant son propre sang et sa chair. L’esprit d’un ancêtre métis enseigne ce don: peu des membres d’autres races ont éprouvé assez de honte et de souffrance pour l’apprendre.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 1,
+      "system": "<p>une fois par scène, le personnage peut s’infliger un seul niveau de dégâts aggravés pour gagner 3 points de Rage en échange. Ce don peut lui permettre d’excéder son score de Rage permanent.</p>",
+    }
+  },
+  {
+    "name": "Création élémentaire",
+    "description": "<p>le métis peut créer une petite quantité d’un des quatre éléments occidentaux classiques (air, eau, feu ou terre). Il peut créer un caillou à lancer, remplir une baignoire sans robinet, allumer un feu sans allumettes ou emplir d’air une pièce hermétiquement scellée. Il ne peut pas créer de formes raffinées de ces éléments; les métaux précieux (et notamment l’argent), les gaz nocifs et l’acide sont au-delà de ses capacités. Les esprits élémentaires enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Gnose et en dépense 1 point. Chaque réussite permet au personnage de créer 30 dm3 de l’élément désiré, jusqu’à un poids maximal de 45 kg. Il peut faire apparaître le matériau n’importe où à portée de vue, dans un rayon de 18 m. L’élément continue d’exister jusqu’à ce qu’il soit utilisé (respiré dans le cas de l’air, ou consumé pour le feu s’il n’a plus de combustible). Les flammes créées grâce à ce don infligent 1 point dégâts par réussite, jusqu’à un maximum de 3.</p>",
+    }
+  },
+  {
+    "name": "Face de rat",
+    "description": "<p>les métis étant nés dans un monde où personne ne veut d’eux, il semble naturel pour les esprits-rats de leur apprendre à se glisser dans les endroits où ils n’ont pas le droit d’aller. Ce don permet au métis de désarticuler ou plier son squelette pour se glisser dans toute anfractuosité assez grande pour qu’il y mette sa tête.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Dextérité + Athlétisme (difficulté 7). Pour le restant de la scène, le métis peut se glisser dans tout espace capable d’accueillir sa tête, en se déplaçant à sa vitesse de marche.</p>",
+    }
+  },
+  {
+    "name": "Mue",
+    "description": "<p>le métis peut muer pour abandonner une couche de peau ou de fourrure, échappant ainsi à l’immobilisation d’un adversaire ou se tirant de liens avec facilité. C’est un esprit-lézard ou un esprit-serpent qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Dextérité +Intuition primitive (difficulté 7). Si le jet réussit, le personnage perd une touffe de poil ou de la peau, révélant une nouvelle fourrure saine en dessous, et se libère d’une prise adverse ou de liens tels des cordes ou des chaînes.</p>",
+    }
+  },
+  {
+    "name": "Sentir le Ver",
+    "description": "<p>le loup-garou peut sentir les manifestations du Ver à proximité lui. Ce don implique un sens mystique et non des images visuelles ou olfactives, bien que les Garous décrivent souvent les émanations spirituelles du Ver comme une puanteur. Ce pouvoir ne détecte pas forcément la dévotion au Ver, mais la présence de son essence spirituelle, qui peut s’accrocher même aux âmes innocentes. Sentir le Ver requiert une concentration active ; le sens spirituel que ce don octroie ne fonctionne pas de manière automatique. Ce don peut être enseigné par n’importe quel esprit de Gaïa.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Perception + Occultisme, dont la difficulté dépend de la force de l’influence du Ver. Sentir un fomor solitaire dans la pièce adjacente aurait une difficulté de 6, mais détecter la puanteur d’un flaïel qui se trouvait dans la pièce il y a une heure en aurait une de 7. Les vampires sont perçus comme corrompus par le Ver, sauf ceux dotés d’une Humanité de 7 ou plus.</p>",
+    }
+  },
+  {
+    "name": "Fouisseur",
+    "description": "<p>ce don octroie la faculté de creuser la terre, créant un tunnel aux dimensions du Garou dans lequel d’autres peuvent s’engouffrer. Le loup-garou doit être sous une forme possédant des griffes pour utiliser ce don. Les esprits-taupes l’enseignent.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Force + Athlétisme dont la difficulté dépend de la substance à creuser (4 pour de la boue bien meuble, 9 pour de la pierre dure). Certains métaux (l’acier et les alliages de titane, par exemple) et autres structures renforcées résisteront au loup-garou, si fort soit-il. Le personnage peut creuser d’un mètre par tour pour chaque réussite. Après le jet initial, le personnage n’a pas besoin de relancer les dés pour continuer à la même vitesse.</p>",
+    }
+  },
+  {
+    "name": "Maîtrise des formes",
+    "description": "<p>ce don excite l’étincelle de Kaos qui réside en tout Garou, conférant à ce dernier un plus grand contrôle sur ses facultés de métamorphose. C’est un esprit-loup qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 2,
+      "system": "<p>lors d’un changement de forme (voir page 285), toutes les difficultés sont réduites de –1 et il ne faut plus qu’une réussite pour amorcer la transformation (ainsi, passer d’homidé à glabro aurait une difficulté de 5 et ne nécessiterait qu’une seule réussite). De plus, lors d’une transformation partielle, le joueur n’a pas besoin de dépenser 1 point de Volonté, et la difficulté du jet est de 7. Les effets de ce don sont permanents.</p>",
+    }
+  },
+  {
+    "name": "Malédiction haineuse",
+    "description": "<p>le métis mobilise sa haine intérieure et l’applique à ses mots, cinglant l’âme de celui qui l’écoute. Ce don peut être appris auprès d’un esprit de la haine.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Manipulation + Expression (difficulté égale à la Volonté de la cible). S’il réussit, son adversaire perd 2 points de Volonté et de Rage. Ce don ne peut être utilisé contre un adversaire qu’une fois par scène.</p>",
+    }
+  },
+  {
+    "name": "Sentir l’argent",
+    "description": "<p>Luna donne à ceux qui sont vraiment nés Garous la faculté de flairer leur plus grande faiblesse. Ce don, enseigné par des lunaires, permet au métis de détecter la présence de l’argent.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Perception + Intuition primitive (difficulté 7). S’il réussit, il peut détecter la présence de toute quantité d’argent dans un rayon de 100 m. Trois réussites ou plus lui permettent de localiser précisément l’argent.</p>",
+    }
+  },
+  {
+    "name": "Caméléon",
+    "description": "<p>comme le reptile éponyme, le Garou peut se confondre avec son environnement. À la différence du lézard, celui-ci change aisément lorsque son environnement varie, ce qui lui permet de se déplacer, et même d’attaquer. Un esprit-pieuvre ou un esprit-caméléon peuvent enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 3,
+      "system": "<p>le personnage dépense 1 point de Gnose pour activer le don. Quiconque tente de le voir doit faire un jet de Perception (difficulté égale à Astuce + Furtivité du Garou), même si celui-ci se trouve à découvert. Une fois que le Garou a attaqué, la difficulté diminue de –3. Ce don n’affecte que la vue; il ne masque ni l’odeur ni les bruits du Garou.</p>",
+    }
+  },
+  {
+    "name": "Isolation",
+    "description": "<p>ce don dresse une barrière émotionnelle et instinctive autour du métis, bloquant l’hostilité du monde et refoulant ses propres tendances autodestructrices. Un esprit-tortue peut l’enseigner.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Volonté (difficulté égale à la Rage de son personnage). Une réussite met le métis à l’abri d’une barrière mystique et psychologique, l’immunisant à toute magie qui altère l’esprit pour le restant de la scène. En contrepartie, il ne peut obtenir aucune réussite à ses jets d’Empathie, d’Intuition primitive ou de Rage, et ne peut pas non plus dépenser de points de Rage.</p>",
+    }
+  },
+  {
+    "name": "Télépathie",
+    "description": "<p>ce don permet une communication mentale, même sur de grandes distances. L’utilisateur doit soit connaître la cible personnellement (bien qu’être son ami ne soit pas nécessaire) ou avoir quelque chose qui appartient à cette personne, comme une mèche de cheveux. Les esprits de l’intellect et les esprits-oiseaux enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Charisme + Empathie (difficulté 8) et dépense 1 point de Volonté. Le personnage peut tenir une conversation mentale avec une cible à une distance maximale de 16 km par réussite. Il n’est pas possible de lire dans les pensées, mais le loup-garou peut faire des jets sociaux, par exemple avec Intimidation. Ces effets durent une scène.</p>",
+    }
+  },
+  {
+    "name": "Yeux de chat",
+    "description": "<p>le loup-garou peut voir clairement dans les ténèbres les plus totales. Ses yeux ont une douce lueur verte lorsque ce pouvoir est actif. Les esprits-chats enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 3,
+      "system": "<p>le personnage ne souffre d’aucune pénalité due aux ténèbres. Ce pouvoir peut être utilisé à volonté et ne requiert ni dépense ni jet de dé.</p>",
+    }
+  },
+  {
+    "name": "Bénédiction du porc-épic",
+    "description": "<p>le loup-garou subit une étonnante transformation: sa fourrure pousse, devenant raide et pointue comme les épines d’un porc-épic. Il doit être sous forme crinos, hispo ou lupus pour utiliser ce don. Porc-épic enseigne ce don, et il a un faible pour les métis.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 4,
+      "system": "<p>le personnage dépense 1 point de Gnose pour aiguiser sa fourrure. Tous ceux que le métis agrippe, immobilise ou plaque au sol subissent Force + 1 points de dégâts aggravés grâce à ces nouvelles extensions. De plus, quiconque le frappe à mains nues et obtient moins de 5 réussites à son jet d’attaque subit un nombre de points de dégâts aggravés égal à leur propre score de Force (ce qui n’empêche pas le métis de subir des dégâts). Ces effets durent une scène ou jusqu’à ce que le loup-garou fasse revenir sa fourrure à la normale.</p>",
+    }
+  },
+  {
+    "name": "Déchaînement de rage",
+    "description": "<p>le métis emploie toute la honte, la haine et la fureur tapies en son cœur, pour cingler un adversaire et le détruire. Les os se brisent, les organes éclatent, des hémorragies se déclarent partout à mesure que la Rage du métis déchire sa cible. C’est un don enseigné par un esprit de la fureur.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 4,
+      "system": "<p>le joueur fait un jet de Rage et en dépense 1 point. Une cible à moins de 100 m subit 1 point de dégâts aggravés qui ne peut être absorbé par réussite. Ce pouvoir peut être utilisé sans dommages une fois par scène, mais toute utilisation subséquente inflige les dégâts du don à la fois au métis et à sa cible.</p>",
+    }
+  },
+  {
+    "name": "Flétrissure d’un membre",
+    "description": "<p>d’un grognement et d’un regard courroucé, le loup-garou rend inutilisable un membre de la victime. Les os se tordent, les muscles se flétrissent, les chairs se dessèchent! Les créatures dotées de capacités régénératrices récupéreront après une scène ; toutes les autres sont estropiées de manière permanente. Les esprits venimeux enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Volonté (difficulté égale à la Vigueur de la victime +4). En cas de réussite, la victime ajoute +2 aux difficultés de tous ses jets de Dextérité. Si c’est une jambe qui est ciblée, la victime ne peut se déplacer qu’à la moitié de sa vitesse normale.</p>",
+    }
+  },
+  {
+    "name": "Morsure du serpent à sonnette",
+    "description": "<p>les canines du métis s’allongent et lui permettent d’injecter un poison mortel grâce à sa morsure. Ce don est enseigné par les esprits-araignées et les esprits-serpents.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 4,
+      "system": "<p>le Garou dépense 1 point de Rage au moment de mordre un adversaire. Si la morsure est réussie, tous les dégâts restants après absorption sont doublés.</p>",
+    }
+  },
+  {
+    "name": "Bénédiction de Protée",
+    "description": "<p>nés difformes, les métis font de leurs difformités une source de pouvoir. Le Garou peut modeler sa chair de diverses façons, développant des excroissances peu naturelles, de nouveaux membres, des bouches supplémentaires ou des tentacules étrangleurs. C’est un chimerlin qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 5,
+      "system": "<p>la faculté de métamorphose partielle du Garou (voir page286) est modifiée de manière permanente pour lui permettre d’effectuer presque n’importe quelle modification grotesque que le joueur puisse imaginer. En fonction de leurs spécificités, ces modifications peuvent accorder l’un des bénéfices suivants : deux dés supplémentaires à l’occasion d’une attaque (des pattes supplémentaires pour les attaques de griffes, des tentacules pour l’immobilisation, etc.); +2 dégâts sur une certaine catégorie de jets d’attaque (un bec de poulpe sur le torse pour faire des dégâts lors des immobilisations, des bras recouverts de dents de requins pour les attaques de griffes, etc.) ; vitesse de déplacement augmentée de 5 m par tour (ailes vestigiales, jambes supplémentaires, etc.).</p>",
+    }
+  },
+  {
+    "name": "Bénédiction du totem",
+    "description": "<p>les métis sont Garous depuis leur naissance, et intimement liés à l’esprit qui guide leur tribu. Le loup-garou peut plaider auprès de son totem tribal pour obtenir du pouvoir, les effets variant de tribu en tribu. Ratte peut envoyer un essaim de rongeurs attaquer ses ennemis, tandis que Grand-Père Tonnerre foudroiera les obstacles et ses adversaires. Le potentiel du don dépend de la faveur du totem, et peut aller jusqu’au miracle. Seul le totem de sa tribu peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Charisme + Rituels (difficulté 7). Plus il obtient de réussites, plus l’aide apportée est spectaculaire. Une réussite produit une distraction mineure, alors que dix peuvent mener à des éruptions volcaniques ou à des tornades qui ravagent toute une région !</p>",
+    }
+  },
+  {
+    "name": "Folie",
+    "description": "<p>les métis luttent toute leur vie pour trouver une place qui leur offre respect et dignité au milieu d’un champ de mines d’horreur et d’abus. Ce don leur permet de lâcher leurs démons intérieurs sur les autres pour leur infliger une folie plus ou moins forte. La nature de ce dérangement varie d’un individu à l’autre, mais il est toujours sévère, empêchant la victime d’agir normalement. Les lunaires, ainsi que d’autres esprits de la tromperie ou de la folie, enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "breed",
+      "breed": "metis",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un test de Manipulation + Intimidation (difficulté égale à la Volonté de la victime). La cible commence immédiatement à souffrir d’un Dérangement (voir page 487), qui persiste pour un jour par réussite obtenue. Pendant cette période, le métis peut accroître ou décroître la sévérité du mal, donnant à la victime des moments de lucidité avant de la plonger dans la psychose. La victime pourra souffrir de séquelles pour le restant de ses jours, bien après que le don a cessé de faire effet.</p>",
+    }
+  }
+]

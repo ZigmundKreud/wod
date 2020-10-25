@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Guide céleste",
+    "description": "<p>L’Arpenteur n’est jamais perdu tant que les étoiles brillent dans le ciel. Ce don est enseigné par les esprits serviteurs de l’étoile Polaire.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 1,
+      "system": "<p>le loup-garou acquiert un sens inné de l’orientation. Il sait toujours dans quelle direction se trouve le Nord, ainsi que le chemin qu’il a pris pour arriver où il est. Les effets de ce don sont permanents.</p>",
+    }
+  },
+  {
+    "name": "Sentir le Ver",
+    "description": "<p>le loup-garou peut sentir les manifestations du Ver à proximité lui. Ce don implique un sens mystique et non des images visuelles ou olfactives, bien que les Garous décrivent souvent les émanations spirituelles du Ver comme une puanteur. Ce pouvoir ne détecte pas forcément la dévotion au Ver, mais la présence de son essence spirituelle, qui peut s’accrocher même aux âmes innocentes. Sentir le Ver requiert une concentration active ; le sens spirituel que ce don octroie ne fonctionne pas de manière automatique. Ce don peut être enseigné par n’importe quel esprit de Gaïa.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Perception + Occultisme, dont la difficulté dépend de la force de l’influence du Ver. Sentir un fomor solitaire dans la pièce adjacente aurait une difficulté de 6, mais détecter la puanteur d’un flaïel qui se trouvait dans la pièce il y a une heure en aurait une de 7. Les vampires sont perçus comme corrompus par le Ver, sauf ceux dotés d’une Humanité de 7 ou plus.</p>",
+    }
+  },
+  {
+    "name": "Silence",
+    "description": "<p>l’Arpenteur peut étouffer tous les sons qu’il produit afin de mieux surprendre les serviteurs du Ver ou de leur échapper sans se faire remarquer. Ce don est enseigné par un esprit-chouette.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 1,
+      "system": "<p>le joueur ajoute deux dés à tous les jets de Dextérité + Furtivité.</p>",
+    }
+  },
+  {
+    "name": "Visions de Duat",
+    "description": "<p>les yeux du loup-garou deviennent laiteux et pâles alors qu’il adapte sa vision aux paysages cendreux de l’au-delà. Un esprit-chouette enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 1,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Perception + Occultisme (difficulté 7). Pour le reste de la scène, son personnage peut voir (et entendre) les fantômes, ou encore détecter les lieux hantés avec un autre jet de Perception + Occultisme (difficulté variable selon la gravité de la hantise). Ce don ne permet cependant pas de toucher ou de communiquer avec les morts, ce qui requiert généralement l’usage du rite Descente dans l’au-delà (voir page 213). Un échec critique fait briller les yeux du Garou comme des phares dans l’au-delà, attirant l’attention d’ombres perverties et vindicatives.</p>",
+    }
+  },
+  {
+    "name": "Vitesse de la pensée",
+    "description": "<p>le Garou double sa vitesse de course. Ce don est enseigné par un esprit-géocoucou ou un esprit-guépard.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 1,
+      "system": "<p>le personnage bénéficie des effets du don pendant une scène après avoir dépensé 1 point de Gnose.</p>",
+    }
+  },
+  {
+    "name": "Axis Mundi",
+    "description": "<p>le Garou déploie son esprit pour sentir la présence de Gaïa, se recentrant grâce à sa relation avec la Mère. Il sait toujours dans quelle direction il se déplace ou vers quel point cardinal il fait face, tant qu’il voyage dans le royaume de Gaïa. Les esprits des oiseaux migrateurs enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 2,
+      "system": "<p>les effets de ce don sont permanents.</p>",
+    }
+  },
+  {
+    "name": "Endurance du messager",
+    "description": "<p>l’Arpenteur peut courir à pleine vitesse pendant trois jours sans avoir besoin de se reposer, de manger ou de boire. Une fois sa destination atteinte, il a dix minutes pour accomplir ce qu’il est venu faire, après quoi il doit dormir pendant un jour complet. C’est un esprit-chameau ou loup qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose. Si le personnage fait quoi que ce soit d’autre que courir, les effets du don prennent fin. Il est possible de conférer l’Endurance du messager à d’autres que soi, au prix d’1 point de Gnose par coureur supplémentaire.</p>",
+    }
+  },
+  {
+    "name": "Ignorance bénie",
+    "description": "<p>en restant immobile, le Garou peut devenir totalement invisible aux sens, esprits et appareils d’enregistrement. Un esprit-caméléon enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Vigueur + Furtivité (difficulté 5). Chaque réussite en soustrait une au résultat des jets de Perception + Vigilance faits pour remarquer le personnage. Si personne ne cherche activement le loup-garou, une réussite suffit à le dissimuler parfaitement.</p>",
+    }
+  },
+  {
+    "name": "Langage du monde",
+    "description": "<p>ce don permet aux guerriers de Gaïa de voir et manipuler l’esprit du langage, dépassant le besoin d’apprendre différentes langues et dialectes. Le Garou peut parler et comprendre toute langue qu’il rencontre, bien qu’il le fasse avec un accent épais qui montre que c’est un étranger. Le Langage du monde n’apprend pas à lire aux illettrés, et ne confère pas de connaissances au sujet de la culture en question. C’est un esprit-ancêtre qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 2,
+      "system": "<p>le joueur fait un jet d’Intelligence + Érudition (difficulté 7). Les effets durent une scène.</p>",
+    }
+  },
+  {
+    "name": "Marcher sur le dos de Sebek",
+    "description": "<p>le loup-garou fait appel à la rivière pour qu’elle soutienne ses pas et lui permette de marcher ou de courir sur l’eau (ou sur d’autres liquides). Ses pieds n’ont aucune protection spéciale s’il choisit de courir sur des toxines du Ver ou d’autres fluides dangereux. Ce don est enseigné par un esprit-crocodile.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Dextérité + Survie (difficulté 7). L’Arpenteur peut se déplacer sur un liquide comme s’il s’agissait d’un terrain dégagé pendant une heure par réussite.</p>",
+    }
+  },
+  {
+    "name": "Adaptation",
+    "description": "<p>l’Arpenteur ne subit aucun dégât des poisons ou des maladies, et peut survivre dans n’importe quel environnement, quelles que soient les conditions de température, de pression ou d’atmosphère. Ce don ne protège pas le Garou des situations dangereuses comme les chutes, seulement des milieux hostiles. Ce don est enseigné par un esprit-ours.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Vigueur + Survie (difficulté 7). Les effets du don durent une heure par réussite.</p>",
+    }
+  },
+  {
+    "name": "Grand bond",
+    "description": "<p>l’Arpenteur peut sauter à des distances réellement ahurissantes. Ce don est enseigné par un esprit-lièvre.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Volonté et fait un jet de Force + Athlétisme. Le personnage peut sauter jusqu’à 30 m par réussite.</p>",
+    }
+  },
+  {
+    "name": "Marque du loup funèbre",
+    "description": "<p>l’Arpenteur Silencieux utilise ses griffes pour graver, sur une surface proche, un sinistre symbole qui fascine et attire les morts sans repos. Un esprit-chouette enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Gnose tandis que son personnage trace la marque, ce qui prend un tour complet, puis fait un jet d’Astuce + Occultisme (difficulté 7). Le symbole garde sa puissance mystique pendant une semaine par réussite, rendant les lieux sérieusement hantés s’il y a le moindre fantôme dans les environs. Détruire le symbole permet de mettre fin aux effets du don prématurément.</p>",
+    }
+  },
+  {
+    "name": "Sens du surnaturel",
+    "description": "<p>le Garou peut sentir la présence de n'importe quelle créature surnaturelles à proximité et déterminer sa force et son type. Cela inclut la magie, les esprits, la souillure du Ver, les fantômes, les vampires, les fées ainsi que n'importe quelle autre manifestation surnaturelle, néanmoins ce n'est pas toujours très précis. Un Garou pourra sentir une personne hantée par un fantôme aussi facilement qu'un fantôme lui-même. Tout serviteur spirituel de Gaia peut enseigner ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 3,
+      "system": "<p>le joueur fait un jet de Perception + Enigmes (difficulté 6). Plus il fait de réussites plus il obtient d'information. La sensation procurée par le don est cependant quelque peu vague et sujette à interprétation. Par exemple, un vampire peut sentir le sang coagulé, la peur, le cadavre ou tout autre élément que le conteur trouve approprié.</p>",
+    }
+  },
+  {
+    "name": "Endiguer la rivière de sang",
+    "description": "<p>aucune tribu ne hait les vampires plus que les Arpenteurs Silencieux, qui ont perdu leur patrie au profit des sangsues. Ce don permet à un Garou d’annuler la magie inhérente à leur sang. Il est enseigné par un esprit-cobra.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Manipulation + Occultisme (difficulté égale à la Volonté de la cible). Chaque réussite empêche la victime d’employer le moindre pouvoir lié d’une manière ou d’une autre au sang, pendant un tour, ou de dépenser des points de sang pour quelque raison que ce soit. Ce don marche contre toute créature pourvue d’une réserve de sang, qu’il s’agisse d’un vampire, d’une goule ou d’un Ananasi.</p>",
+    }
+  },
+  {
+    "name": "Marque noire",
+    "description": "<p>les griffes de l’Arpenteur s’assombrissent et adoptent les reflets de plomb de l’Umbra profonde, laissant sur ses ennemis une marque qui invite les morts sans repos. Ce don est enseigné par un esprit-chouette.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 4,
+      "system": "<p>le joueur peut dépenser 1 point de Gnose lorsque l’Arpenteur touche un adversaire avec ses griffes, mais avant de déterminer les dégâts de l’attaque. La cible devient hantée pendant un jour par point de dégâts infligé, avec les mêmes effets que « Marque du loup funèbre ».</p>",
+    }
+  },
+  {
+    "name": "Plus rapide que la pensée",
+    "description": "<p>le loup-garou peut décupler sa vitesse de course normale au sol. Les effets durent jusqu’à huit heures, pendant lesquelles l’Arpenteur ne peut rien faire d’autre que se concentrer sur sa course. Lorsque les effets cessent, le loup-garou doit manger immédiatement, ou risquer que la faim le plonge dans la frénésie. Un esprit de l’air ou un esprit-guépard enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Vigueur + Athlétisme (difficulté 7) pour activer ce don.</p>",
+    }
+  },
+  {
+    "name": "Syntonie",
+    "description": "<p>le loup-garou peut communier avec les esprits d’une ville ou de la nature pour obtenir des informations sur les populations alentour, comme le nombre d’habitants, l’existence d’éventuelles enclaves garous ou la présence d’autres êtres surnaturels. L’Arpenteur doit choisir quelle version du don il souhaite apprendre (« urbaine » ou « sauvage »).</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet de Perception + Connaissance de la rue ou de Perception + Survie, suivant qu’il a choisi la version urbaine ou sauvage du don (difficulté 6 dans les deux cas). La quantité et la précision des informations dépendent du nombre de succès.</p>",
+    }
+  },
+  {
+    "name": "Atteindre l’Umbra",
+    "description": "<p>le Garou peut entrer dans (et sortir de) l’Umbra à volonté, sans avoir besoin d’une surface réfléchissante, ou même du moindre effort. Ce don est enseigné par un esprit-chouette.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 5,
+      "system": "<p>le Garou peut se décaler instantanément, n’importe quand, et sans danger d’être «pris». Aucun jet n’est nécessaire. Tous ses jets pour entrer ou quitter les royaumes de l’Umbra voient leur difficulté réduite de –2. Il ne peut cependant pas dépenser de Rage au tour où il se décale ou se décaler suffisamment rapidement pour esquiver une attaque qui a déjà été déclarée.</p>",
+    }
+  },
+  {
+    "name": "Porte de la Lune",
+    "description": "<p>ce don crée un pont de lune spécialisé qui transporte instantanément l’Arpenteur à sa destination. La Lune doit être au moins en partie visible depuis le lieu de départ. Ce don est enseigné par une lunaire.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "silent-striders",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose pour chaque tranche de 150 km que l’Arpenteur a besoin de traverser, puis fait un jet d’Intelligence + Vigilance (la difficulté varie selon la distance et la connaissance qu’a l’Arpenteur du chemin). Une réussite transporte instantanément le Garou à destination.</p>",
+    }
+  }
+]

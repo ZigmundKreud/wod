@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Peau d’homme",
+    "description": "<p>bien que cela leur répugne, les Furies Noires trouvent parfois nécessaire de passer inaperçues dans le monde des hommes. Ce don permet à l’une d’entre elles de changer de genre aux yeux de ceux qui la voient. Ses traits et sa carrure deviennent décidément plus virils, et ses vêtements semblent avoir une coupe masculine. La couleur de ses yeux, de sa peau et de ses cheveux ne change pas. Elle aura l’aspect d’un homme entretenant un léger air de famille avec son apparence normale. En dépit du nom de ce don, il fonctionne tout aussi bien si un Garou de sexe masculin l’emploie pour se déguiser en femme. Ce don est enseigné par un esprit-ancêtre ou un esprit-hippocampe.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Charisme + Subterfuge (difficulté 7). L’illusion dure pendant une scène par réussite, ou jusqu’à ce que la Furie change de forme. Le déguisement résiste aux contacts tactiles normaux, mais un contact violent ou appuyé révélera la supercherie.</p>",
+    }
+  },
+  {
+    "name": "Renaissance du Kaos",
+    "description": "<p>soumise au service de Gaïa, l’essence créatrice et vivante du Kaos rugit au sein de la Furie, luisant sous sa peau comme une vague d’énergie prismatique, se concentrant et dardant ses rayons au travers de ses blessures. Cette décharge donne une énergie nouvelle aux capacités régénératrices de la louve-garou, refermant rapidement même les plus sérieuses blessures. Ce don est enseigné par un serviteur de Pégase.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 1,
+      "system": "<p>la Furie passe un tour à se concentrer et le joueur dépense 1 point de Gnose. Le personnage guérit immédiatement trois niveaux de dégâts contondants ou deux niveaux de dégâts létaux. S’il dépense 1 point de Volonté en plus, il peut guérir un niveau de dégâts aggravés à la place. Ce don ne peut pas guérir les dégâts infligés par l’argent.</p>",
+    }
+  },
+  {
+    "name": "Sens accrus",
+    "description": "<p>ce don aiguise les perceptions du loup-garou à un degré incroyable. Il jouit de l’acuité olfactive et auditive d’un loup, même sous forme d’un homidée ou d’un glabro, ainsi que d’une vision de nuit augmentée. Sous forme crinos, hispo et lupus, ses sens deviennent surnaturellement puissants, permettant des exploits sensoriels qui tiennent presque de la précognition. Les bruits soudains, les lumières brillantes ou les odeurs puissantes peuvent toutefois désorienter le bénéficiaire. Les esprits-loups enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 1,
+      "system": "<p>le personnage dépense 1 point de Gnose pour activer ce don pour une scène. Sous forme homidé ou glabro, les difficultés de Perception du loup-garou diminuent de –2, et il peut faire un jet de Perception + Intuition primitive pour traquer quelqu’un à l’odeur, par exemple. Sous forme crinos, hispo et lupus, la difficulté des jets de Perception diminue de –3 (ce n’est pas cumulatif avec l’avantage normal du lupus) et il gagne un dé supplémentaire aux jets d’Intuition primitive.</p>",
+    }
+  },
+  {
+    "name": "Sentir le Ver",
+    "description": "<p>le loup-garou peut sentir les manifestations du Ver à proximité lui. Ce don implique un sens mystique et non des images visuelles ou olfactives, bien que les Garous décrivent souvent les émanations spirituelles du Ver comme une puanteur. Ce pouvoir ne détecte pas forcément la dévotion au Ver, mais la présence de son essence spirituelle, qui peut s’accrocher même aux âmes innocentes. Sentir le Ver requiert une concentration active ; le sens spirituel que ce don octroie ne fonctionne pas de manière automatique. Ce don peut être enseigné par n’importe quel esprit de Gaïa.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 1,
+      "system": "<p>le joueur fait un jet de Perception + Occultisme, dont la difficulté dépend de la force de l’influence du Ver. Sentir un fomor solitaire dans la pièce adjacente aurait une difficulté de 6, mais détecter la puanteur d’un flaïel qui se trouvait dans la pièce il y a une heure en aurait une de 7. Les vampires sont perçus comme corrompus par le Ver, sauf ceux dotés d’une Humanité de 7 ou plus.</p>",
+    }
+  },
+
+  {
+    "name": "Souffle du Kaos",
+    "description": "<p>les Furies se gorgent des énergies de la création, et font part de leur passion avec d’autres. Grâce à ce don, la louve-garou instille une sensation de vitalité, de vie et de clarté chez un autre être vivant. Ce don est enseigné par un serviteur de Pégase.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 1,
+      "system": "<p>la Furie doit toucher la peau de sa cible. Le joueur fait un jet de Gnose (difficulté 5 pour la Parentèle ou les Garous, 6 pour les autres), une réussite étant nécessaire pour renouveler la vigueur mentale de la cible. Celle-ci bénéficiera alors d’un dé supplémentaire à l’occasion de tous ses jets de dés mentaux jusqu’à la fin de la scène, mais verra la difficulté de ses tests de Rage augmentée de +1.</p>",
+    }
+  },
+  {
+    "name": "À genoux",
+    "description": "<p>la Furie Noire peut obliger sa cible à s’agenouiller rien qu’en la pointant du doigt. Seuls les plus déterminés arrivent à faire autre chose que lutter et jurer en guise de réponse. Ce don est enseigné par un esprit de la famille de Pégase.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 2,
+      "system": "<p>la Furie fait un jet de Manipulation + Intimidation (difficulté égale à la Volonté du sujet). En cas de réussite, sa cible tombe à genoux, à moins qu’elle ne dépense 1 point de Gnose pour résister aux effets du don (d’autres êtres surnaturels peuvent dépenser leur propre forme d’énergie mystique, comme 1 point de sang ou de Quintessence, mais les simples mortels sont sans défense). La cible reste agenouillée pendant un tour par réussite.</p>",
+    }
+  },
+  {
+    "name": "Langue de Kali",
+    "description": "<p>au temps des mythes et légendes, une terrible créature du Ver terrorisait le pays, engendrant un monstre chaque fois qu’elle répandait une goutte de sang. Une déesse de la destruction tira sa langue pour rattraper chacune des gouttes qui tombaient, et permit ainsi la défaite du monstre. De nos jours, les Furies Noires appliquent la même magie dans leur lutte contre les Danseurs de la Spirale Noire, et autres adversaires résistants. Ce don est enseigné par un esprit-cobra.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 2,
+      "system": "<p>le joueur dépense 1 point de Rage et fait un jet de Manipulation + Médecine (difficulté égale à la valeur la plus basse entre la Rage de la cible ou sa Volonté –3). Chaque réussite empêche la victime de guérir les dégâts par quelque moyen que ce soit (y compris les dons comme « Toucher de la Mère »), pendant un tour.</p>",
+    }
+  },
+  {
+    "name": "Maîtrise des formes",
+    "description": "<p>ce don excite l’étincelle de Kaos qui réside en tout Garou, conférant à ce dernier un plus grand contrôle sur ses facultés de métamorphose. C’est un esprit-loup qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 2,
+      "system": "<p>lors d’un changement de forme (voir page 285), toutes les difficultés sont réduites de –1 et il ne faut plus qu’une réussite pour amorcer la transformation (ainsi, passer d’homidé à glabro aurait une difficulté de 5 et ne nécessiterait qu’une seule réussite). De plus, lors d’une transformation partielle, le joueur n’a pas besoin de dépenser 1 point de Volonté, et la difficulté du jet est de 7. Les effets de ce don sont permanents.</p>",
+    }
+  },
+  {
+    "name": "Malédiction d’Éole",
+    "description": "<p>la Furie appelle un brouillard épais et inquiétant qui obscurcit la vue et déstabilise ses adversaires, mais ne lui cause aucune gêne. Ce don est enseigné par un esprit-brouillard.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 2,
+      "system": "<p>le joueur fait un jet de Gnose, la difficulté dépendant de l’humidité et de la distance séparant le personnage d’un point d’eau (la berge d’un lac aurait une difficulté de 4, un désert de 9). À l’exception de la Furie, tous les personnages perdent la moitié de leurs dés pour les jets de Perception (arrondi à l’entier supérieur) lorsque le brouillard les enveloppe. Quiconque est pris dans le brouillard perd aussi un dé à ses jets de Volonté, exceptés la Furie et les membres de sa meute.</p>",
+    }
+  },
+  {
+    "name": "Pouls de la proie",
+    "description": "<p>le loup-garou peut la traquer aussi vite que son déplacement le permet, pourvu qu’il dispose d’une information quelconque au sujet de sa proie (un surnom, des initiales, une description vague). Ce sens de l’orientation parfait fonctionne partout, et s’avère aussi utile pour traquer les esprits dans l’Umbra profonde que les cadres de Pentex à Baltimore. Un esprit-chien ou un esprit-loup enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 2,
+      "system": "<p>aucun jet n’est nécessaire à moins que la proie ne se cache activement. Dans ce cas, le joueur fait un jet de Perception + Énigmes dont la difficulté est égale à l’Astuce + Furtivité de la cible, ou à la Gnose de celle-ci s’il s’agit d’un esprit.</p>",
+    }
+  },
+  {
+    "name": "Agonie viscérale",
+    "description": "<p>les griffes de la Furie se changent en d’ignobles serres barbelées dont suinte un venin noir. Bien que cette sécrétion ne soit pas mortelle par elle-même, elle inflige des souffrances terribles. Un esprit-douleur enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Rage avant que son personnage n’attaque. Toute pénalité de blessures soufferte à cause de son attaque à ce tour est doublée pour le restant de la scène. Par exemple, un adversaire qui tomberait au niveau Blessure grave à cause de cette attaque subira quatre dés de pénalité au lieu de deux. Si la cible est résistante à la douleur (parce qu’elle est en frénésie par exemple), elle souffre des pénalités de blessures normales à la place.</p>",
+    }
+  },
+  {
+    "name": "Ailes de Pégase",
+    "description": "<p>la Furie peut faire pousser des ailes majestueuses dans le dos de sa forme hispo qui lui permettent de voler à son gré. Ce don est enseigné par un avatar de Pégase.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Gnose afin de produire des ailes capables de faire voler le personnage à 80 km/h. Les ailes durent jusqu’à ce que la Furie les fasse disparaître. Des manœuvres délicates en vol nécessitent des jets de Dextérité + Athlétisme, la difficulté étant évaluée par le conteur.</p>",
+    }
+  },
+  {
+    "name": "Coup de grâce",
+    "description": "<p>le Garou trouve le point faible de son adversaire et frappe à cet endroit précis. Ce don est enseigné par un esprit-hibou.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 3,
+      "system": "<p>le joueur dépense 1 point de Volonté et fait un jet de Perception + Bagarre (difficulté égale à Vigueur +Athlétisme de la cible). S’il réussit, la prochaine attaque réussie de son personnage infligera le double de ses dégâts.</p>",
+    }
+  },
+  {
+    "name": "Griffe fouisseuse",
+    "description": "<p>la Furie casse une de ses griffes à l’intérieur d’une blessure et lui insuffle toutes ses intentions meurtrières. Celle-ci continue de creuser dans les chairs de la victime, et ne s’arrêtera pas tant qu’elle n’aura pas trouvé son cœur. C’est un esprit-guêpe qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 3,
+      "system": "<p>juste après avoir porté une attaque réussie, le joueur dépense 1 point de Volonté. La griffe fouisseuse inflige automatiquement un niveau de dégâts létaux à chaque tour suivant, jusqu’à ce qu’elle ait tué la cible ou qu’on l’ait extirpée (jet de Dextérité + Médecine, difficulté 7, nécessitant un tour complet de concentration). Les dégâts infligés par la griffe ne peuvent pas être absorbés.</p>",
+    }
+  },
+  {
+    "name": "Griffes de guêpe",
+    "description": "<p>grâce à ce don, la Furie peut projeter ses griffes à distance comme des fléchettes. Elle ne pourra bien sûr plus griffer avec cette main tant que celle-ci n’aura pas régénéré, mais c’est rarement un souci lorsque l’adversaire gît, éviscéré, de l’autre côté de la pièce. Ce don est enseigné par un esprit-guêpe.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 4,
+      "system": "<p>le joueur dépense 1 point de Rage et fait un jet de Dextérité + Bagarre pour toucher. La difficulté est calculée comme si le personnage utilisait une arme à feu d’une portée moyenne de 20 m. Les dégâts sont calculés comme pour une attaque de griffes normale. Régénérer les griffes tirées prend un tour.</p>",
+    }
+  },
+  {
+    "name": "Supplice",
+    "description": "<p>déchargeant sa Rage et sa douleur contre sa cible, la Furie induit une souffrance paralysante. La victime a tendance à tomber au sol, criant et gémissant entre deux convulsions. Ce don est enseigné par un esprit-douleur.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 4,
+      "system": "<p>le joueur fait un jet de Gnose (difficulté égale à la Vigueur de la victime + 3) et en dépense 1 point. S’il réussit, la cible est désorientée et convulse pendant un round par réussite. De plus, la cible retire un dé à tous ses jets pour le reste de la scène.</p>",
+    }
+  },
+  {
+    "name": "Vie animale",
+    "description": "<p>le loup-garou peut communiquer avec les autres bêtes sauvages et les appeler à lui, ou même leur commander. S’étant laissé séduire par les façons des hommes, les animaux domestiques peuvent transmettre des informations au Garou, mais ne lui fourniront aucun autre genre d’aide. Tout esprit animal peut enseigner ce don, bien que les lupus préfèrent l’apprendre d’esprits-lions ou d’esprits-loups.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 4,
+      "system": "<p>le personnage gagne la faculté permanente de communiquer avec tous les animaux, quelle que soit la forme qu’il revêt. Pour les attirer, le joueur dépense 1 point de Gnose et fait un jet de Charisme + Animaux (difficulté 7). Tous les animaux à moins de 15 km par réussite répondent à l’appel, et respecteront les demandes du Garou. La coutume veut qu’on rende hommage à l’esprit de tout animal auquel on ordonne de se sacrifier au moyen de ce don; quiconque omet de le faire encourt la colère du monde des esprits.</p>",
+    }
+  },
+  {
+    "name": "Mille formes",
+    "description": "<p>avec ce don, le loup-garou peut se changer en n’importe quel animal d’une taille située entre celles d’un petit oiseau et d’un bison, obtenant toutes ses facultés spéciales (les branchies du poisson, le vol de l’oiseau, les capacités sensorielles, etc.). Il ne peut pas prendre la forme de créatures du Ver (et il ne devrait pas en avoir envie!), mais, avec quelque effort, il peut prendre celle d’une bête mythique (comme un griffon ou une licorne), tant que celle-ci reste dans la limite de taille du don. Les esprits du Kaos enseignent ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et fait un jet d’Intelligence + Animaux (difficulté 6). Une réussite permet au personnage de prendre la forme de n’importe quel animal normal. Pendant une scène, il peut faire d’autres jets de transformation sans dépenser de Gnose, tant qu’il ne prend la forme que d’animaux normaux. Pour permettre au personnage d’adopter la forme d’animaux mythiques, le joueur doit dépenser 1 point de Gnose supplémentaire et la difficulté du jet passe à 9.</p>",
+    }
+  },
+  {
+    "name": "Regard de la Gorgone",
+    "description": "<p>les yeux de la Furie luisent de rouge, d’or et de vert, alors que cet ancien et légendaire pouvoir transforme la chair en pierre d’un simple regard. Difficile à trouver et encore plus dangereux à approcher, c’est le légendaire Basilic qui enseigne ce don.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 5,
+      "system": "<p>après avoir croisé le regard de sa cible, le personnage dépense 1 point de Gnose et fait un jet d’Apparence + Occultisme (difficulté égale à la Volonté de la cible). La victime est complètement paralysée pendant un tour par réussite, tandis que cinq d’entre elles la pétrifient à jamais.</p>",
+    }
+  },
+  {
+    "name": "Tourbillon du Kaos",
+    "description": "<p>ce don invoque un essaim d’esprits du Kaos à la rescousse de la Furie. Lorsqu’ils arrivent, les esprits sont complètement imprévisibles, mais ils agissent toujours pour son bien. Ils peuvent arracher les membres de ses ennemis, emplir de Rage ses frères de meute, détruire tous les outils de la Tisseuse dans les parages, ou emporter des adversaires dans l’Umbra profonde. Ce don est enseigné par un kaoquin.</p>",
+    "data": {
+      "type": "gift",
+      "scope": "tribe",
+      "tribe": "black-furies",
+      "level": 5,
+      "system": "<p>le joueur dépense 1 point de Gnose et de Rage, puis fait un jet d’Astuce + Énigmes (difficulté égale au niveau local du Goulet). Un nombre plus ou moins important de kaoquins apparaît en fonction du nombre de réussites.</p>",
+    }
+  }
+]

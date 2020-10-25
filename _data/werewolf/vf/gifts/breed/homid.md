@@ -15,7 +15,13 @@
 
 # Détraquage (niveau deux): d’un simple geste, le loup-garou déséquilibre les énergies du Kaos et de la Tisseuse qui se mêlent dans tout engin technologique en les noyant dans un chaos destructeur ou en amplifiant leur stase intrinsèque, jusqu’à ce qu’ils refusent de faire quoi que ce soit. Les ordinateurs plantent, les armes à feu s’enrayent, les voitures calent, et même les plus simples objets manufacturés refusent de fonctionner. Un gremlin (un type d’esprit du Kaos qui aime bien casser les choses) enseigne ce don.
 ## Système : le Garou dépense 1 point de Gnose, et son joueur fait un jet de Manipulation + Artisanats, et choisit le niveau de complexité qu’il souhaite bloquer. Tout artefact technologique (c’est-à-dire fait de matériaux raffinés comme le métal ou le plastique) de cette complexité situé dans un rayon de 15 mètres cesse de fonctionner pendant deux tours par réussite. Les appareils sont physiquement inchangés, mais inertes ; les couteaux ne coupent pas, la poudre à canon ne s’allume plus, les engrenages sont bloqués, et ainsi de suite. La difficulté du jet est basée sur la table suivante :
-[Appareil : Ordinateur; Téléphone; Automobile; Arme à feu; Couteau | Difficulté : 4; 5; 7; 8; 9]
+| Appareil    | Difficulté |
+| ----------- | ---------- |
+| Ordinateur  | 4          |
+| Téléphone   | 5          |
+| Automobile  | 7          |
+| Arme à feu  | 8          |
+| Couteau     | 9          |
 
 # Langage du monde (niveau deux) : ce don permet aux guerriers de Gaïa de voir et manipuler l’esprit du langage, dépassant le besoin d’apprendre différentes langues et dialectes. Le Garou peut parler et comprendre toute langue qu’il rencontre, bien qu’il le fasse avec un accent épais qui montre que c’est un étranger. Le Langage du monde n’apprend pas à lire aux illettrés, et ne confère pas de connaissances au sujet de la culture en question. C’est un esprit-ancêtre qui enseigne ce don.
 ## Système : le joueur fait un jet d’Intelligence + Érudition (difficulté 7). Les effets durent une scène.
@@ -49,7 +55,13 @@
 
 # Refouler le loup (niveau quatre): la guerre contre le Ver n’est pas que griffes et que crocs... parfois, il faut de la fourberie. Un loup-garou peut temporairement «restreindre» son loup intérieur et apparaître tel un humain normal. C’est un esprit-ancêtre qui enseigne ce don.
 ## Système : le garou fait un jet de Gnose (difficulté égale à sa propre Volonté) et en dépense 1 point. En cas de réussite, il passe pour humain au regard de tout pouvoir de détection surnaturelle. Le don annule aussi la Malédiction, ce qui l’empêche de dépenser de la Rage. De plus, le Garou est coincé sous sa forme homidée tant que l’effet persiste. Le nombre de réussites détermine la durée des effets. « Libérer » le loup avant que ce temps ne soit écoulé nécessite un tour complet de concentration et un autre point de Gnose.
-[Réussite(s) : 1; 2; 3; 4; 5 | Durée : Une scène; Douze heures; Un jour; Une semaine; Un cycle lunaire]
+| Réussite(s) | Durée |
+| ----------- | ----------- |
+| 1           | Une scène |
+| 2           | Douze heures|
+| 3           | Un jour |
+| 4           | Une semaine |
+| 5           | Un cycle lunaire |
 
 # Assimilation (niveau cinq): un loup-garou qui possède ce don fondra dans n’importe quelle culture, toute étrange ou inhabituelle soit-elle. Il peut se glisser parmi des nomades bédouins comme s’il était l’un d’eux, ou s’arrêter dans un marché chinois sans que personne ne remarque qu’il fait tache. Le don ne camoufle pas les différences ethniques, mais permet au loup-garou d’imiter le comportement et les manières des autochtones. Il octroie aussi la capacité de parler et de comprendre le langage de cette culture, bien que ce savoir disparaisse lorsque le don cesse d’agir. C’est un esprit-ancêtre qui enseigne ce don.
 ## Système: le joueur fait un jet de Manipulation + Empathie. S’il réussit, son personnage interagit avec les membres d’une autre société comme s’il était l’un des leurs. La difficulté dépend de l’ampleur des différences culturelles. Un autre sept aurait une difficulté de 5, alors qu’une ruche de la Spirale Noire ou un pays étranger pourrait avoir une difficulté de 9. Le personnage ne souffre d’aucune pénalité sociale lorsqu’il interagit avec les membres de cette culture, bien qu’il ne jouisse d’aucun bénéfice spécial non plus. Ces effets durent pendant une scène, plus un jour par point de Volonté dépensé lors de l’activation.
