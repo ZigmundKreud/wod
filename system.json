@@ -2,8 +2,8 @@
   "name": "wod",
   "title": "World of Darkness",
   "description": "<p>World of Darkness system for FoundryVTT</p>",
-  "version": "0.2",
-  "minimumCoreVersion": "0.7.3",
+  "version": "0.3",
+  "minimumCoreVersion": "0.7.1",
   "compatibleCoreVersion": "0.7.5",
   "templateVersion": 2,
   "author": "Zigmund",
@@ -23,11 +23,11 @@
       "path": "lang/fr.json"
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "gridDistance": 2,
+  "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/ZigmundKreud/wod",
   "manifest": "https://raw.githubusercontent.com/ZigmundKreud/wod/master/system.json",
-  "download": "https://github.com/ZigmundKreud/wod/archive/0.2-alpha.zip",
+  "download": "https://github.com/ZigmundKreud/wod/archive/0.3-alpha.zip",
   "license": "licence.txt"
 }
