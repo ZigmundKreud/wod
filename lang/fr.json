@@ -15,6 +15,7 @@
   "WOD.ui.rollResource": "Jet de Ressource",
   "WOD.ui.explodes": "Relance",
   "WOD.ui.main" : "Principal",
+  "WOD.ui.combat" : "Combat",
   "WOD.ui.description" : "Description",
   "WOD.ui.traits" : "Traits",
   "WOD.ui.inventory" : "Inventaire",
@@ -172,6 +173,8 @@
   "WOD.abilities.seneschal": "Sénéchal",
   "WOD.abilities.technology": "Technologie",
   "WOD.abilities.theology": "Théologie",
+
+  "WOD.combat.label" : "Combat",
 
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",

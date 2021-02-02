@@ -341,9 +341,11 @@ export class WodActorSheet extends ActorSheet {
                         const bonus = html.find("#bonus").val();
                         const diff = html.find('#difficulty').val();
                         const attr = eval("this.actor.data." + attrKey);
-                        const attrValue = attr.value;
+                        const attrTmpValue = attr.temp;
+                        const attrValue = (attrTmpValue) ? attrTmpValue : attr.value;
                         const ability = eval("this.actor.data." + abilityKey);
-                        const abilityValue = ability.value;
+                        const abilityTmpValue = ability.temp;
+                        const abilityValue = (abilityTmpValue) ? abilityTmpValue : ability.value;
                         const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus, 10)
                         const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
                         const attrLabel = game.i18n.localize(eval("this.actor.data." + attrKey + ".label"));
@@ -375,6 +377,67 @@ export class WodActorSheet extends ActorSheet {
     /* -------------------------------------------- */
 
     async _rollResourceDialog(label, id, bonus, explodes, difficulty) {
+
+        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-resource-dialog.hbs';
+        const rollData = {
+            actor: this.actor.data,
+            label: label,
+            resource: id,
+            explodes: explodes,
+            bonus: bonus,
+            difficulty: difficulty
+        };
+
+        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
+
+        let d = new Dialog({
+            title: label,
+            content: rollOptionContent,
+            buttons: {
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Cancel",
+                    callback: () => {
+                    }
+                },
+                submit: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Submit",
+                    callback: (html) => {
+                        const resKey = html.find("#resource").val();
+                        const bonus = html.find("#bonus").val();
+                        const diff = html.find('#difficulty').val();
+                        const res = eval("this.actor.data." + resKey);
+                        const resValue = res.value;
+                        const pool = parseInt(resValue, 10) + parseInt(bonus, 10)
+                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
+                        const resLabel = game.i18n.localize(eval("this.actor.data." + resKey + ".label"));
+                        const prefix = game.i18n.localize("WOD.ui.rollResource");
+                        const fullLabel = `${prefix} - ${resLabel}`;
+
+                        if(pool>0){
+                            const r = new WodRoll(pool, bonus, diff, expl);
+                            r.roll();
+                            r.toMessage(fullLabel, this.actor);
+                        }
+                        else {
+                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
+                            return false;
+                        }
+
+                    }
+                }
+            },
+            default: "submit",
+            close: () => {
+            }
+        });
+        d.render(true);
+    }
+
+    /* -------------------------------------------- */
+
+    async _rollDamageDialog(label, id, bonus, explodes, difficulty) {
 
         const rollOptionTpl = 'systems/wod/templates/dialogs/roll-resource-dialog.hbs';
         const rollData = {
@@ -574,4 +637,12 @@ export class WodActorSheet extends ActorSheet {
         return position;
     }
 
+    /* -------------------------------------------- */
+
+    /** @override */
+    getData(options){
+        const data = super.getData(options);
+        console.log(data);
+        return data;
+    }
 }

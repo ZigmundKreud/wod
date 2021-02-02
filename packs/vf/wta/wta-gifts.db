@@ -1,0 +1,19 @@
+{
+  "name": "Don de la mère",
+  "permission": {
+    "default": 0,
+    "GrwlJXWCBAvQT38f": 3
+  },
+  "type": "gift",
+  "data": {
+    "description": "<p></p>",
+    "quantity": 1,
+    "weight": 0,
+    "level": 1,
+    "system": "<p></p>"
+  },
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "effects": [],
+  "_id": "LjtaKctvGkkMoMAa"
+}

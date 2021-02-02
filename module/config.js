@@ -4,10 +4,9 @@ System.label = "World of Darkness";
 System.abbrev = "WOD";
 System.name = "wod";
 System.rootPath = "/systems/" + System.name;
-System.dataPath = System.rootPath + "/data";
+System.dataPath = System.rootPath + "/data/werewolf/fr";
 System.templatesPath = System.rootPath + "/templates";
 System.logPrefix = System.abbrev;
-System.logLevel = LogLevel.DEBUG;
 System.debugMode = true;
 
 export const StringUtils = {};

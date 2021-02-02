@@ -15,6 +15,7 @@
   "WOD.ui.rollResource": "Resource Roll",
   "WOD.ui.explodes": "Explodes",
   "WOD.ui.main" : "Main",
+  "WOD.ui.combat" : "Combat",
   "WOD.ui.description" : "Description",
   "WOD.ui.traits" : "Traits",
   "WOD.ui.inventory" : "Inventory",
@@ -172,6 +173,8 @@
   "WOD.abilities.science": "Science",
   "WOD.abilities.technology": "Technology",
   "WOD.abilities.theology": "Theology",
+
+  "WOD.combat.label" : "Combat",
 
   "WOD.auspice.ahroun": "Ahroun",
   "WOD.auspice.galliard": "Galliard",

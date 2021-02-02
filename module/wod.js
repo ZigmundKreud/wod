@@ -7,6 +7,8 @@ import {WodItemSheet} from "./item/item-sheet.js";
 import {registerSystemSettings} from "./settings.js";
 import {preloadHandlebarsTemplates} from "./templates.js";
 import {registerHandlebarsHelpers} from "./helpers.js";
+import {DataLoader} from "./utils/data.js";
+import {System} from "./config.js";
 
 Hooks.once('init', async function () {
 
@@ -43,4 +45,27 @@ Hooks.once('init', async function () {
 
     // Register Handlebars Helpers
     registerHandlebarsHelpers();
+});
+
+
+/**
+ * Ready hook loads tables, and override's foundry's entity link functions to provide extension to pseudo entities
+ */
+
+Hooks.once("ready", async () => {
+
+// console.debug("Importing data");
+// DataLoader.loadData("wta-archetypes");
+// DataLoader.loadData("wta-auspices");
+// DataLoader.loadData("wta-breeds");
+// DataLoader.loadData("wta-deformities");
+// DataLoader.loadData("wta-derangements");
+// DataLoader.loadData("wta-merits-flaws");
+// DataLoader.loadData("wta-fetishes");
+// DataLoader.loadData("paths");
+// DataLoader.loadData("profiles");
+// DataLoader.loadData("species");
+// DataLoader.loadData("spells");
+
+    console.info("System Initialized.");
 });

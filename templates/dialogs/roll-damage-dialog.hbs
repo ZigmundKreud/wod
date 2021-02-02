@@ -1,0 +1,69 @@
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.attribute"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <select id="attribute" name="attribute" data-type="String" style="width:100%">
+        {{#select attribute}}
+            <option value="">{{localize "WOD.None"}}</option>
+            {{#each (getAllAttributes actor) as | attr id |}}
+                <option value="data.attributes.{{attr.key}}">{{localize attr.label}}</option>
+            {{/each}}
+        {{/select}}
+        </select>
+    </div>
+</div>
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.ability"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <select id="ability" name="ability" data-type="String" style="width:100%">
+        {{#select ability}}
+            <option value="">{{localize "WOD.None"}}</option>
+            {{#each (getAllAbilities actor) as | ab id |}}
+                <option value="data.abilities.{{ab.key}}">{{localize ab.label}}</option>
+            {{/each}}
+        {{/select}}
+        </select>
+    </div>
+</div>
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.bonus"}}/{{localize "WOD.ui.malus"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="bonus" name="bonus" type="text" value="{{bonus}}" data-dtype="Number"/>
+    </div>
+</div>
+{{#if (isEnabled "10reroll")}}
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.explodes"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="explodes" name="explodes" type="text" value="{{explodes}}" data-dtype="Number"/>
+    </div>
+</div>
+{{/if}}
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="dice">{{localize "WOD.ui.difficulty"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <select id="difficulty" name="difficulty" data-dtype="Number" style="width:100%">
+            {{#select difficulty}}
+                <option value="">{{localize "WOD.None"}}</option>
+                <option value="2">{{localize "WOD.difficulty.mundane"}}(2)</option>
+                <option value="3">{{localize "WOD.difficulty.trivial"}}(3)</option>
+                <option value="4">{{localize "WOD.difficulty.easy"}}(4)</option>
+                <option value="5">{{localize "WOD.difficulty.straighforward"}}(5)</option>
+                <option value="6">{{localize "WOD.difficulty.standard"}}(6)</option>
+                <option value="7">{{localize "WOD.difficulty.challenging"}}(7)</option>
+                <option value="8">{{localize "WOD.difficulty.difficult"}}(8)</option>
+                <option value="9">{{localize "WOD.difficulty.extreme"}}(9)</option>
+                <option value="10">{{localize "WOD.difficulty.impossible"}}(10)</option>
+            {{/select}}
+        </select>
+    </div>
+</div>

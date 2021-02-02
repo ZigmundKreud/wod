@@ -18,7 +18,7 @@ export class WodItemSheet extends ItemSheet {
   get template() {
     const path = "systems/wod/templates/item";
     // Return a single sheet for all item types.
-    return `${path}/item-sheet.html`;
+    return `${path}/item-sheet.hbs`;
     // Alternatively, you could use the following return statement to do a
     // unique item sheet by type, like `weapon-sheet.html`.
 
@@ -28,8 +28,9 @@ export class WodItemSheet extends ItemSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
-    const data = super.getData();
+  getData(options) {
+    const data = super.getData(options);
+    console.log(data);
     return data;
   }
 

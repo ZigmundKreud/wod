@@ -13,6 +13,7 @@
                 {{!-- Sheet Tab Navigation --}}
                 <nav class="sheet-tabs tabs" data-group="primary">
                     <a class="item" data-tab="main">{{localize "WOD.ui.main"}}</a>
+                    <a class="item" data-tab="combat">{{localize "WOD.ui.combat"}}</a>
                     <a class="item" data-tab="description">{{localize "WOD.ui.description"}}</a>
                     <a class="item" data-tab="traits">{{localize "WOD.ui.traits"}}</a>
                     <a class="item" data-tab="inventory">{{localize "WOD.ui.inventory"}}</a>
@@ -24,6 +25,10 @@
             {{!-- Main Tab --}}
             <div class="tab main" data-group="primary" data-tab="main">
                 {{> "systems/wod/templates/actor/parts/actor-main.hbs"}}
+            </div>
+            {{!-- Combat Tab --}}
+            <div class="tab items" data-group="primary" data-tab="combat">
+                {{> "systems/wod/templates/actor/parts/actor-combat.hbs"}}
             </div>
             {{!-- Biography Tab --}}
             <div class="tab biography" data-group="primary" data-tab="description">

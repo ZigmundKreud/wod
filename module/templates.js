@@ -11,13 +11,13 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/actor/parts/actor-abilities.hbs",
         "systems/wod/templates/actor/parts/actor-advantages.hbs",
         "systems/wod/templates/actor/parts/actor-attributes.hbs",
+        "systems/wod/templates/actor/parts/actor-combat.hbs",
         "systems/wod/templates/actor/parts/actor-details.hbs",
         "systems/wod/templates/actor/parts/actor-health.hbs",
         "systems/wod/templates/actor/parts/actor-main.hbs",
         "systems/wod/templates/actor/parts/actor-inventory.hbs",
         "systems/wod/templates/actor/parts/actor-toolbar.hbs",
         "systems/wod/templates/actor/parts/actor-traits.hbs",
-        "systems/wod/templates/actor/parts/actor-resources.hbs",
         "systems/wod/templates/actor/parts/score-rank.hbs",
         "systems/wod/templates/actor/parts/resource-rank.hbs",
 
@@ -36,8 +36,12 @@ export const preloadHandlebarsTemplates = async function() {
 
         "systems/wod/templates/dialogs/roll-attribute-dialog.hbs",
         "systems/wod/templates/dialogs/roll-ability-dialog.hbs",
+        "systems/wod/templates/dialogs/roll-damage-dialog.hbs",
         "systems/wod/templates/dialogs/roll-resource-dialog.hbs",
-        "systems/wod/templates/chat/roll-result-card.hbs"
+        "systems/wod/templates/chat/roll-result-card.hbs",
+
+        // Items
+        "systems/wod/templates/item/item-sheet.hbs",
     ];
 
     // Load the template parts
