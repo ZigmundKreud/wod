@@ -40,6 +40,9 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/wod/templates/dialogs/roll-resource-dialog.hbs",
         "systems/wod/templates/chat/roll-result-card.hbs",
 
+        "systems/wod/templates/actor/parts/score/score-value.hbs",
+        "systems/wod/templates/actor/parts/resource/resource-value.hbs",
+
         // Items
         "systems/wod/templates/item/item-sheet.hbs",
     ];

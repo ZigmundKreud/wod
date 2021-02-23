@@ -1,0 +1,2 @@
+<a class="rank reset{{#if score._temp}} temp{{/if}}" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>
+{{#each score.ranks as | rank id | }}{{#if active}}<a class="rank{{#if temp}} temp{{/if}}" title="{{value}}" data-type="score" data-value="{{value}}"><i class="fas fa-circle"></i></a>{{else}}<a class="rank{{#if temp}} temp{{/if}}" title="{{value}}" data-type="score" data-value="{{value}}"><i class="far fa-circle"></i></a>{{/if}}{{/each}}

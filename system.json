@@ -10,112 +10,6 @@
   "esmodules": ["module/wod.js"],
   "styles": ["css/wod.css"],
   "scripts": [],
-  "packs": [
-    {
-      "name": "wta-archetypes",
-      "label": "[WTA] Archetypes",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-archetypes.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-auspices",
-      "label": "[WTA] Auspices",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-auspices.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-backgrounds",
-      "label": "[WTA] Historiques",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-backgrounds.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-breeds",
-      "label": "[WTA] Races",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-breeds.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-deformities",
-      "label": "[WTA] Difformités",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-deformities.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-derangements",
-      "label": "[WTA] Dérangements",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-derangements.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-fetishes",
-      "label": "[WTA] Fétiches",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-fetishes.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-gifts",
-      "label": "[WTA] Dons",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-gifts.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-merits-flaws",
-      "label": "[WTA] Atouts & Handicaps",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-merits-flaws.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-natures",
-      "label": "[WTA] Natures",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-natures.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-rites",
-      "label": "[WTA] Rites",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-rites.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-talens",
-      "label": "[WTA] Talens",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-talens.db",
-      "entity": "Item",
-      "tag" : "wta"
-    },
-    {
-      "name": "wta-tribes",
-      "label": "[WTA] Tribus",
-      "system": "wod",
-      "path": "./packs/vf/wta/wta-tribes.db",
-      "entity": "Item",
-      "tag" : "wta"
-    }
-  ],
   "languages": [
     {
       "lang": "en",
@@ -128,7 +22,7 @@
       "path": "lang/fr.json"
     }
   ],
-  "gridDistance": 2,
+  "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "url": "https://github.com/ZigmundKreud/wod",

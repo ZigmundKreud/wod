@@ -1,39 +1,39 @@
-import {WodScore} from "./score.js";
-import {WodResource} from "./resource.js";
+import {WodScore} from "./controllers/score.js";
+import {WodResource} from "./controllers/resource.js";
 
-export const registerHandlebarsHelpers = async function() {
+export const registerHandlebarsHelpers = async function () {
 
-    Handlebars.registerHelper('getAllAttributes', function (actor) {
-        const attributes = Object.values(actor.data.attributes);
-        attributes.sort(function (a, b) {
-            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
-        });
-        return attributes;
-    });
-
-    Handlebars.registerHelper('getAllAbilities', function (actor) {
-        const abilities = Object.values(actor.data.abilities).filter(a => a.type === "talent" || a.type === "skill" || a.type === "knowledge");
-        abilities.sort(function (a, b) {
-            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
-        });
-        return abilities;
-    });
-
-    Handlebars.registerHelper('getAllResources', function (actor) {
-        const resources = Object.values(actor.data.resources).filter(a => a.type === "resource");
-        resources.sort(function (a, b) {
-            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
-        });
-        return resources;
-    });
-
-    Handlebars.registerHelper('getAbilities', function (items, type) {
-        let abilities = (items instanceof Object) ?Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
-        abilities.sort(function (a, b) {
-            return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
-        });
-        return abilities;
-    });
+    // Handlebars.registerHelper('getAllAttributes', function (actor) {
+    //     const attributes = Object.values(actor.data.attributes);
+    //     attributes.sort(function (a, b) {
+    //         return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+    //     });
+    //     return attributes;
+    // });
+    //
+    // Handlebars.registerHelper('getAllAbilities', function (actor) {
+    //     const abilities = Object.values(actor.data.abilities).filter(a => a.type === "talent" || a.type === "skill" || a.type === "knowledge");
+    //     abilities.sort(function (a, b) {
+    //         return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+    //     });
+    //     return abilities;
+    // });
+    //
+    // Handlebars.registerHelper('getAllResources', function (actor) {
+    //     const resources = Object.values(actor.data.resources).filter(a => a.type === "resource");
+    //     resources.sort(function (a, b) {
+    //         return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+    //     });
+    //     return resources;
+    // });
+    //
+    // Handlebars.registerHelper('getAbilities', function (items, type) {
+    //     let abilities = (items instanceof Object) ? Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
+    //     abilities.sort(function (a, b) {
+    //         return (game.i18n.localize(a.label) > game.i18n.localize(b.label)) ? 1 : -1
+    //     });
+    //     return abilities;
+    // });
 
     Handlebars.registerHelper('filterByType', function (items, type) {
         return (items instanceof Object) ? Object.values(items).filter(item => item.type === type) : items.filter(item => item.type === type);
@@ -93,8 +93,8 @@ export const registerHandlebarsHelpers = async function() {
 
     // If you need to add Handlebars helpers, here are a few useful examples:
     Handlebars.registerHelper('concat', function () {
-        var outStr = '';
-        for (var arg in arguments) {
+        let outStr = '';
+        for (let arg in arguments) {
             if (typeof arguments[arg] != 'object') {
                 outStr += arguments[arg];
             }
@@ -102,33 +102,31 @@ export const registerHandlebarsHelpers = async function() {
         return outStr;
     });
 
-    Handlebars.registerHelper('score', function(value, temp, min, max, namespace) {
-        // console.log(value, temp, min, max, namespace);
-        let score = new WodScore(value, temp, min, max, namespace);
-        return new Handlebars.SafeString(score.toString());
-    });
-
-    Handlebars.registerHelper('resource-score', function(value, max) {
-        let resource = new WodResource(value, max);
-        return new Handlebars.SafeString(resource.getScore());
-    });
-
-    Handlebars.registerHelper('resource-current', function(value, max) {
-        let resource = new WodResource(value, max);
-        return new Handlebars.SafeString(resource.getCurrent());
-    });
-
-    Handlebars.registerHelper('temp', function(value, min, max) {
-        let str="";
-        if(min ==0) str += `<a class="rank rank-0" title="0" data-type="rank" data-value="0"><i class="fas fa-times"></i></a>&nbsp;`;
-        for(let i=0; i < max; i++){
-            if(i < value) str += `<a class="rank" title="${i+1}" data-type="rank" data-value="${i+1}"><i class="fas fa-circle"></i></a>`;
-            else str += `<a class="rank" title="${i+1}" data-value="${i+1}"><i class="far fa-circle"></i></a>`;
+    Handlebars.registerHelper('ranks', function (value, temp, min, max) {
+        console.log(value, temp, min, max);
+        let ranks = [];
+        for(let i=min; i<=max; i++){
+            if(temp){
+                if(i <= value) ranks.push({active: true, temp: true, value: i});
+                else ranks.push({active: false, temp: true, value: i});
+            }
+            else {
+                if(i <= value) ranks.push({active: true, temp: false, value: i});
+                else ranks.push({active: false, temp: false, value: i});
+            }
         }
-        return new Handlebars.SafeString(str);
+        return ranks;
     });
 
-    Handlebars.registerHelper('surroundWithCurlyBraces', function(text) {
+    Handlebars.registerHelper('score', function (key, value, temp, min, max, namespace) {
+        return new WodScore(key, value, temp, min, max, namespace);
+    });
+
+    Handlebars.registerHelper('resource', function (value, temp, max) {
+        return new WodResource(value, temp, max);
+    });
+
+    Handlebars.registerHelper('surroundWithCurlyBraces', function (text) {
         const result = '{' + text + '}';
         return new Handlebars.SafeString(result);
     });

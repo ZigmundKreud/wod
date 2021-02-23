@@ -1,0 +1,20 @@
+<div class="flexrow no-wrap" style="white-space: nowrap; justify-content: center">
+    <a class="rank reset" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;
+    {{#each resource.ranks as | rank id | }}
+        {{#if active}}
+            <a class="rank" title="{{value}}" data-type="score" data-value="{{value}}"><i class="fas fa-circle"></i></a>
+        {{else}}
+            <a class="rank" title="{{value}}" data-type="score" data-value="{{value}}"><i class="far fa-circle"></i></a>
+        {{/if}}
+    {{/each}}
+</div>
+<div class="flexrow no-wrap" style="white-space: nowrap; justify-content: center">
+    <a class="curres reset" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;
+    {{#each resource.temp as | rank id | }}
+        {{#if active}}
+            <a class="curres" title="{{value}}" data-type="score" data-value="{{value}}"><i class="far fa-check-square"></i></a>
+        {{else}}
+            <a class="curres" title="{{value}}" data-type="score" data-value="{{value}}"><i class="far fa-square"></i></a>
+        {{/if}}
+    {{/each}}
+</div>

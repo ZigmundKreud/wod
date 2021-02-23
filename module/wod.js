@@ -7,14 +7,12 @@ import {WodItemSheet} from "./item/item-sheet.js";
 import {registerSystemSettings} from "./settings.js";
 import {preloadHandlebarsTemplates} from "./templates.js";
 import {registerHandlebarsHelpers} from "./helpers.js";
-import {DataLoader} from "./utils/data.js";
-import {System} from "./config.js";
+import {WOD} from "./config.js";
 
 Hooks.once('init', async function () {
 
     game.wod = {
-        WodActor: WodActor,
-        WodItem: WodItem
+        config: WOD
     };
 
     /**
@@ -35,6 +33,27 @@ Hooks.once('init', async function () {
     Items.unregisterSheet("core", ItemSheet);
 
     Actors.registerSheet("wod", WodActorSheet, {makeDefault: true});
+    // Register actor sheets
+    Actors.registerSheet("wod", WodActorSheet, {
+        types: [
+            "werewolf",
+            "vampire",
+            "vampire_da",
+            "ghoul",
+            "mage",
+            "hunter",
+            "human"
+        ],
+        makeDefault: true,
+        label: "WOD.sheet.character"
+    });
+    Actors.registerSheet("wod", WodActorSheet, {
+        types: ["spirit"],
+        makeDefault: true,
+        label: "WOD.sheet.spirit"
+    });
+
+
     Items.registerSheet("wod", WodItemSheet, {makeDefault: true});
 
     // Register System Settings
@@ -55,17 +74,18 @@ Hooks.once('init', async function () {
 Hooks.once("ready", async () => {
 
 // console.debug("Importing data");
-// DataLoader.loadData("wta-archetypes");
-// DataLoader.loadData("wta-auspices");
-// DataLoader.loadData("wta-breeds");
-// DataLoader.loadData("wta-deformities");
-// DataLoader.loadData("wta-derangements");
-// DataLoader.loadData("wta-merits-flaws");
-// DataLoader.loadData("wta-fetishes");
-// DataLoader.loadData("paths");
-// DataLoader.loadData("profiles");
-// DataLoader.loadData("species");
-// DataLoader.loadData("spells");
+//     DataLoader.loadData("archetypes");
+//     DataLoader.loadData("auspices");
+//     DataLoader.loadData("backgrounds");
+//     DataLoader.loadData("breeds");
+//     DataLoader.loadData("deformities");
+//     DataLoader.loadData("derangements");
+//     DataLoader.loadData("fetishes");
+//     DataLoader.loadData("gifts");
+//     DataLoader.loadData("merits-flaws");
+//     DataLoader.loadData("rites");
+//     DataLoader.loadData("talens");
+//     DataLoader.loadData("tribes");
 
     console.info("System Initialized.");
 });

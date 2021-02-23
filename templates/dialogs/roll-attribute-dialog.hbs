@@ -6,8 +6,8 @@
         <select id="attribute" name="attribute" data-type="String" style="width:100%">
             {{#select attribute}}
                 <option value="">{{localize "WOD.None"}}</option>
-                {{#each (getAllAttributes actor) as | attr id |}}
-                    <option value="data.attributes.{{attr.key}}">{{localize attr.label}}</option>
+                {{#each attributes as | attr id |}}
+                    <option value="{{attr.key}}">{{localize attr.label}}</option>
                 {{/each}}
             {{/select}}
         </select>
@@ -21,16 +21,6 @@
         <input class="field-value readonly" id="bonus" name="bonus" type="text" value="{{bonus}}" data-dtype="Number"/>
     </div>
 </div>
-{{#if (isEnabled "10reroll")}}
-    <div class="flexrow">
-        <div class="flex1 center">
-            <label for="dice">{{localize "WOD.ui.explodes"}}</label>
-        </div>
-        <div class="flex1 center cell">
-            <input class="field-value readonly" id="explodes" name="explodes" type="text" value="{{explodes}}" data-dtype="Number"/>
-        </div>
-    </div>
-{{/if}}
 <div class="flexrow">
     <div class="flex1 center">
         <label for="dice">{{localize "WOD.ui.difficulty"}}</label>
@@ -50,5 +40,13 @@
                 <option value="10">{{localize "WOD.difficulty.impossible"}}(10)</option>
             {{/select}}
         </select>
+    </div>
+</div>
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="specialization">{{localize "WOD.ui.specialization"}}</label>
+    </div>
+    <div class="flex1 center cell">
+        <input class="field-value readonly" id="specialization" name="specialization" type="checkbox"/>
     </div>
 </div>

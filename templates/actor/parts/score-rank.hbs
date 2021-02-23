@@ -1,5 +1,10 @@
-<div class="flexrow flex-between score {{namespace}}" data-namespace="{{namespace}}" data-key="{{key}}" data-item-id="{{namespace}}.{{key}}.value">
-    <div class="score-label flex3 left ellipsis {{#if active}}active{{/if}}"><a class="rollable" title="{{localize (concat "WOD.roll." namespace)}}" data-type="{{namespace}}" data-item-id="data.{{namespace}}.{{key}}">{{localize label}}</a></div>
-    <div class="score-value flex1 right" style="white-space: nowrap;">{{score value temp min max namespace}}</div>
-<!--    <div class="score-value flex1 right" style="white-space: nowrap;">{{!value}} / {{!&this.temp}}</div>-->
+<div class="flexrow flex-between score {{namespace}} {{group}}" data-namespace="{{namespace}}" data-group="{{group}}" data-key="{{key}}">
+    <div class="score-label flex3 left ellipsis {{#if active}}active{{/if}}">
+<!--        <a class="rollable" title="{{!localize (concat "WOD.roll." namespace)}}" data-type="{{!namespace}}" data-item-id="data.{{!namespace}}.{{!key}}">{{!localize label}}</a>-->
+        <a class="rollable" title="{{localize (concat "WOD.roll." namespace)}}">{{localize label}}</a>
+    </div>
+    <div class="score-value flex1 right" style="white-space: nowrap;">
+        {{> "systems/wod/templates/actor/parts/score/score-value.hbs" score=(score key value temp min max namespace)}}
+    </div>
+    <div class="score-value flex1 right" style="white-space: nowrap;">{{value}} / {{&this.temp}}</div>
 </div>

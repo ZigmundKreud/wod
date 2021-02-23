@@ -1,6 +1,4 @@
-<div class="flexrow flex-between resource {{namespace}}" data-namespace="{{namespace}}" data-key="{{key}}" data-item-id="{{namespace}}.{{key}}.value" style="white-space: nowrap;">
-    {{resource-score value max}}
-</div>
-<div class="flexrow flex-between resource {{namespace}}" data-namespace="{{namespace}}" data-key="{{key}}" data-item-id="{{namespace}}.{{key}}.temp" style="white-space: nowrap;">
-    {{resource-current temp max}}
+<div class="flexcol score {{namespace}} {{group}}" data-namespace="{{namespace}}" data-group="{{group}}" data-key="{{key}}">
+    {{> "systems/wod/templates/actor/parts/resource/resource-value.hbs" resource=(resource value temp max) }}
+    <div class="score-value flex1 right" style="white-space: nowrap;">{{value}} / {{&this.temp}}</div>
 </div>

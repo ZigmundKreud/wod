@@ -2,8 +2,8 @@
   min-height: 25px;
   height: 25px;
   max-height: 25px;
-  margin:3px;
-  padding-top:3px;
+  margin: 3px;
+  padding-top: 3px;
   font-weight: bold;
   font-size: 20px;
 }
@@ -12,13 +12,52 @@
   min-height: 25px;
   height: 25px;
   max-height: 25px;
-  margin:3px;
+  margin: 3px;
   box-shadow: 3px 3px 3px gray;
+
   input, select {
     border-radius: 0;
     border: none;
     background: white;
 
+  }
+
+  .field-item {
+    min-height: 25px;
+    height: 25px;
+    max-height: 25px;
+    box-shadow: 3px 3px 3px gray;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    .item-content {
+      height: 25px;
+      min-height: 25px;
+      max-height: 25px;
+      background-size: 25px 25px;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 5px 0 0 30px;
+    }
+
+    .item-control {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      padding: 0 2px 0 0;
+      visibility: hidden;
+
+    }
+
+    &:hover{
+      .item-control {
+        visibility: visible;
+      }
+    }
   }
 }
 
@@ -30,6 +69,7 @@ select, input {
   max-height: 25px;
   height: 25px;
 }
-::placeholder{
+
+::placeholder {
   color: lightgray;
 }

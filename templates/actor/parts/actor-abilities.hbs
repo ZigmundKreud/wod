@@ -1,18 +1,18 @@
 <div class="talents flex-group-center">
     <label class="section-title">{{localize "WOD.abilities.talents"}} ({{actor.data.abilities.talents.total}})</label>
-    {{#each (getAbilities data.abilities "talent") as |attr id|}}
-        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{#each talents as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities" group="talents"}}
     {{/each}}
 </div>
 <div class="skills flex-group-center">
     <label class="section-title">{{localize "WOD.abilities.skills"}} ({{actor.data.abilities.skills.total}})</label>
-    {{#each (getAbilities data.abilities "skill") as |attr id|}}
-        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{#each skills as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities" group="skills"}}
     {{/each}}
 </div>
 <div class="knowledges flex-group-center">
     <label class="section-title">{{localize "WOD.abilities.knowledges"}} ({{actor.data.abilities.knowledges.total}})</label>
-    {{#each (getAbilities data.abilities "knowledge") as |attr id|}}
-        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities"}}
+    {{#each knowledges as |attr id|}}
+        {{> "systems/wod/templates/actor/parts/score-rank.hbs" attr namespace="abilities" group="knowledges"}}
     {{/each}}
 </div>

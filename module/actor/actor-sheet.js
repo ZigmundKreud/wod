@@ -3,23 +3,21 @@
  * @extends {ActorSheet}
  */
 
-import {WodRoll} from "../roll.js";
-import {WOUND_TYPE, WodHealth} from "../health.js";
-import {WodChat} from "../chat.js";
-import {WodMetamorphosis} from "../metamorphosis.js";
+import {WOUND_TYPE, WodHealth} from "../controllers/health.js";
+import {WodChat} from "../controllers/chat.js";
+import {WodMetamorphosis} from "../controllers/metamorphosis.js";
+import {WodBaseSheet} from "./base-sheet.js";
+import {WodDialog} from "../controllers/dialogs.js";
 
-export class WodActorSheet extends ActorSheet {
+export class WodActorSheet extends WodBaseSheet {
 
     constructor(...args) {
         super(...args);
-        this._shiftKeyDown = false;
-        this._altKeyDown = false;
     }
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["wod", "sheet", "actor"],
             template: "systems/wod/templates/actor/actor-sheet.hbs",
             width: 850,
             height: 600,
@@ -59,38 +57,47 @@ export class WodActorSheet extends ActorSheet {
         });
         html.find('.health-rank-box').contextmenu(this._onDecreaseHealthRank.bind(this));
 
-        // Add Inventory Item
-        html.find('.rank').click(ev => {
-            if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
-            else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
-            else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
-            else return this._onUpdateRank(ev, false, false)
-        });
-        html.find('.rank').mouseenter(ev => {
-            if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        });
-        html.find('.rank').mouseover(ev => {
-            if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        });
-        html.find('.rank').mousemove(ev => {
-            if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        });
-        html.find('.rank').keydown(ev => {
-            if (ev.which === 16) return this._onHighlightRank(ev)
-        });
-        html.find('.score').mouseleave(ev => {
-            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
-        });
-        html.find('.score').mouseout(ev => {
-            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
-        });
         html.find('.curres').click(ev => {
-            if (this._altKeyDown) return this._onUpdateCurrentResource(ev, true, false)
-            return this._onUpdateCurrentResource(ev, false, false)
+            ev.stopPropagation()
+            // if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
+            // else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
+            // else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
+            // else return this._onUpdateRank(ev, false, false)
+            return this._onUpdateRank(ev, true, false)
         });
-        html.find('.curres').contextmenu(ev => {
-            return this._onUpdateCurrentResource(ev, false, true)
+
+        html.find('.rank').click(ev => {
+            // if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
+            // else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
+            // else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
+            // else return this._onUpdateRank(ev, false, false)
+            return this._onUpdateRank(ev, false, false)
         });
+        // html.find('.rank').mouseenter(ev => {
+        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        // });
+        // html.find('.rank').mouseover(ev => {
+        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        // });
+        // html.find('.rank').mousemove(ev => {
+        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        // });
+        // html.find('.rank').keydown(ev => {
+        //     if (ev.which === 16) return this._onHighlightRank(ev)
+        // });
+        // html.find('.score').mouseleave(ev => {
+        //     if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
+        // });
+        // html.find('.score').mouseout(ev => {
+        //     if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
+        // });
+        // html.find('.curres').click(ev => {
+        //     if (this._altKeyDown) return this._onUpdateCurrentResource(ev, true, false)
+        //     return this._onUpdateCurrentResource(ev, false, false)
+        // });
+        // html.find('.curres').contextmenu(ev => {
+        //     return this._onUpdateCurrentResource(ev, false, true)
+        // });
 
         // Add Inventory Item
         html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -120,23 +127,26 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
-    async _onUpdateRank(event, isTemp=false, isReset=false) {
+    _onUpdateRank(event, isTemp=false, isReset=false) {
         event.preventDefault();
         const header = $(event.currentTarget);
         const value = header.data("value");
         const type = header.data("type");
         const parent = (type === "score") ? $(event.currentTarget).parents(".score") : $(event.currentTarget).parents(".resource");
         const ns = parent.data("namespace");
+        const group = parent.data("group");
         const key = parent.data("key");
-        return this._setRankValue(ns, key, value, isTemp, isReset);
+        if(ns === "attributes" || ns === "abilities" ) return this._setRankValue(ns, group, key, value, isTemp, isReset);
+        else{
+            return this._setResourceValue(ns, group, key, value, isTemp, isReset);
+        }
     }
 
     /* -------------------------------------------- */
 
-    _setRankValue(ns, key, value, isTemp=false, isReset=false){
-        let data = this.getData().actor.data;
-        const fieldname = `data.${ns}.${key}`;
-        const field = eval(fieldname);
+    _setRankValue(ns, group, key, value, isTemp=false, isReset=false){
+        let data = duplicate(this.actor.data);
+        const field = data.data[ns][group].scores.find(s => s.key === key);
         let fromValue = (isTemp) ? field.temp : field.value;
         if(isReset) {
             if(isTemp) {
@@ -155,9 +165,35 @@ export class WodActorSheet extends ActorSheet {
             else field.value = value;
             WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
         }
-        let fieldData = {};
-        fieldData[fieldname] = field;
-        return this.actor.update(fieldData);
+        return this.actor.update(data);
+    }
+
+
+    /* -------------------------------------------- */
+
+    _setResourceValue(ns, group, key, value, isTemp=false, isReset=false){
+        let data = duplicate(this.actor.data);
+        const field = data.data.resources[key];
+        let fromValue = (isTemp) ? field.temp : field.value;
+        console.log(field, isTemp);
+        if(isReset) {
+            if(isTemp) {
+                field.temp = null;
+                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, "-", isTemp);
+            }
+            else {
+                field.value = field.min;
+                WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.min, isTemp);
+            }
+        }else {
+            if(isTemp) {
+                field.temp = value;
+                if(!fromValue) fromValue = "-";
+            }
+            else field.value = value;
+            WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
+        }
+        return this.actor.update(data);
     }
 
     /* -------------------------------------------- */
@@ -220,280 +256,14 @@ export class WodActorSheet extends ActorSheet {
      */
     _onRoll(event) {
         event.preventDefault();
-        const elt = $(event.currentTarget);
-        const type = elt.data("type");
-        const id = elt.data("itemId");
-        const target = eval("this.actor.data." + id);
-        const targetLabel = eval("game.i18n.localize('" + target.label + "')");
-
-        // Find any malus from ijuries to apply on roll if exists
-        let injuries = Object.values(this.actor.data.data.health.status).filter(s => s.checked && s.malus > 0);
-        if(injuries.length > 0) {
-            injuries.sort(function (a, b) {
-                return (a.malus < b.malus) ? 1 : -1
-            });
-        }
-        const malus = (injuries[0]) ? -(injuries.shift().malus) : 0;
-
-        if (type == "attributes") {
-            const label = game.i18n.localize("WOD.ui.rollAttribute") + " - " + targetLabel;
-            this._rollAttributeDialog(label, id, malus, 10, 6);
-        } else if (type == "abilities") {
-            const label = game.i18n.localize("WOD.ui.rollAbility") + " - " + targetLabel;
-            this._rollAbilityDialog(label, id, malus, 10, 6);
-        } else if (type == "resources") {
-            const label = game.i18n.localize("WOD.ui.rollResource") + " - " + targetLabel;
-            this._rollResourceDialog(label, id, malus, 10, 6);
-        }
-    }
-
-    /* -------------------------------------------- */
-
-    async _rollAttributeDialog(label, id, bonus, explodes, difficulty) {
-
-        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-attribute-dialog.hbs';
-
-        const rollData = {
-            actor: this.actor.data,
-            label: label,
-            attribute: id,
-            explodes: explodes,
-            bonus: bonus,
-            difficulty: difficulty
-        };
-
-        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
-
-        let d = new Dialog({
-            title: label,
-            content: rollOptionContent,
-            buttons: {
-                cancel: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: "Cancel",
-                    callback: () => {
-                    }
-                },
-                submit: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: "Submit",
-                    callback: (html) => {
-                        const attrKey = html.find("#attribute").val();
-                        const bonus = html.find("#bonus").val();
-                        const diff = html.find('#difficulty').val();
-                        const attr = eval("this.actor.data." + attrKey);
-                        const attrValue = attr.value;
-                        const pool = parseInt(attrValue, 10) + parseInt(bonus, 10)
-                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        if(pool>0){
-                            const r = new WodRoll(pool, bonus, diff, expl);
-                            r.roll();
-                            r.toMessage(label, this.actor);
-                        }
-                        else {
-                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
-                            return false;
-                        }
-                    }
-                }
-            },
-            default: "submit",
-            close: () => {
-            }
-        });
-        d.render(true);
-    }
-
-    /* -------------------------------------------- */
-
-    async _rollAbilityDialog(label, id, bonus, explodes, difficulty) {
-
-        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-ability-dialog.hbs';
-        const activeAttribute = Object.values(this.actor.data.data.attributes).find(a => a.active);
-        const rollData = {
-            actor: this.actor.data,
-            label: label,
-            attribute: (activeAttribute) ? `data.attributes.${activeAttribute.key}` : "data.attributes.str",
-            ability: id,
-            explodes: explodes,
-            bonus: bonus,
-            difficulty: difficulty
-        };
-
-        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
-
-        let d = new Dialog({
-            title: label,
-            content: rollOptionContent,
-            buttons: {
-                cancel: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: "Cancel",
-                    callback: () => {
-                    }
-                },
-                submit: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: "Submit",
-                    callback: (html) => {
-                        const attrKey = html.find("#attribute").val();
-                        const abilityKey = html.find("#ability").val();
-                        const bonus = html.find("#bonus").val();
-                        const diff = html.find('#difficulty').val();
-                        const attr = eval("this.actor.data." + attrKey);
-                        const attrTmpValue = attr.temp;
-                        const attrValue = (attrTmpValue) ? attrTmpValue : attr.value;
-                        const ability = eval("this.actor.data." + abilityKey);
-                        const abilityTmpValue = ability.temp;
-                        const abilityValue = (abilityTmpValue) ? abilityTmpValue : ability.value;
-                        const pool = parseInt(attrValue, 10) + parseInt(abilityValue, 10) + parseInt(bonus, 10)
-                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        const attrLabel = game.i18n.localize(eval("this.actor.data." + attrKey + ".label"));
-                        const abilityLabel = game.i18n.localize(eval("this.actor.data." + abilityKey + ".label"));
-                        const prefix = game.i18n.localize("WOD.ui.rollAbility");
-                        const fullLabel = `${prefix} - ${attrLabel}/${abilityLabel}`;
-
-                        if(pool>0){
-                            const r = new WodRoll(pool, bonus, diff, expl);
-                            r.roll();
-                            r.toMessage(fullLabel, this.actor);
-                        }
-                        else {
-                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
-                            return false;
-                        }
-
-                    }
-                }
-            },
-            default: "submit",
-            close: () => {
-            }
-        });
-        d.render(true);
-    }
-
-
-    /* -------------------------------------------- */
-
-    async _rollResourceDialog(label, id, bonus, explodes, difficulty) {
-
-        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-resource-dialog.hbs';
-        const rollData = {
-            actor: this.actor.data,
-            label: label,
-            resource: id,
-            explodes: explodes,
-            bonus: bonus,
-            difficulty: difficulty
-        };
-
-        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
-
-        let d = new Dialog({
-            title: label,
-            content: rollOptionContent,
-            buttons: {
-                cancel: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: "Cancel",
-                    callback: () => {
-                    }
-                },
-                submit: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: "Submit",
-                    callback: (html) => {
-                        const resKey = html.find("#resource").val();
-                        const bonus = html.find("#bonus").val();
-                        const diff = html.find('#difficulty').val();
-                        const res = eval("this.actor.data." + resKey);
-                        const resValue = res.value;
-                        const pool = parseInt(resValue, 10) + parseInt(bonus, 10)
-                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        const resLabel = game.i18n.localize(eval("this.actor.data." + resKey + ".label"));
-                        const prefix = game.i18n.localize("WOD.ui.rollResource");
-                        const fullLabel = `${prefix} - ${resLabel}`;
-
-                        if(pool>0){
-                            const r = new WodRoll(pool, bonus, diff, expl);
-                            r.roll();
-                            r.toMessage(fullLabel, this.actor);
-                        }
-                        else {
-                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
-                            return false;
-                        }
-
-                    }
-                }
-            },
-            default: "submit",
-            close: () => {
-            }
-        });
-        d.render(true);
-    }
-
-    /* -------------------------------------------- */
-
-    async _rollDamageDialog(label, id, bonus, explodes, difficulty) {
-
-        const rollOptionTpl = 'systems/wod/templates/dialogs/roll-resource-dialog.hbs';
-        const rollData = {
-            actor: this.actor.data,
-            label: label,
-            resource: id,
-            explodes: explodes,
-            bonus: bonus,
-            difficulty: difficulty
-        };
-
-        const rollOptionContent = await renderTemplate(rollOptionTpl, rollData);
-
-        let d = new Dialog({
-            title: label,
-            content: rollOptionContent,
-            buttons: {
-                cancel: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: "Cancel",
-                    callback: () => {
-                    }
-                },
-                submit: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: "Submit",
-                    callback: (html) => {
-                        const resKey = html.find("#resource").val();
-                        const bonus = html.find("#bonus").val();
-                        const diff = html.find('#difficulty').val();
-                        const res = eval("this.actor.data." + resKey);
-                        const resValue = res.value;
-                        const pool = parseInt(resValue, 10) + parseInt(bonus, 10)
-                        const expl = game.settings.get("wod", "10reroll") ? html.find('#explodes').val() : null;
-                        const resLabel = game.i18n.localize(eval("this.actor.data." + resKey + ".label"));
-                        const prefix = game.i18n.localize("WOD.ui.rollResource");
-                        const fullLabel = `${prefix} - ${resLabel}`;
-
-                        if(pool>0){
-                            const r = new WodRoll(pool, bonus, diff, expl);
-                            r.roll();
-                            r.toMessage(fullLabel, this.actor);
-                        }
-                        else {
-                            ui.notifications.error(game.i18n.localize("WOD.error.negativeDicePool"));
-                            return false;
-                        }
-
-                    }
-                }
-            },
-            default: "submit",
-            close: () => {
-            }
-        });
-        d.render(true);
+        const elt = $(event.currentTarget).parents(".score");
+        const ns = elt.data("namespace");
+        const group = elt.data("group");
+        const key = elt.data("key");
+        const data = this.getData();
+        if (ns == "attributes")     return WodDialog.rollAttributeDialog(data, ns, group, key, 6);
+        else if (ns == "abilities") return WodDialog.rollAbilityDialog  (data, ns, group, key, 6);
+        else if (ns == "resources") return WodDialog.rollResourceDialog (data, ns, group, key, 6);
     }
 
     /* -------------------------------------------- */
@@ -612,18 +382,18 @@ export class WodActorSheet extends ActorSheet {
      */
     _onToggleActiveState(event) {
         event.preventDefault();
-        let data = this.getData();
-        let attributes = data.actor.data.attributes;
-        // console.log(attributes);
-        Object.values(attributes).filter(attr => attr.active === true).forEach(attr => attr.active = false);
-        const li = $(event.currentTarget);
-        const id = li.data("key");
-        console.log(event.currentTarget);
-        console.log(id);
-        const active = eval(`attributes.${id}`);
-        console.log(active);
-        active.active = true;
-        return this.actor.update({"data.attributes": attributes});
+        const elt = $(event.currentTarget);
+        const ns = elt.data("namespace");
+        const group = elt.data("group");
+        const key = elt.data("key");
+        let data = duplicate(this.actor.data);
+        const groups = ["physical", "social", "mental"];
+        for (let group of groups) {
+            data.data.attributes[group].scores.forEach(s => s.active = false);
+        }
+        const field = data.data[ns][group].scores.find(s => s.key === key);
+        field.active = true;
+        return this.actor.update(data);
     }
 
     /* -------------------------------------------- */
@@ -643,6 +413,30 @@ export class WodActorSheet extends ActorSheet {
     getData(options){
         const data = super.getData(options);
         console.log(data);
+        data.physical = data.data.attributes.physical.scores;
+        data.social = data.data.attributes.social.scores;
+        data.mental = data.data.attributes.mental.scores;
+        const attribs = data.data.attributes.physical.scores.concat(data.data.attributes.social.scores).concat(data.data.attributes.mental.scores);
+        data.attributes = {};
+        for(const attrib of attribs){
+            data.attributes[attrib.key] = attrib;
+        }
+
+        data.talents = data.data.abilities.talents.scores;
+        data.skills = data.data.abilities.skills.scores;
+        data.knowledges = data.data.abilities.knowledges.scores;
+        const abilities = data.data.abilities.talents.scores.concat(data.data.abilities.skills.scores).concat(data.data.abilities.knowledges.scores);
+        data.abilities = {};
+        for(const ability of abilities){
+            data.abilities[ability.key] = ability;
+        }
+        data.resources = data.data.resources;
+        data.breed = data.items.find(item => item.type === "breed");
+        data.auspice = data.items.find(item => item.type === "auspice");
+        data.tribe = data.items.find(item => item.type === "tribe");
+        data.gifts = data.items.filter(item => item.type === "gifts");
+        data.backgrounds = data.items.filter(item => item.type === "background");
+        // console.log(data);
         return data;
     }
 }

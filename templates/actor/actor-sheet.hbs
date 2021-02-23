@@ -2,7 +2,7 @@
     <div class="wrap">
         {{> "systems/wod/templates/actor/parts/actor-toolbar.hbs"}}
         <div class="sheet-header flexrow">
-            <div class="portrait flex1">
+            <div class="portrait flex1 center">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
             </div>
             <div class="header-fields flex5">
@@ -31,8 +31,8 @@
                 {{> "systems/wod/templates/actor/parts/actor-combat.hbs"}}
             </div>
             {{!-- Biography Tab --}}
-            <div class="tab biography" data-group="primary" data-tab="description">
-                {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            <div class="tab description" data-group="primary" data-tab="description">
+                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
             </div>
             {{!-- Owned Items Tab --}}
             <div class="tab items" data-group="primary" data-tab="traits">

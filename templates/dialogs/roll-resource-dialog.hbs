@@ -6,8 +6,8 @@
         <select id="resource" name="resource" data-type="String" style="width:100%">
             {{#select resource}}
                 <option value="">{{localize "WOD.None"}}</option>
-                {{#each (getAllResources actor) as | attr id |}}
-                    <option value="data.resources.{{attr.key}}">{{localize attr.label}}</option>
+                {{#each resources as | res id |}}
+                    <option value="{{res.key}}">{{localize res.label}}</option>
                 {{/each}}
             {{/select}}
         </select>
@@ -21,16 +21,6 @@
         <input class="field-value readonly" id="bonus" name="bonus" type="text" value="{{bonus}}" data-dtype="Number"/>
     </div>
 </div>
-{{#if (isEnabled "10reroll")}}
-    <div class="flexrow">
-        <div class="flex1 center">
-            <label for="dice">{{localize "WOD.ui.explodes"}}</label>
-        </div>
-        <div class="flex1 center cell">
-            <input class="field-value readonly" id="explodes" name="explodes" type="text" value="{{explodes}}" data-dtype="Number"/>
-        </div>
-    </div>
-{{/if}}
 <div class="flexrow">
     <div class="flex1 center">
         <label for="dice">{{localize "WOD.ui.difficulty"}}</label>
