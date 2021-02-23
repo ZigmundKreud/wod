@@ -25,7 +25,7 @@ export class WodActor extends Actor {
         const groups = ["talents", "skills", "knowledges"];
         for (let group of groups) {
             if (actorData.data.abilities[group].scores.length == 0) {
-                actorData.data.abilities[group].scores = game.wod.config[actorData.type].abilities[group].map(t => {
+                actorData.data.abilities[group].scores = game.wod.config.features[actorData.type].abilities[group].map(t => {
                     t.value = 0;
                     t.min = 0;
                     t.max = 9;

@@ -277,6 +277,14 @@
 
   "WOD.roll.attributes" : "Roll an attribute check",
   "WOD.roll.abilities" : "Roll a capacity check",
-  "WOD.roll.resources" : "Roll a resource check"
+  "WOD.roll.resources" : "Roll a resource check",
 
+  "WOD.category.armor" : "Armor",
+  "WOD.category.melee" : "Melee weapon",
+  "WOD.category.thrown" : "Thrown weapon",
+  "WOD.category.ranged" : "Ranged weapon",
+  "WOD.category.fetish" : "Fetisch",
+  "WOD.category.talen" : "Talen",
+  "WOD.category.currency" : "Currency",
+  "WOD.category.other" : "Autre"
 }

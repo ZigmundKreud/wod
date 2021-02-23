@@ -880,6 +880,7 @@
         "description": "<p></p>"
       },
       "equipment": {
+        "subtype": "",
         "quantity": 1,
         "weight": 0,
         "properties" : {
@@ -891,6 +892,7 @@
           "equipment": true,
           "weapon": false,
           "protection": false,
+          "mystical": false,
           "effects": false
         }
       },
@@ -900,7 +902,8 @@
     },
     "item": {
       "templates": [
-        "base"
+        "base",
+        "equipment"
       ]
     },
     "archetype": {

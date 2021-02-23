@@ -277,5 +277,14 @@
 
   "WOD.roll.attributes" : "Test d'attribut",
   "WOD.roll.abilities" : "Test de capacité",
-  "WOD.roll.resources" : "Test de ressource"
+  "WOD.roll.resources" : "Test de ressource",
+
+  "WOD.category.armor" : "Armure",
+  "WOD.category.melee" : "Arme de contact",
+  "WOD.category.thrown" : "Arme de jet",
+  "WOD.category.ranged" : "Arme à distance",
+  "WOD.category.fetish" : "Fétiche",
+  "WOD.category.talen" : "Talen",
+  "WOD.category.currency" : "Argent",
+  "WOD.category.other" : "Autre"
 }

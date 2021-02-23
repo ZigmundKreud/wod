@@ -18,6 +18,7 @@ export class WodActorSheet extends WodBaseSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
+            classes: ["wod", "sheet", "actor"],
             template: "systems/wod/templates/actor/actor-sheet.hbs",
             width: 850,
             height: 600,
@@ -436,6 +437,19 @@ export class WodActorSheet extends WodBaseSheet {
         data.tribe = data.items.find(item => item.type === "tribe");
         data.gifts = data.items.filter(item => item.type === "gifts");
         data.backgrounds = data.items.filter(item => item.type === "background");
+
+        data.inventory = {
+            count: data.items.filter(i => i.type === "item").length,
+            categories: []
+        };
+        for (const category of Object.keys(game.wod.config.itemCategories)) {
+            data.inventory.categories.push({
+                id: category,
+                label: "WOD.category." + category,
+                items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category).sort((a, b) => (a.name > b.name) ? 1 : -1)
+            });
+        }
+
         // console.log(data);
         return data;
     }
