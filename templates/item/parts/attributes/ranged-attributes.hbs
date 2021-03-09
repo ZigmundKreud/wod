@@ -1,0 +1,44 @@
+<h3 class="form-header">{{localize "WOD.properties.ranged"}}</h3>
+<div class="form-group">
+    <label>{{localize "WOD.ui.type"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.bow" {{checked item.data.properties.bow}}> {{localize "WOD.properties.bow"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.firearm" {{checked item.data.properties.firearm}}> {{localize "WOD.properties.firearm"}}
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.range"}}</label>
+    <div class="form-fields">
+        <input name="data.facets.ranged.range" type="number" value="{{data.facets.ranged.range}}" placeholder="{{localize "WOD.ui.range"}}" data-dtype="Number">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.rate"}}</label>
+    <div class="form-fields">
+        <input name="data.facets.ranged.rate" type="number" value="{{data.facets.ranged.rate}}" placeholder="{{localize "WOD.ui.rate"}}" data-dtype="Number">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.clip"}}</label>
+    <div class="form-fields">
+        <input name="data.facets.ranged.clip" type="text" value="{{data.facets.ranged.clip}}" placeholder="{{localize "WOD.ui.clip"}}" data-dtype="String">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.fullauto" {{checked item.data.properties.fullauto}}> {{localize "WOD.properties.fullauto"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.3roundBurst" {{checked item.data.properties.3roundBurst}}> {{localize "WOD.properties.3roundBurst"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.spray" {{checked item.data.properties.spray}}> {{localize "WOD.properties.spray"}}
+        </label>
+    </div>
+</div>

@@ -1,33 +1,43 @@
-<div class="section-header flexrow">
-    <div class="flex3"></div>
-    <label class="section-title">{{localize "WOD.combat.label"}}</label>
-    <div class="flex3"></div>
-</div>
-{{#each actor.data.melee as |melee id|}}
-    <li class="item flexrow" data-item-id="{{id}}">
-        <div class="item-image"><img src="{{melee.img}}" data-edit="img" width="24" height="24"/></div>
-        <div class="field-value flex2">
-            <input name="data.melee.{{id}}.label" type="text" value="{{melee.label}}" placeholder="{{localize "WOD.details.name"}}"/>
-        </div>
-        <div class="field-value flex2">
-            <select name="data.melee.{{id}}.attribute" data-type="String" style="width:100%">
-                {{#select melee.attribute}}
-                    <option value="">{{localize "WOD.None"}}</option>
-                    <option value="data.abilities.brawl">{{localize "WOD.breed.homid"}}</option>
-                    <option value="data.abilities.melee">{{localize "WOD.breed.metis"}}</option>
-                {{/select}}
-            </select>
-        </div>
-        <div class="field-value flex2">
-            <input name="data.melee.{{id}}.ability" type="text" value="{{melee.ability}}" placeholder="{{localize "WOD.details.ability"}}"/>
-        </div>
-        <div class="field-value flex2">
-            <input name="data.melee.{{id}}.dmgType" type="text" value="{{melee.dmgType}}" placeholder="{{localize "WOD.details.dmgType"}}"/>
-        </div>
+{{#if (isPositive maneuvers.count)}}
+    <ol class="items-list">
+        <li class="item flexrow item-header">
+            <div class="item-image"></div>
+            <div class="item-name">{{localize maneuvers.label}}</div>
+            <div class="item-controls">
+                <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
+            </div>
+        </li>
+        {{#each maneuvers.items as |item id|}}
+            <li class="item flexrow" data-item-id="{{item._id}}" data-namespace="items" data-group="maneuver" data-key="{{item._id}}">
+                <div class="item-image"><a class="item-control rollable" data-roll-type="maneuver"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a></div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+        {{/each}}
+    </ol>
+{{/if}}
+
+{{#each combat.categories as |category id|}}
+<ol class="items-list">
+    <li class="item flexrow item-header">
+        <div class="item-image"></div>
+        <div class="item-name">{{localize category.label}}</div>
         <div class="item-controls">
-            <a class="item-control rollable" data-roll-type="encounter-weapon"><i class="fas fa-dice-d20"></i></a>
-            <a class="item-control rollable" data-roll-type="encounter-damage"><i class="fas fa-dice"></i></a>
-            <a class="item-control weapon-remove" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
         </div>
     </li>
+    {{#each category.items as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <h4 class="item-name">{{item.name}}</h4>
+            <div class="item-controls">
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </li>
+    {{/each}}
+</ol>
 {{/each}}

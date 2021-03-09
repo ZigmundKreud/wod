@@ -11,8 +11,8 @@ export class WodScore {
         this._namespace = namespace;
         this.ranks = [];
         for(let i=this._min+1; i<=this._max; i++){
-            if(this._temp){
-                if(i <= value) this.ranks.push({active: true, temp: true, value: i});
+            if(this._temp != null){
+                if(i <= this._temp) this.ranks.push({active: true, temp: true, value: i});
                 else this.ranks.push({active: false, temp: true, value: i});
             }
             else {

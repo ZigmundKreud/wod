@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----------------------------------------- */
 /*  LOCAL FONTS                             */
 /* ----------------------------------------- */
@@ -7,38 +8,13 @@
 }
 
 @font-face {
-  font-family: "Werewolf";
-  src: url("../fonts/werewolf.ttf");
-}
-
-@font-face {
   font-family: "GoudyOldStyle";
   src: url("../fonts/GoudyOldStyleRegular.ttf");
 }
 
 @font-face {
-  font-family: "CaflischScriptPro";
-  src: url("../fonts/caflischscriptpro-regular.otf");
-}
-
-@font-face {
   font-family: "Delavan";
   src: url("../fonts/delavan.ttf");
-}
-
-@font-face {
-  font-family: "Abbess";
-  src: url("../fonts/AbbessRegular.ttf");
-}
-
-@font-face {
-  font-family: "DeRoos";
-  src: url("../fonts/DeRoosCaps.ttf");
-}
-
-@font-face {
-  font-family: "Emerald Isle";
-  src: url("../fonts/emeri.ttf");
 }
 
 .ellipsis {
@@ -51,6 +27,16 @@
 /* Global styles */
 .window-app {
   font-family: "MyriadPro", sans-serif;
+}
+
+.window-app.wod.sheet.actor {
+  min-width: 765px;
+  overflow: hidden;
+}
+
+.window-app.wod.sheet.item {
+  min-width: 430px;
+  overflow: hidden;
 }
 
 .rollable:hover, .rollable:focus {
@@ -349,6 +335,10 @@
 }
 
 /* Styles limited to wod sheets */
+.wod {
+  /* Form Groups */
+}
+
 .wod .field-label {
   min-height: 25px;
   height: 25px;
@@ -428,6 +418,113 @@
   height: 25px;
 }
 
+.wod .form-group label {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  color: #4b4a44;
+  font-weight: bold;
+}
+
+.wod .form-group .form-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.wod .form-group .form-fields > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 3px 0 0;
+}
+
+.wod .form-group .form-fields > *:last-child {
+  margin-right: 0;
+}
+
+.wod .form-group .form-fields > * .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .form-group .form-fields > * .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.wod .form-group .form-fields > * .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.wod .form-group .form-fields > * .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.wod .form-group .form-fields label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.wod .form-group .form-fields label.checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  text-align: left;
+}
+
+.wod .form-group.stacked label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.wod .form-group.stacked label.checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  text-align: left;
+}
+
+.wod .form-header {
+  margin: 0 0 0.25em 0;
+  padding: 2px 0;
+  border-top: 2px groove #eeede0;
+  border-bottom: 2px groove #eeede0;
+  font-family: "MyriadPro", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wod .tag {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  padding: 0 3px;
+  font-size: 10px;
+  line-height: 16px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .wod ::-webkit-input-placeholder {
   color: lightgray;
 }
@@ -505,47 +602,456 @@
   text-align: right;
 }
 
-.wod .window-content {
+.wod .featured-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #7a7971;
+}
+
+.wod .featured-list.foldable .inventory-header h3 {
+  cursor: pointer;
+}
+
+.wod .featured-list.foldable .inventory-header h3:before {
+  content: "▾\202F";
+}
+
+.wod .featured-list.folded .inventory-header h3:before {
+  content: "▸\202F";
+}
+
+.wod .featured-list .item {
+  line-height: 30px;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+
+.wod .featured-list .item:last-child {
+  border-bottom: none;
+}
+
+.wod .featured-list .item .item-name {
+  cursor: pointer;
+  max-height: 30px;
+  overflow: hidden;
+}
+
+.wod .featured-list .item .item-name .item-image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  background-size: 30px;
+  margin-right: 5px;
+}
+
+.wod .featured-list .item .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.wod .featured-list .item .item-name.rollable:hover .item-image {
+  background-image: url("../../../icons/svg/d20-grey.svg") !important;
+}
+
+.wod .featured-list .item .item-name.rollable .item-image:hover {
+  background-image: url("../../../icons/svg/d20-black.svg") !important;
+}
+
+.wod .featured-list .item .item-name i.attuned {
+  color: #7a7971;
+}
+
+.wod .featured-list .item .item-uses input {
+  width: 24px;
+  text-align: center;
+}
+
+.wod .featured-list .item .item-properties {
+  margin-top: 3px;
+}
+
+.wod .featured-list .item .item-recharge {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  text-align: right;
+  font-size: 11px;
+  color: #7a7971;
+  white-space: nowrap;
+}
+
+.wod .featured-list .list-header {
+  margin: 2px 0;
+  padding: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.wod .featured-list .list-header h3 {
+  margin: 0 -5px 0 0;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.wod .featured-list .list-header .item-controls a.item-create,
+.wod .featured-list .list-header .item-controls-1 a.item-create,
+.wod .featured-list .list-header .item-controls-2 a.item-create,
+.wod .featured-list .list-header .item-controls-3 a.item-create,
+.wod .featured-list .list-header .item-controls-4 a.item-create {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.wod .featured-list .item-name {
+  color: #4b4a44;
+}
+
+.wod .featured-list .item-detail {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  font-size: 12px;
+  color: #7a7971;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wod .featured-list .item-detail:last-child {
+  border-right: none;
+}
+
+.wod .featured-list .item-detail.item-action {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+}
+
+.wod .featured-list .item-weight {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+}
+
+.wod .featured-list .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wod .featured-list .item-list.out-of-charge {
+  color: lightgray;
+  font-style: italic;
+}
+
+.wod .featured-list .item-list.out-of-charge .item-name {
+  color: lightgray;
+  font-style: italic;
+}
+
+.wod .featured-list .item-controls-1 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.wod .featured-list .item-controls-1 > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-1 .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-1 .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.wod .featured-list .item-controls-1 .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.wod .featured-list .item-controls-1 .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.wod .featured-list .item-controls-1 a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  font-size: 12px;
+  text-align: center;
+  color: #7a7971;
+}
+
+.wod .featured-list .item-controls,
+.wod .featured-list .item-controls-2 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 44px;
+  flex: 0 0 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.wod .featured-list .item-controls > *,
+.wod .featured-list .item-controls-2 > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls .flex1,
+.wod .featured-list .item-controls-2 .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls .flex2,
+.wod .featured-list .item-controls-2 .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.wod .featured-list .item-controls .flex3,
+.wod .featured-list .item-controls-2 .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.wod .featured-list .item-controls .flex4,
+.wod .featured-list .item-controls-2 .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.wod .featured-list .item-controls a,
+.wod .featured-list .item-controls-2 a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  font-size: 12px;
+  text-align: center;
+  color: #7a7971;
+}
+
+.wod .featured-list .item-controls-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66px;
+  flex: 0 0 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.wod .featured-list .item-controls-3 > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-3 .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-3 .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.wod .featured-list .item-controls-3 .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.wod .featured-list .item-controls-3 .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.wod .featured-list .item-controls-3 a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  font-size: 12px;
+  text-align: center;
+  color: #7a7971;
+}
+
+.wod .featured-list .item-controls-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 88px;
+  flex: 0 0 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.wod .featured-list .item-controls-4 > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-4 .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.wod .featured-list .item-controls-4 .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.wod .featured-list .item-controls-4 .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.wod .featured-list .item-controls-4 .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.wod .featured-list .item-controls-4 a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  font-size: 12px;
+  text-align: center;
+  color: #7a7971;
+}
+
+.wod .featured-list .item-summary {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  border-top: 1px solid #c9c7b8;
+}
+
+.wod .editor {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.wod .editor .editor-content {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.wod .editor .tox-tinymce {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.wod.actor .window-content {
   background: white;
 }
 
-.wod.actor .wrap {
+.wod.actor .window-content .wrap {
   padding: 5px;
 }
 
-.wod.actor .wrap .toolbar {
-  position: absolute;
-  float: right;
-  top: 32px;
-  z-index: 1000;
-  left: 3px;
-}
-
-.wod.actor .wrap .toolbar .btn {
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0 5px;
-  background: white;
-  -webkit-box-shadow: 0 0 5px #999 inset;
-  box-shadow: 0 0 5px #999 inset;
-  border: 1px outset #999;
-  border-radius: 3px;
-  margin-bottom: 2px;
-  color: #777;
-}
-
-.wod.actor .wrap .toolbar .btn.active {
-  border: 1px inset #999;
-  background: rgba(180, 180, 180, 0.9);
-  color: #333;
-}
-
-.wod.actor .wrap .sheet-header .logo {
-  margin-left: -190px;
-}
-
-.wod.actor .wrap .sheet-header .portrait {
+.wod.actor .window-content .wrap .sheet-header .portrait {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,37 +1067,59 @@
   align-content: center;
   outline: 4px solid white;
   background-color: lightgray;
-  min-height: 250px;
-  height: 250px;
-  max-height: 250px;
-  min-width: 190px;
-  width: 190px;
-  max-width: 190px;
   text-align: center;
   -webkit-box-shadow: 5px 5px 5px gray;
   box-shadow: 5px 5px 5px gray;
   cursor: pointer;
 }
 
-.wod.actor .wrap .sheet-header .portrait img {
+.wod.actor .window-content .wrap .sheet-header .portrait img {
   border: none;
+  -o-object-fit: contain;
+  object-fit: contain;
   max-height: 250px;
+  min-height: 250px;
   max-width: 190px;
+  min-width: 190px;
   width: 190px;
+  height: 250px;
 }
 
-.wod.actor .wrap .sheet-header .header-fields .details {
+.wod.actor .window-content .wrap .sheet-header .header-fields .logo {
+  background-image: url("../ui/wod/wod.webp");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: auto 130px;
+  min-height: 130px;
+  height: 130px;
+  max-height: 130px;
+  margin-left: -190px;
+  margin-top: -10px;
+}
+
+.wod.actor .window-content .wrap .sheet-header .header-fields .details {
   padding-left: 10px;
   margin-top: -15px;
 }
 
-.wod.actor .wrap .sheet-header .header-fields .sheet-tabs {
-  border: none;
+.wod.actor .window-content .wrap .sheet-header .header-fields .details .field-label {
+  font-family: "Delavan", Serif;
+  font-size: 14px;
 }
 
-.wod.actor .wrap .sheet-body .section-header {
-  font-family: "GoudyOldStyle", Serif;
-  background-color: white;
+.wod.actor .window-content .wrap .sheet-header .header-fields .sheet-tabs {
+  border: none;
+  font-family: "Delavan", Serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab {
+  height: 100%;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab .section-header {
   text-align: center;
   min-height: 50px;
   height: 50px;
@@ -600,308 +1128,119 @@
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
+  font-family: "GoudyOldStyle", Serif;
+  background-color: white;
+  background-image: url("../ui/wod/separator.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 37px;
+  background-position-y: center;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content {
+.wod.actor .window-content .wrap .sheet-body .tab .section-header .section-title {
+  background-color: white;
+  font-family: "Delavan", Serif;
+  font-size: 24px;
+  padding: 0 10px;
+  margin: 0 10px 0 10px;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content {
   margin-top: -10px;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .health .health-rank-label, .wod.actor .wrap .sheet-body .main .section-content .health .health-rank-malus {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .section-title {
+  font-family: "Delavan", Serif;
+  font-size: 18px;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .score-label {
   font-family: "GoudyOldStyle", Serif;
   font-size: 16px;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .score .score-label {
-  font-family: "GoudyOldStyle", Serif;
-  font-size: 16px;
-}
-
-.wod.actor .wrap .sheet-body .main .section-content .score .score-label.active {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .score-label.active {
   text-decoration: underline;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .score .rank {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .rank {
   font-size: 12px;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .score .rank.temp {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .rank.temp {
   color: red;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .score .reset {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .reset {
   font-size: 12px;
   visibility: hidden;
 }
 
-.wod.actor .wrap .sheet-body .main .section-content .score:hover .reset {
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score:hover .reset {
   visibility: visible;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .toolbar .btn {
-  font-family: Werewolf;
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .score-value {
+  display: block;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .resource-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .score .resource-curres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wod.actor .window-content .wrap .sheet-body .tab.main .section-content .health .health-rank-label, .wod.actor .window-content .wrap .sheet-body .tab.main .section-content .health .health-rank-malus {
+  font-family: "GoudyOldStyle", Serif;
   font-size: 16px;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/werewolf/logo-v20.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 150px;
-  min-height: 150px;
-  height: 150px;
-  max-height: 150px;
-  margin-top: -30px;
+.wod.item .window-content .sheet-body .tab.description .item-properties {
+  height: 100%;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 2px groove #eeede0;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "CaflischScriptPro", Serif;
-  font-weight: bold;
-  font-size: 20px;
+.wod.item .window-content .sheet-body .tab.description .item-properties .properties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Werewolf", Serif;
-  font-weight: bold;
-  font-size: 20px;
+.wod.item .window-content .sheet-body .tab.description .item-properties .properties-list li {
+  margin: 3px 0;
+  padding: 0 2px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-body .section-header {
-  background-image: url("../ui/werewolf/separator-short.png");
-  background-repeat: repeat-x;
-  background-size: 311px 37px;
-  background-position-y: center;
+.wod.item .window-content .sheet-body .tab.description .editor {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Werewolf", Serif;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 5px 10px 5px 10px;
-  margin: 7px 10px 0 10px;
-  -webkit-box-shadow: 0 0 10px white;
-  box-shadow: 0 0 10px white;
+.wod.item .window-content .sheet-body .tab.description .editor .editor-content {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
-.wod.actor .window-content .editable.werewolf .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Werewolf", Serif;
-  font-weight: bold;
-  font-size: 20px;
+.wod.item .window-content .sheet-body .tab.description .editor .tox-tinymce {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
-.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/vampire/logo-v20.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 130px;
-  min-height: 130px;
-  height: 130px;
-  max-height: 130px;
-  margin-top: -10px;
-}
-
-.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "Delavan", Serif;
-  font-size: 14px;
-}
-
-.wod.actor .window-content .editable.vampire .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Delavan", Serif;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header {
-  background-image: url("../ui/vampire/separator.png");
-  background-repeat: no-repeat;
-  background-size: 100% 37px;
-  background-position-y: center;
-}
-
-.wod.actor .window-content .editable.vampire .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Delavan", Serif;
-  font-size: 24px;
-  padding: 0 10px;
-  margin: 0 10px 0 10px;
-}
-
-.wod.actor .window-content .editable.vampire .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Delavan", Serif;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/vampire_da/logo.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 130px;
-  min-height: 130px;
-  height: 130px;
-  max-height: 130px;
-  margin-top: -10px;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "Emerald Isle", Serif;
-  font-size: 14px;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Emerald Isle", Serif;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .section-header {
-  background-image: url("../ui/vampire_da/separator.png");
-  background-repeat: no-repeat;
-  background-size: 100% 10px;
-  background-position-y: center;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Emerald Isle", Serif;
-  font-size: 24px;
-  padding: 0 10px;
-  margin: 0 10px 0 10px;
-}
-
-.wod.actor .window-content .editable.vampire_da .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Emerald Isle", Serif;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/mage/logo.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 130px;
-  min-height: 130px;
-  height: 130px;
-  max-height: 130px;
-  margin-top: -20px;
-  margin-bottom: 10px;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "Abbess", Serif;
-  font-size: 14px;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Abbess", Serif;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-body .section-header {
-  background-image: url("../ui/mage/separator.png");
-  background-repeat: no-repeat;
-  background-size: 100% 22px;
-  background-position-y: center;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Abbess", Serif;
-  font-weight: bold;
-  font-size: 25px;
-  padding: 0 10px 0 10px;
-  margin: 0 10px 0 10px;
-}
-
-.wod.actor .window-content .editable.mage .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Abbess", Serif;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/hunter/logo.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 130px;
-  min-height: 130px;
-  height: 130px;
-  max-height: 130px;
-  margin-top: -10px;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "Delavan", Serif;
-  font-size: 14px;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-body .section-header {
-  background-image: url("../ui/vampire/separator.png");
-  background-repeat: no-repeat;
-  background-size: 100% 37px;
-  background-position-y: center;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Delavan", Serif;
-  font-size: 24px;
-  padding: 0 10px;
-  margin: 0 10px 0 10px;
-}
-
-.wod.actor .window-content .editable.hunter .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Delavan", Serif;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .logo {
-  background-image: url("../ui/ghoul/logo.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  background-size: auto 130px;
-  min-height: 130px;
-  height: 130px;
-  max-height: 130px;
-  margin-top: -10px;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .details .field-label {
-  font-family: "Delavan", Serif;
-  font-size: 14px;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-header .header-fields .sheet-tabs {
-  font-family: "Delavan", Serif;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-body .section-header {
-  background-image: url("../ui/ghoul/separator.png");
-  background-repeat: no-repeat;
-  background-size: 100% 37px;
-  background-position-y: center;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-body .section-header .section-title {
-  background-color: white;
-  font-family: "Delavan", Serif;
-  font-size: 24px;
-  padding: 0 10px;
-  margin: 0 10px 0 10px;
-}
-
-.wod.actor .window-content .editable.ghoul .wrap .sheet-body .main .section-content .section-title {
-  font-family: "Delavan", Serif;
-  font-size: 18px;
+.wod.item .window-content .sheet-body .tab.attributes .form-header {
+  margin: 10px 0 10px 0;
 }

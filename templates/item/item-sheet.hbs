@@ -3,26 +3,71 @@
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <div class="item-subtitle">
+                {{#if data.subtype}}
+                    <h4 class="item-type">{{localize (concat "WOD.category." data.subtype)}}</h4>
+                {{else}}
+                    <h4 class="item-type">{{localize (concat "WOD.itemType." item.type)}}</h4>
+                {{/if}}
+            </div>
         </div>
     </header>
-
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="description">{{localize "WOD.ui.description"}}</a> <a class="item" data-tab="attributes">{{localize "WOD.ui.attributes"}}</a>
     </nav>
-
     {{!-- Sheet Body --}}
-    <section class="sheet-body">
-
+    <section class="sheet-body" style="height:100%;">
         {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        <div class="tab flexrow description" data-group="primary" data-tab="description" style="height:100%;">
+            {{#if itemProperties}}
+                <div class="flex1 item-properties">
+                    <ol class="properties-list">
+                        {{#each itemProperties}}
+                            <li>{{localize this}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+            {{/if}}
+            <div class="flex3" style="height:100%;">
+                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            </div>
         </div>
-
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            {{!-- As you add new fields, add them in here! --}}
+            {{#if (equals item.type "item")}}
+                {{> "systems/wod/templates/item/parts/attributes/item-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "auspice")}}
+                {{> "systems/wod/templates/item/parts/attributes/auspice-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "background")}}
+                {{> "systems/wod/templates/item/parts/attributes/background-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "breed")}}
+                {{> "systems/wod/templates/item/parts/attributes/breed-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "clan")}}
+                {{> "systems/wod/templates/item/parts/attributes/clan-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "tribe")}}
+                {{> "systems/wod/templates/item/parts/attributes/tribe-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "gift")}}
+                {{> "systems/wod/templates/item/parts/attributes/gift-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "rite")}}
+                {{> "systems/wod/templates/item/parts/attributes/rite-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "discipline")}}
+                {{> "systems/wod/templates/item/parts/attributes/discipline-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "merit")}}
+                {{> "systems/wod/templates/item/parts/attributes/merit-attributes.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "flaw")}}
+                {{> "systems/wod/templates/item/parts/attributes/flaw-attributes.hbs"}}
+            {{/if}}
         </div>
     </section>
 </form>

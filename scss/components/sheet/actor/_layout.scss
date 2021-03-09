@@ -1,142 +1,158 @@
-.wrap {
+.window-content {
+  background: white;
 
-  padding: 5px;
+  .wrap {
+    padding: 5px;
 
-  .toolbar {
-    position: absolute;
-    float: right;
-    top: 32px;
-    z-index: 1000;
-    left: 3px;
+    .sheet-header {
+      .portrait {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
 
-    .btn {
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 0 5px;
-      background: white;
-      //background: rgba(220, 220, 220, 0.9);
-      box-shadow: 0 0 5px #999 inset;
-      border: 1px outset #999;
-      border-radius: 3px;
-      margin-bottom: 2px;
-      color:#777;
+        outline: 4px solid white;
+        background-color: lightgray;
+        text-align: center;
+        box-shadow: 5px 5px 5px gray;
+        cursor: pointer;
 
-      &.active {
-        border: 1px inset #999;
-        background: rgba(180, 180, 180, 0.9);
-        color:#333;
-      }
-    }
-  }
-
-  .sheet-header {
-    .logo {
-      margin-left: -190px;
-    }
-
-    .portrait {
-      display: flex;
-      //flex-direction: column;
-      flex-wrap: nowrap;
-      align-items:center;
-      justify-content:center;
-      align-content:center;
-
-      //background-color: white;
-      outline: 4px solid white;
-      background-color: lightgray;
-      min-height: 250px;
-      height: 250px;
-      max-height: 250px;
-      min-width: 190px;
-      width: 190px;
-      max-width: 190px;
-      text-align: center;
-      //border-radius: 4px;
-      box-shadow: 5px 5px 5px gray;
-      cursor: pointer;
-      //margin: -10px 10px 0 -10px;
-      //border: 1px solid gray;
-
-      img {
-        border:none;
-        //min-height: 250px;
-        max-height: 250px;
-        //height: 250px;
-        //min-width: 190px;
-        max-width: 190px;
-        width: 190px;
-      }
-    }
-
-    .header-fields {
-      .details {
-        padding-left: 10px;
-        margin-top: -15px;
+        img {
+          border: none;
+          object-fit: contain;
+          max-height: 250px;
+          min-height: 250px;
+          max-width: 190px;
+          min-width: 190px;
+          width: 190px;
+          height: 250px;
+        }
       }
 
-      .sheet-tabs {
-        border: none;
-      }
-    }
-  }
+      .header-fields {
+        .logo {
+          background-image: url("../ui/wod/wod.webp");
+          background-repeat: no-repeat;
+          background-position-x: center;
+          background-position-y: top;
+          background-size: auto 130px;
+          min-height: 130px;
+          height: 130px;
+          max-height: 130px;
+          margin-left: -190px;
+          margin-top: -10px;
+        }
 
-  .sheet-body {
+        .details {
+          padding-left: 10px;
+          margin-top: -15px;
 
-    .section-header {
-      font-family: $font-secondary;
-      background-color: white;
-      text-align: center;
-      min-height: 50px;
-      height: 50px;
-      max-height: 50px;
-      align-items: center;
-      justify-items: center;
-    }
-
-    .main {
-      .section-content {
-        margin-top: -10px;
-
-        .health {
-          .health-rank-label, .health-rank-malus {
-            font-family: $font-secondary;
-            font-size: 16px;
-          }
-
-          .health-rank-value {
-            .health-rank-box {
-            }
+          .field-label {
+            font-family: $font-character;
+            font-size: 14px;
           }
         }
 
-        .score {
-          .score-label {
-            font-family: $font-secondary;
-            font-size: 16px;
+        .sheet-tabs {
+          border: none;
+          font-family: $font-character;
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
 
-            &.active {
-              text-decoration: underline;
+    .sheet-body {
+      .tab {
+        height: 100%;
+
+        .section-header {
+          text-align: center;
+          min-height: 50px;
+          height: 50px;
+          max-height: 50px;
+          align-items: center;
+          justify-items: center;
+
+          font-family: $font-secondary;
+          background-color: white;
+          background-image: url("../ui/wod/separator.webp");
+          background-repeat: no-repeat;
+          background-size: 100% 37px;
+          background-position-y: center;
+
+          .section-title {
+            background-color: white;
+            font-family: $font-character;
+            font-size: 24px;
+            padding: 0 10px;
+            margin: 0 10px 0 10px;
+          }
+        }
+
+        &.main {
+          .section-content {
+            margin-top: -10px;
+
+            .section-title {
+              font-family: $font-character;
+              font-size: 18px;
             }
-          }
 
-          .rank {
-            font-size: 12px;
+            .score {
+              .score-label {
+                font-family: $font-secondary;
+                font-size: 16px;
 
-            &.temp {
-              color: red;
+                &.active {
+                  text-decoration: underline;
+                }
+              }
+
+              .rank {
+                font-size: 12px;
+                &.temp {
+                  color: red;
+                }
+              }
+
+              .reset {
+                font-size: 12px;
+                visibility: hidden;
+              }
+              &:hover {
+                .reset {
+                  visibility: visible;
+                }
+              }
+
+              .score-value {
+                display: block;
+              }
+              .resource-value {
+                display: flex;
+                //flex-wrap: nowrap;
+                //flex: 0 0 0;
+              }
+
+              .resource-curres {
+                display: flex;
+                //flex-wrap: nowrap;
+                //flex: 0 0 0;
+              }
             }
-          }
 
-          .reset {
-            font-size: 12px;
-            visibility: hidden;
-          }
+            .health {
+              .health-rank-label, .health-rank-malus {
+                font-family: $font-secondary;
+                font-size: 16px;
+              }
 
-          &:hover {
-            .reset {
-              visibility: visible;
+              .health-rank-value {
+                .health-rank-box {
+                }
+              }
             }
           }
         }
@@ -144,5 +160,3 @@
     }
   }
 }
-
-

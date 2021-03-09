@@ -15,7 +15,6 @@ export class WodRoll {
         this._bonus = bonus;
         this._difficulty = difficulty;
         this._explodes = explodes;
-        this._sd = 0;
         this._isSuccess = false;
         this._isBotch = false;
         this._ones = 0;
@@ -89,7 +88,8 @@ export class WodRoll {
             difficulty : this._difficulty,
             bonus : this._bonus,
             successes : this._successes,
-            ones : this._ones
+            ones : this._ones,
+            isBotch : this._isBotch
         }
         const rollResultCardContent = await renderTemplate(rollResultCardTpl, rollData);
         const messageData = {

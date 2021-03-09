@@ -37,10 +37,14 @@
                     </div>
                 </section>
             </div>
-            {{#if (isNegativeOrNull roll.total)}}
-                <h4 class="dice-total">{{localize "WOD.ui.nosuccess"}}</h4>
+            {{#if isBotch}}
+                <h4 class="dice-total">{{localize "WOD.degree.botch"}}</h4>
             {{else}}
-                <h4 class="dice-total">{{roll.total}} {{#if (isNegativeOrNull roll.total)}}{{localize "WOD.ui.success"}}{{else}}{{localize "WOD.ui.successes"}}{{/if}}</h4>
+                {{#if (isNegativeOrNull roll.total)}}
+                    <h4 class="dice-total">{{localize "WOD.ui.nosuccess"}}</h4>
+                {{else}}
+                    <h4 class="dice-total">{{roll.total}} {{#if (isNegativeOrNull roll.total)}}{{localize "WOD.ui.success"}}{{else}}{{localize "WOD.ui.successes"}}{{/if}}</h4>
+                {{/if}}
             {{/if}}
         </div>
     </div>

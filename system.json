@@ -22,6 +22,24 @@
       "path": "lang/fr.json"
     }
   ],
+  "packs": [
+    {
+      "name": "equipment",
+      "label": "Équipement",
+      "system": "wod",
+      "path": "./packs/equipment.db",
+      "entity": "Item",
+      "tag" : "wod"
+    },
+    {
+      "name": "maneuvers",
+      "label": "Manoeuvres",
+      "system": "wod",
+      "path": "./packs/maneuvers.db",
+      "entity": "Item",
+      "tag" : "wod"
+    }
+  ],
   "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",

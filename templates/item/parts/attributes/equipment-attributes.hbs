@@ -1,0 +1,80 @@
+<h3 class="form-header">{{localize "WOD.properties.equipment"}}</h3>
+
+<div class="form-group">
+    <label>{{localize "WOD.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox"> <input type="checkbox" name="data.properties.equipable" {{checked data.properties.equipable}}> {{localize "WOD.properties.equipable"}}</label>
+        <label class="checkbox"> <input type="checkbox" name="data.properties.stackable" {{checked data.properties.stackable}}> {{localize "WOD.properties.stackable"}}</label>
+        <label class="checkbox"><input type="checkbox" name="data.properties.consumable" {{checked data.properties.consumable}}> {{localize "WOD.properties.consumable"}}</label>
+        <label class="checkbox"><input type="checkbox" name="data.properties.2h" {{checked data.properties.2h}}> {{localize "WOD.properties.2h"}}</label>
+    </div>
+</div>
+{{#if data.properties.equipable}}
+    <div class="form-group">
+        <label>{{localize "WOD.ui.slot"}}</label>
+        <div class="form-fields">
+            <select name="data.facets.equipable.slot" data-type="String" style="width:100%">
+                {{#select data.facets.equipable.slot}}
+                    <option value="">{{localize "WOD.None"}}</option>
+                    <option value="hand">{{localize "WOD.slot.hand"}}</option>
+                    <option value="head">{{localize "WOD.slot.head"}}</option>
+                    <option value="ear">{{localize "WOD.slot.ear"}}</option>
+                    <option value="neck">{{localize "WOD.slot.neck"}}</option>
+                    <option value="shoulders">{{localize "WOD.slot.shoulders"}}</option>
+                    <option value="chest">{{localize "WOD.slot.chest"}}</option>
+                    <option value="back">{{localize "WOD.slot.back"}}</option>
+                    <option value="arm">{{localize "WOD.slot.arm"}}</option>
+                    <option value="finger">{{localize "WOD.slot.finger"}}</option>
+                    <option value="wrist">{{localize "WOD.slot.wrist"}}</option>
+                    <option value="waist">{{localize "WOD.slot.waist"}}</option>
+                    <option value="legs">{{localize "WOD.slot.legs"}}</option>
+                    <option value="feet">{{localize "WOD.slot.feet"}}</option>
+                    <option value="belt">{{localize "WOD.slot.belt"}}</option>
+                    <option value="backpack">{{localize "WOD.slot.backpack"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label>{{! localize "WOD.ui.weight" }}</label>-->
+<!--        <div class="form-fields">-->
+<!--            <input type="number" name="data.facets.equipable.weight" value="{{!data.facets.equipable.weight}}" placeholder="{{!localize "WOD.ui.weight"}}" data-dtype="Number"/>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label>{{localize "WOD.ui.conceal"}}</label>
+        <div class="form-fields">
+            <select name="data.facets.equipable.conceal" data-type="String" style="width:100%">
+                {{#select data.facets.equipable.conceal}}
+                    <option value="">{{localize "WOD.None"}}</option>
+                    <option value="pocket">{{localize "WOD.conceal.pocket"}}</option>
+                    <option value="jacket">{{localize "WOD.conceal.jacket"}}</option>
+                    <option value="trenchcoat">{{localize "WOD.conceal.trenchcoat"}}</option>
+                    <option value="none">{{localize "WOD.conceal.none"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "WOD.ui.properties"}}</label>
+        <div class="form-fields">
+            <label class="checkbox"><input type="checkbox" {{#if (not actor)}}disabled="disabled"{{/if}} name="data.facets.equipable.worn" {{checked data.facets.equipable.worn}}> {{localize "WOD.ui.worn"}}</label>
+        </div>
+    </div>
+
+{{/if}}
+{{#if data.properties.stackable}}
+    <div class="form-group">
+        <label>{{ localize "WOD.ui.quantity" }}</label>
+        <div class="form-fields">
+            <input type="number" name="data.qty" value="{{data.qty}}" placeholder="{{localize "WOD.ui.quantity"}}" data-dtype="Number"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>{{localize "WOD.ui.stacksize"}}</label>
+        <div class="form-fields">
+            <input name="data.facets.stackable.stackSize" type="number" value="{{data.facets.stackable.stackSize}}" placeholder="{{localize "WOD.ui.stacksize"}}" data-dtype="Number">
+        </div>
+    </div>
+{{/if}}

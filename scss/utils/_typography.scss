@@ -1,5 +1,3 @@
-//@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap');
-
 /* ----------------------------------------- */
 /*  LOCAL FONTS                             */
 /* ----------------------------------------- */
@@ -10,18 +8,8 @@
 }
 
 @font-face {
-  font-family: "Werewolf";
-  src: url('../fonts/werewolf.ttf');
-}
-
-@font-face {
   font-family: "GoudyOldStyle";
   src: url('../fonts/GoudyOldStyleRegular.ttf');
-}
-
-@font-face {
-  font-family: "CaflischScriptPro";
-  src: url('../fonts/caflischscriptpro-regular.otf');
 }
 
 @font-face {
@@ -29,34 +17,9 @@
   src: url('../fonts/delavan.ttf');
 }
 
-@font-face {
-  font-family: "Abbess";
-  src: url('../fonts/AbbessRegular.ttf');
-}
-
-@font-face {
-  font-family: "DeRoos";
-  src: url('../fonts/DeRoosCaps.ttf');
-}
-
-@font-face {
-  font-family: "Emerald Isle";
-  src: url('../fonts/emeri.ttf');
-}
-
 $font-primary: 'MyriadPro', sans-serif;
 $font-secondary: "GoudyOldStyle", Serif;
-
-$font-werewolf: "Werewolf", Serif;
-$font-werewolf2: "CaflischScriptPro", Serif;
-$font-vampire: "Delavan", Serif;
-$font-vampire_da: "Emerald Isle", Serif;
-$font-ghoul: "Delavan", Serif;
-$font-hunter: "Delavan", Serif;
-$font-mage: "Abbess", Serif;
-
-//$font-primary: 'Georgia', sans-serif;
-//$font-secondary: 'Georgia', sans-serif;
+$font-character: "Delavan", Serif;
 
 .ellipsis {
   text-overflow: ellipsis;

@@ -1,17 +1,11 @@
 {
   "Actor": {
     "types": [
-      "werewolf",
-      "vampire",
-      "vampire_da",
-      "ghoul",
-      "mage",
-      "human",
-      "hunter",
-      "spirit"
+      "character"
     ],
     "templates": {
       "base": {
+        "characterTemplate" : "default",
         "details": {
           "description": "<p></p>",
           "biography": "",
@@ -19,8 +13,13 @@
           "gender": "",
           "player": "",
           "chronicle": "",
-          "concept": ""
-        },
+          "concept": "",
+          "nature": "",
+          "demeanor": "",
+          "residence": ""
+        }
+      },
+      "attributes" : {
         "attributes": {
           "physical": {
             "key": "physical",
@@ -36,7 +35,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "physical",
@@ -47,7 +46,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "physical",
@@ -58,7 +57,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               }
             ]
           },
@@ -76,7 +75,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "social",
@@ -87,7 +86,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "social",
@@ -98,7 +97,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               }
             ]
           },
@@ -116,7 +115,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "mental",
@@ -127,7 +126,7 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               },
               {
                 "type": "mental",
@@ -138,11 +137,13 @@
                 "max": 9,
                 "temp": null,
                 "active": false,
-                "specialization" : ""
+                "specialization": ""
               }
             ]
           }
-        },
+        }
+      },
+      "health" : {
         "health": {
           "max": 7,
           "value": 7,
@@ -225,7 +226,344 @@
               "aggravated": false
             }
           }
-        },
+        }
+      },
+      "abilities": {
+        "abilities": {
+          "talents": {
+            "key": "talents",
+            "label": "WOD.abilities.talents",
+            "total": 0,
+            "scores" : [
+              {
+                "key": "alertness",
+                "label": "WOD.abilities.alertness",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "art",
+                "label": "WOD.abilities.art",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "athletics",
+                "label": "WOD.abilities.athletics",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "awareness",
+                "label": "WOD.abilities.awareness",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "brawl",
+                "label": "WOD.abilities.brawl",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "empathy",
+                "label": "WOD.abilities.empathy",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "expression",
+                "label": "WOD.abilities.expression",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "intimidation",
+                "label": "WOD.abilities.intimidation",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "leadership",
+                "label": "WOD.abilities.leadership",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "streetwise",
+                "label": "WOD.abilities.streetwise",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "subterfuge",
+                "label": "WOD.abilities.subterfuge",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              }
+            ]
+          },
+          "skills": {
+            "key": "skills",
+            "label": "WOD.abilities.skills",
+            "total": 0,
+            "scores" : [
+              {
+                "key": "animalken",
+                "label": "WOD.abilities.animalken",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "crafts",
+                "label": "WOD.abilities.crafts",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "drive",
+                "label": "WOD.abilities.drive",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "etiquette",
+                "label": "WOD.abilities.etiquette",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "firearms",
+                "label": "WOD.abilities.firearms",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "larceny",
+                "label": "WOD.abilities.larceny",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "melee",
+                "label": "WOD.abilities.melee",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "performance",
+                "label": "WOD.abilities.performance",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "stealth",
+                "label": "WOD.abilities.stealth",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "survival",
+                "label": "WOD.abilities.survival",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "archery",
+                "label": "WOD.abilities.archery",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              }
+            ]
+          },
+          "knowledges": {
+            "key": "talents",
+            "label": "WOD.abilities.knowledges",
+            "total": 0,
+            "scores" : [
+              {
+                "key": "academics",
+                "label": "WOD.abilities.academics",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "computer",
+                "label": "WOD.abilities.computer",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "finance",
+                "label": "WOD.abilities.finance",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "investigation",
+                "label": "WOD.abilities.investigation",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "law",
+                "label": "WOD.abilities.law",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "medecine",
+                "label": "WOD.abilities.medecine",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "occult",
+                "label": "WOD.abilities.occult",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "politics",
+                "label": "WOD.abilities.politics",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              },
+              {
+                "key": "science",
+                "label": "WOD.abilities.science",
+                "value": 0,
+                "min": 0,
+                "max": 9,
+                "temp": null,
+                "active": false,
+                "specialization": ""
+              }
+            ]
+          }
+        }
+      },
+      "experience" : {
         "experience": {
           "key": "experience",
           "label": "WOD.experience",
@@ -235,686 +573,299 @@
       },
       "resources": {
         "resources": {
-          "willpower": {
-            "type": "resource",
-            "key": "willpower",
-            "label": "WOD.resources.willpower",
-            "value": 0,
-            "temp": 0,
-            "min": 0,
-            "max": 10
-          }
-        }
-      },
-      "abilities": {
-        "abilities": {
-          "talents": {
-            "key": "talents",
-            "label": "WOD.abilities.talents",
-            "total": 0,
-            "scores" : []
+          "primary" : {
+            "key": "virtues",
+            "label": "WOD.virtues.label",
+            "scores" : [
+              {
+                "type": "virtue",
+                "key": "cc",
+                "label": "WOD.virtues.cc",
+                "rollable" : false,
+                "value": 0,
+                "temp": null,
+                "min": 0,
+                "max": 5
+              },
+              {
+                "type": "virtue",
+                "key": "sci",
+                "label": "WOD.virtues.sci",
+                "rollable" : false,
+                "value": 0,
+                "temp": null,
+                "min": 0,
+                "max": 5
+              },
+              {
+                "type": "virtue",
+                "key": "courage",
+                "label": "WOD.virtues.courage",
+                "rollable" : false,
+                "value": 0,
+                "temp": null,
+                "min": 0,
+                "max": 5
+              }
+            ]
           },
-          "skills": {
-            "key": "skills",
-            "label": "WOD.abilities.skills",
-            "total": 0,
-            "scores" : []
-          },
-          "knowledges": {
-            "key": "talents",
-            "label": "WOD.abilities.knowledges",
-            "total": 0,
-            "scores" : []
+          "secondary" : {
+            "scores" : [
+              {
+                "type": "resource",
+                "key": "humanity",
+                "label": "WOD.resources.humanity",
+                "rollable" : true,
+                "value": 0,
+                "temp": null,
+                "min": 0,
+                "max": 10
+              },
+              {
+                "type": "resource",
+                "key": "willpower",
+                "label": "WOD.resources.willpower",
+                "rollable" : true,
+                "value": 0,
+                "temp": 0,
+                "min": 0,
+                "max": 10
+              },
+              {
+                "type": "special",
+                "key": "bloodpool",
+                "label": "WOD.resources.bloodpool",
+                "rollable" : false,
+                "perturn": 0,
+                "value": null,
+                "temp": 0,
+                "min": 0,
+                "max": 50
+              }
+            ]
           }
         }
-      },
-      "combat": {
-        "melee": [
-          {
-            "img": "",
-            "label": "",
-            "attribute": "",
-            "ability": "",
-            "bonus": "",
-            "dmgType": ""
-          }
-        ],
-        "ranged": [
-          {
-            "img": "",
-            "label": "",
-            "attribute": "",
-            "ability": "",
-            "bonus": "",
-            "dmgType": ""
-          }
-        ]
       }
     },
-    "werewolf": {
+    "character" : {
       "templates": [
         "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "breed": "",
-        "auspice": "",
-        "tribe": "",
-        "packname": "",
-        "packtotem": "",
-        "deformities": [],
-        "battlescars": []
-      },
-      "resources": {
-        "glory": {
-          "type": "special",
-          "key": "glory",
-          "label": "WOD.resources.glory",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "honor": {
-          "type": "special",
-          "key": "honor",
-          "label": "WOD.resources.honor",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "wisdom": {
-          "type": "special",
-          "key": "wisdom",
-          "label": "WOD.resources.wisdom",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "rage": {
-          "type": "resource",
-          "key": "rage",
-          "label": "WOD.resources.rage",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "gnosis": {
-          "type": "resource",
-          "key": "gnosis",
-          "label": "WOD.resources.gnosis",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        }
-      },
-      "forms": {
-        "homid": {
-          "key": "homid",
-          "label": "WOD.forms.homid",
-          "active": true
-        },
-        "glabro": {
-          "key": "glabro",
-          "label": "WOD.forms.glabro",
-          "active": false
-        },
-        "crinos": {
-          "key": "crinos",
-          "label": "WOD.forms.crinos",
-          "active": false
-        },
-        "hispo": {
-          "key": "hispo",
-          "label": "WOD.forms.hispo",
-          "active": false
-        },
-        "lupus": {
-          "key": "lupus",
-          "label": "WOD.forms.lupus",
-          "active": false
-        }
-      }
-    },
-    "vampire": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "clan": "",
-        "generation": "",
-        "sire": ""
-      },
-      "virtues": {
-        "cc": {
-          "type": "virtue",
-          "key": "cc",
-          "label": "WOD.virtues.cc",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "sci": {
-          "type": "virtue",
-          "key": "sci",
-          "label": "WOD.virtues.sci",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "courage": {
-          "type": "virtue",
-          "key": "courage",
-          "label": "WOD.virtues.courage",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        }
-      },
-      "resources": {
-        "humanity": {
-          "type": "resource",
-          "key": "humanity",
-          "label": "WOD.resources.humanity",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "bloodpool": {
-          "type": "special",
-          "key": "bloodpool",
-          "label": "WOD.resources.bloodpool",
-          "perturn": 0,
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 50
-        }
-      }
-    },
-    "vampire_da": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "clan": "",
-        "generation": "",
-        "sire": ""
-      },
-      "virtues": {
-        "cc": {
-          "type": "virtue",
-          "key": "cc",
-          "label": "WOD.virtues.cc",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "sci": {
-          "type": "virtue",
-          "key": "sci",
-          "label": "WOD.virtues.sci",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "courage": {
-          "type": "virtue",
-          "key": "courage",
-          "label": "WOD.virtues.courage",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        }
-      },
-      "resources": {
-        "humanity": {
-          "type": "resource",
-          "key": "humanity",
-          "label": "WOD.resources.humanity",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "bloodpool": {
-          "type": "special",
-          "key": "bloodpool",
-          "label": "WOD.resources.bloodpool",
-          "perturn": 0,
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 50
-        }
-      }
-    },
-    "ghoul": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "clan": "",
-        "generation": "",
-        "sire": ""
-      },
-      "virtues": {
-        "cc": {
-          "type": "virtue",
-          "key": "cc",
-          "label": "WOD.virtues.cc",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "sci": {
-          "type": "virtue",
-          "key": "sci",
-          "label": "WOD.virtues.sci",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "courage": {
-          "type": "virtue",
-          "key": "courage",
-          "label": "WOD.virtues.courage",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        }
-      },
-      "resources": {
-        "humanity": {
-          "type": "resource",
-          "key": "humanity",
-          "label": "WOD.resources.humanity",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "bloodpool": {
-          "type": "special",
-          "key": "bloodpool",
-          "label": "WOD.resources.bloodpool",
-          "perturn": 0,
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 50
-        }
-      }
-    },
-    "mage": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "essence": "",
-        "affiliation": "",
-        "sect": ""
-      },
-      "resources": {
-        "arete": {
-          "type": "resource",
-          "key": "arete",
-          "label": "WOD.resources.arete",
-          "value": 0,
-          "min": 0,
-          "max": 10
-        },
-        "quintessence": {
-          "type": "special",
-          "key": "quintessence",
-          "label": "WOD.resources.quintessence",
-          "value": 0,
-          "min": 0,
-          "max": 10
-        },
-        "paradox": {
-          "type": "special",
-          "key": "paradox",
-          "label": "WOD.resources.paradox",
-          "value": 0,
-          "min": 0,
-          "max": 10
-        }
-      },
-      "spheres": {
-        "correspondence": {
-          "type": "sphere",
-          "key": "correspondence",
-          "label": "WOD.spheres.correspondence",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "entropy": {
-          "type": "sphere",
-          "key": "entropy",
-          "label": "WOD.spheres.entropy",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "forces": {
-          "type": "sphere",
-          "key": "forces",
-          "label": "WOD.spheres.forces",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "life": {
-          "type": "sphere",
-          "key": "life",
-          "label": "WOD.spheres.life",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "matter": {
-          "type": "sphere",
-          "key": "matter",
-          "label": "WOD.spheres.matter",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "mind": {
-          "type": "sphere",
-          "key": "mind",
-          "label": "WOD.spheres.mind",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "prime": {
-          "type": "sphere",
-          "key": "prime",
-          "label": "WOD.spheres.prime",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "spirit": {
-          "type": "sphere",
-          "key": "spirit",
-          "label": "WOD.spheres.spirit",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        },
-        "time": {
-          "type": "sphere",
-          "key": "time",
-          "label": "WOD.spheres.time",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 9
-        }
-      }
-    },
-    "hunter": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "residence": ""
-      },
-      "virtues": {
-        "conscience": {
-          "type": "virtue",
-          "key": "conscience",
-          "label": "WOD.virtues.conscience",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "self-control": {
-          "type": "virtue",
-          "key": "self-control",
-          "label": "WOD.virtues.self-control",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "courage": {
-          "type": "virtue",
-          "key": "courage",
-          "label": "WOD.virtues.courage",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        }
-      },
-      "resources": {
-        "faith": {
-          "type": "resource",
-          "key": "faith",
-          "label": "WOD.resources.faith",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 5
-        },
-        "humanity": {
-          "type": "resource",
-          "key": "humanity",
-          "label": "WOD.resources.humanity",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        }
-      }
-    },
-    "human": {
-      "templates": [
-        "base",
-        "combat",
-        "resources",
-        "abilities"
-      ],
-      "details": {
-        "nature": "",
-        "demeanor": "",
-        "residence": ""
-      },
-      "virtues": {
-        "conscience": {
-          "type": "virtue",
-          "key": "conscience",
-          "label": "WOD.virtues.conscience",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "self-control": {
-          "type": "virtue",
-          "key": "self-control",
-          "label": "WOD.virtues.self-control",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        },
-        "courage": {
-          "type": "virtue",
-          "key": "courage",
-          "label": "WOD.virtues.courage",
-          "value": 0,
-          "temp": null,
-          "min": 0,
-          "max": 5
-        }
-      },
-      "resources": {
-        "faith": {
-          "type": "resource",
-          "key": "faith",
-          "label": "WOD.resources.faith",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 5
-        },
-        "humanity": {
-          "type": "resource",
-          "key": "humanity",
-          "label": "WOD.resources.humanity",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        }
-      }
-    },
-    "spirit": {
-      "resources": {
-        "rage": {
-          "type": "resource",
-          "key": "rage",
-          "label": "WOD.resources.rage",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "gnosis": {
-          "type": "resource",
-          "key": "gnosis",
-          "label": "WOD.resources.gnosis",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        },
-        "willpower": {
-          "type": "resource",
-          "key": "willpower",
-          "label": "WOD.resources.willpower",
-          "value": 0,
-          "temp": 0,
-          "min": 0,
-          "max": 10
-        }
-      }
+        "attributes",
+        "abilities",
+        "health",
+        "experience",
+        "resources"
+      ]
     }
   },
   "Item": {
     "types": [
       "item",
-      "archetype",
-      "auspice",
-      "background",
-      "breed",
-      "deformity",
-      "derangement",
-      "gift",
-      "rite",
-      "discipline",
-      "merit",
-      "tribe",
-      "flaw",
-      "fetish",
-      "talen"
+      "equipment",
+      "trait",
+      "capacity",
+      "collection"
     ],
     "templates": {
       "base": {
-        "description": "<p></p>"
+        "description": "<p></p>",
+        "category": {
+          "key": null,
+          "label": null
+        },
+        "subtype": "",
+        "subcategories": [],
+        "features": {},
+        "properties": {}
       },
       "equipment": {
-        "subtype": "",
-        "quantity": 1,
-        "weight": 0,
-        "properties" : {
+        "qty": 1,
+        "features": {
+          "stackable": {
+            "stackSize": null
+          },
+          "equipable": {
+            "slot": null,
+            "conceal": null,
+            "worn": false
+          },
+          "protection": {
+            "absorption": null,
+            "penalty": null
+          },
+          "ranged": {
+            "range": null,
+            "rate": null,
+            "clip": null
+          },
+          "weapon": {
+            "damageType": null,
+            "difficulty": 6,
+            "attackStat": null,
+            "attackAbility": null,
+            "damageStat": null,
+            "damageBonus": null,
+            "actions": 1
+          },
+          "spiritual": {
+            "level": null,
+            "gnosis": null
+          },
+          "consumable": {},
+          "effects": {}
+        },
+        "properties": {
+          "equipment": true,
           "equipable": false,
           "stackable": false,
-          "ranged": false,
-          "thrown": false,
-          "melee": false,
-          "equipment": true,
           "weapon": false,
           "protection": false,
-          "mystical": false,
-          "effects": false
+          "ranged": false,
+          "thrown": false,
+          "brawl": false,
+          "melee": false,
+          "firearm": false,
+          "bow": false,
+          "spiritual": false,
+          "effects": false,
+          "2h": false,
+          "silver": false,
+          "bashing": false,
+          "lethal": false,
+          "aggravated": false,
+          "consumable": false,
+          "fullauto": false,
+          "3roundBurst": false,
+          "spray": false
+        }
+      },
+      "capacity": {
+        "capacity": {
+          "skillcheck": {
+            "attribute": null,
+            "ability": null,
+            "difficulty": 6,
+            "actions": 1
+          },
+          "damaging": {
+            "attribute": null,
+            "bonus": null,
+            "difficulty": 6,
+            "damageType": null
+          }
+        },
+        "properties": {
+          "skillcheck": false,
+          "damaging": false,
+          "passive": false,
+          "effects": false,
+          "defense": false,
+          "maneuver": false,
+          "attack": false,
+          "bashing": false,
+          "lethal": false,
+          "aggravated": false
         }
       },
       "ranked": {
-        "level": 1
+        "level": null
+      },
+      "scoped": {
+        "scope": null,
+        "application": null
+      },
+      "valued": {
+        "value": null,
+        "range": null
+      },
+      "trait": {
+        "ranked": {
+          "level": null
+        },
+        "scoped": {
+          "scope": {
+            "key" : null,
+            "label" : null
+          },
+          "application": {
+            "key" : null,
+            "label" : null
+          }
+        },
+        "valued": {
+          "value": null,
+          "range": null
+        },
+        "properties": {
+          "archetype": false,
+          "nature": false,
+          "background": false,
+          "merit": false,
+          "flaw": false,
+          "ranked": false,
+          "valued": false,
+          "scoped": false
+        }
+      },
+      "collection": {
+        "items": [],
+        "properties": {
+          "isCapacityCollection": false,
+          "isTraitCollection": false,
+          "isEquipmentCollection": false,
+          "ordered": false
+        }
       }
     },
     "item": {
+      "templates": [
+        "base"
+      ]
+    },
+    "equipment": {
       "templates": [
         "base",
         "equipment"
       ]
     },
-    "archetype": {
-      "templates": [
-        "base"
-      ]
-    },
-    "background": {
+    "capacity": {
       "templates": [
         "base",
-        "ranked"
+        "capacity"
+      ]
+    },
+    "collection": {
+      "templates": [
+        "base",
+        "capacity"
+      ]
+    },
+    "trait": {
+      "templates": [
+        "base",
+        "capacity"
+      ]
+    },
+    "gift": {
+      "templates": [
+        "base",
+        "ranked",
+        "capacity",
+        "scoped"
+      ]
+    },
+    "rite": {
+      "templates": [
+        "base",
+        "ranked",
+        "capacity"
+      ]
+    },
+    "discipline": {
+      "templates": [
+        "base",
+        "ranked",
+        "capacity"
       ]
     },
     "auspice": {
@@ -928,7 +879,7 @@
       "templates": [
         "base"
       ],
-      "gnose": 0,
+      "gnosis": 0,
       "gifts": []
     },
     "tribe": {
@@ -938,65 +889,16 @@
       "willpower": 0,
       "gifts": []
     },
-    "deformity": {
-      "templates": [
-        "base"
-      ]
-    },
-    "derangement": {
-      "templates": [
-        "base"
-      ]
-    },
-    "gift": {
+    "meritflaw": {
       "templates": [
         "base",
-        "ranked"
+        "scoped",
+        "valued"
       ],
-      "scope": "",
-      "application": ""
-    },
-    "rite": {
-      "templates": [
-        "base",
-        "ranked"
-      ],
-      "scope": ""
-    },
-    "discipline": {
-      "templates": [
-        "base",
-        "ranked"
-      ]
-    },
-    "merit": {
-      "templates": [
-        "base"
-      ],
-      "scope": "",
-      "costRange": "1",
-      "actualCost": 1
-    },
-    "flaw": {
-      "templates": [
-        "base"
-      ],
-      "scope": "",
-      "benefitsRange": "1",
-      "actualBenefit": 1
-    },
-    "fetish": {
-      "gnose": 1,
-      "templates": [
-        "base",
-        "ranked"
-      ]
-    },
-    "talen": {
-      "gnose": 1,
-      "templates": [
-        "base"
-      ]
+      "properties": {
+        "merit": false,
+        "flaw": false
+      }
     }
   }
 }

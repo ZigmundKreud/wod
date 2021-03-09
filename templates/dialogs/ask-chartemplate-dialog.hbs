@@ -1,0 +1,15 @@
+<div class="flexrow">
+    <div class="flex1 center">
+        <label for="attribute">Quel type de personnage voulez-vous créer ?</label>
+    </div>
+    <div class="flex1 center cell">
+        <select id="characterTemplate" name="characterTemplate" data-type="String" style="width:100%">
+            {{#select characterTemplate}}
+                <option value="default">{{localize "WOD.None"}}</option>
+                {{#each templates as | template id |}}
+                    <option value="{{id}}">{{localize template.label}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>

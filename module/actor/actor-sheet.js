@@ -3,16 +3,19 @@
  * @extends {ActorSheet}
  */
 
-import {WOUND_TYPE, WodHealth} from "../controllers/health.js";
+import {WodHealth, WOUND_TYPE} from "../controllers/health.js";
 import {WodChat} from "../controllers/chat.js";
-import {WodMetamorphosis} from "../controllers/metamorphosis.js";
-import {WodBaseSheet} from "./base-sheet.js";
 import {WodDialog} from "../controllers/dialogs.js";
 
-export class WodActorSheet extends WodBaseSheet {
+export class WodActorSheet extends ActorSheet {
 
+    /* --------------------------------------------
+       METHOD OVERRIDES
+       -------------------------------------------- */
     constructor(...args) {
         super(...args);
+        this._shiftKeyDown = false;
+        // this._altKeyDown = false;
     }
 
     /** @override */
@@ -26,7 +29,14 @@ export class WodActorSheet extends WodBaseSheet {
         });
     }
 
-    /* -------------------------------------------- */
+    /** @override */
+    setPosition(options = {}) {
+        const position = super.setPosition(options);
+        const sheetBody = this.element.find(".sheet-body");
+        const bodyHeight = position.height - 192;
+        sheetBody.css("height", bodyHeight);
+        return position;
+    }
 
     /** @override */
     activateListeners(html) {
@@ -36,19 +46,16 @@ export class WodActorSheet extends WodBaseSheet {
         if (!this.options.editable) return;
 
         $(document).keydown(event => {
-            // console.log(event.which);
             if (event.which === 16) this._shiftKeyDown = true;
-            if (event.which === 18) this._altKeyDown = true;
+            // if (event.which === 18) this._altKeyDown = true;
         });
         $(document).keyup(event => {
             if (event.which === 16) {
                 this._shiftKeyDown = false;
                 return this._onResetAllHighlights(event)
             }
-            if (event.which === 18) this._altKeyDown = false;
+            // if (event.which === 18) this._altKeyDown = false;
         });
-
-        html.find('.metamorphosis').click(this._onToggleMetamorphosis.bind(this));
 
         html.find('.attributes.score').contextmenu(this._onToggleActiveState.bind(this));
 
@@ -58,47 +65,43 @@ export class WodActorSheet extends WodBaseSheet {
         });
         html.find('.health-rank-box').contextmenu(this._onDecreaseHealthRank.bind(this));
 
-        html.find('.curres').click(ev => {
-            ev.stopPropagation()
-            // if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
-            // else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
-            // else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
-            // else return this._onUpdateRank(ev, false, false)
-            return this._onUpdateRank(ev, true, false)
+        html.find('.score-value>.rank').click(ev => {
+            ev.stopPropagation();
+            if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
+            else return this._onUpdateRank(ev, false, false)
+        });
+        html.find('.score-value>.rank').contextmenu(ev => {
+            ev.stopPropagation();
+            if (this._shiftKeyDown) return this._onUpdateRank(ev, true, true)
+            else return false;
+        });
+        html.find('.score-value>.rank').mouseenter(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.score-value>.rank').mouseover(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.score-value>.rank').mousemove(ev => {
+            if (this._shiftKeyDown) return this._onHighlightRank(ev)
+        });
+        html.find('.score-value>.rank').keydown(ev => {
+            if (ev.which === 16) return this._onHighlightRank(ev)
+        });
+        html.find('.score').mouseleave(ev => {
+            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
+        });
+        html.find('.score').mouseout(ev => {
+            if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
         });
 
-        html.find('.rank').click(ev => {
-            // if (this._shiftKeyDown && this._altKeyDown) return this._onUpdateRank(ev, true, true)
-            // else if (this._shiftKeyDown) return this._onUpdateRank(ev, true, false)
-            // else if (this._altKeyDown) return this._onUpdateRank(ev, false, true)
-            // else return this._onUpdateRank(ev, false, false)
+        html.find('.resource-value>.rank').click(ev => {
+            ev.stopPropagation();
             return this._onUpdateRank(ev, false, false)
         });
-        // html.find('.rank').mouseenter(ev => {
-        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        // });
-        // html.find('.rank').mouseover(ev => {
-        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        // });
-        // html.find('.rank').mousemove(ev => {
-        //     if (this._shiftKeyDown) return this._onHighlightRank(ev)
-        // });
-        // html.find('.rank').keydown(ev => {
-        //     if (ev.which === 16) return this._onHighlightRank(ev)
-        // });
-        // html.find('.score').mouseleave(ev => {
-        //     if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
-        // });
-        // html.find('.score').mouseout(ev => {
-        //     if (this._shiftKeyDown) return this._onResetHighlightScore(ev)
-        // });
-        // html.find('.curres').click(ev => {
-        //     if (this._altKeyDown) return this._onUpdateCurrentResource(ev, true, false)
-        //     return this._onUpdateCurrentResource(ev, false, false)
-        // });
-        // html.find('.curres').contextmenu(ev => {
-        //     return this._onUpdateCurrentResource(ev, false, true)
-        // });
+        html.find('.resource-curres>.curres').click(ev => {
+            ev.stopPropagation();
+            return this._onUpdateRank(ev, true, false)
+        });
 
         // Add Inventory Item
         html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -115,11 +118,6 @@ export class WodActorSheet extends WodBaseSheet {
             const li = $(ev.currentTarget).parents(".item");
             this.actor.deleteOwnedItem(li.data("itemId"));
             li.slideUp(200, () => this.render(false));
-        });
-
-        html.find('.tb-toggle-link').click(ev => {
-            ev.preventDefault();
-            $("#tb-menu").slideToggle('fast');
         });
 
         // Rollable abilities.
@@ -174,9 +172,8 @@ export class WodActorSheet extends WodBaseSheet {
 
     _setResourceValue(ns, group, key, value, isTemp=false, isReset=false){
         let data = duplicate(this.actor.data);
-        const field = data.data.resources[key];
+        const field = data.data[ns][group].scores.find(s => s.key === key);
         let fromValue = (isTemp) ? field.temp : field.value;
-        console.log(field, isTemp);
         if(isReset) {
             if(isTemp) {
                 field.temp = null;
@@ -197,50 +194,20 @@ export class WodActorSheet extends WodBaseSheet {
         return this.actor.update(data);
     }
 
-    /* -------------------------------------------- */
-
-    _setCurrentResourceValue(ns, key, value, isReset=false, isDecrease=false){
-        let data = this.getData().actor.data;
-        const fieldname = `data.${ns}.${key}`;
-        const field = eval(fieldname);
-        const fromValue = field.temp;
-        if(isReset)         field.temp = field.value;
-        else if(isDecrease) field.temp = (field.temp > 0) ? field.temp -1 : field.temp;
-        else                field.temp = value;
-        WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.temp);
-        let fieldData = {};
-        fieldData[fieldname] = field;
-        return this.actor.update(fieldData);
-    }
-
-    /* -------------------------------------------- */
-
-    _onUpdateCurrentResource(event, isReset=false, isDecrease=false){
-        event.preventDefault();
-        const header = $(event.currentTarget);
-        const value = header.data("value");
-        const parent = $(event.currentTarget).parents(".resource");
-        const ns = parent.data("namespace");
-        const key = parent.data("key");
-        return this._setCurrentResourceValue(ns, key, value, isReset);
-    }
-
-    /* -------------------------------------------- */
+    /* --------------------------------------------
+       HIGHLIGHT METHODS
+       -------------------------------------------- */
 
     _onResetHighlightScore(event){
         event.preventDefault();
         const score = $(event.currentTarget);
         score.find(".rank").css( "color", "");
     }
-
-    /* -------------------------------------------- */
     _onResetAllHighlights(event){
         event.preventDefault();
         const ranks = $(".rank");
         ranks.css( "color", "");
     }
-    /* -------------------------------------------- */
-
     _onHighlightRank(event){
         event.preventDefault();
         const rank = $(event.currentTarget);
@@ -257,14 +224,21 @@ export class WodActorSheet extends WodBaseSheet {
      */
     _onRoll(event) {
         event.preventDefault();
-        const elt = $(event.currentTarget).parents(".score");
-        const ns = elt.data("namespace");
-        const group = elt.data("group");
-        const key = elt.data("key");
         const data = this.getData();
-        if (ns == "attributes")     return WodDialog.rollAttributeDialog(data, ns, group, key, 6);
-        else if (ns == "abilities") return WodDialog.rollAbilityDialog  (data, ns, group, key, 6);
-        else if (ns == "resources") return WodDialog.rollResourceDialog (data, ns, group, key, 6);
+        if($(event.currentTarget).hasClass("item-control")){
+            const elt = $(event.currentTarget).parents(".item");
+            const key = elt.data("key");
+            const item = this.actor.items.get(key);
+            return WodDialog.rollItemDialog(data, item);
+        }else {
+            const elt = $(event.currentTarget).parents(".score");
+            const ns = elt.data("namespace");
+            const group = elt.data("group");
+            const key = elt.data("key");
+            if (ns == "attributes")     return WodDialog.rollAttributeDialog(data, ns, group, key, 6);
+            else if (ns == "abilities") return WodDialog.rollAbilityDialog  (data, ns, group, key, 6);
+            else if (ns == "resources") return WodDialog.rollResourceDialog (data, ns, group, key, 6);
+        }
     }
 
     /* -------------------------------------------- */
@@ -357,30 +331,7 @@ export class WodActorSheet extends WodBaseSheet {
     }
 
     /* -------------------------------------------- */
-    _onToggleMetamorphosis(event){
-        event.preventDefault();
-        const btn = $(event.currentTarget);
-        const id = btn.data("itemId");
-        let actorData = this.getData().actor.data;
-        if(id === "homid") actorData = WodMetamorphosis.homid(actorData);
-        else if(id === "glabro") actorData = WodMetamorphosis.glabro(actorData);
-        else if(id === "crinos") actorData = WodMetamorphosis.crinos(actorData);
-        else if(id === "hispo")  actorData = WodMetamorphosis.hispo(actorData);
-        else if(id === "lupus")  actorData = WodMetamorphosis.lupus(actorData);
 
-        WodChat.metamorphosisNotification(this.actor, id);
-        return this.actor.update({
-            "data.attributes" : actorData.attributes,
-            "data.forms" : actorData.forms
-        });
-    }
-
-    /* -------------------------------------------- */
-    /**
-     * Handle clickable rolls.
-     * @param {Event} event   The originating click event
-     * @private
-     */
     _onToggleActiveState(event) {
         event.preventDefault();
         const elt = $(event.currentTarget);
@@ -400,20 +351,8 @@ export class WodActorSheet extends WodBaseSheet {
     /* -------------------------------------------- */
 
     /** @override */
-    setPosition(options = {}) {
-        const position = super.setPosition(options);
-        const sheetBody = this.element.find(".sheet-body");
-        const bodyHeight = position.height - 192;
-        sheetBody.css("height", bodyHeight);
-        return position;
-    }
-
-    /* -------------------------------------------- */
-
-    /** @override */
     getData(options){
         const data = super.getData(options);
-        console.log(data);
         data.physical = data.data.attributes.physical.scores;
         data.social = data.data.attributes.social.scores;
         data.mental = data.data.attributes.mental.scores;
@@ -426,31 +365,57 @@ export class WodActorSheet extends WodBaseSheet {
         data.talents = data.data.abilities.talents.scores;
         data.skills = data.data.abilities.skills.scores;
         data.knowledges = data.data.abilities.knowledges.scores;
+
         const abilities = data.data.abilities.talents.scores.concat(data.data.abilities.skills.scores).concat(data.data.abilities.knowledges.scores);
         data.abilities = {};
         for(const ability of abilities){
             data.abilities[ability.key] = ability;
         }
+
         data.resources = data.data.resources;
-        data.breed = data.items.find(item => item.type === "breed");
-        data.auspice = data.items.find(item => item.type === "auspice");
-        data.tribe = data.items.find(item => item.type === "tribe");
-        data.gifts = data.items.filter(item => item.type === "gifts");
-        data.backgrounds = data.items.filter(item => item.type === "background");
 
         data.inventory = {
-            count: data.items.filter(i => i.type === "item").length,
+            count: data.items.filter(item => item.type === "item" && item.data.properties?.equipment).length,
             categories: []
         };
         for (const category of Object.keys(game.wod.config.itemCategories)) {
-            data.inventory.categories.push({
-                id: category,
-                label: "WOD.category." + category,
-                items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category).sort((a, b) => (a.name > b.name) ? 1 : -1)
-            });
+            const items = Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category && item.data.properties?.equipment).sort((a, b) => (a.name > b.name) ? 1 : -1)
+            if(items.length > 0) {
+                data.inventory.categories.push({
+                    id: category,
+                    label: "WOD.category." + category,
+                    items: items
+                });
+            }
         }
 
-        // console.log(data);
+        data.combat = {
+            count: data.items.filter(item => item.type === "item" && item.data.facets?.equipable?.worn).length,
+            categories: []
+        };
+        for (const category of Object.keys(game.wod.config.itemCategories)) {
+            const items = Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category && item.data.facets?.equipable?.worn).sort((a, b) => (a.name > b.name) ? 1 : -1)
+            if(items.length > 0) {
+                data.combat.categories.push({
+                    id: category,
+                    label: "WOD.category." + category,
+                    items: items
+                });
+            }
+        }
+        data.maneuvers = {
+            count: data.items.filter(i => i.type === "item" && i.data.subtype === "maneuver" ).length,
+            id: "maneuvers",
+            label: "WOD.category.maneuvers",
+            items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === "maneuver").sort((a, b) => (a.name > b.name) ? 1 : -1)
+        };
+
+        // data.combat.categories.push({
+        //     id: "maneuvers",
+        //     label: "WOD.category.maneuvers",
+        //     items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === "maneuver").sort((a, b) => (a.name > b.name) ? 1 : -1)
+        // });
+        console.log(data);
         return data;
     }
 }

@@ -1,0 +1,27 @@
+<h3 class="form-header">{{localize "WOD.ui.properties"}}</h3>
+<div class="form-group">
+    <label>{{ localize "WOD.ui.startingGnosis" }}</label>
+    <div class="form-fields">
+        <input type="number" name="data.gnosis" value="{{data.gnosis}}" placeholder="{{localize "WOD.ui.startingGnosis"}}" data-dtype="Number"/>
+    </div>
+</div>
+
+<h3 class="form-header">{{ localize "WOD.ui.startingGifts" }}</h3>
+<ol class="featured-list">
+    <li class="list-header flexrow">
+        <h3 class="item-name flexrow">{{ localize "WOD.ui.gifts" }}</h3>
+    </li>
+    {{#each data.gifts as | gift id | }}
+        <ol class="item-list">
+            <li class="item flexrow" data-item-id="{{gift._id}}" data-item-type="gift" draggable="true">
+                <div class="item-name flexrow">
+                    <div class="item-image" style="background-image: url('{{gift.img}}')"></div>
+                    <h4>{{gift.name}}</h4>
+                </div>
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a> <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+        </ol>
+    {{/each}}
+</ol>

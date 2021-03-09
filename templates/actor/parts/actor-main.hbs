@@ -14,18 +14,24 @@
 <div class="section-content abilities grid grid-3col">
     {{> "systems/wod/templates/actor/parts/actor-abilities.hbs"}}
 </div>
-{{#if (equals actor.type "werewolf")}}
-    {{> "systems/wod/templates/actor/parts/werewolf/actor-secondary.hbs"}}
-{{/if}}
-{{#if (or (equals actor.type "vampire") (equals actor.type "vampire_da"))}}
-    {{> "systems/wod/templates/actor/parts/vampire/actor-secondary.hbs"}}
-{{/if}}
-{{#if (equals actor.type "mage")}}
-    {{> "systems/wod/templates/actor/parts/mage/actor-secondary.hbs"}}
-{{/if}}
-{{#if (equals actor.type "hunter")}}
-    {{> "systems/wod/templates/actor/parts/hunter/actor-secondary.hbs"}}
-{{/if}}
-{{#if (equals actor.type "ghoul")}}
-    {{> "systems/wod/templates/actor/parts/ghoul/actor-secondary.hbs"}}
-{{/if}}
+<div class="section-header flexrow">
+    <div class="flex3"></div>
+    <label class="section-title">{{localize "WOD.resources.label"}}</label>
+    <div class="flex3"></div>
+</div>
+<div class="section-content abilities grid grid-3col">
+    <div class="primary flex-group-center">
+        {{#each data.resources.primary.scores as | res id | }}
+            {{> "systems/wod/templates/actor/parts/resource/resource-rank.hbs" res namespace="resources" group="primary"}}
+        {{/each}}
+    </div>
+    <div class="secondary flex-group-center" style="padding: 0 40px;">
+        {{#each data.resources.secondary.scores as | res id | }}
+            {{> "systems/wod/templates/actor/parts/resource/resource-rank.hbs" res namespace="resources" group="secondary"}}
+        {{/each}}
+    </div>
+    <div class="health flex-group-center" style="padding: 0 10px;">
+        <label class="section-title">{{localize "WOD.resources.health"}}</label>
+        {{> "systems/wod/templates/actor/parts/actor-health.hbs"}}
+    </div>
+</div>

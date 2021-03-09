@@ -1,5 +1,15 @@
 .window-app {
   font-family: $font-primary;
+
+  &.wod.sheet.actor {
+    min-width: 765px;
+    overflow: hidden;
+  }
+
+  &.wod.sheet.item {
+    min-width: 430px;
+    overflow: hidden;
+  }
 }
 
 .rollable {

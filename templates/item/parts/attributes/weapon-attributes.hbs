@@ -1,0 +1,100 @@
+<h3 class="form-header">{{localize "WOD.properties.weapon"}}</h3>
+<div class="form-group">
+    <label>{{localize "WOD.ui.type"}}</label>
+    <div class="form-fields">
+        <label class="checkbox"> <input type="checkbox" name="data.properties.melee" {{checked item.data.properties.melee}}> {{localize "WOD.properties.melee"}}
+        </label> <label class="checkbox"> <input type="checkbox" name="data.properties.brawl" {{checked item.data.properties.brawl}}> {{localize "WOD.properties.brawl"}}
+    </label> <label class="checkbox"> <input type="checkbox" name="data.properties.thrown" {{checked item.data.properties.thrown}}> {{localize "WOD.properties.thrown"}}
+    </label>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.attackStat"}}</label>
+    <div class="form-fields">
+        <select name="data.facets.weapon.attackStat" data-type="String" style="width:100%">
+            {{#select data.facets.weapon.attackStat}}
+                <option value="">{{localize "WOD.None"}}</option>
+                {{#each config.characterAttributes as | attrib id |}}
+                    <option value="{{id}}">{{localize attrib}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.attackAbility"}}</label>
+    <div class="form-fields">
+        <select name="data.facets.weapon.attackAbility" data-type="String" style="width:100%">
+            {{#select data.facets.weapon.attackAbility}}
+                <option value="">{{localize "WOD.None"}}</option>
+                {{#each config.characterAbilities as | ability id |}}
+                    <option value="{{id}}">{{localize ability}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.attackDifficulty"}}</label>
+    <div class="form-fields">
+        <select id="data.facets.weapon.difficulty" name="difficulty" data-dtype="Number" style="width:100%">
+            {{#select data.facets.weapon.difficulty}}
+                <option value="">{{localize "WOD.None"}}</option>
+                <option value="2">{{localize "WOD.difficulty.mundane"}}(2)</option>
+                <option value="3">{{localize "WOD.difficulty.trivial"}}(3)</option>
+                <option value="4">{{localize "WOD.difficulty.easy"}}(4)</option>
+                <option value="5">{{localize "WOD.difficulty.straighforward"}}(5)</option>
+                <option value="6">{{localize "WOD.difficulty.standard"}}(6)</option>
+                <option value="7">{{localize "WOD.difficulty.challenging"}}(7)</option>
+                <option value="8">{{localize "WOD.difficulty.difficult"}}(8)</option>
+                <option value="9">{{localize "WOD.difficulty.extreme"}}(9)</option>
+                <option value="10">{{localize "WOD.difficulty.impossible"}}(10)</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.damageStat"}}</label>
+    <div class="form-fields">
+        <select name="data.facets.weapon.damageStat" data-type="String" style="width:100%">
+            {{#select data.facets.weapon.damageStat}}
+                <option value="">{{localize "WOD.None"}}</option>
+                {{#each config.characterAttributes as | attrib id |}}
+                    <option value="{{id}}">{{localize attrib}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.damageBonus"}}</label>
+    <div class="form-fields">
+        <input name="data.facets.weapon.damageBonus" type="number" value="{{data.facets.weapon.damageBonus}}" placeholder="{{localize "WOD.ui.damageBonus"}}" data-dtype="Number">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.damageType"}}</label>
+    <div class="form-fields">
+        <select name="data.facets.weapon.damageType" data-type="String" style="width:100%">
+            {{#select data.facets.weapon.damageType}}
+                <option value="">{{localize "WOD.None"}}</option>
+                <option value="bashing">{{localize "WOD.properties.bashing"}}</option>
+                <option value="lethal">{{localize "WOD.properties.lethal"}}</option>
+                <option value="aggravated">{{localize "WOD.properties.aggravated"}}</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.actions"}}</label>
+    <div class="form-fields">
+        <input name="data.facets.weapon.actions" type="number" value="{{data.facets.weapon.actions}}" placeholder="{{localize "WOD.ui.actions"}}" data-dtype="Number">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "WOD.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox"> <input type="checkbox" name="data.properties.silver" {{checked item.data.properties.silver}}> {{localize "WOD.properties.silver"}}
+        </label>
+    </div>
+</div>

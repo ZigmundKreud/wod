@@ -47,6 +47,10 @@ export const registerHandlebarsHelpers = async function () {
         return val == null;
     });
 
+    Handlebars.registerHelper('notNull', function (val) {
+        return val != null;
+    });
+
     Handlebars.registerHelper('isEmpty', function (list) {
         return list.length == 0;
     });
@@ -81,6 +85,10 @@ export const registerHandlebarsHelpers = async function () {
 
     Handlebars.registerHelper('or', function (val1, val2) {
         return val1 || val2;
+    });
+
+    Handlebars.registerHelper('not', function (cond) {
+        return !cond;
     });
 
     Handlebars.registerHelper('isEnabled', function (configKey) {
@@ -138,4 +146,5 @@ export const registerHandlebarsHelpers = async function () {
     Handlebars.registerHelper('i18n', function (str) {
         return game.i18n.localize(str);
     });
+
 }

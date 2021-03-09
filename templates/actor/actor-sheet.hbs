@@ -14,9 +14,9 @@
                 <nav class="sheet-tabs tabs" data-group="primary">
                     <a class="item" data-tab="main">{{localize "WOD.ui.main"}}</a>
                     <a class="item" data-tab="combat">{{localize "WOD.ui.combat"}}</a>
-                    <a class="item" data-tab="description">{{localize "WOD.ui.description"}}</a>
-                    <a class="item" data-tab="traits">{{localize "WOD.ui.traits"}}</a>
                     <a class="item" data-tab="inventory">{{localize "WOD.ui.inventory"}}</a>
+                    <a class="item" data-tab="traits">{{localize "WOD.ui.traits"}}</a>
+                    <a class="item" data-tab="description">{{localize "WOD.ui.description"}}</a>
                 </nav>
             </div>
         </div>
@@ -30,17 +30,17 @@
             <div class="tab items" data-group="primary" data-tab="combat">
                 {{> "systems/wod/templates/actor/parts/actor-combat.hbs"}}
             </div>
-            {{!-- Biography Tab --}}
-            <div class="tab description" data-group="primary" data-tab="description">
-                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{!-- Owned Items Tab --}}
+            <div class="tab items" data-group="primary" data-tab="inventory">
+                {{> "systems/wod/templates/actor/parts/actor-inventory.hbs"}}
             </div>
             {{!-- Owned Items Tab --}}
             <div class="tab items" data-group="primary" data-tab="traits">
                 {{> "systems/wod/templates/actor/parts/actor-traits.hbs"}}
             </div>
-            {{!-- Owned Items Tab --}}
-            <div class="tab items" data-group="primary" data-tab="inventory">
-                {{> "systems/wod/templates/actor/parts/actor-inventory.hbs"}}
+            {{!-- Biography Tab --}}
+            <div class="tab flexrow description" data-group="primary" data-tab="description">
+                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
             </div>
         </section>
     </div>

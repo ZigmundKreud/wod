@@ -15,51 +15,11 @@
   @import 'components/forms';
   @import 'components/tabs';
   @import 'components/items';
-
-  .window-content {
-    background: white;
-  }
-
-  //.editor {
-  //  height: 100%;
-  //  min-height: 100%;
-  //  max-height: 100%;
-  //  .editor-content {
-  //    height: 100%;
-  //    min-height: 100%;
-  //    max-height: 100%;
-  //  }
-  //  .tox-tinymce{
-  //    height: 100%;
-  //    min-height: 100%;
-  //    max-height: 100%;
-  //  }
-  //}
+  @import 'components/lists';
+  @import 'components/editor';
 
   &.actor {
     @import 'scss/components/sheet/actor/layout';
-    .window-content {
-      .editable {
-        &.werewolf {
-          @import 'scss/components/sheet/actor/werewolf';
-        }
-        &.vampire {
-          @import 'scss/components/sheet/actor/vampire';
-        }
-        &.vampire_da {
-          @import 'scss/components/sheet/actor/vampire_da';
-        }
-        &.mage {
-          @import 'scss/components/sheet/actor/mage';
-        }
-        &.hunter {
-          @import 'scss/components/sheet/actor/hunter';
-        }
-        &.ghoul {
-          @import 'scss/components/sheet/actor/ghoul';
-        }
-      }
-    }
   }
 
   &.item {

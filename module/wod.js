@@ -32,29 +32,17 @@ Hooks.once('init', async function () {
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
 
-    Actors.registerSheet("wod", WodActorSheet, {makeDefault: true});
     // Register actor sheets
     Actors.registerSheet("wod", WodActorSheet, {
-        types: [
-            "werewolf",
-            "vampire",
-            "vampire_da",
-            "ghoul",
-            "mage",
-            "hunter",
-            "human"
-        ],
         makeDefault: true,
         label: "WOD.sheet.character"
     });
-    Actors.registerSheet("wod", WodActorSheet, {
-        types: ["spirit"],
+
+    Items.registerSheet("wod", WodItemSheet, {
         makeDefault: true,
-        label: "WOD.sheet.spirit"
+        label: "WOD.sheet.item"
     });
 
-
-    Items.registerSheet("wod", WodItemSheet, {makeDefault: true});
 
     // Register System Settings
     registerSystemSettings();
@@ -66,6 +54,43 @@ Hooks.once('init', async function () {
     registerHandlebarsHelpers();
 });
 
+
+/**
+ * Ready hook loads tables, and override's foundry's entity link functions to provide extension to pseudo entities
+ */
+
+// Hooks.on("createActor", (entity, options, userId) => {
+//     let data = duplicate(entity.data);
+//     const rollOptionTpl = 'systems/wod/templates/dialogs/ask-chartemplate-dialog.hbs';
+//     const rollData = {
+//         characterTemplate: "default",
+//         templates: WOD.characterTemplates
+//     };
+//     return renderTemplate(rollOptionTpl, rollData).then(html => {
+//         return new Dialog({
+//             title: "Character Template",
+//             content: html,
+//             buttons: {
+//                 cancel: {
+//                     icon: '<i class="fas fa-times"></i>',
+//                     label: "Cancel",
+//                     callback: () => {}
+//                 },
+//                 submit: {
+//                     icon: '<i class="fas fa-check"></i>',
+//                     label: "Submit",
+//                     callback: (html) => {
+//                         const characterTemplate = html.find("#characterTemplate").val();
+//                         data.data.characterTemplate = characterTemplate;
+//                         return entity.update(data);
+//                     }
+//                 }
+//             },
+//             default: "submit",
+//             close: () => {}
+//         }).render(true);
+//     });
+// });
 
 /**
  * Ready hook loads tables, and override's foundry's entity link functions to provide extension to pseudo entities
