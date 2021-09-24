@@ -23,10 +23,10 @@ export class WodRoll {
     }
 
     roll() {
-        this._roll.roll();
+        this._roll.roll({async:false});
         this._successes = this._roll.terms[0].results.filter(r => r.success === true).length;
         this._ones = this._roll.terms[0].results.filter(r => r.result === 1).length;
-        this._roll.results[0] = this._roll.results[0] - this._ones;
+        // this._roll.results[0] = this._roll.results[0] - this._ones;
         this.total = this.total - this._ones;
         this._isSuccess = this.total > 0;
         this._isBotch = this._successes == 0 && this._ones > 0;
@@ -93,7 +93,7 @@ export class WodRoll {
         }
         const rollResultCardContent = await renderTemplate(rollResultCardTpl, rollData);
         const messageData = {
-            user: game.user._id,
+            user: game.user.id,
             flavor: this._buildMessageFlavor(label),
             content : rollResultCardContent,
             speaker: ChatMessage.getSpeaker({actor: actor})

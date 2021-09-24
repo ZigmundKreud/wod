@@ -1,4 +1,4 @@
-{{#each actor.data.health.status as | status id |}}
+{{#each actor.data.data.health.status as | status id |}}
     <div class="flexrow flex-between health-rank" data-key="{{status.key}}" data-item-id="health.status.{{status.key}}">
         <div class="health-rank-label flex4 left ellipsis">
             {{localize status.label}}

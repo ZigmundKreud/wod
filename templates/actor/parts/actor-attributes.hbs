@@ -1,17 +1,17 @@
 <div class="physical flex-group-center">
-    <label class="section-title">{{localize "WOD.attributes.physical"}} ({{actor.data.attributes.physical.total}})</label>
+    <label class="section-title">{{localize "WOD.attributes.physical"}} ({{physical.total}})</label>
     {{#each physical as |attr id|}}
         {{> "systems/wod/templates/actor/parts/score/score-rank.hbs" attr namespace="attributes" group="physical"}}
     {{/each}}
 </div>
 <div class="social flex-group-center">
-    <label class="section-title">{{localize "WOD.attributes.social"}} ({{actor.data.attributes.social.total}})</label>
+    <label class="section-title">{{localize "WOD.attributes.social"}} ({{social.total}})</label>
     {{#each social as |attr id|}}
         {{> "systems/wod/templates/actor/parts/score/score-rank.hbs" attr namespace="attributes" group="social"}}
     {{/each}}
 </div>
 <div class="mental flex-group-center">
-    <label class="section-title">{{localize "WOD.attributes.mental"}} ({{actor.data.attributes.mental.total}})</label>
+    <label class="section-title">{{localize "WOD.attributes.mental"}} ({{mental.total}})</label>
     {{#each mental as |attr id|}}
         {{> "systems/wod/templates/actor/parts/score/score-rank.hbs" attr namespace="attributes" group="mental"}}
     {{/each}}

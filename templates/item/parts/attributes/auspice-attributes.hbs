@@ -13,7 +13,7 @@
     </li>
     {{#each data.gifts as | gift id | }}
         <ol class="item-list">
-            <li class="item flexrow" data-item-id="{{gift._id}}" data-item-type="gift" draggable="true">
+            <li class="item flexrow" data-item-id="{{gift.id}}" data-item-type="gift" draggable="true">
                 <div class="item-name flexrow">
                     <div class="item-image" style="background-image: url('{{gift.img}}')"></div>
                     <h4>{{gift.name}}</h4>

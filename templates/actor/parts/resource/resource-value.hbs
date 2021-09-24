@@ -1,5 +1,6 @@
 {{#if (notNull resource.ranks)}}
-    <div class="flexrow resource-value" style="white-space: nowrap; justify-content: center; align-content: center;">
+<!--    <div class="flexrow resource-value" style="white-space: nowrap; justify-content: center; align-content: center;">-->
+    <div class="flexrow resource-value">
         <a class="rank reset" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;
         {{#each resource.ranks as | rank id | }}
             {{#if active}}
@@ -11,7 +12,8 @@
     </div>
 {{/if}}
 {{#if (notNull resource.temp)}}
-    <div class="flexrow resource-curres" style="white-space: nowrap; justify-content: center; align-content: center;">
+<!--    <div class="flexrow resource-curres" style="white-space: nowrap; justify-content: center; align-content: center;">-->
+    <div class="flexrow resource-curres">
         <a class="curres reset" title="0" data-type="score" data-value="0"><i class="fas fa-times"></i></a>&nbsp;
         {{#each resource.temp as | rank id | }}
             {{#if active}}

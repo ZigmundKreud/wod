@@ -43,10 +43,8 @@ export class WodItemSheet extends ItemSheet {
     /** @override */
     activateListeners(html) {
         super.activateListeners(html);
-
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
-
         // Roll handlers, click handlers, etc. would go here.
     }
 
@@ -60,7 +58,7 @@ export class WodItemSheet extends ItemSheet {
     _getItemProperties(item) {
         const props = [];
         if ( item.type === "item" ) {
-            const entries = Object.entries(item.data.properties)
+            const entries = Object.entries(item.data.data.properties)
             props.push(...entries.filter(e => e[1] === true).map(e => {
                 return game.wod.config.itemProperties[e[0]]
             }));

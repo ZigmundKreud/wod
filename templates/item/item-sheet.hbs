@@ -17,9 +17,9 @@
         <a class="item" data-tab="description">{{localize "WOD.ui.description"}}</a> <a class="item" data-tab="attributes">{{localize "WOD.ui.attributes"}}</a>
     </nav>
     {{!-- Sheet Body --}}
-    <section class="sheet-body" style="height:100%;">
+    <section class="sheet-body">
         {{!-- Description Tab --}}
-        <div class="tab flexrow description" data-group="primary" data-tab="description" style="height:100%;">
+        <div class="tab flexrow description" data-group="primary" data-tab="description">
             {{#if itemProperties}}
                 <div class="flex1 item-properties">
                     <ol class="properties-list">
@@ -29,7 +29,7 @@
                     </ol>
                 </div>
             {{/if}}
-            <div class="flex3" style="height:100%;">
+            <div class="flex3">
                 {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
             </div>
         </div>

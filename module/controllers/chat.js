@@ -1,7 +1,7 @@
 export class WodChat {
     static message(actor, flavor, content, sound = null) {
         let msgData = {
-            user: game.user._id,
+            user: game.user.id,
             flavor: flavor,
             content: content
         };

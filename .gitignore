@@ -125,3 +125,5 @@ Supprimerait templates/actor/
 Supprimerait templates/item/
 Supprimerait ui/
 /foundry.js
+/package-lock.json
+/.idea/

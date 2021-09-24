@@ -1,27 +1,30 @@
-@mixin element-invisible {
+.element-invisible {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-@mixin hide {
+.hide {
   display: none;
 }
 
-@mixin ellipsis {
+.ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-@mixin flexrow {
+.nomargin {
+  margin:0;
+  padding: 0;
+}
+
+.flxrow {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

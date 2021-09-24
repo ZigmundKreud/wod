@@ -126,7 +126,7 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
-    _onUpdateRank(event, isTemp=false, isReset=false) {
+    _onUpdateRank(event, isTemp = false, isReset = false) {
         event.preventDefault();
         const header = $(event.currentTarget);
         const value = header.data("value");
@@ -135,33 +135,31 @@ export class WodActorSheet extends ActorSheet {
         const ns = parent.data("namespace");
         const group = parent.data("group");
         const key = parent.data("key");
-        if(ns === "attributes" || ns === "abilities" ) return this._setRankValue(ns, group, key, value, isTemp, isReset);
-        else{
+        if (ns === "attributes" || ns === "abilities") return this._setRankValue(ns, group, key, value, isTemp, isReset);
+        else {
             return this._setResourceValue(ns, group, key, value, isTemp, isReset);
         }
     }
 
     /* -------------------------------------------- */
 
-    _setRankValue(ns, group, key, value, isTemp=false, isReset=false){
+    _setRankValue(ns, group, key, value, isTemp = false, isReset = false) {
         let data = duplicate(this.actor.data);
         const field = data.data[ns][group].scores.find(s => s.key === key);
         let fromValue = (isTemp) ? field.temp : field.value;
-        if(isReset) {
-            if(isTemp) {
+        if (isReset) {
+            if (isTemp) {
                 field.temp = null;
                 WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, "-", isTemp);
-            }
-            else {
+            } else {
                 field.value = field.min;
                 WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.min, isTemp);
             }
-        }else {
-            if(isTemp) {
+        } else {
+            if (isTemp) {
                 field.temp = value;
-                if(!fromValue) fromValue = "-";
-            }
-            else field.value = value;
+                if (!fromValue) fromValue = "-";
+            } else field.value = value;
             WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
         }
         return this.actor.update(data);
@@ -170,25 +168,23 @@ export class WodActorSheet extends ActorSheet {
 
     /* -------------------------------------------- */
 
-    _setResourceValue(ns, group, key, value, isTemp=false, isReset=false){
+    _setResourceValue(ns, group, key, value, isTemp = false, isReset = false) {
         let data = duplicate(this.actor.data);
         const field = data.data[ns][group].scores.find(s => s.key === key);
         let fromValue = (isTemp) ? field.temp : field.value;
-        if(isReset) {
-            if(isTemp) {
+        if (isReset) {
+            if (isTemp) {
                 field.temp = null;
                 WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, "-", isTemp);
-            }
-            else {
+            } else {
                 field.value = field.min;
                 WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, field.min, isTemp);
             }
-        }else {
-            if(isTemp) {
+        } else {
+            if (isTemp) {
                 field.temp = value;
-                if(!fromValue) fromValue = "-";
-            }
-            else field.value = value;
+                if (!fromValue) fromValue = "-";
+            } else field.value = value;
             WodChat.scoreUpdateNotification(this.actor, key, ns, fromValue, value, isTemp);
         }
         return this.actor.update(data);
@@ -198,21 +194,23 @@ export class WodActorSheet extends ActorSheet {
        HIGHLIGHT METHODS
        -------------------------------------------- */
 
-    _onResetHighlightScore(event){
+    _onResetHighlightScore(event) {
         event.preventDefault();
         const score = $(event.currentTarget);
-        score.find(".rank").css( "color", "");
+        score.find(".rank").css("color", "");
     }
-    _onResetAllHighlights(event){
+
+    _onResetAllHighlights(event) {
         event.preventDefault();
         const ranks = $(".rank");
-        ranks.css( "color", "");
+        ranks.css("color", "");
     }
-    _onHighlightRank(event){
+
+    _onHighlightRank(event) {
         event.preventDefault();
         const rank = $(event.currentTarget);
-        rank.css( "color", "red");
-        rank.prevAll().css( "color", "red");
+        rank.css("color", "red");
+        rank.prevAll().css("color", "red");
     }
 
     /* -------------------------------------------- */
@@ -225,19 +223,19 @@ export class WodActorSheet extends ActorSheet {
     _onRoll(event) {
         event.preventDefault();
         const data = this.getData();
-        if($(event.currentTarget).hasClass("item-control")){
+        if ($(event.currentTarget).hasClass("item-control")) {
             const elt = $(event.currentTarget).parents(".item");
             const key = elt.data("key");
             const item = this.actor.items.get(key);
             return WodDialog.rollItemDialog(data, item);
-        }else {
+        } else {
             const elt = $(event.currentTarget).parents(".score");
             const ns = elt.data("namespace");
             const group = elt.data("group");
             const key = elt.data("key");
-            if (ns == "attributes")     return WodDialog.rollAttributeDialog(data, ns, group, key, 6);
-            else if (ns == "abilities") return WodDialog.rollAbilityDialog  (data, ns, group, key, 6);
-            else if (ns == "resources") return WodDialog.rollResourceDialog (data, ns, group, key, 6);
+            if (ns === "attributes") return WodDialog.rollAttributeDialog(data, ns, group, key, 6);
+            else if (ns === "abilities") return WodDialog.rollAbilityDialog(data, ns, group, key, 6);
+            else if (ns === "resources") return WodDialog.rollResourceDialog(data, ns, group, key, 6);
         }
     }
 
@@ -274,7 +272,7 @@ export class WodActorSheet extends ActorSheet {
 
     _onUpdateHealthRank(event, decrease = false, reset = false) {
         let data = this.getData();
-        let health = data.actor.data.health;
+        let health = data.actor.data.data.health;
 
         // Get health ranks
         const li = $(event.currentTarget).closest(".health-rank");
@@ -286,21 +284,19 @@ export class WodActorSheet extends ActorSheet {
             // If reset, reset all ranks above current
             let upper = ranks.filter(r => r.ordinal >= rank.ordinal)
             upper.forEach(r => r.value = WOUND_TYPE.EMPTY);
-        }
-        else if (decrease) {
+        } else if (decrease) {
             // If decrease, decrease all higher ranks whose values are greater
             rank.value = (rank.value <= WOUND_TYPE.EMPTY) ? WOUND_TYPE.EMPTY : rank.value - 1;
             let upper = ranks.filter(r => r.ordinal > rank.ordinal)
             upper.forEach(r => {
-                if(r.value > rank.value) r.value = rank.value
+                if (r.value > rank.value) r.value = rank.value
             });
-        }
-        else {
+        } else {
             // If increase, increase all lower ranks whose values are lower
             rank.value = (rank.value >= WOUND_TYPE.AGGRAVATED) ? WOUND_TYPE.AGGRAVATED : rank.value + 1;
             let lesser = ranks.filter(r => r.ordinal < rank.ordinal)
             lesser.forEach(r => {
-                if(r.value < rank.value) r.value = rank.value
+                if (r.value < rank.value) r.value = rank.value
             });
         }
 
@@ -351,28 +347,32 @@ export class WodActorSheet extends ActorSheet {
     /* -------------------------------------------- */
 
     /** @override */
-    getData(options){
+    getData(options) {
         const data = super.getData(options);
-        data.physical = data.data.attributes.physical.scores;
-        data.social = data.data.attributes.social.scores;
-        data.mental = data.data.attributes.mental.scores;
-        const attribs = data.data.attributes.physical.scores.concat(data.data.attributes.social.scores).concat(data.data.attributes.mental.scores);
+
+        // The Actor's data
+        const actorData = this.actor.data.toObject(false);
+
+        data.physical = actorData.data.attributes.physical.scores;
+        data.social = actorData.data.attributes.social.scores;
+        data.mental = actorData.data.attributes.mental.scores;
+        const attribs = actorData.data.attributes.physical.scores.concat(actorData.data.attributes.social.scores).concat(actorData.data.attributes.mental.scores);
         data.attributes = {};
-        for(const attrib of attribs){
+        for (const attrib of attribs) {
             data.attributes[attrib.key] = attrib;
         }
 
-        data.talents = data.data.abilities.talents.scores;
-        data.skills = data.data.abilities.skills.scores;
-        data.knowledges = data.data.abilities.knowledges.scores;
+        data.talents = actorData.data.abilities.talents.scores;
+        data.skills = actorData.data.abilities.skills.scores;
+        data.knowledges = actorData.data.abilities.knowledges.scores;
 
-        const abilities = data.data.abilities.talents.scores.concat(data.data.abilities.skills.scores).concat(data.data.abilities.knowledges.scores);
+        const abilities = actorData.data.abilities.talents.scores.concat(actorData.data.abilities.skills.scores).concat(actorData.data.abilities.knowledges.scores);
         data.abilities = {};
-        for(const ability of abilities){
+        for (const ability of abilities) {
             data.abilities[ability.key] = ability;
         }
 
-        data.resources = data.data.resources;
+        data.resources = actorData.data.resources;
 
         data.inventory = {
             count: data.items.filter(item => item.type === "item" && item.data.properties?.equipment).length,
@@ -380,7 +380,7 @@ export class WodActorSheet extends ActorSheet {
         };
         for (const category of Object.keys(game.wod.config.itemCategories)) {
             const items = Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category && item.data.properties?.equipment).sort((a, b) => (a.name > b.name) ? 1 : -1)
-            if(items.length > 0) {
+            if (items.length > 0) {
                 data.inventory.categories.push({
                     id: category,
                     label: "WOD.category." + category,
@@ -395,7 +395,7 @@ export class WodActorSheet extends ActorSheet {
         };
         for (const category of Object.keys(game.wod.config.itemCategories)) {
             const items = Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === category && item.data.facets?.equipable?.worn).sort((a, b) => (a.name > b.name) ? 1 : -1)
-            if(items.length > 0) {
+            if (items.length > 0) {
                 data.combat.categories.push({
                     id: category,
                     label: "WOD.category." + category,
@@ -403,18 +403,21 @@ export class WodActorSheet extends ActorSheet {
                 });
             }
         }
+
         data.maneuvers = {
-            count: data.items.filter(i => i.type === "item" && i.data.subtype === "maneuver" ).length,
+            count: data.items.filter(i => i.type === "item" && i.data.subtype === "maneuver").length,
             id: "maneuvers",
             label: "WOD.category.maneuvers",
             items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === "maneuver").sort((a, b) => (a.name > b.name) ? 1 : -1)
         };
 
-        // data.combat.categories.push({
-        //     id: "maneuvers",
-        //     label: "WOD.category.maneuvers",
-        //     items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === "maneuver").sort((a, b) => (a.name > b.name) ? 1 : -1)
-        // });
+        data.combat.categories.push({
+            id: "maneuvers",
+            label: "WOD.category.maneuvers",
+            items: Object.values(data.items).filter(item => item.type === "item" && item.data.subtype === "maneuver").sort((a, b) => (a.name > b.name) ? 1 : -1)
+        });
+
+        console.log(actorData);
         console.log(data);
         return data;
     }

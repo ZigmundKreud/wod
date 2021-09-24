@@ -42,7 +42,7 @@ export class WodHealth {
 
     static getMalus(actor){
         // Find any malus from injuries that applies to roll if exists
-        let injuries = Object.values(actor.data.health.status).filter(s => s.checked && s.malus > 0);
+        let injuries = Object.values(actor.data.data.health.status).filter(s => s.checked && s.malus > 0);
         if(injuries.length > 0) {
             injuries.sort(function (a, b) {
                 return (a.malus < b.malus) ? 1 : -1

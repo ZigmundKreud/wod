@@ -21,12 +21,12 @@
 </div>
 <div class="section-content abilities grid grid-3col">
     <div class="primary flex-group-center">
-        {{#each data.resources.primary.scores as | res id | }}
+        {{#each actor.data.data.resources.primary.scores as | res id | }}
             {{> "systems/wod/templates/actor/parts/resource/resource-rank.hbs" res namespace="resources" group="primary"}}
         {{/each}}
     </div>
     <div class="secondary flex-group-center" style="padding: 0 40px;">
-        {{#each data.resources.secondary.scores as | res id | }}
+        {{#each actor.data.data.resources.secondary.scores as | res id | }}
             {{> "systems/wod/templates/actor/parts/resource/resource-rank.hbs" res namespace="resources" group="secondary"}}
         {{/each}}
     </div>
